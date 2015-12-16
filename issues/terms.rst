@@ -16,9 +16,25 @@ Základné pojmy
 - GIS.lab má vlastný DHCP server, ku ktorému majú prístup len klienti GIS.lab
   na základe MAC adresy 
 
+**IP adresa**
+
+- sieťová adresa; IP adresy prideľuje DHCP server; to, či vôbec IP adresu 
+  pridelí sa rozhodne na základe MAC adresy; pri VB sa MAC adresa generuje 
+  automaticky a je treba ju 
+  zadať `gislab-machines -a "<ma:ca:dd:re:ss:aa>"`; jeden PC má rôzne IP na rôznych
+  miestach (podľa toho, k akej sieti je pripojený); nemôžu byť rovnaké IP adresy
+  v rámci jednej podsiete (to isté platí aj pre MAC adresy); IP je vyššia vrstva 
+  ako MAC
+
 **konfigurácia** 
 
 - usporiadanie, zoskupenie
+
+**MAC adresa**
+
+- hardvérová adresa, MAC adresa je adresa konkrétneho PC, nemôžu byť rovnaké 
+  MAC adresy; MAC používa hardware sieťovky na to, aby vedel čo má prijať 
+  (xx:xx:xx:xx:xx:xx)
 
 **PXE (Preboot Execution Environment)**
 

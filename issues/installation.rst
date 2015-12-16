@@ -30,6 +30,35 @@ Klient
 - po vytvorení klienta je potrebné prihlásiť sa na server cez `vagrant ssh`
   a pomocou `sudo gislab-machines -a <MAC-address>` (napr. `sudo gislab-machines 
   -a 08:00:27:85:04:59) pridať, aktivovať, povoliť mu prístup (MAC adresa je v 
-  záložke Network advanced)
-- potom iba spustím klienta klasicky zeleneou šípkou vo Virtual box-e
+  záložke Network advanced); 
+- potom iba spustím klienta klasicky zelenou šípkou vo Virtual box-e; je lepšie 
+  bootovať opačne ako je pripojenie na internet, resp. v prípade virtuálu vypnúť 
+  internet (aby nehľadalo IP v sieti, lebo ak v okolí existuje nejaký GIS.lab, 
+  bude sa snažiť bootovať z neho, ale nepodarí sa to, keďže registrovaná MAC tam
+  nie je)
+
+B) UNIT (krabička)
+==================
+
+- krabička (budúci server) musí spĺňať isté požiadavky (16 GB RAM, CPU Intel 
+  Core i5, ...)
+- PC (budúci klient) musí spĺňať isté požiadavky (8 GB, HDMI to DVI adapter, ...)
+- ďalej je potrebný aktuálny GIS.lab repozitár a nainštalovaný SW Ansible 
+  príslušnej verzie
+
+Server
+^^^^^^
+
+- budeme inštalovať Ubuntu 12.04 Precise (stiahneme aktuálny ISO image (64 bit) 
+  z oficiálnej stránky http://releases.ubuntu.com/precise)
+- toto iso ešte upravíme pomocou skriptu *gislab-unit-iso.sh*; tento skript má 
+  isté parametre -s -t -k -w a -i (pomocou prepínača *-h* ich zobrazíme); 
+- spustíme customizačný skript napr. ako: 
+  ``sudo ./providers/gislab-unit/gislab-unit-iso.sh -s CZ -t Europe/Prague -k ~/.ssh/id_rsa_gislab_unit.pub -w /tmp/ -i ~/Downloads/ubuntu-12.04.5-server-amd64.iso``
+- potom použijem program na MAKE STARTUP DISK, ktorý mi z USB spraví bootovateľné
+  USB ()
+
+
+
+
 
