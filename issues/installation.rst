@@ -23,15 +23,13 @@ Server
 Klient
 ^^^^^^
 - vytvorenie vo Virtual box-e
-- bootovať môže buď v móde PXE alebo cez HTTP
-
-PXE 
-- system (Network boot order, pointing device PS/2 mouse)
-- network (Bridged adapter, PCnet-FAST III (Am79C973) adapter type)
+- bootovať môže buď v móde PXE (nastaviť treba v *System* záložke Network boot 
+  order, pointing device PS/2 mouse a v *Network* záložke Bridged adapter a 
+  PCnet-FAST III (Am79C973) adapter type) alebo cez HTTP
 
 - po vytvorení klienta je potrebné prihlásiť sa na server cez `vagrant ssh`
   a pomocou `sudo gislab-machines -a <MAC-address>` (napr. `sudo gislab-machines 
   -a 08:00:27:85:04:59) pridať, aktivovať, povoliť mu prístup (MAC adresa je v 
   záložke Network advanced)
-
+- potom iba spustím klienta klasicky zeleneou šípkou vo Virtual box-e
 
