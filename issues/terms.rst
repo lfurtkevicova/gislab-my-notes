@@ -23,12 +23,9 @@ Základné pojmy
 **PXE (Preboot Execution Environment)**
 
 - technológia pre bootovanie (štart PC z PC siete); pre tenkých klientov, ktorí 
-  nemajú pevný disk; využíva sa IP z rodiny protokolov TCP/IP
-- princíp:
-
-.. image::
-
-   
+  nemajú pevný disk; využíva sa IP z rodiny protokolov TCP/IP; komunikácia 
+  pomocou DHCP (Dynamic Host Configuration Protocol): DHSPDISCOVER, DHCPOFFER,
+  DHCPREQUEST, DHSPACK   
 
 **Vagrant** 
 
