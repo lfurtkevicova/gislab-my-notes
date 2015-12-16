@@ -7,8 +7,12 @@ A) VIRTUAL (môj PC)
 SERVER
 ^^^^^^
 
-- defaultný súbor je v adresári **group-vars** (súbor *all*)
-- ak chcem niečo meniť, vytvorím súbor *gislab-vagrant* v adresári **host-vars** 
+- adresár **system**; defaultný súbor s konfiguračnými nastaveniami, t.j súbor 
+  *all* je v adresári **group-vars**; ak chcem niečo meniť, vytvorím súbor 
+  *gislab-vagrant* v adresári **host-vars** (v prípade, že **host_vars** 
+  neobsahuje súbor *gislab_vagrant*, pri vytváraní klienta sa použije súbor *all*)
+- GIS.lab má vlastnú sieť (predvolene 192.168.50.0/24), je to vlastne premenná
+  GISLAB_NETWORK v súbore *all* 
 
 KLIENT
 ^^^^^^

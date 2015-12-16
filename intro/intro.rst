@@ -1,4 +1,4 @@
-INTRO
------
+Dokumnetácia
+------------
 
-intro intro intro ...
+Dokumentácia je dostupná tu: https://github.com/imincik/gis-lab/wiki

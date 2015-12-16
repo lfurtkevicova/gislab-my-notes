@@ -6,7 +6,9 @@ ISSUES
    :maxdepth: 2
 
    terms
+   installation
    customization
+   commands
 
 
 
