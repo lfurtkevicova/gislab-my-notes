@@ -17,9 +17,9 @@ copyright = u'%d, Ľudmila Furtkevičová' % get_year()
 # built documents.
 #
 # The short X.Y version.
-version = 'x'
+version = '0.'
 # The full version, including alpha/beta/rc tags.
-release = '%sx' % version
+release = '%s1' % version
 
 # -- Options for HTML output ----------------------------------------------
 
@@ -37,7 +37,7 @@ html_title = project
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     ('index', '%s-%s.tex' % (htmlhelp_basename, version), project,
-     u'GISMentors', u'manual'),
+     u'Ludka', u'manual'),
     ]
 
 # -- Options for manual page output ---------------------------------------
