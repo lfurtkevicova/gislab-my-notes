@@ -54,9 +54,21 @@ Server
 - toto iso ešte upravíme pomocou skriptu *gislab-unit-iso.sh*; tento skript má 
   isté parametre -s -t -k -w a -i (pomocou prepínača *-h* ich zobrazíme); 
 - spustíme customizačný skript napr. ako: 
-  ``sudo ./providers/gislab-unit/gislab-unit-iso.sh -s CZ -t Europe/Prague -k ~/.ssh/id_rsa_gislab_unit.pub -w /tmp/ -i ~/Downloads/ubuntu-12.04.5-server-amd64.iso``
-- potom použijem program na MAKE STARTUP DISK, ktorý mi z USB spraví bootovateľné
-  USB ()
+  ``sudo ./providers/gislab-unit/gislab-unit-iso.sh -s CZ -t Europe/Prague -k ~/.ssh/id_rsa_gislab_unit.pub -w /tmp/ -i ~/Downloads/ubuntu-12.04.5-server-amd64.iso``;
+  (skript zabezpečí, že sa napr. pri inštalácii nebude pýtať na jazyk, atď., ale
+  bude to prednastavené) 
+- potom použijem program MAKE STARTUP DISK, ktorý mi z USB spraví bootovateľné
+  USB (dám tam 64 bit-ové upravené *iso*)
+- pri inštalácii budem používať **ssh** (lepšie je vytvoriť si *ssh* konkrétne 
+  pre gis.lab, aby som nepoužívala to, ktoré je napr. pre GitHub);
+  príkazom ``ssh-keygen`` v priečinku *home/.ssh* vygenerujem nové *ssh*, 
+  ktoré uložím napr. ako *id_rsa_gislab_unit* (pôjde o pár, verejný *.pub* a 
+  privátny kľúč)
+- potom do krabičky pripojím *zdroj*, *klávesnicu*, *monitor* a *USB s iso-om*;
+  unit zapnem a stláčam *F10* (spustím aj bez siete), zadám usr ako *ubuntu*, 
+  psw ako *ubuntu* a bootovanie z USB => potom mám na unit-e Ubuntu, ktoré chcem
+  (GIS.lab)
+ 
 
 
 

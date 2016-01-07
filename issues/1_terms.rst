@@ -7,6 +7,14 @@ Základné pojmy
 - automatizačný nástroj na správu systémov; používa sa pri unite; konfigurácia 
   je v *yaml* súboroch
 
+**Barrel folder**
+
+- hlavný priečinok zdieľania sietí
+
+**Bridged adapter**
+
+- ako prepojiť sieť klienta s VB
+
 **customizácia** 
 
 - zmena, resp. prispôsobenie systému individuálnym podmienkam používateľa
@@ -42,6 +50,25 @@ Základné pojmy
   nemajú pevný disk; využíva sa IP z rodiny protokolov TCP/IP; komunikácia 
   pomocou DHCP (Dynamic Host Configuration Protocol): DHSPDISCOVER, DHCPOFFER,
   DHCPREQUEST, DHSPACK   
+
+**Projects folder**
+
+- uložené projekty klienta
+
+**Publish folder**
+
+- klient; umožňuje publikovanie do web-u
+
+**Repository folder**
+
+- hlavne administrátori
+
+**Travis CI**
+
+- webová služba podporujúca priebežnú integráciu projektov, resp. repozitárov 
+  na GitHub-e (Continuous Integration); zaisťuje **zostavenie** a **otestovanie** 
+  projektu; dôležitý je súbor *.travis.yml*, ktorý musí byť v hlavnom adresári 
+  na GitHub-e; urýchľuje vývoj SW (a rovnako aj spoluprácu v tíme) 
 
 **Vagrant** 
 
