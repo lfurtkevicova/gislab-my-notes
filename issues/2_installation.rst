@@ -60,7 +60,7 @@ Server
   ``sudo ./providers/gislab-unit/gislab-unit-iso.sh -s CZ -t Europe/Prague -k ~/.ssh/id_rsa_gislab_unit.pub -w /tmp/ -i ~/Downloads/ubuntu-12.04.5-server-amd64.iso``;
   (skript zabezpečí, že sa napr. pri inštalácii nebude pýtať na jazyk, atď., ale
   bude to prednastavené; ďalej aby balíčky boli sťahované z najbližších archivov,
-  napr. pri zadaní "CZ" to bude cz.ubuntu.com) 
+  napr. pri zadaní "CZ" to bude cz.ubuntu.com .. informácia, akú URL má použiť) 
 - potom použijeme program MAKE STARTUP DISK, ktorý mi z USB spraví bootovateľné
   USB (dám tam 64 bit-ové upravené *iso*)
   alebo v termináli použijem `usb-creator-gtk`
@@ -92,13 +92,36 @@ Server
 
 **2. krok:** inicializácia unitu
 
-- vytvoríme Ansible súbor (názov závidí od toho, ako sa bude unit volať), 
-  napr. pre *gislab-unit-roundice* to bude *gislab-unit-roundice.iventory* 
- 
+- vytvoríme Ansible súbor (názov závisí od toho, ako sa bude unit volať), 
+  napr. pre *gislab-unit* to bude *gislab-unit.iventory*
+- jeho obsahom bude názov unitu, ssh a názov užívateľa 
+  ``gislab-unit-roudnice ansible_ssh_host=00.00.00.00 ansible_ssh_user=ubuntu``
+- potom spustím ``ansible-playbook --inventory=gislab-unit-roudnice.inventory --private-key=<private-SSH-key-file> providers/gislab-unit/gislab-unit.yml``
+  s konkrétnymi cestami pre súbory *.inventory, *privatekey* a gislab-unit.yml 
+  (od tejto chvíle potrebujem zdrojáky gis.lab-u); týmto sa public časť ssh
+  prekopíruje na unit a prístup bude možný už len cez *ssh*
+  
+  *pozn.:* gislab-unit.yml zabezpečí otimalizáciu napr. SSD, súborového systému, 
+  swap, sieťové záležitosti, reštartuje krabičku, atď.; ide o to, že Ansible
+  sa cez ssh prihlási na krabičku a pustí všetky príkazy v súbore *.yml
 
- 
+**3. krok:** inštalácia unitu
 
+- po inštalácii ubuntu z USB sa GIS.lab sám vypne; vyberieme USB a krabičku 
+  zapneme
+- pred samotnou inštaláciou sa odporúča nastaviť aspoň základnú konfiguráciu;
+  konfiguračné súbory sú v adresári *system* a customizujú server aj klienta;
+  ak chceme niečo meniť a nevyhovujú nám východzie nastavenia v 
+  *system/group_vars/all*, vytvoríme súbor s názvom *gislab-unit* s požadovanými
+  nastaveniami
+- po nakomfigurovaní GIS.lab-u môžeme pristúpiť k inštalácii; spustíme príkaz
+  s príslušnými cestami k súborom *.invenotry, *privatekey* a *gislab.yml*
+  ``ansible-playbook --inventory=gislab-unit.inventory --private-key=<private-SSH-key-file> system/gislab.yml``
 
+- objaví sa jediná záležitosť súvisiaca s kešovanými balíčkami (totiž, ak vieme,
+  že budeme mať viac GIS.lab unitov a budeme ich inštalovať viackrát, je výhodné, 
+  aby sa balíčky nesťahovali z internetu (napr. QGIS, GRASS, atď.), ale zo 
+  zálohy; ak takúto zálohu balíčkov máme, zadáme, kde ich treba hľadať)
 
 
 
