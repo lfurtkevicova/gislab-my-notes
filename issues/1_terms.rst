@@ -80,3 +80,13 @@ Základné pojmy
 - image (predpis, schéma, vzor operačného systému), aby sa virtuálny stroj 
   nevytváral od nuly; je to zabalený minimálny operačný systém, ktorý sa dá 
   spustiť; je to oveľa rýchlejšie
+
+*INÉ*
+
+**virtualenv**
+
+- nástroj, ktorým možno vytvoriť python prostredie oddelené alebo doplňujúce to,
+  čo je na serveri; do toho prostredia sa dá nainštalovať ľubovoľné knižnice
+  ľubovoľnej verzie; prostredie aplikácie je oddelené od prostredia servera; 
+  je to fyzický adresár, ktorý obsahuje unix-ovú štruktúru s niekoľkými
+  binárkami, knižnicami, python modulmi 

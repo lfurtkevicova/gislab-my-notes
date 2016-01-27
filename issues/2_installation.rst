@@ -115,7 +115,7 @@ Server
   *system/group_vars/all*, vytvoríme súbor s názvom *gislab-unit* s požadovanými
   nastaveniami
 - po nakomfigurovaní GIS.lab-u môžeme pristúpiť k inštalácii; spustíme príkaz
-  s príslušnými cestami k súborom *.invenotry, *privatekey* a *gislab.yml*
+  s príslušnými cestami k súborom *.inventory, *privatekey* a *gislab.yml*
   ``ansible-playbook --inventory=gislab-unit.inventory --private-key=<private-SSH-key-file> system/gislab.yml``
 
 - objaví sa jediná záležitosť súvisiaca s kešovanými balíčkami (totiž, ak vieme,
