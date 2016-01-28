@@ -19,6 +19,11 @@ Základné pojmy
 
 - zmena, resp. prispôsobenie systému individuálnym podmienkam používateľa
 
+**chroot**
+
+- je to akoby *root*, koreňový adresár, ale ako "podpriestor"; zmení koreňový 
+  adresár pre práve bežiaci proces a jeho potomkov
+
 **DHCP server**
 
 - GIS.lab má vlastný DHCP server, ku ktorému majú prístup len klienti GIS.lab
@@ -72,8 +77,10 @@ Základné pojmy
 
 **Vagrant** 
 
-- nástroj, ktorý umožňuje modifikovať virtuálny stroj podľa mojich 
-  predstáv pomocou nejakého predpisu
+- nástroj, ktorý umožňuje modifikovať virtuálny stroj (mašinku) podľa mojich 
+  predstáv pomocou nejakého predpisu; dôležitý je *Vagrant file* + jednoduché 
+  príkazy v shell-i; je to multiplatformový nástroj; kľúčovými sú poskytovateľ
+  (provisioner) a prevádzkar (provider)
 
 **Vagrant box**
 
@@ -90,3 +97,15 @@ Základné pojmy
   ľubovoľnej verzie; prostredie aplikácie je oddelené od prostredia servera; 
   je to fyzický adresár, ktorý obsahuje unix-ovú štruktúru s niekoľkými
   binárkami, knižnicami, python modulmi 
+
+**chmod** 
+
+- slúži v systéme Unix na zmenu prístupových práv k súboru; zmeniť práva môže 
+  len vlastník alebo *root*, meniť vlastníka môže len *root*
+- práva sú udávené ako číslo v osmičkovej sústave buď absolútnym zápisom
+  alebo symbolickým zápisom
+- *absolútny zápis* sa najčastejšie zapisuje ako 3-miestne číslo **rwx** (prvá 
+  číslica = vlastník, druhá číslica = práva skupiny, tretia číslica = ostatní)
+- spustenie prispieva váhou "1", zápis váhou "2" a čítanie váhou "4", kombinácia
+  všetkých je potom "721" .. chápem :)
+

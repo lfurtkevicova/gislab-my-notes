@@ -9,8 +9,3 @@ ISSUES
    2_installation
    3_customization
    4_commands
-
-
-
-
-
