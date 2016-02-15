@@ -2,7 +2,7 @@
 Conventions
 ***********
 
-- a block of code is set as follows
+- a block of code, files and directories are set as follows
 
   ``text text text``
 
@@ -22,7 +22,7 @@ Conventions
 
    text text text
 
-- name of software
+- name of software, settings, name of bookmarks
 
   *text text text*
 
