@@ -9,10 +9,8 @@ Server
 ^^^^^^
 
 - platia nejaké minimálne požiadavky: 4GB RAM, SW ako *Linux, Git, Ansible, 
-  VirtualBox, Vagrant* (príslušných verzií) a stiahnutý *Vagrant box* a **GIS-lab** 
-  repozitár.
-
-- po `vagrant up`, t.j. inštalácii GIS.lab-u sa vytvorí superuser (gislab);
+  VirtualBox, Vagrant* príslušných verzií, *Vagrant box* a *GIS-lab repozitár*.
+- po `vagrant up`, t.j. inštalácii GIS.lab-u sa vytvorí superuser **gislab**;
   po prihlásení na GIS.lab server cez SSH (vagrant ssh) možno pridať ďalších 
   používateľov napr. 
   `sudo gislab-adduser -g User -l GIS.lab -m lab1@gis.lab -p lab lab1` 
