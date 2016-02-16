@@ -105,14 +105,14 @@ Server
 **2. krok:** inicializácia unitu
 
 - vytvoríme Ansible súbor, názov závisí od toho, ako sa bude unit volať, 
-  napr. pre *gislab-unit* to bude ``gislab-unit.iventory``, je to identifikátor 
-  vzdialeného PC
+  napr. pre *gislab-unit-italy* to bude ``gislab-unit-italy.iventory``, je to 
+  identifikátor vzdialeného PC
 - jeho obsahom bude *názov GIS.lab* unit-u, *Ansible ssh host* s IP unit-u a 
   *názov užívateľa*, pod akým sa budeme prihlasovať k unit-u
-  ``gislab-unit-roudnice ansible_ssh_host=00.00.00.00 ansible_ssh_user=ubuntu``
+  ``gislab-unit-italy ansible_ssh_host=00.00.00.00 ansible_ssh_user=ubuntu``
 - potom spustíme *ansible-playbook* spolu s názvom *inventory* súboru, s ssh kľúčom 
   na pripojenie ku vzdialenému PC a so súborom ``*yml``, ktorý chceme spustiť 
-  ``ansible-playbook --inventory=gislab-unit-roudnice.inventory --private-key=<private-SSH-key-file> providers/gislab-unit/gislab-unit.yml``
+  ``ansible-playbook --inventory=gislab-unit-italy.inventory --private-key=<private-SSH-key-file> providers/gislab-unit/gislab-unit.yml``
   s konkrétnymi cestami pre súbory ``*.inventory``, *privatekey* a ``gislab-unit.yml`` 
   (od tejto chvíle potrebujeme zdrojáky GIS.lab-u); týmto sa public časť ssh
   prekopíruje na unit a prístup bude možný už len cez *ssh*
@@ -129,12 +129,11 @@ Server
 - po inštalácii Ubuntu z USB sa GIS.lab sám vypne; vyberieme USB a krabičku 
   zapneme
 - pred samotnou inštaláciou sa odporúča nastaviť aspoň základnú konfiguráciu
-  inštalácie;
-  konfiguračné súbory sú v adresári ``system`` a customizujú server aj klientov;
-  prípadne aj užívateľov, napríklad automatické veci pri vytvorení, zmazaní užívateľov)
-  ak chceme niečo meniť a nevyhovujú nám východzie nastavenia v 
-  ``system/group_vars/all``, vytvoríme súbor s názvom unit-u, napr. ``gislab-unit`` 
-  s požadovanými nastaveniami
+  inštalácie; konfiguračné súbory sú v adresári ``system`` a customizujú server 
+  aj klientov; prípadne aj užívateľov, napríklad automatické veci pri vytvorení, 
+  zmazaní užívateľov; ak chceme niečo meniť a nevyhovujú nám východzie nastavenia v 
+  ``system/group_vars/all``, vytvoríme súbor s názvom unit-u, napr. 
+  ``gislab-unit-italy`` s požadovanými nastaveniami
 - po nakomfigurovaní GIS.lab-u môžeme pristúpiť k inštalácii; spustíme príkaz
   s príslušnými cestami k súborom ``*.inventory``, *privatekey* a ``*gislab.yml*``
   ``ansible-playbook --inventory=gislab-unit.inventory --private-key=<private-SSH-key-file> system/gislab.yml``

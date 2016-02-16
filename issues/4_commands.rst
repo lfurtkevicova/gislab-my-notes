@@ -2,6 +2,7 @@
 Užitočné príkazy
 ****************
 
-* `vagrant up`, resp. `vagrant halt` (zapnutie, resp. vypnutie servera)
-* `vagrant destroy` (zmazanie servera)
-* `vagrant provision` (aktualizácia servera)
+* ``vagrant up``, resp. ``vagrant halt`` (zapnutie, resp. vypnutie servera)
+* ``vagrant destroy`` (zmazanie servera)
+* ``vagrant provision`` (aktualizácia servera)
+* ``vagrant reload`` (reštart servera)

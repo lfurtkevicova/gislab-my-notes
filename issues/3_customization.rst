@@ -7,17 +7,29 @@ A) VIRTUAL (môj PC)
 SERVER
 ^^^^^^
 
-- adresár **system**; defaultný súbor s konfiguračnými nastaveniami, t.j súbor 
-  *all* je v adresári **group-vars**; ak chcem niečo meniť, vytvorím súbor 
-  *gislab-vagrant* v adresári **host-vars** (v prípade, že **host_vars** 
-  neobsahuje súbor *gislab_vagrant*, pri vytváraní klienta sa použije súbor *all*)
+- adresár ``system``; defaultný súbor s konfiguračnými nastaveniami pre 
+  inštakáciu, t.j súbor ``all`` je v adresári **group-vars**; ak chceme niečo 
+  meniť, napríklad ``GISLAB_CLIENT_KEYBOARDS`` na ``sk`` a `cz`, vytvoríme súbor 
+  *gislab-vagrant* v adresári **host-vars** a nastavíme 
+  .. code::
+     GISLAB_CLIENT_KEYBOARDS:
+     - layout: sk
+       variant: qwerty
+     - layout: cz
+       variant: qwerty 
+- v prípade, že ``host_vars`` neobsahuje súbor *gislab_vagrant*, pri vytváraní 
+  klienta sa použije súbor ``all``
+- konfigurácia inštalácie sa prejaví po aktualizácii pomocou ``vagrant provision``,
+  prípadne je potrebné server reštartovať ako ``vagrant reload`` alebo 
+  ``vagrant halt`` a ``vagrant up``
+- po novom bootovaní klienta sa zmeny konfiguračné nastavenia prejavia
 - GIS.lab má vlastnú sieť (predvolene 192.168.50.0/24), je to vlastne premenná
-  GISLAB_NETWORK v súbore *all* 
+  GISLAB_NETWORK v súbore ``all`` 
 
 KLIENT
 ^^^^^^
 
-1) nainštalujem GIS.lab po stiahnutí repozitára **gis-lab**: ``vagrant up``
+1) nainštalujeme GIS.lab po stiahnutí *repozitára gis-lab*: ``vagrant up``
 2) prihlásim sa na vagrant server: ``vagrant ssh``
 3) pridám užívateľa: ``gislab-adduser ...``
 4) prepnem sa do klientskeho root-a: ``gislab-client-shell -i``
@@ -25,7 +37,7 @@ KLIENT
 6) prepnem sa naspäť na server (exit-om)
 7) skomprimujem klientsky root adresár, čím vytvorím nový image (z neho budú 
    bootovať klienti): ``gislab-client-image`` (na základe aktuálneho root-a)
-8) vo virtualbox-e vytvorím klienta, ktorý bootuje z nového image-u
+8) vo VirtualBox vytvorím klienta, ktorý bootuje z nového image-u
 
 B) UNIT (krabička, škola)
 =========================
@@ -38,8 +50,8 @@ B) UNIT (krabička, škola)
   `sudo gislab-client-image` 
   vytvorím nový image, t.j. skomprimovaný chroot (pri každej aktualizácii 
   GIS.lab-u sú klientsky root a image prepísané na východzí - originál)
-- v **host_vars** pri unit-e sa konfiguračný súbor inštalácie nevolá 
-  *gislab_vagrant*, ale volá sa rovnako ako unit (v tomto súbore je dobré 
+- v ``host_vars`` pri unit-e sa konfiguračný súbor inštalácie nevolá 
+  ``gislab_vagrant``, ale volá sa rovnako ako unit (v tomto súbore je dobré 
   editovať hlavne IP rozsah, na ktorej bude fungovať GIS.lab sieť; klienti budú
   potom so štvormiestnym číslom 192.168.50.xx)
 
