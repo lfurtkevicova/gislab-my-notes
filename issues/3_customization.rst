@@ -11,12 +11,14 @@ SERVER
   inštakáciu, t.j súbor ``all`` je v adresári **group-vars**; ak chceme niečo 
   meniť, napríklad ``GISLAB_CLIENT_KEYBOARDS`` na ``sk`` a `cz`, vytvoríme súbor 
   *gislab-vagrant* v adresári **host-vars** a nastavíme 
-  .. code::
-     GISLAB_CLIENT_KEYBOARDS:
-     - layout: sk
-       variant: qwerty
-     - layout: cz
-       variant: qwerty 
+  
+.. code::
+    
+   GISLAB_CLIENT_KEYBOARDS:
+   - layout: sk
+     variant: qwerty
+   - layout: cz
+     variant: qwerty 
 - v prípade, že ``host_vars`` neobsahuje súbor *gislab_vagrant*, pri vytváraní 
   klienta sa použije súbor ``all``
 - konfigurácia inštalácie sa prejaví po aktualizácii pomocou ``vagrant provision``,
@@ -33,10 +35,16 @@ KLIENT
 2) prihlásim sa na vagrant server: ``vagrant ssh``
 3) pridám užívateľa: ``sudo gislab-adduser -g User -l GIS.lab -m user@gis.lab -p user user``
 4) prepnem sa do klientskeho root-a: ``gislab-client-shell -i``
-5) urobím si tam čo chcem,napr. nainštalujem grass
+5) urobím si tam čo chcem,napr. nainštalujem grass 
+
+.. code::
+
+   sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
+   sudo apt-get update
+   sudo apt-get install grass
 6) prepnem sa naspäť na server pomocou ``exit``
-7) skomprimujem klientsky root adresár, čím vytvorím nový image (z neho budú 
-   bootovať klienti): ``gislab-client-image`` (na základe aktuálneho root-a)
+7) skomprimujem klientsky root adresár, čím vytvorím nový image, z neho budú 
+   bootovať klienti: ``gislab-client-image`` (na základe aktuálneho chroot)
 8) vo VirtualBox vytvorím klienta, ktorý bootuje z nového image-u
 
 B) UNIT (krabička, škola)
