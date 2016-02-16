@@ -31,10 +31,10 @@ KLIENT
 
 1) nainštalujeme GIS.lab po stiahnutí *repozitára gis-lab*: ``vagrant up``
 2) prihlásim sa na vagrant server: ``vagrant ssh``
-3) pridám užívateľa: ``gislab-adduser ...``
+3) pridám užívateľa: ``sudo gislab-adduser -g User -l GIS.lab -m user@gis.lab -p user user``
 4) prepnem sa do klientskeho root-a: ``gislab-client-shell -i``
 5) urobím si tam čo chcem,napr. nainštalujem grass
-6) prepnem sa naspäť na server (exit-om)
+6) prepnem sa naspäť na server pomocou ``exit``
 7) skomprimujem klientsky root adresár, čím vytvorím nový image (z neho budú 
    bootovať klienti): ``gislab-client-image`` (na základe aktuálneho root-a)
 8) vo VirtualBox vytvorím klienta, ktorý bootuje z nového image-u
