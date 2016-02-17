@@ -64,29 +64,44 @@ Server
 **1. krok:** inštalácia základného operačného systému
 
 - budeme inštalovať *Ubuntu 12.04 Precise*; stiahneme aktuálny ``*.iso`` **image**, 
-  64 bit pre server z oficiálnej stránky http://releases.ubuntu.com/precise, napr.
+  64-bit pre **server** z oficiálnej stránky http://releases.ubuntu.com/precise, t.j.
   *64-bit PC (AMD64) server install CD*
 - toto ``*.iso`` ešte upravíme pomocou skriptu ``gislab-unit-iso.sh``; tento 
   skript má isté parametre ``-s -t -k -w`` a ``-i`` (pomocou prepínača ``-h`` 
   ich zobrazíme); 
-- spustíme customizačný skript napr. ako: 
-  ``sudo ./providers/gislab-unit/gislab-unit-iso.sh -s CZ -t Europe/Prague -k ~/.ssh/id_rsa_gislab_unit.pub -w /tmp/ -i ~/Downloads/ubuntu-12.04.5-server-amd64.iso``;
-  skript zabezpečí, že sa napr. pri inštalácii nebude pýtať na jazyk, atď., ale
-  bude to prednastavené; ďalej balíčky budú sťahované z najbližších archívov,
-  napr. pri zadaní "CZ" to bude cz.ubuntu.com .. informácia, akú URL má použiť 
-- potom použijeme program *Make Startup Disk*, ktorý z USB spraví bootovateľné
-  USB (dáme tam 64 bit-ové upravené ``*.iso``)
-  alebo v termináli použijem ``usb-creator-gtk``
 - pri inštalácii budem používať **ssh** (lepšie je vytvoriť si *ssh* konkrétne 
   pre GIS.lab, aby som nepoužívala to, ktoré je napr. pre GitHub);
   príkazom ``ssh-keygen`` v priečinku ``home/.ssh`` vygenerujem nové *ssh*, 
   ktoré uložím napr. ako *id_rsa_gislab_unit* (pôjde o pár, verejný *.pub* a 
   privátny kľúč)
+- spustíme customizačný skript napr. ako: 
+
+  ``sudo ./providers/gislab-unit/gislab-unit-iso.sh -s CZ -t Europe/Prague -k ~/.ssh/id_rsa_gislab_unit.pub -w /tmp/ -i ~/Downloads/ubuntu-12.04.5-server-amd64.iso``
+  
+  alebo
+
+  ``sudo ./providers/gislab-unit/gislab-unit-iso.sh -s IT -t Europe/Rome -k ~/.ssh/id_rsa_gislab_unit.pub -w /tmp/ -i ~/Downloads/ubuntu-12.04.5-server-amd64.iso``
+
+- skript zabezpečí, že sa napr. pri inštalácii nebude pýtať na jazyk, atď., ale
+  bude to prednastavené; ďalej balíčky budú sťahované z najbližších archívov,
+  napr. pri zadaní "CZ" to bude cz.ubuntu.com .. informácia, akú URL má použiť 
+- potom použijeme program *Startup Disk Creator*, ktorý z USB spraví bootovateľné
+  USB (dáme tam 64-bit upravené ``*.iso``) alebo v termináli použijem ``usb-creator-gtk``
+
+  *Pozn:*
+- v prípade, že by nebootovalo z USB, použijeme GParted Partion Editor a sformátujeme
+  USB; následne zistíme, ktorá zložka je USB pomocou ``df`` (napríklad ``/dev/sdc1``)
+  a prenesieme upravené ISO z ``tmp`` na USB pomocou ``dd``
+
+  ``sudo dd if=/tmp/gislab-base-system-am8ohng9.iso of=/dev/sdc1 bs=1M``
+
 - potom do krabičky pripojím zdroj, klávesnicu, monitor, USB s ``*.iso``
   a internetový kábel;
-- unit zapnem a stláčam ``F10`` (spustím aj bez siete), zadám **usr** ako *ubuntu*, 
-  **psw** ako *ubuntu* a bootovanie z USB => potom mám na unit-e *Ubuntu*, ktoré 
-  chcem vytvorené na základe súboru ``*.iso``
+- unit zapnem a stláčam ``F10`` (spustím aj bez siete), ak nemám server s CASH,
+  iba pokračujem s ``continue``, všetko sa nainštaluje z USB; po inštalácii
+  sa unit sám vypne => na unit-e je teda *ubuntu*, ktoré chcem vytvorené na 
+  základe súboru ``*.iso``
+- potom je potrebné unit opäť zapnúť a zadať **usr** ako *ubuntu*, **psw** ako *ubuntu*
 - sú dva spôsoby, ako sa dá prihlásiť na unit; zatiaľ sa prihlasujem len cez 
   heslo (*ubuntu/ubuntu*); to sa dá iba pomocou klávesnice a monitoru pripojených 
   k unit-u
@@ -100,8 +115,11 @@ Server
   buď unit registruje automaticky alebo je potrebné spustiť DHCP klienta 
   ``sudo dhclient eth0 -v``, ktorý požiada o IP a krabička má internet 
   (prepínač -v ako *verbous*; čím viac ``v``, tým podrobnejší popis, napr. ``-vvvv``)
+- to či je unit na sieti je možné zistiť napríklad pomocou ``ping www.google.com``
+- na reštart siete slúži príkaz ``sudo /etc/init.d/networking restart``
 - ak chceme zistiť z ľubovoľného PC, či sa môžeme prihlásiť a či je unit na sieti, 
-  zadáme ``ssh ubuntu@ip.ad.re.sa``
+  zadáme ``ifconfig``, kde zistím *inet addr* a napríklad z notebooku 
+  zadám ``ssh ubuntu@ip.ad.re.sa(inet)``
 
 **2. krok:** inicializácia unitu
 
@@ -110,10 +128,14 @@ Server
   identifikátor vzdialeného PC
 - jeho obsahom bude *názov GIS.lab* unit-u, *Ansible ssh host* s IP unit-u a 
   *názov užívateľa*, pod akým sa budeme prihlasovať k unit-u
+
   ``gislab-unit-italy ansible_ssh_host=00.00.00.00 ansible_ssh_user=ubuntu``
+
 - potom spustíme *ansible-playbook* spolu s názvom *inventory* súboru, s ssh kľúčom 
   na pripojenie ku vzdialenému PC a so súborom ``*yml``, ktorý chceme spustiť 
+
   ``ansible-playbook --inventory=gislab-unit-italy.inventory --private-key=<private-SSH-key-file> providers/gislab-unit/gislab-unit.yml``
+
   s konkrétnymi cestami pre súbory ``*.inventory``, *privatekey* a ``gislab-unit.yml`` 
   (od tejto chvíle potrebujeme zdrojáky GIS.lab-u); týmto sa public časť ssh
   prekopíruje na unit a prístup bude možný už len cez *ssh*

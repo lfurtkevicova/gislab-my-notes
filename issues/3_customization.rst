@@ -19,14 +19,18 @@ SERVER
      variant: qwerty
    - layout: cz
      variant: qwerty 
-- v prípade, že ``host_vars`` neobsahuje súbor *gislab_vagrant*, pri vytváraní 
-  klienta sa použije súbor ``all``
+- v prípade, že ``host_vars`` neobsahuje súbor ``gislab_vagrant``, pri vytváraní 
+  klienta sa použije len súbor ``all``; súbor ``gislab_vagrant`` by mal obsahovať 
+  len zmeny
 - konfigurácia inštalácie sa prejaví po aktualizácii pomocou ``vagrant provision``,
   prípadne je potrebné server reštartovať ako ``vagrant reload`` alebo 
   ``vagrant halt`` a ``vagrant up``
 - po novom bootovaní klienta sa zmeny konfiguračné nastavenia prejavia
 - GIS.lab má vlastnú sieť (predvolene 192.168.50.0/24), je to vlastne premenná
-  GISLAB_NETWORK v súbore ``all`` 
+  GISLAB_NETWORK v súbore ``all``; je to nastavené tak, že server má vždy číslo 
+  ``5`` a prvý klient číslo ``50``, t.j. 192.168.50.5 a 192.168.50.50; túto 
+  informáciu je dobré vedieť pri manuálnom bootovaní cez HTTP, kde je potrebné
+  zadať IP adresu servera
 
 KLIENT
 ^^^^^^
@@ -34,7 +38,7 @@ KLIENT
 1) nainštalujeme GIS.lab po stiahnutí *repozitára gis-lab*: ``vagrant up``
 2) prihlásim sa na vagrant server: ``vagrant ssh``
 3) pridám užívateľa: ``sudo gislab-adduser -g User -l GIS.lab -m user@gis.lab -p user user``
-4) prepnem sa do klientskeho root-a: ``gislab-client-shell -i``
+4) prepnem sa do klientskeho root-a: ``sudo gislab-client-shell -i``
 5) urobím si tam čo chcem,napr. nainštalujem grass 
 
 .. code::
@@ -66,15 +70,19 @@ B) UNIT (krabička, škola)
 PRÁCA ADMINISTRÁTORA spravujúceho GIS.lab server:
 -------------------------------------------------
 
-1. záloha *chroot* a *image*
-
-- je dobré zálohovať si klientsky root (skomprimujem do adresára *backup* - vidí
+1. záloha *chroot* a *image*: je dobré zálohovať si klientsky root 
+  (skomprimujem do adresára *backup* - vidí
   iba administrátor); je viac chroot-ov, klient môže byť desktop-ový alebo web-ový, 
-  atď.; tu je príklad pre desktop-ový chroot:
-  ``sudo tar cjf /mnt/backup/client-desktop-root-`date -I`.tar.bz2 /opt/gislab/system/clients/desktop/root`` 
-  a tiež image (binárny súbor, ktorý Ivan nazval ako *.img) 
-  ``sudo cp -a /opt/gislab/system/clients/desktop/image /mnt/backup/client-desktop-image-`date -I``
-  (image vlastne ani nemusím zálohovať, lebo ten vždy vytvorím z chroot-a)
+  atď.; tu je príklad pre desktop-ový chroot a tiež image - binárny súbor, 
+  ktorý Ivan nazval ako ``*.img``; image vlastne ani nemusím zálohovať, lebo 
+  ten vždy vytvorím z chroot-a
+
+.. code::
+ 
+   sudo tar cjf /mnt/backup/client-desktop-root-`date -I`.tar.bz2 /opt/gislab/system/clients/desktop/root 
+   sudo cp -a /opt/gislab/system/clients/desktop/image /mnt/backup/client-desktop-image-`date -I`
+  
+  
 
 2. vymazanie *chroot* a *image*
    ``sudo rm -r /opt/gislab/system/clients/desktop/root``
