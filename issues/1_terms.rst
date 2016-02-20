@@ -109,3 +109,8 @@ Základné pojmy
 - spustenie prispieva váhou "1", zápis váhou "2" a čítanie váhou "4", kombinácia
   všetkých je potom "721" .. chápem :)
 
+**pozn.:**
+
+- ak chcem zistiť, či funguje pripojenie na internet, jednoduchý príkaz je 
+  napríklad ``ping 8.8.8.8`` (google)
+

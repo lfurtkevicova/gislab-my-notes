@@ -11,4 +11,10 @@ GIS.lab Web
 
 - ``$ export APT_PROXY=http://192.168.99.118:3142`` kvôli cashovaniu balíčkov;
   ak to použijem, pri ďalšom vytváraní servera je to rýchlejšie, pretože nemusím 
-  op  
+  opäť sťahovať balíčky
+
+- po stiahnutí adresára gislab-web:
+
+  ``vagrant up``
+
+  ``vagrant provision``

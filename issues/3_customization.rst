@@ -40,7 +40,9 @@ KLIENT
 2) prihlásim sa na vagrant server: ``vagrant ssh``
 3) pridám užívateľa: ``sudo gislab-adduser -g User -l GIS.lab -m user@gis.lab -p user user``
 4) prepnem sa do klientskeho root-a: ``sudo gislab-client-shell -i``
-5) urobím si tam čo chcem,napr. nainštalujem grass 
+5) urobím si tam čo chcem,napr. nainštalujem gedit 
+
+   ``sudo apt-get update``
 
    ``sudo apt-get install gedit``
 
