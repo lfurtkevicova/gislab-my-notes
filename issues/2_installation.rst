@@ -212,7 +212,7 @@ B.
 
   ``ssh gislab@10.234.1.50 -i ~/.ssh/id_rsa_gislab_unit.pub``
 
-  **pozn:** ak je súbor s verejným ssh kľúčom v zložke ``home/.ssh``, prepínač 
+  **pozn.:** ak je súbor s verejným ssh kľúčom v zložke ``home/.ssh``, prepínač 
   `-i` a cestu netreba zadávať, automaticky ju nájde
 
 - v ďalšom kroku povolíme prístup PC-om, ktorým chceme pomocou MAC adresy 
@@ -226,7 +226,8 @@ B.
   ``sudo gislab-machines -a 00:00:00:00:00:00``
 
 - po tomto zadaní, dostane PC od DHCP IP adresu a pri bootovaní zo siete sa 
-  prihlási do siete GIS.lab
+  prihlási do siete GIS.lab (voľba ONBOARD NIC = **Network Interface Card**, 
+  i.e. ethernet card)
 - z pozície administrátora ďalej zaregistrujem **užívateľa** ``sudo gislab-adduser``
   + prepínače (``-g -e -m -p``)
 

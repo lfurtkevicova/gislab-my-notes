@@ -19,6 +19,7 @@ SERVER
      variant: qwerty
    - layout: cz
      variant: qwerty 
+
 - v prípade, že ``host_vars`` neobsahuje súbor ``gislab_vagrant``, pri vytváraní 
   klienta sa použije len súbor ``all``; súbor ``gislab_vagrant`` by mal obsahovať 
   len zmeny
@@ -41,27 +42,45 @@ KLIENT
 4) prepnem sa do klientskeho root-a: ``sudo gislab-client-shell -i``
 5) urobím si tam čo chcem,napr. nainštalujem grass 
 
-.. code::
+   ``sudo apt-get install gedit``
 
-   sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
-   sudo apt-get update
-   sudo apt-get install grass
 6) prepnem sa naspäť na server pomocou ``exit``
 7) skomprimujem klientsky root adresár, čím vytvorím nový image, z neho budú 
    bootovať klienti: ``gislab-client-image`` (na základe aktuálneho chroot)
 8) vo VirtualBox vytvorím klienta, ktorý bootuje z nového image-u
 
+   **pozn.:**: niektoré zmeny sa prejavia iba pri vytvorené nového klienta
+   (v budúcnosti by to malo byť doriešené) 
+
 B) UNIT (krabička, škola)
 =========================
-- prihlásenie cez ssh, najprv server ``ssh gislab@147.32.131.60 -p 12345 -X``, 
-  potom bežiaci klient ``ssh user@192.168.17.50 -X``
+
+- použijeme vopred pripravené customizačné skripty a spustíme ich pomocou 
+  ``ansible-playbook``, napríklad spustenie súboru pre customizáciu servera 
+  s názvom ``gislab-server-customize.yml``,
+  ktorý máme uložený v adresári ``gislab-customization`` by vyzeralo
+
+  ``ansible-playbook --inventory=../gislab/gislab-unit-fem.inventory --private-key=~/.ssh/id_rsa_gislab_unit gislab-server-customize.yml``
+
+  spustenie súboru pre kompiláciu GRASS GIS
+
+  ``ansible-playbook --inventory=../gislab/gislab-unit-fem.inventory --private-key=~/.ssh/id_rsa_gislab_unit gislab-grass-trunk.yml``
+
+  a pre customizáciu klienta
+
+  ``ansible-playbook --inventory=../gislab/gislab-unit-fem.inventory --private-key=~/.ssh/id_rsa_gislab_unit gislab-client-customize.yml``
+
+  tento script (scripty) sa od inštalácie líši ``*.yml`` súborom na konci
+
+- prihlásenie cez ssh, najprv užívateľ (user) ``ssh gislab@<IP od FEM> -p 12345 -X``, 
+  potom bežiaci klient ``ssh gislab@c.50 -X``
 
 - pri customizácii klienta musia byť príkazy customizácie zadávané v *chroot*; 
   príkazom `sudo gislab-client-shell -i` sa dostanem do chroot-a, tam niečo 
   napríklad nainštalujem, odhlásim sa klasicky ako `exit` a skriptom 
   `sudo gislab-client-image` 
   vytvorím nový image, t.j. skomprimovaný chroot (pri každej aktualizácii 
-  GIS.lab-u sú klientsky root a image prepísané na východzí - originál)
+  GIS.lab-u sú klientsky root - *chroot* a *image* prepísané na východzí - originál)
 - v ``host_vars`` pri unit-e sa konfiguračný súbor inštalácie nevolá 
   ``gislab_vagrant``, ale volá sa rovnako ako unit (v tomto súbore je dobré 
   editovať hlavne IP rozsah, na ktorej bude fungovať GIS.lab sieť; klienti budú
@@ -77,13 +96,10 @@ PRÁCA ADMINISTRÁTORA spravujúceho GIS.lab server:
   ktorý Ivan nazval ako ``*.img``; image vlastne ani nemusím zálohovať, lebo 
   ten vždy vytvorím z chroot-a
 
-.. code::
+   ``sudo tar cjf /mnt/backup/client-desktop-root-`date -I`.tar.bz2 /opt/gislab/system/clients/desktop/root``
  
-   sudo tar cjf /mnt/backup/client-desktop-root-`date -I`.tar.bz2 /opt/gislab/system/clients/desktop/root 
-   sudo cp -a /opt/gislab/system/clients/desktop/image /mnt/backup/client-desktop-image-`date -I`
+   ``sudo cp -a /opt/gislab/system/clients/desktop/image /mnt/backup/client-desktop-image-`date -I` ``
   
-  
-
 2. vymazanie *chroot* a *image*
    ``sudo rm -r /opt/gislab/system/clients/desktop/root``
    ``sudo rm -r /opt/gislab/system/clients/desktop/image``
@@ -100,9 +116,13 @@ PRÁCA ADMINISTRÁTORA spravujúceho GIS.lab server:
   `before-delete`, `after-delete` a `files`; napr. to vo `files` sa pri novom 
   užívateľovi prekopíruje do jeho `home`
 
-*Prepínanie image-ov*:
+  *Prepínanie image-ov*:
 
 - v `opt/.../client/` vytvorím link pomocou `ln -s` ako `sudo ln -s 'cesta_kde' 'cesta_image'`
 
- 
+  **pozn.:** v prípade, že užívateľ nabootuje s predvolenou customizáciou (*image*)
+  a následne zmeníme image, pri odhlásení je upozornený na to, že existuje nový
 
+  **pozn.:** môže sa stať, že niektoré ikony v lište užívateľa ostanú ako 
+  nefunkčné (akoby stopa po predchádzajúcom *image*, z ktorého klient bootoval); 
+  pri vytvorení nového užívateľa je všetko v poriadku (podľa aktuálneho *image*)
