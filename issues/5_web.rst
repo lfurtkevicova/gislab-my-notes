@@ -15,7 +15,7 @@ GIS.lab Web
 
 - dôležitou súčasťou je **GIS.lab QGIS plugin** 
 - umožňuje vytvoriť GIS.lab Web-ovú reprezentáciu (balíček) z akéhokoľvek QGIS 
-  projektu  
+  projektu
 - je možné pridávať podkladové mapy, vytvárať témy zo zoznamu vrstiev, nastaviť
   prístupové obmedzenia alebo platnosť projektu
 - softvérové požiadavky: Linux/Mac, Git, VirtualBox, Vagrant, Ansible 1.9
@@ -23,6 +23,12 @@ GIS.lab Web
 - ``$ export APT_PROXY=http://192.168.99.118:3142`` kvôli cashovaniu balíčkov;
   ak to použijem, pri ďalšom vytváraní servera je to rýchlejšie, pretože nemusím 
   opäť sťahovať balíčky
+
+- ``git clone https://github.com/gislab-npo/gislab-web.git``
+
+  alebo 
+
+  ``git pull``
 
 - po stiahnutí adresára gislab-web:
 
@@ -34,7 +40,7 @@ GIS.lab Web
 
 - development services (mapový, webový server, django... )
 
-- tmux rozdeli terminál na plochy, koré potrebujem (logy z webové serveru = vľavo 
+- tmux rozdelí terminál na plochy, koré potrebujem (logy z webové serveru = vľavo 
   dolu; obecné správy, s PCmôžem komunikovať cez http ...  
   mapový server = vpravo dole, vykreslovanie geodát ...)
 - vypublikované súbory ako nové súbory s timestamp-om
@@ -43,8 +49,18 @@ GIS.lab Web
 
   ``/vagrant/utils/tmux-dev.sh``
 
+- projekty
+
   ``https://localhost:8000?PROJECT=vagrant/natural-earth/central-europe``
+  ``https://localhost:8000?PROJECT=vagrant/skkn-tool/gw-kn-vedenie``
+  ``https://localhost:8000?PROJECT=vagrant/praha-ruian/praha-ruian``
+  ``https://localhost:8000?PROJECT=vagrant/gismentors/qz-dmt``
+  
 
   ``tmux kill-session``
 
+  ``logout``
+
   ``vagrant halt``
+
+
