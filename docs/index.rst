@@ -12,11 +12,11 @@ Welcome to the GIS.lab documentation!
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
-   cs/index
    en/index
    sk/index
+   cs/index
 
 ==================
 Indices and tables
