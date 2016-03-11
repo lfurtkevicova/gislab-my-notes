@@ -88,8 +88,7 @@ B) UNIT (krabička, škola)
   editovať hlavne IP rozsah, na ktorej bude fungovať GIS.lab sieť; klienti budú
   potom so štvormiestnym číslom 192.168.50.xx)
 
-PRÁCA ADMINISTRÁTORA spravujúceho GIS.lab server:
--------------------------------------------------
+*PRÁCA ADMINISTRÁTORA spravujúceho GIS.lab server:*
 
 1. záloha *chroot* a *image*: je dobré zálohovať si klientsky root 
   (skomprimujem do adresára *backup* - vidí
