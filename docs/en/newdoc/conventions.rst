@@ -1,9 +1,13 @@
 .. some substitutions:
 
 .. |GL| replace:: GIS.lab
-.. |caution| image:: warning.png
-	     :width: 1em
-             :alt: Warning!
+.. |tip| image:: tip.png
+   :width: 1.5em
+.. |att| image:: attention.png
+   :width: 2.5em
+.. |note| image:: note.png
+   :width: 1.5em
+
 
 ***********
 Conventions
@@ -57,11 +61,11 @@ attention to a particular part of a code block, the relevant lines or items.
 `Plain text` indicates menu titles, menu options, menu buttons, and keyboard 
 accelerators.
 
-.. tip:: This signifies a tip, suggestion, or general useful note.
+.. tip:: |tip| This signifies a tip, suggestion, or general useful note.
 
-.. attention:: |caution| This style indicates a warning or caution.
+.. attention:: |att| This style indicates a warning or caution.
 
-.. important:: text
+.. note:: |note| This is note.
 
 Other roles like :superscript:`superscript` and :subscript:`subscript` text.
 
