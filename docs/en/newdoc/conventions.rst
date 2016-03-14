@@ -1,3 +1,10 @@
+.. some substitutions:
+
+.. |GL| replace:: GIS.lab
+.. |caution| image:: warning.png
+	     :width: 1em
+             :alt: Warning!
+
 ***********
 Conventions
 ***********
@@ -31,12 +38,6 @@ Paragraphs
 Parts
 #####
 
-*Italic* indicates new terms, URLs, email addresses, filenames, file extensions, 
-pathnames, directories, and Unix utilities.*
-
-**Bold** shows commands or other text indicates that we wish to draw your 
-attention to a particular part of a code block, the relevant lines or items.
-
 ``Code text`` represents code, commands, options, switches, variables, 
 attributes, keys, functions, types, classes, namespaces, methods, modules, 
 properties, parameters, values, objects, events, event handlers, tags, macros, 
@@ -47,20 +48,20 @@ parts are written in blocks as follows:
 
 	<code block>
 
+*Italic* indicates new terms, URLs, email addresses, filenames, file extensions, 
+pathnames, directories, and Unix utilities.
+
+**Bold** shows commands or other text indicates that we wish to draw your 
+attention to a particular part of a code block, the relevant lines or items.
+
 `Plain text` indicates menu titles, menu options, menu buttons, and keyboard 
 accelerators.
 
 .. tip:: This signifies a tip, suggestion, or general useful note.
 
-.. warning:: This style indicates a warning or caution.
-
-.. attention:: text
-
-.. hint:: text
+.. attention:: |caution| This style indicates a warning or caution.
 
 .. important:: text
-
-.. amonition:: text
 
 Other roles like :superscript:`superscript` and :subscript:`subscript` text.
 
@@ -77,4 +78,17 @@ Lists and Quote-like blocks are written as follows:
 
 **term**
    term of definition list ...
+
+For usage of footnotes, see [#name]_, citations or references, see ref_, 
+example of substitution is e.g. |GL|, 
+
+.. rubric:: Footnotes
+
+.. [#name] The first footnote.
+
+Referencies:
+
+.. [ref] 
+
+
 
