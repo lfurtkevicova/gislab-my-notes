@@ -1,8 +1,8 @@
 Customizácia
 ------------
 
-A) VIRTUAL (môj PC)
-===================
+A) VIRTUAL
+==========
 
 SERVER
 ^^^^^^
@@ -54,8 +54,8 @@ KLIENT
    **pozn.:**: niektoré zmeny sa prejavia iba pri vytvorené nového klienta
    (v budúcnosti by to malo byť doriešené) 
 
-B) UNIT (krabička, škola)
-=========================
+B) UNIT
+=======
 
 - použijeme vopred pripravené customizačné skripty a spustíme ich pomocou 
   ``ansible-playbook``, napríklad spustenie súboru pre customizáciu servera 

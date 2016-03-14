@@ -2,8 +2,8 @@
 Quick Start
 ***********
 
-A) VIRTUAL (môj PC)
-===================
+A) VIRTUAL
+==========
 
 Server
 ^^^^^^
@@ -49,8 +49,8 @@ Klient
   bude sa snažiť bootovať z neho, ale nepodarí sa to, keďže registrovaná MAC tam
   nie je)
 
-B) UNIT (krabička)
-==================
+B) UNIT
+=======
 
 - krabička (budúci server) musí spĺňať isté požiadavky (16 GB RAM, CPU Intel 
   Core i5, ...)

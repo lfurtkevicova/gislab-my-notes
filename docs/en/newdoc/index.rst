@@ -8,3 +8,5 @@ page once ready.*
 
 .. toctree::
    :maxdepth: 2
+
+   conventions

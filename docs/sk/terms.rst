@@ -4,8 +4,8 @@ Základné pojmy
 
 **Ansible** 
 
-- automatizačný nástroj na správu systémov; používa sa pri unite; konfigurácia 
-  je v *yaml* súboroch
+- automatizačný nástroj na správu systémov, používa sa pri unite, konfigurácia 
+  je v tzv. **yaml** súboroch
 
 **Barrel folder**
 
