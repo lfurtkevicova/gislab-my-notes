@@ -7,6 +7,6 @@ for other versions will be available from official GIS.lab Documentation
 page once ready.*
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    conventions

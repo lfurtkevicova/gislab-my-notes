@@ -6,7 +6,7 @@
 .. |att| image:: attention.png
    :width: 2.5em
 .. |note| image:: note.png
-   :width: 2em
+   :width: 1.5em
 .. |important| image:: important.png
    :width: 1.5em
 
@@ -89,21 +89,21 @@ Lists and Quote-like blocks are written as follows:
 
 For usage of footnotes, see [#name]_, example of substitution is e.g. |GL| 
 written as \|GL|, external hyperlinks are represented as `GIS.lab web page <http://web.gislab.io/>`_, for reference to some picture, see :ref:`some-figure-s` 
-and :ref:`some-figure-m`.
+and :ref:`some-figure-m`
 
 .. _some-figure-s:
 
 .. figure:: gislab-unit.png
    :width: 155
 
-   GIS.lab unit, small.
+   GIS.lab unit small.
 
 .. _some-figure-m:
 
 .. figure:: gislab-unit.png
    :width: 310
 
-   GIS.lab unit, middle.
+   GIS.lab unit middle.
 
 .. rubric:: Footnotes
 
