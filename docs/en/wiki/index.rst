@@ -1,6 +1,6 @@
-******************
-User documentation
-******************
+**********************
+Original documentation
+**********************
 
 *This documentation is valid only for development version. Documentation
 for other versions will be available from official GIS.lab Documentation
@@ -21,9 +21,8 @@ page once ready.*
 Get Involved and Support
 ------------------------
 
--  `Communication <Communication-channels>`_ - communication
-   channels
--  `Road Map to 1.0 <Road-Map-to-1.0>`__ - road map to first really
+-  :ref:`communication` - communication channels
+-  :ref:`roadmap` - road map to first really
    production ready version
 -  `Get Involved <wiki/Get-Involved>`__ - team structure with list of
    required skills and responsibilities
