@@ -5,10 +5,10 @@
    :width: 2.5em
 .. |att| image:: attention.png
    :width: 2.5em
-.. |note| image:: note_.png
+.. |note| image:: note.png
    :width: 2em
 .. |important| image:: important.png
-   :width: 2em
+   :width: 1.5em
 
 
 ***********
