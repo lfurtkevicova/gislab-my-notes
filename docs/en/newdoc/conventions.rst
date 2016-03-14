@@ -5,10 +5,10 @@
    :width: 2.5em
 .. |att| image:: attention.png
    :width: 2.5em
-.. |note| image:: note.png
-   :width: 1.5em
+.. |note| image:: note_.png
+   :width: 2em
 .. |important| image:: important.png
-   :width: 1.5em
+   :width: 2em
 
 
 ***********
@@ -67,9 +67,9 @@ accelerators.
 
 .. attention:: |att| This style indicates a warning or caution.
 
-.. note:: |note| This is note.
-
 .. important:: |important| This represents something important.
+
+.. note:: |note| This is note.
 
 Other roles like :superscript:`superscript` and :subscript:`subscript` text.
 
@@ -87,38 +87,26 @@ Lists and Quote-like blocks are written as follows:
 **Useful term**
    term of definition list ...
 
-For usage of footnotes, see [#name]_, citations or references, see ref_, 
-example of substitution is e.g. |GL| written as \|GL|, for usage of external 
-hyperlinks, see e.g. `GIS.lab web page <http://web.gislab.io/>`_, for reference
-to some picture, see :ref:`some-figure`.
+For usage of footnotes, see [#name]_, example of substitution is e.g. |GL| 
+written as \|GL|, external hyperlinks are represented as `GIS.lab web page <http://web.gislab.io/>`_, for reference to some picture, see :ref:`some-figure-s` 
+and :ref:`some-figure-m`.
 
-.. _some-figure:
+.. _some-figure-s:
 
 .. figure:: gislab-unit.png
    :width: 155
 
    GIS.lab unit, small.
 
-.. _some-figure:
+.. _some-figure-m:
 
 .. figure:: gislab-unit.png
    :width: 310
 
    GIS.lab unit, middle.
 
-.. _some-figure:
-
-.. figure:: gislab-unit.png
-   :width: 620
-
-   GIS.lab unit, large.
-
 .. rubric:: Footnotes
 
-.. [#name] The first footnote.
-
-Referencies:
-
-.. [ref] 
+.. [#name] Some footnote.
 
 
