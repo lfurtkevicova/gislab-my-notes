@@ -1,3 +1,4 @@
 *.pyc
-docs/_build
+docs/.build
+docs/.mynotes
 *~

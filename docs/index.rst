@@ -14,9 +14,9 @@ Contents:
 .. toctree::
    :maxdepth: 1
 
-   en/index
-   sk/index
-   cs/index
+   conventions
+   wiki/index
+   newdoc/index
 
 ==================
 Indices and tables
