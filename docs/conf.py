@@ -21,9 +21,7 @@ sys.path.insert(0, os.path.abspath('extensions'))
 extensions = ['sphinx.ext.autodoc', 'sphinx.ext.doctest', 'sphinx.ext.todo',
               'sphinx.ext.coverage', 'sphinx.ext.pngmath', 'sphinx.ext.ifconfig',
 	      'sphinx.ext.autosummary', 'sphinx.ext.graphviz',
-    	      'sphinx.ext.intersphinx', 'sphinx.ext.todo', 
-	      'matplotlib.sphinxext.only_directives', 
-	      'matplotlib.sphinxext.plot_directive']
+    	      'sphinx.ext.intersphinx', 'sphinx.ext.todo']
 
 todo_include_todos = True
 
