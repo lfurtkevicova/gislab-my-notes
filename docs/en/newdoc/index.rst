@@ -7,6 +7,8 @@ for other versions will be available from official GIS.lab Documentation
 page once ready.*
 
 .. toctree::
-   :maxdepth: 1
+   :numbered:
+   :titlesonly:
+   :maxdepth: 2
 
    conventions

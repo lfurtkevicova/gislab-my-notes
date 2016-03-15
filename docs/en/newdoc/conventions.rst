@@ -20,10 +20,8 @@ In this documentation, you will find number of styles of text that distinguish
 between different kinds of information. Here are some types of headings, 
 examples of typographical 
 conventions, styles, and an explanation of their meaning.
-
-********
-Chapters
-********
+For style of chapter names see :ref:`Conventions <conventions>`, others are
+shown below. 
 
 ========
 Sections
@@ -90,7 +88,7 @@ Lists and Quote-like blocks are written as follows:
 
 For usage of footnotes, see [#name]_, example of substitution is e.g. |GL| 
 written as \|GL|, external hyperlinks are represented as `GIS.lab web page <http://web.gislab.io/>`_, for reference to some picture, see :ref:`some-figure-s` 
-and :ref:`some-figure-m`, for reference to some part of page, see :ref:`Conventions <conventions>`
+and :ref:`some-figure-m`, for reference to some part of page, see :ref:`Conventions <conventions>`.
 
 .. _some-figure-s:
 
