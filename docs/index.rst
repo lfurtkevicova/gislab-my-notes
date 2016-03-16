@@ -13,7 +13,7 @@
 
 .. figure:: img/gislab_screen.png
    :align: center
-   :width: 450
+   :width: 500
 
 ========
 Contents
