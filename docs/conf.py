@@ -24,6 +24,7 @@ extensions = ['sphinx.ext.autodoc', 'sphinx.ext.doctest', 'sphinx.ext.todo',
     	      'sphinx.ext.intersphinx', 'sphinx.ext.todo', 'autoimage','numfig']
 
 todo_include_todos = True
+file_insertion_enabled = True
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['.templates']
@@ -88,6 +89,9 @@ pygments_style = 'sphinx'
 # If true, keep warnings as "system message" paragraphs in the built documents.
 #keep_warnings = False
 
+rst_epilog = """
+.. include:: ../.substitutions.rst
+"""
 
 # -- Options for HTML output ----------------------------------------------
 
@@ -118,7 +122,7 @@ html_logo = 'logo.svg'
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
-html_favicon = 'logo.svg'
+html_favicon = 'logo.ico'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -172,7 +176,7 @@ html_static_path = ['.static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'GISlabdoc'
+#htmlhelp_basename = 'GISlabdoc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -236,8 +240,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'GISlab', u'GIS.lab Documentation',
-   u'GIS.lab team', 'GISlab', 'One line description of project.',
+  ('index', 'GIS.lab', u'GIS.lab',
+   u'GIS.lab team', 'GIS.lab', 'One line description of project.',
    'Miscellaneous'),
 ]
 

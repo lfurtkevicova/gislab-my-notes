@@ -1,19 +1,3 @@
-.. some substitutions:
-
-.. |GL| replace:: GIS.lab
-.. |tip| image:: ../img/tip.png
-   :width: 2.5em
-.. |att| image:: ../img/attention.png
-   :width: 2.5em
-.. |note| image:: ../img/note.png
-   :width: 1.5em
-.. |important| image:: ../img/important.png
-   :width: 1.5em
-.. |todo| image:: ../img/todo.png
-   :width: 2em
-.. |see| image:: ../img/see.png
-   :width: 1.5em
-
 .. _conventions:
 
 ***********
@@ -96,15 +80,19 @@ Other roles like :superscript:`superscript` and :subscript:`subscript` text.
 
 .. raw:: html
 
-   <font color="silver"> Useful term </font>
-term of definition list
+   <font color="silver"> Useful terms </font> 
 
-For usage of footnotes, see [#name]_, example of substitution is e.g. |GL| 
+are represented with grey color. 
+
+Commands are written as :command:`Some command`, guilabel as 
+:guilabel:`Guilabel`, direction through a menu is displayed as 
+:menuselection:`First step --> Second step`, name of file is represented by 
+:file:`file.svg`. For usage of footnotes, see [#name]_, example of 
+substitution is e.g. |GL| 
 written as \|GL|, external hyperlinks are represented as `GIS.lab web page <http://web.gislab.io/>`_, for reference to some picture, see :num:`#some-figure-t`, 
 :num:`#some-figure-s`, :num:`#some-figure-m` and :num:`#some-figure-l`, 
 for reference to some part of page, 
-see :ref:`Conventions <conventions>`, to download file try 
-:download:`GIS.lab logo <https://github.com/gislab-npo/gislab-web/blob/master/clients/src/web/styles/map/image_logo.svg>`.
+see :ref:`Conventions <conventions>`, to include files as part of the build process e.g. :download:`GIS.lab logo <https://github.com/gislab-npo/gislab-web/blob/master/clients/src/web/styles/map/image_logo.svg>` is used.
 
 .. rubric:: Short paragraphs:
 
@@ -112,15 +100,17 @@ see :ref:`Conventions <conventions>`, to download file try
 
 .. attention:: |att| This style indicates a warning or caution.
 
+.. note:: |note| This is note.
+
 .. important:: |important| This represents something important.
 
-.. note:: |note| This is note.
+.. danger:: |danger| This style indicates a warning or caution.
+
+.. seealso:: |see| This note leads the user to another material that is on the similar level of scope.
 
 .. note is displayed only if ``todo_include_todos`` in ``conf.py`` is set as ``True``.
 
 .. todo:: |todo| This signifies some issue to be done next time.
-
-.. seealso:: |see| This is a simple **seealso** note.
 
 .. sidebar:: Some Sidebar 
 
@@ -211,7 +201,6 @@ see :ref:`Conventions <conventions>`, to download file try
     * J
     * K
     * L 
-
 
 .. rubric:: Footnotes:
 
