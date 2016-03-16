@@ -7,9 +7,9 @@
 .. rubric:: Welcome to the GIS.lab documentation!
    :align:   center
 
-=====================================
-Welcome to the GIS.lab documentation!
-=====================================
+.. raw:: html
+
+   <h1><CENTER>Welcome to the GIS.lab documentation!</CENTER></h1>
 
 .. figure:: img/gislab_screen.png
    :align: center
