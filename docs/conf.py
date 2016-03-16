@@ -16,12 +16,12 @@ import sys
 import os
 import sphinx_rtd_theme
 
-sys.path.insert(0, os.path.abspath('extensions'))
+sys.path.append(os.path.abspath('.extensions'))
 
 extensions = ['sphinx.ext.autodoc', 'sphinx.ext.doctest', 'sphinx.ext.todo',
               'sphinx.ext.coverage', 'sphinx.ext.pngmath', 'sphinx.ext.ifconfig',
 	      'sphinx.ext.autosummary', 'sphinx.ext.graphviz',
-    	      'sphinx.ext.intersphinx', 'sphinx.ext.todo']
+    	      'sphinx.ext.intersphinx', 'sphinx.ext.todo', 'autoimage','numfig']
 
 todo_include_todos = True
 
@@ -113,7 +113,7 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-html_logo = 'logo.png'
+html_logo = 'logo.svg'
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32

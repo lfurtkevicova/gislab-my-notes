@@ -1,17 +1,17 @@
 .. some substitutions:
 
 .. |GL| replace:: GIS.lab
-.. |tip| image:: images/tip.png
+.. |tip| image:: ../img/tip.png
    :width: 2.5em
-.. |att| image:: images/attention.png
+.. |att| image:: ../img/attention.png
    :width: 2.5em
-.. |note| image:: images/note.png
+.. |note| image:: ../img/note.png
    :width: 1.5em
-.. |important| image:: images/important.png
+.. |important| image:: ../img/important.png
    :width: 1.5em
-.. |todo| image:: images/todo.png
+.. |todo| image:: ../img/todo.png
    :width: 2em
-.. |see| image:: images/see.png
+.. |see| image:: ../img/see.png
    :width: 1.5em
 
 .. _conventions:
@@ -100,10 +100,11 @@ Other roles like :superscript:`superscript` and :subscript:`subscript` text.
 term of definition list
 
 For usage of footnotes, see [#name]_, example of substitution is e.g. |GL| 
-written as \|GL|, external hyperlinks are represented as `GIS.lab web page <http://web.gislab.io/>`_, for reference to some picture, see :ref:`some-figure-s` 
-and :ref:`some-figure-m`, for reference to some part of page, 
+written as \|GL|, external hyperlinks are represented as `GIS.lab web page <http://web.gislab.io/>`_, for reference to some picture, see :num:`#some-figure-t`, 
+:num:`#some-figure-s`, :num:`#some-figure-m` and :num:`#some-figure-l`, 
+for reference to some part of page, 
 see :ref:`Conventions <conventions>`, to download file try 
-:download:`Vagrant logo <https://github.com/lfurtkevicova/gislab-my-notes/blob/master/presentations/images/vagrant.png?raw=true>`.
+:download:`GIS.lab logo <https://github.com/gislab-npo/gislab-web/blob/master/clients/src/web/styles/map/image_logo.svg>`.
 
 .. rubric:: Short paragraphs:
 
@@ -121,6 +122,10 @@ see :ref:`Conventions <conventions>`, to download file try
 
 .. seealso:: |see| This is a simple **seealso** note.
 
+.. sidebar:: Some Sidebar 
+
+   ...
+
 .. rubric:: Lists and Quote-like blocks:
 
 #. numbered list 
@@ -132,27 +137,39 @@ see :ref:`Conventions <conventions>`, to download file try
 
 .. rubric: Sidebars:
 
-.. sidebar:: Some Sidebar 
-
-   ...
-
 .. rubric:: Figures:
+
+.. _some-figure-t:
+
+.. figure:: ../img/login_text_logo.svg
+   :align: center
+   :width: 150
+
+   GIS.lab unit tiny.
 
 .. _some-figure-s:
 
-.. figure:: images/gislab-unit.png
+.. figure:: ../img/login_text_logo.svg
    :align: center
-   :width: 155
+   :width: 250
 
    GIS.lab unit small.
 
 .. _some-figure-m:
 
-.. figure:: images/gislab-unit.png
+.. figure:: ../img/login_text_logo.svg
    :align: center
-   :width: 310
+   :width: 450
 
    GIS.lab unit middle.
+
+.. _some-figure-l:
+
+.. figure:: ../img/login_text_logo.svg
+   :align: center
+   :width: 750
+
+   GIS.lab unit large.
 
 .. rubric:: Tables:
 
