@@ -7,9 +7,11 @@
 Welcome to the GIS.lab documentation!
 =====================================
 
-.. note:: GIS.lab is still in pre-release state
+.. figure:: img/gislab_screen.png
+   :align: center
+   :width: 450
 
-Contents:
+.. rubric:: Contents:
 
 .. toctree::
    :maxdepth: 1
@@ -26,3 +28,4 @@ Indices and tables
 * :ref:`modindex`
 * :ref:`search`
 
+.. note:: GIS.lab is still in pre-release state
