@@ -16,3 +16,11 @@ part. We try to explain in detail what :ref:`GIS.lab <gislab>`,
 :ref:`GIS.lab Web <gislab-web>` and :ref:`GIS.lab Mobile <gislab-mobile>` 
 are, and we even tell you how to install 
 and how to use every of these pieces in the most efficient way. 
+
+Firstly, there are sections related to introduction like 
+:ref:`Learning about the pieces <about>` or :ref:`Useful terms <terms>`.
+To distinguish between different kinds of information we use some typographical
+and stylistic features, see chapter
+:ref:`Conventions used in this documentation <conventions>`. 
+In case you feel sufficiently familiar with all the introductory parts just skip 
+them and go straight away to :ref:`GIS.lab Manual <gislab-manual>`.
