@@ -1,6 +1,8 @@
 .. |note| image:: img/note.png
    :width: 1.5em
 
+.. _gislab-main:
+
 .. GIS.lab documentation master file, created by
    sphinx-quickstart on Fri Mar 11 12:08:21 2016.
    You can adapt this file completely to your liking, but it should at least
@@ -10,9 +12,10 @@
 
    <h1><center>Welcome to GIS.lab documentation!</center></h1>
    <p>
-   <center>Your voyage to land of GIS.lab starts here. Go beyond the basics and 
-   unleash the full power of GIS.lab with useful, step-by-step examples how to 
-   install it, use it and take your first step. </center>
+   <center><font color="gray">Your voyage to land of GIS.lab starts here. 
+   Go beyond the basics and unleash the full power of GIS.lab with useful,
+   step-by-step examples how to install it, use it and take your first 
+   step. </font></center>
    <p>
 
 .. figure:: img/gislab_screen.png
@@ -28,10 +31,10 @@ Contents
 
    start
    about
-   credits
    terms
    conventions
    user_manual/index
+   credits
    wiki/index
 
 ==================

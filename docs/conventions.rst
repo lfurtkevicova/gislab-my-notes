@@ -1,18 +1,3 @@
-.. |tip| image:: img/tip.png
-   :width: 2.5em
-.. |att| image:: img/attention.png
-   :width: 2.5em
-.. |todo| image:: img/todo.png
-   :width: 1.5em
-.. |see| image:: img/see.png
-   :width: 1.5em
-.. |note| image:: img/note.png
-   :width: 1.5em
-.. |important| image:: img/important.png
-   :width: 1.5em
-.. |danger| image:: img/danger.png
-   :width: 1.5em
-
 .. _conventions:
 
 **************************************
@@ -26,63 +11,11 @@ between different kinds of information. Here are some types of headings,
 examples of typographical conventions, styles, and an explanation of their 
 meaning.
 
-.. rubric:: This is style of paragraph heading e.g. Types of Headings:
+.. _styles-text:
 
-For style of chapter names, please :ref:`see <conventions>` chapter name above,
-others are shown below.
-
-========
-Sections
-========
-
------------
-Subsections
------------
-
-^^^^^^^^^^^^^^
-Subsubsections
-^^^^^^^^^^^^^^
-
-""""""""""
-Paragraphs
-""""""""""
-
-#####
-Parts
-#####
-
-.. rubric:: Styles of text:
-
-``Code text`` represents code, commands, options, switches, variables, 
-attributes, keys, functions, types, classes, namespaces, methods, modules, 
-properties, parameters, values, objects, events, event handlers, tags, macros, 
-the contents of files, or the output from commands. More comprehensive
-parts are written in blocks as follows: 
-
-.. code::
-
-	<code block>
-
-.. code-block:: python
-   :emphasize-lines: 3
-
-   some python code
-   if re.match(r'^\d{3}-\d{4}$', test_string):
-   some python code highlighted
-   some python code 
-
-.. code-block:: sh
-   :linenos:
-
-   some numbered shell script code
-   if ! [ $MAX_NO -ge 5 -a $MAX_NO -le 9 ] ; then
-   some numbered shell script code
-
-.. code-block:: sql
-  
-   some sql statement
-   ORDER BY Name ASC;
-   some sql statement
+==============
+Styles of text
+==============
 
 *Italic* indicates new terms, URLs, email addresses, filenames, file extensions, 
 pathnames, directories, and Unix utilities.
@@ -93,15 +26,40 @@ attention to a particular part of a code block, the relevant lines or items.
 `Plain text` indicates menu titles, menu options, menu buttons, and keyboard 
 accelerators.
 
-Other roles like :superscript:`superscript` and :subscript:`subscript` text.
+Other roles like :superscript:`superscript` and :subscript:`subscript` text are 
+displayed in this way.
 
-.. raw:: html
+*Example of useful term*
+   description ... 
 
-   <font color="silver"> Useful terms </font> 
+``Code text`` represents code, commands, options, switches, variables, 
+attributes, keys, functions, types, classes, namespaces, methods, modules, 
+properties, parameters, values, objects, events, event handlers, tags, macros, 
+the contents of files, or the output from commands. More comprehensive
+parts are written in blocks as follows: 
 
-are represented with grey color. 
+.. code-block:: python
+   :emphasize-lines: 3
+   :linenos:
 
-Commands are written as :command:`Some command`, guilabel as 
+   some numbered python code
+   if re.match(r'^\d{3}-\d{4}$', test_string):
+   some numbered python code highlighted
+   some numbered python code 
+
+Shell commands beginning with :command:`$` (dollar) should be run in command window.
+
+.. code-block:: sh
+
+   $ some shell script code
+   $ if ! [ $MAX_NO -ge 5 -a $MAX_NO -le 9 ] ; then
+   $ some shell script code
+
+.. code::
+
+	<various code block>
+
+General commands are written as :command:`Some command`, guilabel as 
 :guilabel:`Guilabel`, direction through a menu is displayed as 
 :menuselection:`First step --> Second step`, name of file is represented by 
 :file:`file.svg`. For usage of footnotes, see [#name]_, external hyperlinks are 
@@ -111,7 +69,9 @@ some picture, see :num:`#some-figure-t`,
 for reference to some part of page, 
 see :ref:`Conventions <conventions>`, to include files as part of the build process e.g. :download:`GIS.lab logo <https://github.com/gislab-npo/gislab-web/blob/master/clients/src/web/styles/map/image_logo.svg>` is used.
 
-.. rubric:: Short paragraphs:
+================
+Short paragraphs
+================
 
 .. tip:: |tip| This signifies a tip, suggestion, or general useful note.
 
@@ -129,22 +89,37 @@ see :ref:`Conventions <conventions>`, to include files as part of the build proc
 
 .. todo:: |todo| This signifies some issue to be done next time.
 
-.. sidebar:: Some Sidebar 
+=================
+Types of Headings
+=================
 
-   :code:`vagrant up`
+For style of chapter names, please :ref:`see <conventions>` chapter name above,
+for example of section, :ref:`see <styles-text>` subsection above, others are 
+shown below.
 
-.. rubric:: Lists and Quote-like blocks:
+----------
+Subsection
+----------
 
-#. numbered list 
-  #. nested numbered list
+^^^^^^^^^^^^^
+Subsubsection
+^^^^^^^^^^^^^
 
-* bulleted list 
+"""""""""
+Paragraph
+"""""""""
 
-  * nested bulleted list
+####
+Part
+####
 
-.. rubric: Sidebars:
+.. rubric:: Paragraph heading 
+   
+etc.
 
-.. rubric:: Figures:
+=======
+Figures
+=======
 
 .. _some-figure-t:
 
@@ -178,19 +153,9 @@ see :ref:`Conventions <conventions>`, to include files as part of the build proc
 
    GIS.lab unit large.
 
-.. rubric:: Tables:
-
-+---------------------------------------+----------------+
-| Contributors to GIS.lab documentation |    Country     |
-+=======================================+================+
-|          Ludmila Furtkevicova         |    Slovakia    |
-+---------------------------------------+----------------+
-|               Ivan Mincik             |    Slovakia    |
-+---------------------------------------+----------------+
-|               Martin Landa            | Czech Republic |
-+---------------------------------------+----------------+
-|                   ...                 |       ...      |
-+---------------------------------------+----------------+
+======
+Tables
+======
 
 .. csv-table:: Table with GIS.lab contributors.
    :header: "Contributors to GIS.lab documentation", "Country"
@@ -201,7 +166,26 @@ see :ref:`Conventions <conventions>`, to include files as part of the build proc
    "Martin Landa", "Czech republic"
    "...", "..."
 
-.. rubric:: Columns:
+=====================================
+Sidebars, lists and quote-like blocks
+=====================================
+
+.. sidebar:: Some Sidebar 
+
+   :code:`vagrant up`
+
+#. numbered list 
+  #. nested numbered list
+
+* bulleted list 
+
+  * nested bulleted list
+
+=======
+Columns
+=======
+
+Example of three columns is shown below.
 
 .. hlist::
     :columns: 3
@@ -219,7 +203,9 @@ see :ref:`Conventions <conventions>`, to include files as part of the build proc
     * K
     * L 
 
-.. rubric:: Footnotes:
+=========
+Footnotes
+=========
 
 .. [#name] Some footnote.
 
