@@ -1,13 +1,30 @@
+.. |tip| image:: img/tip.png
+   :width: 2.5em
+.. |att| image:: img/attention.png
+   :width: 2.5em
+.. |todo| image:: img/todo.png
+   :width: 1.5em
+.. |see| image:: img/see.png
+   :width: 1.5em
+.. |note| image:: img/note.png
+   :width: 1.5em
+.. |important| image:: img/important.png
+   :width: 1.5em
+.. |danger| image:: img/danger.png
+   :width: 1.5em
+
 .. _conventions:
 
-***********
-Conventions
-***********
+**************************************
+Conventions used in this documentation
+**************************************
 
-In this documentation, you will find number of styles of text that distinguish 
+There are many different organizational and typographical features throughout 
+this documentation designed to help you get the most out of the material.
+You will find number of styles of text that distinguish 
 between different kinds of information. Here are some types of headings, 
-examples of typographical 
-conventions, styles, and an explanation of their meaning.
+examples of typographical conventions, styles, and an explanation of their 
+meaning.
 
 .. rubric:: This is style of paragraph heading e.g. Types of Headings:
 
@@ -87,9 +104,9 @@ are represented with grey color.
 Commands are written as :command:`Some command`, guilabel as 
 :guilabel:`Guilabel`, direction through a menu is displayed as 
 :menuselection:`First step --> Second step`, name of file is represented by 
-:file:`file.svg`. For usage of footnotes, see [#name]_, example of 
-substitution is e.g. |GL| 
-written as \|GL|, external hyperlinks are represented as `GIS.lab web page <http://web.gislab.io/>`_, for reference to some picture, see :num:`#some-figure-t`, 
+:file:`file.svg`. For usage of footnotes, see [#name]_, external hyperlinks are 
+represented as `GIS.lab web page <http://web.gislab.io/>`_, for reference to 
+some picture, see :num:`#some-figure-t`, 
 :num:`#some-figure-s`, :num:`#some-figure-m` and :num:`#some-figure-l`, 
 for reference to some part of page, 
 see :ref:`Conventions <conventions>`, to include files as part of the build process e.g. :download:`GIS.lab logo <https://github.com/gislab-npo/gislab-web/blob/master/clients/src/web/styles/map/image_logo.svg>` is used.
@@ -114,7 +131,7 @@ see :ref:`Conventions <conventions>`, to include files as part of the build proc
 
 .. sidebar:: Some Sidebar 
 
-   ...
+   :code:`vagrant up`
 
 .. rubric:: Lists and Quote-like blocks:
 
@@ -131,7 +148,7 @@ see :ref:`Conventions <conventions>`, to include files as part of the build proc
 
 .. _some-figure-t:
 
-.. figure:: ../img/login_text_logo.svg
+.. figure:: img/login_text_logo.svg
    :align: center
    :width: 150
 
@@ -139,7 +156,7 @@ see :ref:`Conventions <conventions>`, to include files as part of the build proc
 
 .. _some-figure-s:
 
-.. figure:: ../img/login_text_logo.svg
+.. figure:: img/login_text_logo.svg
    :align: center
    :width: 250
 
@@ -147,7 +164,7 @@ see :ref:`Conventions <conventions>`, to include files as part of the build proc
 
 .. _some-figure-m:
 
-.. figure:: ../img/login_text_logo.svg
+.. figure:: img/login_text_logo.svg
    :align: center
    :width: 450
 
@@ -155,7 +172,7 @@ see :ref:`Conventions <conventions>`, to include files as part of the build proc
 
 .. _some-figure-l:
 
-.. figure:: ../img/login_text_logo.svg
+.. figure:: img/login_text_logo.svg
    :align: center
    :width: 750
 

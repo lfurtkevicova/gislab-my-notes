@@ -6,12 +6,14 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-.. rubric:: Welcome to the GIS.lab documentation!
-   :align:   center
-
 .. raw:: html
 
-   <h1><CENTER>Welcome to the GIS.lab documentation!</CENTER></h1>
+   <h1><center>Welcome to GIS.lab documentation!</center></h1>
+   <p>
+   <center>Your voyage to land of GIS.lab starts here. Go beyond the basics and 
+   unleash the full power of GIS.lab with useful, step-by-step examples how to 
+   install it, use it and take your first step. </center>
+   <p>
 
 .. figure:: img/gislab_screen.png
    :align: center
@@ -24,9 +26,13 @@ Contents
 .. toctree::
    :maxdepth: 1
 
+   start
+   about
+   credits
+   terms
    conventions
+   user_manual/index
    wiki/index
-   newdoc/index
 
 ==================
 Indices and tables

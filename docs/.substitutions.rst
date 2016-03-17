@@ -1,5 +1,3 @@
-.. |GL| replace:: GIS.lab
-
 .. |tip| image:: ../img/tip.png
    :width: 2.5em
 .. |att| image:: ../img/attention.png

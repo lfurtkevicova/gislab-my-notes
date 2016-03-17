@@ -1,6 +1,6 @@
-*************************
-GitHub wiki documentation
-*************************
+*********************************
+GitHub wiki documentation - draft
+*********************************
 
 *This documentation is valid only for development version. Documentation
 for other versions will be available from official GIS.lab Documentation
