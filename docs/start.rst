@@ -4,8 +4,8 @@
 Let's get started
 *****************
 
-You may be coming to :ref:`GIS.lab <about>` from another operating system, 
-and we expect that you are probably 
+You may be coming to :ref:`GIS.lab <about>` from various operating system, 
+but we expect that you are probably 
 familiar with browsing the Web, writing documents, sending email and doing other 
 jobrelated tasks with your computer. Whether you’re somewhat experienced or 
 completely new to computers, this documentation should be very useful for you.
