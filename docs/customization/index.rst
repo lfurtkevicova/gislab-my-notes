@@ -7,5 +7,5 @@ Customization
 .. toctree::
    :maxdepth: 2
 
-   virtual
    physical
+   virtual
