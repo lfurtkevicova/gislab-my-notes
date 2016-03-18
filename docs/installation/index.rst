@@ -1,8 +1,8 @@
-.. _gislab-manual:
+.. _gislab-installation:
  
-******
-Manual
-******
+************
+Installation
+************
 
 Actually, this manual is dedicated to be used as main material for *Workshop*.
 
@@ -10,8 +10,7 @@ Actually, this manual is dedicated to be used as main material for *Workshop*.
    :maxdepth: 2
    :numbered:
 
-   gislab/index
-   gislab-web/index
-   gislab-mobile/index
+   physical
+   virtual
    
    

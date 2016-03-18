@@ -18,9 +18,10 @@ are, and we even tell you how to install
 and how to use every of these pieces in the most efficient way. 
 
 Firstly, there are sections related to introduction like 
-:ref:`Learning about the pieces <about>` or :ref:`Useful terms <terms>`.
+:ref:`Learning about the pieces <about>`, :ref:`Useful terms <terms>` 
+or :ref:`Useful commands <commands>`.
 To distinguish between different kinds of information we use some typographical
 and stylistic features, see chapter
 :ref:`Conventions used in this documentation <conventions>`. 
 In case you feel sufficiently familiar with all the introductory parts just skip 
-them and go straight away to :ref:`GIS.lab Manual <gislab-manual>`.
+them and go straight away to :ref:`GIS.lab Installation <gislab-installation>`.

@@ -32,17 +32,23 @@ Contents
    start
    about
    terms
+   commands
    conventions
-   manual/index
+
+.. toctree::
+   :maxdepth: 2
+   :numbered:
+
+   installation/index
+   customization/index
+   practice/index
+   gislab-web/index
+   gislab-mobile/index
+   wiki/index*
+
+.. toctree::
+   :maxdepth: 1
+
    credits
-   wiki/index
-
-==================
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
 
 .. note:: |note| GIS.lab is still in pre-release state
