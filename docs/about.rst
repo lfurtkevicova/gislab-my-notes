@@ -53,7 +53,7 @@ What about software requirements?
 At a minimum, your PC needs some necessaries. For this kind of facts,
 see `Software requirements <https://github.com/gislab-npo/gislab/wiki/Quick-Start#software-requirements>`_.
 
-.. seealso:: |see| More information related to introduction 
+.. seealso:: |see.| More information related to introduction 
    and basic information are available :ref:`here <quick-start>`.
 
 ==========================
@@ -78,7 +78,7 @@ What is GIS.lab Unit?
 GIS.lab system which is ready for immediate plug-and-play deployment and 
 user friendly management using web administration interface.
 
-.. seealso:: |see| `Technical specification <http://web.gislab.io/pages/gislab-unit>`_
+.. seealso:: |see.| `Technical specification <http://web.gislab.io/pages/gislab-unit>`_
 
 .. _gislab-web:
 
@@ -86,7 +86,7 @@ user friendly management using web administration interface.
 What is GIS.lab Web
 ===================
 
-.. todo:: |todo| GIS.lab Web
+.. todo:: |todo.| GIS.lab Web
 
 .. _gislab-mobile:
 
@@ -94,5 +94,5 @@ What is GIS.lab Web
 What is GIS.lab Mobile
 ======================
 
-.. todo:: |todo| GIS.lab Mobile
+.. todo:: |todo.| GIS.lab Mobile
 

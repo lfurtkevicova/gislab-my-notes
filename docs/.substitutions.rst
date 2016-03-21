@@ -8,29 +8,31 @@
    :width: 1.5em
 .. |note| image:: ../img/note.png
    :width: 1.5em
-.. |important| image:: ../img/important.png
+.. |imp| image:: ../img/important.png
    :width: 1.5em
 .. |danger| image:: ../img/danger.png
    :width: 1.5em
 .. |problem| image:: ../img/problem.png
    :width: 1em
+.. |solution| image:: ../img/solution.png
+   :width: 1em
 
-.. |tip| image:: img/tip.png
+.. |tip.| image:: img/tip.png
    :width: 2.5em
-.. |att| image:: img/attention.png
+.. |att.| image:: img/attention.png
    :width: 2.5em
-.. |todo| image:: img/todo.png
+.. |todo.| image:: img/todo.png
    :width: 1.5em
-.. |see| image:: img/see.png
+.. |see.| image:: img/see.png
    :width: 1.5em
-.. |note| image:: img/note.png
+.. |note.| image:: img/note.png
    :width: 1.5em
-.. |important| image:: img/important.png
+.. |imp.| image:: img/important.png
    :width: 1.5em
-.. |danger| image:: img/danger.png
+.. |danger.| image:: img/danger.png
    :width: 1.5em
-.. |problem| image:: img/problem.png
+.. |problem.| image:: img/problem.png
    :width: 1.5em
-.. |solution| image:: img/solution.png
+.. |solution.| image:: img/solution.png
    :width: 1em
 

@@ -73,21 +73,21 @@ see :ref:`Conventions <conventions>`, to include files as part of the build proc
 Short paragraphs
 ================
 
-.. tip:: |tip| This signifies a tip, suggestion, or general useful note.
+.. tip:: |tip.| This signifies a tip, suggestion, or general useful note.
 
-.. attention:: |att| This style indicates a warning or caution.
+.. attention:: |att.| This style indicates a warning or caution.
 
-.. note:: |note| This is note.
+.. note:: |note.| This is note.
 
-.. important:: |important| This represents something important.
+.. important:: |imp.| This represents something important.
 
-.. danger:: |danger| This style indicates a warning or caution.
+.. danger:: |danger.| This style indicates a warning or caution.
 
-.. seealso:: |see| This note leads the user to another material that is on the similar level of scope.
+.. seealso:: |see.| This note leads the user to another material that is on the similar level of scope.
 
 .. note is displayed only if ``todo_include_todos`` in ``conf.py`` is set as ``True``.
 
-.. todo:: |todo| This signifies some issue to be done next time.
+.. todo:: |todo.| This signifies some issue to be done next time.
 
 =================
 Types of Headings

@@ -43,10 +43,10 @@ Useful terms
 
    DHCP server [#dhcp]_
 
-*GIS.lab client*
+*GIS.lab node*
    GIS.lab client environment which runs on client machine
 
-*GIS.lab server*
+*GIS.lab master* 
    GIS.lab server environment which runs as virtualized system on host machine
 
 *Host machine*
@@ -107,11 +107,9 @@ Useful terms
 
 .. seealso:: |see| 
    
-   `19 Minutes With Ansible <https://sysadmincasts.com/episodes/43-19-minutes-with-ansible-part-1-4>`_
-   
-   `Booting from the network with PXE <https://www.youtube.com/watch?v=zQ-TQhmjhuc>`_
-
-   `Vagrant in 5 minutes <https://opensource.com/business/16/1/lightning-talk-quick-introduction-vagrant?sc_cid=701600000011jJaAAI>`_
+   * `19 Minutes With Ansible <https://sysadmincasts.com/episodes/43-19-minutes-with-ansible-part-1-4>`_
+   * `Booting from the network with PXE <https://www.youtube.com/watch?v=zQ-TQhmjhuc>`_
+   * `Vagrant in 5 minutes <https://opensource.com/business/16/1/lightning-talk-quick-introduction-vagrant?sc_cid=701600000011jJaAAI>`_
    
 
 .. rubric:: Source
