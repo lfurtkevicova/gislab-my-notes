@@ -49,6 +49,7 @@ Contents
 .. toctree::
    :maxdepth: 1
 
+   problems
    credits
 
 .. note:: |note| GIS.lab is still in pre-release state

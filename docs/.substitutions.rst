@@ -12,6 +12,8 @@
    :width: 1.5em
 .. |danger| image:: ../img/danger.png
    :width: 1.5em
+.. |problem| image:: ../img/problem.png
+   :width: 1em
 
 .. |tip| image:: img/tip.png
    :width: 2.5em
@@ -27,3 +29,8 @@
    :width: 1.5em
 .. |danger| image:: img/danger.png
    :width: 1.5em
+.. |problem| image:: img/problem.png
+   :width: 1.5em
+.. |solution| image:: img/solution.png
+   :width: 1em
+
