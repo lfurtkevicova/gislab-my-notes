@@ -4,6 +4,9 @@
 Useful terms
 ************
 
+*AMD64, x86_64*
+   platform, the 64-bit version of the x86 instruction set, x86 means 32 bit OS
+
 *Ansible*
    an easy to use configuration management and orchestration tool, it is platform 
    that can combine multi-node software deployment and ad hoc task execution, 
@@ -31,6 +34,9 @@ Useful terms
    doing some modification over an existing applications according to requirements 
    of the client
 
+*Dev*
+   development tools, software developer or device in PC
+
 *DHCP server*
     *Dynamic Host Configuration Protocol*, way how to set host's IP address to 
     automatically assign an IP address to any host on the network upon the request
@@ -54,12 +60,26 @@ Useful terms
 
 *Chroot*
 
+*GUI*
+   *Graphical User Interface*
+
+*I386, x86*
+   ordinary platform, 32-bit microprocessor
+
+*IA64*
+   platform, 64-bit microprocessor
+
 *IP address*
    *Internet Protocol address*, numerical identifier assigned to each device 
    participating in a computer network that uses the Internet Protocol for 
    communication, it is 32-bit numeric address written as four numbers ``0.0.0.0`` 
    separated by periods, each number can be zero to 255, it is assigned as part 
    of connecting to a network
+
+*ISO*
+   an archive file of an optical disc, image file is a snapshot of the data and 
+   layout of a CD or DVD, saved in ISO-9660 format, widely used for storing CD 
+   content
 
 *MAC address*
    *Media Access Control address*, kind of serial number assigned to every 
