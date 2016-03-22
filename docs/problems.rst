@@ -4,19 +4,19 @@
 Problem solving
 ***************
 
-|problem| *GIS.lab client is not connected to the internet*
+|problem.| *GIS.lab client is not connected to the internet*
 
-|solution| 
-
-
-|problem| *GIS.lab ...*
-
-|solution| 
+|solution.| 
 
 
-|problem| *GIS.lab ...*
+|problem.| *GIS.lab ...*
 
-|solution|
+|solution.| 
+
+
+|problem.| *GIS.lab ...*
+
+|solution.|
 
 
 

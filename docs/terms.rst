@@ -105,7 +105,7 @@ Useful terms
    identical working environment, 
    
 
-.. seealso:: |see| 
+.. seealso:: |see.| 
    
    * `19 Minutes With Ansible <https://sysadmincasts.com/episodes/43-19-minutes-with-ansible-part-1-4>`_
    * `Booting from the network with PXE <https://www.youtube.com/watch?v=zQ-TQhmjhuc>`_
@@ -116,4 +116,4 @@ Useful terms
 
 .. [#bnc] `Configuring Bridged Networking <http://pubs.vmware.com/ws8/wwhelp/wwhimpl/js/html/wwhelp.htm#href=using_ws/GUID-BAFA66C3-81F0-4FCA-84C4-D9F7D258A60A.html#1_14_9_1>`_
 .. [#dhcp] `DHCP server <http://www.tomshardware.co.uk/faq/id-1932036/dhcp-server-assigns-addresses-client-computers.html>`
-.. [#pxe] `Preboot Execution Environment <https://en.wikipedia.org/wiki/Preboot_Execution_Environment>`
+.. [#pxe] `Preboot Execution Environment <https://en.wikipedia.org/wiki/Preboot_Execution_Environment>`_
