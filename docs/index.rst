@@ -49,6 +49,7 @@ Contents
 .. toctree::
    :maxdepth: 1
 
+   datasets
    problems
    credits
 
