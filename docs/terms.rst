@@ -4,8 +4,8 @@
 Useful terms
 ************
 
-*AMD64, x86_64*
-   platform, the 64-bit version of the x86 instruction set, x86 means 32 bit OS
+*AMD64*
+   platform, the 64-bit version of the x86 instruction set, x86 means 32-bit OS
 
 *Ansible*
    an easy to use configuration management and orchestration tool, it is platform 
