@@ -52,4 +52,4 @@ Contents
    problems
    credits
 
-.. note:: |note| GIS.lab is still in pre-release state
+.. note:: |note.| GIS.lab is still in pre-release state

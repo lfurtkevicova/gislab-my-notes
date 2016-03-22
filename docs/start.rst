@@ -25,3 +25,6 @@ and stylistic features, see chapter
 :ref:`Conventions used in this documentation <conventions>`. 
 In case you feel sufficiently familiar with all the introductory parts just skip 
 them and go straight away to :ref:`GIS.lab Installation <gislab-installation>`.
+
+Moreover, when you meet some trouble or difficulty, you can find solutions to 
+simple and difficult problems in :ref:`Problem solving <problems>` part.
