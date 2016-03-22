@@ -136,12 +136,12 @@ Database ``prague.sqlite``:
 .. rubric:: Data source
 
 The data is sourced from 
-open data provided by *Prague Institute of Planning and Development* - 
-`IPR <http://www.geoportalpraha.cz/en/opendata>`_ , open data of the 
-*Registry of Territorial Identification, Addresses and Real Estate* 
-`RÚIAN <http://vdp.cuzk.cz/vdp/ruian/stat/>`_ and data 
-`DIBAVOD <http://www.dibavod.cz/index.php?id=27&PHPSESSID=vcbxqccbl>`_ 
-provided by *T. G. Masaryk water research institute, public research institution*. 
+open data `IPR <http://www.geoportalpraha.cz/en/opendata>`_ provided by 
+*Prague Institute of Planning and Development*, open data 
+`RÚIAN <http://vdp.cuzk.cz/vdp/ruian/stat/>`_ supplied by the 
+*Registry of Territorial Identification, Addresses and Real Estate* and data 
+`DIBAVOD <http://www.dibavod.cz/index.php?id=27&PHPSESSID=vcbxqccbl>`_ provided 
+by *T. G. Masaryk water research institute, public research institution*. 
 
 .. rubric:: Coordinate systems
 
