@@ -131,6 +131,11 @@ data and other information
 2. Prague
 =========
 
+.. note:: |note.| Nowadays there are some efforts to have standardized
+          datasets, see `Common rules <https://trac.osgeo.org/grass/wiki/SampleDataset#Commonrules>`_ 
+          of GRASS GIS Sample Datasets. 
+          On this basis, we shall try to follow these rules.
+
 Database ``prague.sqlite``:
 
 .. rubric:: Data source
@@ -143,23 +148,126 @@ open data `IPR <http://www.geoportalpraha.cz/en/opendata>`_ provided by
 `DIBAVOD <http://www.dibavod.cz/index.php?id=27&PHPSESSID=vcbxqccbl>`_ provided 
 by *T. G. Masaryk water research institute, public research institution*. 
 
-.. rubric:: Coordinate systems
+.. rubric:: Coordinate systems (Reference system)
+
+102067 – S-JTSK/Krovak (East/North)
 
 .. rubric:: Format and other key features
+
+* *Extent around:* ``50.3 (N), 49.9 (S), 14.8 (E), 14.2 (W)``
 
 ---------------
 Thematic layers
 ---------------
 
-1. x
+1. IPR
 
-**x** - x
+**air pollution** - bonita of climate in terms of air pollution (I - the best, V - the worse)
 
-* *Layer name* : ``x``
+* *Layer name:* ``air_pollution``
+* *Storage type:* SQLite database
+* *Last update:* 01.01.2008
+* *Spatial representation:* vector
+* `Source <http://www.geoportalpraha.cz/cs/opendata/5BB4E2C5-9D4B-4B2B-BF0A-E0B98EE6013A>`_
+
+
+**bike routes** - cycling routes marked, registered and others
+
+* *Layer name:* ``bike_routes``
+* *Storage type:* SQLite database
+* *Last update:* 14.03.2016
+* *Spatial representation:* vector
+* *Spatial resolution:* `1:10000`
+* `Source <http://www.geoportalpraha.cz/en/opendata/0AF6DE97-68B3-4CD6-AE5D-76ACEEE50636>`_
+
+
+**buildings** - classified raster with absolute altitude of buildings
+
+* *Layer name:* ``buildings_3d``
+* *Storage type:* SQLite database
+* *Spatial representation:* 3D grid  
+* `Source <http://www.geoportalpraha.cz/en/opendata/DDBD51D9-CDF6-4288-8FAB-F049BB5ADFD9>`_
+
+.. note:: |note.| I think, vector of buildings with hights or number of floors
+          would be better
+
+**elevation** - digital terrain model (DTM) within the meaning of the bare surface
+
+* *Layer name:* ``elevation``
+* *Storage type:* SQLite database
+* *Last update:* 10.04.2015
+* *Spatial representation:* 3D grid
+* *Spatial resolution:* 1:5000
+* `Source <http://www.geoportalpraha.cz/en/opendata/6E9A6D83-5F66-4B06-ABB5-CE8E773A811C>`_
+
+**landuse** - landuse in 2016
+
+* *Layer name:* ``landuse``
+* *Storage type:* SQLite database
+* *Last update:* 24.02.2016
+* *Spatial resolution:* 1:5000
+* *Spatial representation:* vector
+* `Source <http://www.geoportalpraha.cz/en/opendata/A0198E36-FCAD-42E7-BE4A-3B7755A48DAC>`_
+
+**ortophoto** - colored orthophoto of Prague 
+
+* *Layer name:* ``ortophoto``
+* *Pixel resolution:* ``50 cm``
+* *Storage type:* SQLite database
+* *Last update:* 10.12.2015
+* *Spatial representation:* vector
+* `Source <http://www.geoportalpraha.cz/cs/opendata/A0198E36-FCAD-42E7-BE4A-3B7755A48DAC>`_,
+  `metadata <http://www.geoportalpraha.cz/en/fulltext_geoportal?id=A0198E36-FCAD-42E7-BE4A-3B7755A48DAC>`_
+
+**parcels** - polygons of the parcels
+
+* *Layer name:* ``parcels``
+* *Storage type:* SQLite database
+* *Last update:* 01.03.2016
+* *Spatial representation:* vector
+* *Spatial resolution:* `1:500`
+* `Source <http://www.geoportalpraha.cz/en/opendata/31363CF6-2A9F-41D1-B000-23587084BC7A>`_
+
+**public toilets** - public toilets
+
+* *Layer name:* ``public_toilets``
+* *Storage type:* SQLite database
+* *Last update:* 20.07.2015
+* *Spatial representation:* vector
+* `Source <http://www.geoportalpraha.cz/en/opendata/27028B3A-9442-44BC-9EA2-4DF8A2DF9940>`_
 
 ==============
 Issues (draft)
 ==============
 
-* 
+.. figure:: img/data_elevation.png
+   :align: center
+   :width: 450
+
+   Elevation map in combination with shaded relief.
+
+.. figure:: img/data_toilets.png
+   :align: center
+   :width: 450
+   
+   Public toilets with information about opening hours.
+
+.. figure:: img/data_landuse_LRO.png
+   :align: center
+   :width: 450
+
+   Selection of forests in landuse layer.
+   
+
+.. figure:: img/data_ortophoto.png
+   :align: center
+   :width: 450
+
+   Ortophoto of Prague in GRASS GIS environment.
+
+.. figure:: img/data_air_pollution.png
+   :align: center
+   :width: 450
+
+   Bonita of climate in terms of air pollution.
 
