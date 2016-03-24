@@ -144,15 +144,21 @@ The data is sourced from
 open data `IPR <http://www.geoportalpraha.cz/en/opendata>`_ provided by 
 *Prague Institute of Planning and Development*, open data 
 `RÚIAN <http://vdp.cuzk.cz/vdp/ruian/stat/>`_ supplied by the 
-*Registry of Territorial Identification, Addresses and Real Estate* and data 
+*Registry of Territorial Identification, Addresses and Real Estate*, data 
 `DIBAVOD <http://www.dibavod.cz/index.php?id=27&PHPSESSID=vcbxqccbl>`_ provided 
-by *T. G. Masaryk water research institute, public research institution*. 
+by *T. G. Masaryk water research institute, public research institution* and 
+from great resource for free and openly licensed data, 
+`OpenStreetMap (OSM) <http://www.openstreetmap.org/>`_.  
 
 .. rubric:: Coordinate systems (Reference system)
 
-102067 – S-JTSK/Krovak (East/North)
+All data in Prague dataset use referense system ``102067``, S-JTSK/Krovak 
+(East/North). 
 
 .. rubric:: Format and other key features
+
+Vector data come in ESRI shapefile format. Character encoding is ``?``.
+Raster come in TIFF format.
 
 * *Extent around:* ``50.3 (N), 49.9 (S), 14.8 (E), 14.2 (W)``
 
@@ -170,7 +176,6 @@ Thematic layers
 * *Spatial representation:* vector
 * `Source <http://www.geoportalpraha.cz/cs/opendata/5BB4E2C5-9D4B-4B2B-BF0A-E0B98EE6013A>`_
 
-
 **bike routes** - cycling routes marked, registered and others
 
 * *Layer name:* ``bike_routes``
@@ -179,6 +184,24 @@ Thematic layers
 * *Spatial representation:* vector
 * *Spatial resolution:* `1:10000`
 * `Source <http://www.geoportalpraha.cz/en/opendata/0AF6DE97-68B3-4CD6-AE5D-76ACEEE50636>`_
+
+**bike signs** - bicycle transport signs
+
+* *Layer name:* ``bike_signs``
+* *Storage type:* SQLite database
+* *Last update:* 14.03.2016
+* *Spatial representation:* vector
+* *Spatial resolution:* `1:10000`
+* `Source <http://www.geoportalpraha.cz/cs/opendata/7ED6D2D8-A68C-44F1-8EC3-0F75A5AEF781>`_,
+  `metadata <http://www.geoportalpraha.cz/cs/fulltext_geoportal?id=7ED6D2D8-A68C-44F1-8EC3-0F75A5AEF781>`_
+
+**boundary region** - boundary of Prague region
+
+* *Layer name:* ``boundary_region``
+* *Storage type:* SQLite database
+* *Last update:* 04.05.2014
+* *Spatial representation:* vector
+* `Source <http://www.geoportalpraha.cz/cs/opendata/669607B8-EA0A-44FB-8771-C509C2384E59>`_
 
 
 **buildings** - classified raster with absolute altitude of buildings
@@ -236,6 +259,72 @@ Thematic layers
 * *Spatial representation:* vector
 * `Source <http://www.geoportalpraha.cz/en/opendata/27028B3A-9442-44BC-9EA2-4DF8A2DF9940>`_
 
+2. RÚIAN
+
+**streets** - roads and streets
+
+* *Layer name:* ``streets``
+* *Storage type:* SQLite database
+
+**zipcodes** - address points of RUIAN
+
+* *Layer name:* ``zipcodes``
+* *Storage type:* SQLite database
+
+**administrative districts** - administrative boudaries in Prague**
+
+* *Layer name:* ``districts``
+* *Storage type:* SQLite database
+
+.. note:: |note.| data from GISMentors dataset - mapsets *ruian* and *ruian_praha* 
+          (`adresnimista_bod`, `ulice`, spravniobvody)
+
+3. DIBAVOD
+
+**basins** - hydrological structure, basins of IV. code
+
+* *Layer name:* ``basins``
+* *Storage type:* SQLite database
+* *Last update:* 06.04.2006
+* *Spatial representation:* vector 
+* `Source <http://www.dibavod.cz/download.php?id_souboru=1418&PHPSESSID=vcbxqccbl>`_
+
+**streams** - water flow (flow model)
+
+* *Layer name:* ``streams``
+* *Storage type:* SQLite database
+* *Last update:* 06.04.2006
+* *Spatial representation:* vector
+* `Source <http://www.dibavod.cz/download.php?id_souboru=1412&PHPSESSID=vcbxqccbl>`_
+
+4. OSM
+
+**pharmacy** - pharmacies
+
+* *Layer name:* ``pharmacy``
+* *Spatial representation:* vector
+
+**public_wifi** - wifi
+
+* *Layer name:* ``public_wifi``
+* *Spatial representation:* vector
+
+**railways** - railways
+
+* *Layer name:* ``railways``
+* *Spatial representation:* vector
+
+**schools** - schools
+
+* *Layer name:* ``schools``
+* *Spatial representation:* vector 
+
+**universities** - schools
+
+* *Layer name:* ``universities``
+* *Spatial representation:* vector
+
+
 ==============
 Issues (draft)
 ==============
@@ -271,3 +360,38 @@ Issues (draft)
 
    Bonita of climate in terms of air pollution.
 
+.. figure:: img/data_bike_wc.png
+   :align: center
+   :width: 450
+
+   Bike signs and public toilets overlapping Bing Road map.
+
+.. figure:: img/data_zip_streets_wc.png
+   :align: center
+   :width: 450
+
+   Zipcodes, streets and public toilets.
+
+.. figure:: img/data_basins.png
+   :align: center
+   :width: 450
+
+   Basins of IV. code in Prague.
+
+.. figure:: img/data_points.png
+   :align: center
+   :width: 450
+
+   Some OSM point data in Prague.
+
+.. figure:: img/data_wifi.png
+   :align: center
+   :width: 250
+
+   Public wifi.
+
+.. figure:: img/data_districts.png
+   :align: center
+   :width: 450
+
+   Boundaries of administrative districts in Prague.
