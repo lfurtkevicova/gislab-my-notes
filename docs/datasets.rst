@@ -207,8 +207,8 @@ Thematic layers
 * *Last update:* 14.03.2016
 * *Geometry type of the features in layer* : Multilinestring
 * *Spatial resolution:* `1:10000`
-* `Source <http://www.geoportalpraha.cz/en/opendata/0AF6DE97-68B3-4CD6-AE5D-76ACEEE50636>`_
-* `metadata <http://www.geoportalpraha.cz/cs/fulltext_geoportal?id=0AF6DE97-68B3-4CD6-AE5D-76ACEEE50636>`_
+* `Source <http://www.geoportalpraha.cz/en/opendata/0AF6DE97-68B3-4CD6-AE5D-76ACEEE50636>`_,
+  `metadata <http://www.geoportalpraha.cz/cs/fulltext_geoportal?id=0AF6DE97-68B3-4CD6-AE5D-76ACEEE50636>`_
 
 .. csv-table:: Attributes of bike routes layer.
    :header: "Name", "Description"
@@ -320,7 +320,7 @@ Thematic layers
 
 * *Layer name:* ``pop_statistics``
 * *Data representation:* comma separated values file
-* *Last update*: 31.12.2014
+* *Last update*: 31.12.2014
 * `Source <https://www.czso.cz/documents/10180/26823476/3301231505.xlsx/1e37f0cd-ef06-4872-b108-31778585b635?version=1.0>`_
 
 **public toilets** - public toilets
