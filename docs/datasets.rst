@@ -158,7 +158,7 @@ Raster come in TIFF format.
 Thematic layers
 ---------------
 
-**administrative districts** - administrative boudaries in Prague (data from GISMentors dataset `spravniobvody`)
+**administrative districts** - administrative boudaries in Prague 
 
 * *Layer name:* ``districts``
 * *Storage type:* SQLite database
@@ -388,7 +388,7 @@ Thematic layers
 
    "*name*", "name of stream"
 
-**streets** - roads and streets (data from GISMentors dataset `ulice`) 
+**streets** - roads and streets
 
 * *Layer name:* ``streets``
 * *Geometry type of the features in layer* : Multilinestring
@@ -412,7 +412,7 @@ Thematic layers
 
    "*name*", "name of university"
 
-**zipcodes** - address points of RUIAN (data from GISMentors dataset `adresnimista_bod`)
+**zipcodes** - address points of RUIAN
 
 * *Layer name:* ``zipcodes``
 * *Storage type:* SQLite database
