@@ -133,8 +133,8 @@ All data in Prague dataset use referense system ``102067``, S-JTSK/Krovak
 
 .. rubric:: Format and other key features
 
-Vector data come in ESRI shapefile format. Character encoding is ``Windows-1252``.
-Raster come in TIFF format.
+Vector data comes in ESRI shapefile format. Character encoding is ``Windows-1252``.
+Raster comes in TIFF format.
 
 * *Extent around:* ``50.3 (N), 49.9 (S), 14.8 (E), 14.2 (W)``
 
@@ -315,6 +315,16 @@ Thematic layers
 * *Data representation:* comma separated values file
 * *Last update*: 31.12.2014
 * `Source <https://www.czso.cz/documents/10180/26823476/3301231505.xlsx/1e37f0cd-ef06-4872-b108-31778585b635?version=1.0>`_
+
+.. csv-table:: Some population statistics.
+   :header: "Name", "Description"
+   :widths: 10, 10
+
+   "*district*", "name of district"
+   "*marriages*", "marriages in 2014"
+   "*divorces*", "divorces in 2014"
+   "*live births*", "live births"
+   "*deaths*", "deaths"
 
 **public toilets** - public toilets
 
