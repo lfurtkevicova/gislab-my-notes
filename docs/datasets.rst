@@ -4,7 +4,7 @@
 Data sets
 *********
 
-Some basic information about our data aiming to be a part of examples indroduced
+Some basic information about our data aiming to be a part of examples introduced
 in this documentation.
 
 ================
@@ -15,7 +15,8 @@ Database ``natural-earth.sqlite``:
 
 .. rubric:: Data source
 
-The data is sourced from `Natural Earth dataset <http://www.naturalearthdata.com/downloads/>`_. It is a public domain map dataset available at ``1:10 million``, 
+The data is sourced from `Natural Earth dataset <http://www.naturalearthdata.com/downloads/>`_. 
+It is a public domain map dataset available at ``1:10 million``, 
 ``1:50 million``, and ``1:110 million`` map scales. It is 
 free for use in any type of project. 
 Dataset was built through a collaboration of many volunteers, it is supported 
@@ -124,12 +125,11 @@ open data `IPR <http://www.geoportalpraha.cz/en/opendata>`_ provided by
 by *T. G. Masaryk water research institute, public research institution* and 
 from great resource for free and openly licensed data, 
 `OpenStreetMap (OSM) <http://www.openstreetmap.org/>`_. Some statistics data
-are from `Czech statistical office <https://www.czso.cz/csu/czso/home>`_.
+is from `Czech statistical office <https://www.czso.cz/csu/czso/home>`_.
 
 .. rubric:: Coordinate systems (Reference system)
 
-All data in Prague dataset use referense system ``102067``, S-JTSK/Krovak 
-(East/North). 
+All data in Prague dataset use referense system ``5514``, S-JTSK Krovak East North. 
 
 .. rubric:: Format and other key features
 
@@ -238,9 +238,9 @@ Thematic layers
 
    "*name*", "name of region"
 
-**buildings** - classified raster with absolute altitude of buildings
+**buildings** - classified 3D raster with absolute altitude of buildings
 
-* *Layer name:* ``buildings_3d``
+* *Layer name:* ``buildings``
 * *Storage type:* SQLite database
 * *Spatial representation:* 3D grid 
 * `Source <http://www.geoportalpraha.cz/en/opendata/DDBD51D9-CDF6-4288-8FAB-F049BB5ADFD9>`_
@@ -276,7 +276,7 @@ Thematic layers
 * *Pixel resolution:* ``50 cm``
 * *Storage type:* SQLite database
 * *Last update:* 10.12.2015
-* *Spatial representation:* vector
+* *Spatial representation:* grid
 * `Source <http://www.geoportalpraha.cz/cs/opendata/A0198E36-FCAD-42E7-BE4A-3B7755A48DAC>`_,
   `metadata <http://www.geoportalpraha.cz/en/fulltext_geoportal?id=A0198E36-FCAD-42E7-BE4A-3B7755A48DAC>`_
 
@@ -315,6 +315,7 @@ Thematic layers
 * *Data representation:* comma separated values file
 * *Last update*: 31.12.2014
 * `Source <https://www.czso.cz/documents/10180/26823476/3301231505.xlsx/1e37f0cd-ef06-4872-b108-31778585b635?version=1.0>`_
+* *Attributes* :
 
 .. csv-table:: Some population statistics.
    :header: "Name", "Description"
@@ -381,7 +382,7 @@ Thematic layers
 
    "*name*", "name and type of school"
 
-**streams** - water flow (flow model)
+**streams** - water flow, flow model
 
 * *Layer name:* ``streams``
 * *Storage type:* SQLite database
