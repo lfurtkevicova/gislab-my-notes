@@ -49,10 +49,6 @@ Thematic layers
 * *Layer name* : ``area``
 * *Storage type* : SQLite database
 * *Geometry type of the features in layer* : Polygon
-* *Primary key attributes* : PK_UID 
-* *The number of features* : 1
-* *The number of attributes* : 0
-* *In layer spatial reference system units* : ``xMin = 5.75267, yMin = 45.3242, xMax = 24.2430, yMax = 55.1653``
 
 **Countries** - matched boundary lines and polygons with various attributes for 
 countries
@@ -60,10 +56,6 @@ countries
 * *Layer name* : ``countries``
 * *Storage type* : SQLite database
 * *Geometry type of the features in layer* : Polygon
-* *Primary key attributes* : PK_UID 
-* *The number of features* : 9
-* *The number of attributes* : 5
-* *In layer spatial reference system units* : ``xMin = 5.85249, yMin = 45.4236, xMax = 24.1432, yMax = 55.0653``
 * *Attributes* :
 
 .. csv-table:: Attributes of country layer.
@@ -81,10 +73,6 @@ data and other information (urban landscape)
 * *Layer name* : ``places``
 * *Storage type* : SQLite database
 * *Geometry type of the features in layer* : Point
-* *Primary key attributes* : PK_UID 
-* *The number of features* : 161
-* *The number of attributes* : 10
-* *In layer spatial reference system units* : ``xMin = 6.14003, yMin = 46.0004, xMax = 23.17, yMax = 54.7837``
 * *Attributes* :
 
 .. csv-table:: Attributes of places layer.
@@ -107,10 +95,6 @@ data and other information (urban landscape)
 * *Layer name* : ``roads``
 * *Storage type* : SQLite database
 * *Geometry type of the features in layer* : Line
-* *Primary key attributes* : PK_UID 
-* *The number of features* : 1536
-* *The number of attributes* : 5
-* *In layer spatial reference system units* : ``xMin = 6.071, yMin = 45.5358, xMax = 23.8521, yMax = 54.8022``
 * *Attributes* :
 
 .. csv-table:: Attributes of places layer.
@@ -163,6 +147,7 @@ Thematic layers
 * *Layer name:* ``districts``
 * *Storage type:* SQLite database
 * *Geometry type of the features in layer* : Multipolygon
+* *Attributes* :
 
 .. csv-table:: Attributes of administrative districts layer.
    :header: "Name", "Description"
@@ -178,6 +163,7 @@ Thematic layers
 * *Last update:* 01.01.2008
 * *Geometry type of the features in layer* : Polygon
 * `Source <http://www.geoportalpraha.cz/cs/opendata/5BB4E2C5-9D4B-4B2B-BF0A-E0B98EE6013A>`_
+* *Attributes* :
 
 .. csv-table:: Attributes of air pollution layer.
    :header: "Name", "Description"
@@ -192,6 +178,7 @@ Thematic layers
 * *Last update:* 06.04.2006
 * *Geometry type of the features in layer* : Polygon
 * `Source <http://www.dibavod.cz/download.php?id_souboru=1418&PHPSESSID=vcbxqccbl>`_
+* *Attributes* :
 
 .. csv-table:: Attributes of basins layer.
    :header: "Name", "Description"
@@ -209,6 +196,7 @@ Thematic layers
 * *Spatial resolution:* `1:10000`
 * `Source <http://www.geoportalpraha.cz/en/opendata/0AF6DE97-68B3-4CD6-AE5D-76ACEEE50636>`_,
   `metadata <http://www.geoportalpraha.cz/cs/fulltext_geoportal?id=0AF6DE97-68B3-4CD6-AE5D-76ACEEE50636>`_
+* *Attributes* :
 
 .. csv-table:: Attributes of bike routes layer.
    :header: "Name", "Description"
@@ -227,6 +215,7 @@ Thematic layers
 * *Spatial resolution:* `1:10000`
 * `Source <http://www.geoportalpraha.cz/cs/opendata/7ED6D2D8-A68C-44F1-8EC3-0F75A5AEF781>`_,
   `metadata <http://www.geoportalpraha.cz/cs/fulltext_geoportal?id=7ED6D2D8-A68C-44F1-8EC3-0F75A5AEF781>`_
+* *Attributes* :
 
 .. csv-table:: Attributes of bike signs layer.
    :header: "Name", "Description"
@@ -241,6 +230,7 @@ Thematic layers
 * *Last update:* 04.05.2014
 * *Geometry type of the features in layer* : Multipolygon
 * `Source <http://www.geoportalpraha.cz/cs/opendata/669607B8-EA0A-44FB-8771-C509C2384E59>`_
+* *Attributes* :
 
 .. csv-table:: Attributes of boundary region.
    :header: "Name", "Description"
@@ -272,6 +262,7 @@ Thematic layers
 * *Spatial resolution:* 1:5000
 * *Geometry type of the features in layer* : Multipolygon
 * `Source <http://www.geoportalpraha.cz/en/opendata/A0198E36-FCAD-42E7-BE4A-3B7755A48DAC>`_
+* *Attributes* :
 
 .. csv-table:: Attributes of landuse layer.
    :header: "Name", "Description"
@@ -297,6 +288,7 @@ Thematic layers
 * *Geometry type of the features in layer* : Multipolygon
 * *Spatial resolution:* `1:500`
 * `Source <http://www.geoportalpraha.cz/en/opendata/31363CF6-2A9F-41D1-B000-23587084BC7A>`_
+* *Attributes* :
 
 .. csv-table:: Attributes of parcels layer.
    :header: "Name", "Description"
@@ -309,6 +301,7 @@ Thematic layers
 
 * *Layer name:* ``pharmacy``
 * *Geometry type of the features in layer* : Multipoint
+* *Attributes* :
 
 .. csv-table:: Attributes of pharmacy layer.
    :header: "Name", "Description"
@@ -330,6 +323,7 @@ Thematic layers
 * *Last update:* 20.07.2015
 * *Geometry type of the features in layer* : Multipoint
 * `Source <http://www.geoportalpraha.cz/en/opendata/27028B3A-9442-44BC-9EA2-4DF8A2DF9940>`_
+* *Attributes* :
 
 .. csv-table:: Attributes of public toilets layer.
    :header: "Name", "Description"
@@ -345,6 +339,7 @@ Thematic layers
 
 * *Layer name:* ``public_wifi``
 * *Geometry type of the features in layer* : Multipoint
+* *Attributes* :
 
 .. csv-table:: Attributes of public WiFi layer.
    :header: "Name", "Description"
@@ -356,6 +351,7 @@ Thematic layers
 
 * *Layer name:* ``railways``
 * *Geometry type of the features in layer* : Multilinestring
+* *Attributes* :
 
 .. csv-table:: Attributes of railways layer.
    :header: "Name", "Description"
@@ -367,6 +363,7 @@ Thematic layers
 
 * *Layer name:* ``schools``
 * *Geometry type of the features in layer* : Multipoint
+* *Attributes* :
 
 .. csv-table:: Attributes of schools layer.
    :header: "Name", "Description"
@@ -381,6 +378,7 @@ Thematic layers
 * *Last update:* 06.04.2006
 * *Geometry type of the features in layer* : Multilinestring
 * `Source <http://www.dibavod.cz/download.php?id_souboru=1412&PHPSESSID=vcbxqccbl>`_
+* *Attributes* :
 
 .. csv-table:: Attributes of streams layer.
    :header: "Name", "Description"
@@ -393,6 +391,7 @@ Thematic layers
 * *Layer name:* ``streets``
 * *Geometry type of the features in layer* : Multilinestring
 * *Storage type:* SQLite database
+* *Attributes* :
 
 .. csv-table:: Attributes of streets layer.
    :header: "Name", "Description"
@@ -405,6 +404,7 @@ Thematic layers
 * *Layer name:* ``universities``
 * *Spatial representation:* vector
 * *Geometry type of the features in layer* : Multipoint
+* *Attributes* :
 
 .. csv-table:: Attributes of universities layer.
    :header: "Name", "Description"
@@ -416,6 +416,7 @@ Thematic layers
 
 * *Layer name:* ``zipcodes``
 * *Storage type:* SQLite database
+* *Attributes* :
 
 .. csv-table:: Attributes of zipcode layer.
    :header: "Name", "Description"
