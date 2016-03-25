@@ -44,9 +44,7 @@ segments for creating tapers, etc.
 Thematic layers
 ---------------
 
-1. Administrative areas
-
-**Area** - matched boundary polygon for area of interest
+**Area** - matched boundary polygon for area of interest (administrative areas)
 
 * *Layer name* : ``area``
 * *Storage type* : SQLite database
@@ -77,10 +75,8 @@ countries
    "*gdp_md_est*", "estimated total GDP in millions of dollars"
    "*subregion*", "part of a larger region or continent"
 
-2. Urban landscape
-
 **Places** - point symbols with name attributes. Includes DEM data, population 
-data and other information 
+data and other information (urban landscape)
 
 * *Layer name* : ``places``
 * *Storage type* : SQLite database
@@ -131,11 +127,6 @@ data and other information
 2. Prague
 =========
 
-.. note:: |note.| Nowadays there are some efforts to have standardized
-          datasets, see `Common rules <https://trac.osgeo.org/grass/wiki/SampleDataset#Commonrules>`_ 
-          of GRASS GIS Sample Datasets. 
-          On this basis, we shall try to follow these rules.
-
 Database ``prague.sqlite``:
 
 .. rubric:: Data source
@@ -148,7 +139,8 @@ open data `IPR <http://www.geoportalpraha.cz/en/opendata>`_ provided by
 `DIBAVOD <http://www.dibavod.cz/index.php?id=27&PHPSESSID=vcbxqccbl>`_ provided 
 by *T. G. Masaryk water research institute, public research institution* and 
 from great resource for free and openly licensed data, 
-`OpenStreetMap (OSM) <http://www.openstreetmap.org/>`_.  
+`OpenStreetMap (OSM) <http://www.openstreetmap.org/>`_. Some statistics data
+are from `Czech statistical office <https://www.czso.cz/csu/czso/home>`_.
 
 .. rubric:: Coordinate systems (Reference system)
 
@@ -157,7 +149,7 @@ All data in Prague dataset use referense system ``102067``, S-JTSK/Krovak
 
 .. rubric:: Format and other key features
 
-Vector data come in ESRI shapefile format. Character encoding is ``?``.
+Vector data come in ESRI shapefile format. Character encoding is ``Windows-1252``.
 Raster come in TIFF format.
 
 * *Extent around:* ``50.3 (N), 49.9 (S), 14.8 (E), 14.2 (W)``
@@ -166,53 +158,102 @@ Raster come in TIFF format.
 Thematic layers
 ---------------
 
-1. IPR
+**administrative districts** - administrative boudaries in Prague (data from GISMentors dataset `spravniobvody`)
+
+* *Layer name:* ``districts``
+* *Storage type:* SQLite database
+* *Geometry type of the features in layer* : Multipolygon
+
+.. csv-table:: Attributes of administrative districts layer.
+   :header: "Name", "Description"
+   :widths: 10, 10
+
+   "*code*", "code of district"
+   "*name*", "name of district"
 
 **air pollution** - bonita of climate in terms of air pollution (I - the best, V - the worse)
 
 * *Layer name:* ``air_pollution``
 * *Storage type:* SQLite database
 * *Last update:* 01.01.2008
-* *Spatial representation:* vector
+* *Geometry type of the features in layer* : Polygon
 * `Source <http://www.geoportalpraha.cz/cs/opendata/5BB4E2C5-9D4B-4B2B-BF0A-E0B98EE6013A>`_
 
+.. csv-table:: Attributes of air pollution layer.
+   :header: "Name", "Description"
+   :widths: 10, 10
+
+   "*value*", "bonita of climate in terms of air pollution"
+
+**basins** - hydrological structure, basins of IV. code
+
+* *Layer name:* ``basins``
+* *Storage type:* SQLite database
+* *Last update:* 06.04.2006
+* *Geometry type of the features in layer* : Polygon
+* `Source <http://www.dibavod.cz/download.php?id_souboru=1418&PHPSESSID=vcbxqccbl>`_
+
+.. csv-table:: Attributes of basins layer.
+   :header: "Name", "Description"
+   :widths: 10, 10
+
+   "*number*", "number of basin"
+   "*area*", "area in square kilometre"
+   
 **bike routes** - cycling routes marked, registered and others
 
 * *Layer name:* ``bike_routes``
 * *Storage type:* SQLite database
 * *Last update:* 14.03.2016
-* *Spatial representation:* vector
+* *Geometry type of the features in layer* : Multilinestring
 * *Spatial resolution:* `1:10000`
 * `Source <http://www.geoportalpraha.cz/en/opendata/0AF6DE97-68B3-4CD6-AE5D-76ACEEE50636>`_
+* `metadata <http://www.geoportalpraha.cz/cs/fulltext_geoportal?id=0AF6DE97-68B3-4CD6-AE5D-76ACEEE50636>`_
+
+.. csv-table:: Attributes of bike routes layer.
+   :header: "Name", "Description"
+   :widths: 10, 10
+
+   "*number*", "number of route"
+   "*state*", "traffic state"
+   "*one_way*", "D means one-way route"
 
 **bike signs** - bicycle transport signs
 
 * *Layer name:* ``bike_signs``
 * *Storage type:* SQLite database
 * *Last update:* 14.03.2016
-* *Spatial representation:* vector
+* *Geometry type of the features in layer* : Multipoint
 * *Spatial resolution:* `1:10000`
 * `Source <http://www.geoportalpraha.cz/cs/opendata/7ED6D2D8-A68C-44F1-8EC3-0F75A5AEF781>`_,
   `metadata <http://www.geoportalpraha.cz/cs/fulltext_geoportal?id=7ED6D2D8-A68C-44F1-8EC3-0F75A5AEF781>`_
+
+.. csv-table:: Attributes of bike signs layer.
+   :header: "Name", "Description"
+   :widths: 10, 10
+
+   "*type*", "type of sign"
 
 **boundary region** - boundary of Prague region
 
 * *Layer name:* ``boundary_region``
 * *Storage type:* SQLite database
 * *Last update:* 04.05.2014
-* *Spatial representation:* vector
+* *Geometry type of the features in layer* : Multipolygon
 * `Source <http://www.geoportalpraha.cz/cs/opendata/669607B8-EA0A-44FB-8771-C509C2384E59>`_
 
+.. csv-table:: Attributes of boundary region.
+   :header: "Name", "Description"
+   :widths: 10, 10
+
+   "*name*", "name of region"
 
 **buildings** - classified raster with absolute altitude of buildings
 
 * *Layer name:* ``buildings_3d``
 * *Storage type:* SQLite database
-* *Spatial representation:* 3D grid  
+* *Spatial representation:* 3D grid 
 * `Source <http://www.geoportalpraha.cz/en/opendata/DDBD51D9-CDF6-4288-8FAB-F049BB5ADFD9>`_
-
-.. note:: |note.| I think, vector of buildings with hights or number of floors
-          would be better
 
 **elevation** - digital terrain model (DTM) within the meaning of the bare surface
 
@@ -229,10 +270,16 @@ Thematic layers
 * *Storage type:* SQLite database
 * *Last update:* 24.02.2016
 * *Spatial resolution:* 1:5000
-* *Spatial representation:* vector
+* *Geometry type of the features in layer* : Multipolygon
 * `Source <http://www.geoportalpraha.cz/en/opendata/A0198E36-FCAD-42E7-BE4A-3B7755A48DAC>`_
 
-**ortophoto** - colored orthophoto of Prague 
+.. csv-table:: Attributes of landuse layer.
+   :header: "Name", "Description"
+   :widths: 10, 10
+
+   "*code*", "code of usage"
+
+**ortophoto** - colored orthophoto of Prague 1 district 
 
 * *Layer name:* ``ortophoto``
 * *Pixel resolution:* ``50 cm``
@@ -242,88 +289,140 @@ Thematic layers
 * `Source <http://www.geoportalpraha.cz/cs/opendata/A0198E36-FCAD-42E7-BE4A-3B7755A48DAC>`_,
   `metadata <http://www.geoportalpraha.cz/en/fulltext_geoportal?id=A0198E36-FCAD-42E7-BE4A-3B7755A48DAC>`_
 
-**parcels** - polygons of the parcels
+**parcels** - polygons of the parcels for some areas
 
 * *Layer name:* ``parcels``
 * *Storage type:* SQLite database
 * *Last update:* 01.03.2016
-* *Spatial representation:* vector
+* *Geometry type of the features in layer* : Multipolygon
 * *Spatial resolution:* `1:500`
 * `Source <http://www.geoportalpraha.cz/en/opendata/31363CF6-2A9F-41D1-B000-23587084BC7A>`_
+
+.. csv-table:: Attributes of parcels layer.
+   :header: "Name", "Description"
+   :widths: 10, 10
+
+   "*parcel*", "parcel number"
+   "*code*", "code of cadastral region"
+
+**pharmacy** - pharmacies
+
+* *Layer name:* ``pharmacy``
+* *Geometry type of the features in layer* : Multipoint
+
+.. csv-table:: Attributes of pharmacy layer.
+   :header: "Name", "Description"
+   :widths: 10, 10
+
+   "*name*", "name of pharmacy"
+
+**population statistics** - marriages, divorces, live births and deaths statistics for Prague districts in 2014
+
+* *Layer name:* ``pop_statistics``
+* *Data representation:* comma separated values file
+* *Last update*: 31.12.2014
+* `Source <https://www.czso.cz/documents/10180/26823476/3301231505.xlsx/1e37f0cd-ef06-4872-b108-31778585b635?version=1.0>`_
 
 **public toilets** - public toilets
 
 * *Layer name:* ``public_toilets``
 * *Storage type:* SQLite database
 * *Last update:* 20.07.2015
-* *Spatial representation:* vector
+* *Geometry type of the features in layer* : Multipoint
 * `Source <http://www.geoportalpraha.cz/en/opendata/27028B3A-9442-44BC-9EA2-4DF8A2DF9940>`_
 
-2. RÚIAN
+.. csv-table:: Attributes of public toilets layer.
+   :header: "Name", "Description"
+   :widths: 10, 10
 
-**streets** - roads and streets
+   "*locality*", "the position or site of public toilet"
+   "*address*", "address of public toilet"
+   "*open*", "open hours"
+   "*price*", "price for usage"
+   "*invalid*", "1 for invalid toilet"
 
-* *Layer name:* ``streets``
-* *Storage type:* SQLite database
+**public_wifi** - WiFi facilities allowing to connect to the Internet within a particular area
 
-**zipcodes** - address points of RUIAN
+* *Layer name:* ``public_wifi``
+* *Geometry type of the features in layer* : Multipoint
 
-* *Layer name:* ``zipcodes``
-* *Storage type:* SQLite database
+.. csv-table:: Attributes of public WiFi layer.
+   :header: "Name", "Description"
+   :widths: 10, 10
 
-**administrative districts** - administrative boudaries in Prague**
+   "*wifi*", "more details about WiFi"
 
-* *Layer name:* ``districts``
-* *Storage type:* SQLite database
+**railways** - railways
 
-.. note:: |note.| data from GISMentors dataset - mapsets *ruian* and *ruian_praha* 
-          (`adresnimista_bod`, `ulice`, spravniobvody)
+* *Layer name:* ``railways``
+* *Geometry type of the features in layer* : Multilinestring
 
-3. DIBAVOD
+.. csv-table:: Attributes of railways layer.
+   :header: "Name", "Description"
+   :widths: 10, 10
 
-**basins** - hydrological structure, basins of IV. code
+   "*osm_id*", "OSM id"
 
-* *Layer name:* ``basins``
-* *Storage type:* SQLite database
-* *Last update:* 06.04.2006
-* *Spatial representation:* vector 
-* `Source <http://www.dibavod.cz/download.php?id_souboru=1418&PHPSESSID=vcbxqccbl>`_
+**schools** - schools
+
+* *Layer name:* ``schools``
+* *Geometry type of the features in layer* : Multipoint
+
+.. csv-table:: Attributes of schools layer.
+   :header: "Name", "Description"
+   :widths: 10, 10
+
+   "*name*", "name and type of school"
 
 **streams** - water flow (flow model)
 
 * *Layer name:* ``streams``
 * *Storage type:* SQLite database
 * *Last update:* 06.04.2006
-* *Spatial representation:* vector
+* *Geometry type of the features in layer* : Multilinestring
 * `Source <http://www.dibavod.cz/download.php?id_souboru=1412&PHPSESSID=vcbxqccbl>`_
 
-4. OSM
+.. csv-table:: Attributes of streams layer.
+   :header: "Name", "Description"
+   :widths: 10, 10
 
-**pharmacy** - pharmacies
+   "*name*", "name of stream"
 
-* *Layer name:* ``pharmacy``
-* *Spatial representation:* vector
+**streets** - roads and streets (data from GISMentors dataset `ulice`) 
 
-**public_wifi** - wifi
+* *Layer name:* ``streets``
+* *Geometry type of the features in layer* : Multilinestring
+* *Storage type:* SQLite database
 
-* *Layer name:* ``public_wifi``
-* *Spatial representation:* vector
+.. csv-table:: Attributes of streets layer.
+   :header: "Name", "Description"
+   :widths: 10, 10
 
-**railways** - railways
-
-* *Layer name:* ``railways``
-* *Spatial representation:* vector
-
-**schools** - schools
-
-* *Layer name:* ``schools``
-* *Spatial representation:* vector 
+   "*name*", "name of street"
 
 **universities** - schools
 
 * *Layer name:* ``universities``
 * *Spatial representation:* vector
+* *Geometry type of the features in layer* : Multipoint
 
+.. csv-table:: Attributes of universities layer.
+   :header: "Name", "Description"
+   :widths: 10, 10
+
+   "*name*", "name of university"
+
+**zipcodes** - address points of RUIAN (data from GISMentors dataset `adresnimista_bod`)
+
+* *Layer name:* ``zipcodes``
+* *Storage type:* SQLite database
+
+.. csv-table:: Attributes of zipcode layer.
+   :header: "Name", "Description"
+   :widths: 10, 10
+
+   "*number*", "number of building"
+   "*code*", "zipcode"
 
 ==============
 Issues (draft)
