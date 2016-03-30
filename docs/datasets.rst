@@ -95,7 +95,7 @@ data and other information (urban landscape)
 
 * *Layer name* : ``roads``
 * *Storage type* : SQLite database
-* *Geometry type of the features in layer* : Line
+* *Geometry type of the features in layer* : Polyline
 * *Attributes* :
 
 .. csv-table:: Attributes of places layer.
@@ -146,7 +146,7 @@ Thematic layers
 
 * *Layer name:* ``districts``
 * *Storage type:* SQLite database
-* *Geometry type of the features in layer* : Multipolygon
+* *Geometry type of the features in layer* : Polygon
 * *Attributes* :
 
 .. csv-table:: Attributes of administrative districts layer.
@@ -192,7 +192,7 @@ Thematic layers
 * *Layer name:* ``bike_routes``
 * *Storage type:* SQLite database
 * *Last update:* 14.03.2016
-* *Geometry type of the features in layer* : Multilinestring
+* *Geometry type of the features in layer* : Polyline
 * *Spatial resolution:* `1:10000`
 * `Source <http://www.geoportalpraha.cz/en/opendata/0AF6DE97-68B3-4CD6-AE5D-76ACEEE50636>`_,
   `metadata <http://www.geoportalpraha.cz/cs/fulltext_geoportal?id=0AF6DE97-68B3-4CD6-AE5D-76ACEEE50636>`_
@@ -206,12 +206,12 @@ Thematic layers
    "*state*", "traffic state"
    "*one_way*", "D means one-way route"
 
-**bike signs** - bicycle transport signs
+**bike signs** - bicycle transport signs for Prague 1 district
 
 * *Layer name:* ``bike_signs``
 * *Storage type:* SQLite database
 * *Last update:* 14.03.2016
-* *Geometry type of the features in layer* : Multipoint
+* *Geometry type of the features in layer* : Point
 * *Spatial resolution:* `1:10000`
 * `Source <http://www.geoportalpraha.cz/cs/opendata/7ED6D2D8-A68C-44F1-8EC3-0F75A5AEF781>`_,
   `metadata <http://www.geoportalpraha.cz/cs/fulltext_geoportal?id=7ED6D2D8-A68C-44F1-8EC3-0F75A5AEF781>`_
@@ -228,7 +228,7 @@ Thematic layers
 * *Layer name:* ``boundary_region``
 * *Storage type:* SQLite database
 * *Last update:* 04.05.2014
-* *Geometry type of the features in layer* : Multipolygon
+* *Geometry type of the features in layer* : Polygon
 * `Source <http://www.geoportalpraha.cz/cs/opendata/669607B8-EA0A-44FB-8771-C509C2384E59>`_
 * *Attributes* :
 
@@ -260,7 +260,7 @@ Thematic layers
 * *Storage type:* SQLite database
 * *Last update:* 24.02.2016
 * *Spatial resolution:* 1:5000
-* *Geometry type of the features in layer* : Multipolygon
+* *Geometry type of the features in layer* : Polygon
 * `Source <http://www.geoportalpraha.cz/en/opendata/A0198E36-FCAD-42E7-BE4A-3B7755A48DAC>`_
 * *Attributes* :
 
@@ -280,12 +280,12 @@ Thematic layers
 * `Source <http://www.geoportalpraha.cz/cs/opendata/A0198E36-FCAD-42E7-BE4A-3B7755A48DAC>`_,
   `metadata <http://www.geoportalpraha.cz/en/fulltext_geoportal?id=A0198E36-FCAD-42E7-BE4A-3B7755A48DAC>`_
 
-**parcels** - polygons of the parcels for some areas
+**parcels** - polygons of the parcels for Prague 1 district
 
 * *Layer name:* ``parcels``
 * *Storage type:* SQLite database
 * *Last update:* 01.03.2016
-* *Geometry type of the features in layer* : Multipolygon
+* *Geometry type of the features in layer* : Polygon
 * *Spatial resolution:* `1:500`
 * `Source <http://www.geoportalpraha.cz/en/opendata/31363CF6-2A9F-41D1-B000-23587084BC7A>`_
 * *Attributes* :
@@ -294,13 +294,14 @@ Thematic layers
    :header: "Name", "Description"
    :widths: 10, 10
 
-   "*parcel*", "parcel number"
-   "*code*", "code of cadastral region"
+   "*p_number*", "permanent parcel number"
+   "*f_number*", "fractional parcel numeber"
+   "*area*", "area in square meters"
 
 **pharmacy** - pharmacies
 
 * *Layer name:* ``pharmacy``
-* *Geometry type of the features in layer* : Multipoint
+* *Geometry type of the features in layer* : Point
 * *Attributes* :
 
 .. csv-table:: Attributes of pharmacy layer.
@@ -327,12 +328,26 @@ Thematic layers
    "*live births*", "live births"
    "*deaths*", "deaths"
 
+**prague_1** - boundary of Prague 1 district
+
+* *Layer name:* ``prague_1``
+* *Storage type:* SQLite database
+* *Geometry type of the features in layer* : Polygon
+* *Attributes* :
+
+.. csv-table:: Attributes of Prague 1 district layer.
+   :header: "Name", "Description"
+   :widths: 10, 10
+
+   "*code*", "code of district"
+   "*name*", "name of district"
+
 **public toilets** - public toilets
 
 * *Layer name:* ``public_toilets``
 * *Storage type:* SQLite database
 * *Last update:* 20.07.2015
-* *Geometry type of the features in layer* : Multipoint
+* *Geometry type of the features in layer* : Point
 * `Source <http://www.geoportalpraha.cz/en/opendata/27028B3A-9442-44BC-9EA2-4DF8A2DF9940>`_
 * *Attributes* :
 
@@ -349,7 +364,7 @@ Thematic layers
 **public_wifi** - WiFi facilities allowing to connect to the Internet within a particular area
 
 * *Layer name:* ``public_wifi``
-* *Geometry type of the features in layer* : Multipoint
+* *Geometry type of the features in layer* : Point
 * *Attributes* :
 
 .. csv-table:: Attributes of public WiFi layer.
@@ -361,7 +376,7 @@ Thematic layers
 **railways** - railways
 
 * *Layer name:* ``railways``
-* *Geometry type of the features in layer* : Multilinestring
+* *Geometry type of the features in layer* : Polyline
 * *Attributes* :
 
 .. csv-table:: Attributes of railways layer.
@@ -373,7 +388,7 @@ Thematic layers
 **schools** - schools
 
 * *Layer name:* ``schools``
-* *Geometry type of the features in layer* : Multipoint
+* *Geometry type of the features in layer* : Point
 * *Attributes* :
 
 .. csv-table:: Attributes of schools layer.
@@ -387,7 +402,7 @@ Thematic layers
 * *Layer name:* ``streams``
 * *Storage type:* SQLite database
 * *Last update:* 06.04.2006
-* *Geometry type of the features in layer* : Multilinestring
+* *Geometry type of the features in layer* : Polyline
 * `Source <http://www.dibavod.cz/download.php?id_souboru=1412&PHPSESSID=vcbxqccbl>`_
 * *Attributes* :
 
@@ -397,10 +412,10 @@ Thematic layers
 
    "*name*", "name of stream"
 
-**streets** - roads and streets
+**streets** - roads and streets for Prague 1 district
 
 * *Layer name:* ``streets``
-* *Geometry type of the features in layer* : Multilinestring
+* *Geometry type of the features in layer* : Polyline
 * *Storage type:* SQLite database
 * *Attributes* :
 
@@ -414,7 +429,7 @@ Thematic layers
 
 * *Layer name:* ``universities``
 * *Spatial representation:* vector
-* *Geometry type of the features in layer* : Multipoint
+* *Geometry type of the features in layer* : Point
 * *Attributes* :
 
 .. csv-table:: Attributes of universities layer.
