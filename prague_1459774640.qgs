@@ -5,19 +5,19 @@
     <customproperties/>
     <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="Prague 1">
       <customproperties/>
-      <layer-tree-layer expanded="1" checked="Qt::Checked" id="prague_120160330130120552" name="Boudary Prague 1">
+      <layer-tree-layer expanded="1" checked="Qt::Checked" id="prague_120160330130120552_1459774640" name="Boudary Prague 1">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" checked="Qt::Checked" id="bike_signs20160330130048970" name="Bike signs">
+      <layer-tree-layer expanded="1" checked="Qt::Checked" id="bike_signs20160330130048970_1459774640" name="Bike signs">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" checked="Qt::Checked" id="streets20160330130139279" name="Streets">
+      <layer-tree-layer expanded="1" checked="Qt::Checked" id="streets20160330130139279_1459774640" name="Streets">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="parcels20160330130103258" name="Parcels">
+      <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="parcels20160330130103258_1459774640" name="Parcels">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="landuse20160330130100094" name="Landuse">
+      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="landuse20160330130100094_1459774640" name="Landuse">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
@@ -25,41 +25,41 @@
       <customproperties/>
       <layer-tree-group expanded="1" checked="Qt::Checked" name="Facilities">
         <customproperties/>
-        <layer-tree-layer expanded="1" checked="Qt::Checked" id="public_wifi20160330130127934" name="Public wifi">
+        <layer-tree-layer expanded="1" checked="Qt::Checked" id="public_wifi20160330130127934_1459774640" name="Public wifi">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" checked="Qt::Checked" id="public_toilets20160330130124890" name="Public toilets">
+        <layer-tree-layer expanded="1" checked="Qt::Checked" id="public_toilets20160330130124890_1459774640" name="Public toilets">
           <customproperties>
             <property key="showFeatureCount" value="0"/>
           </customproperties>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" checked="Qt::Checked" id="schools20160330130133978" name="Schools">
+        <layer-tree-layer expanded="1" checked="Qt::Checked" id="schools20160330130133978_1459774640" name="Schools">
           <customproperties>
             <property key="overview" value="0"/>
           </customproperties>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" checked="Qt::Checked" id="universities20160330130141705" name="Universities">
+        <layer-tree-layer expanded="1" checked="Qt::Checked" id="universities20160330130141705_1459774640" name="Universities">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" checked="Qt::Checked" id="pharmacy20160330130110730" name="Pharmacy">
+        <layer-tree-layer expanded="1" checked="Qt::Checked" id="pharmacy20160330130110730_1459774640" name="Pharmacy">
           <customproperties/>
         </layer-tree-layer>
       </layer-tree-group>
-      <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="boudary_region20160330130051201" name="Boudary region">
+      <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="boudary_region20160330130051201_1459774640" name="Boudary region">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="districts20160330130056066" name="Districts">
+      <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="districts20160330130056066_1459774640" name="Districts">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="air_pollution20160330130033449" name="Air pollution">
+      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="air_pollution20160330130033449_1459774640" name="Air pollution">
         <customproperties/>
       </layer-tree-layer>
       <layer-tree-group expanded="0" checked="Qt::Unchecked" name="Transport">
         <customproperties/>
-        <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="railways20160330130130974" name="Railways">
+        <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="railways20160330130130974_1459774640" name="Railways">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="bike_routes20160330130046846" name="Bike routes">
+        <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="bike_routes20160330130046846_1459774640" name="Bike routes">
           <customproperties>
             <property key="showFeatureCount" value="0"/>
           </customproperties>
@@ -67,27 +67,27 @@
       </layer-tree-group>
       <layer-tree-group expanded="0" checked="Qt::Unchecked" name="Hydrology">
         <customproperties/>
-        <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="streams20160330130136671" name="Streams">
+        <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="streams20160330130136671_1459774640" name="Streams">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="basins20160330130042878" name="Basins">
+        <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="basins20160330130042878_1459774640" name="Basins">
           <customproperties/>
         </layer-tree-layer>
       </layer-tree-group>
     </layer-tree-group>
     <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="3D data">
       <customproperties/>
-      <layer-tree-layer expanded="0" checked="Qt::Checked" id="elevation_shade20160330155739070" name="Elevation - shade">
+      <layer-tree-layer expanded="0" checked="Qt::Checked" id="elevation_shade20160330155739070_1459774640" name="Elevation - shade">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" checked="Qt::Checked" id="elevation20160330155810804" name="Elevation">
+      <layer-tree-layer expanded="0" checked="Qt::Checked" id="elevation20160330155810804_1459774640" name="Elevation">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="buildings20160330155804287" name="Buildings">
+      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="buildings20160330155804287_1459774640" name="Buildings">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-layer expanded="1" checked="Qt::Checked" id="pop_statistics20160330171330775" name="Population statistics">
+    <layer-tree-layer expanded="1" checked="Qt::Checked" id="pop_statistics20160330171330775_1459774640" name="Population statistics">
       <customproperties/>
     </layer-tree-layer>
   </layer-tree-group>
@@ -116,86 +116,86 @@
     </destinationsrs>
     <rendermaptile>0</rendermaptile>
     <layer_coordinate_transform_info>
-      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="prague_120160330130120552"/>
-      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="public_toilets20160330130124890"/>
-      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="boudary_region20160330130051201"/>
-      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="basins20160330130042878"/>
+      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="prague_120160330130120552_1459774640"/>
+      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="public_toilets20160330130124890_1459774640"/>
+      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="boudary_region20160330130051201_1459774640"/>
+      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="basins20160330130042878_1459774640"/>
       <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="USER:100008" srcDatumTransform="-1" destDatumTransform="-1" layerid="ortophoto20160330130415840"/>
-      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="districts20160330130056066"/>
+      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="districts20160330130056066_1459774640"/>
       <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="USER:100008" srcDatumTransform="-1" destDatumTransform="-1" layerid="ortophoto20160330130415261"/>
-      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="elevation20160330155810804"/>
-      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="pharmacy20160330130110730"/>
-      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="USER:100008" srcDatumTransform="-1" destDatumTransform="-1" layerid="buildings20160330155804287"/>
-      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="universities20160330130141705"/>
+      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="elevation20160330155810804_1459774640"/>
+      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="pharmacy20160330130110730_1459774640"/>
+      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="USER:100008" srcDatumTransform="-1" destDatumTransform="-1" layerid="buildings20160330155804287_1459774640"/>
+      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="universities20160330130141705_1459774640"/>
       <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="USER:100008" srcDatumTransform="-1" destDatumTransform="-1" layerid="elevation_shade20160330130414346"/>
-      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="elevation_shade20160330155739070"/>
-      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="bike_routes20160330130046846"/>
-      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="railways20160330130130974"/>
-      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="schools20160330130133978"/>
-      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="public_wifi20160330130127934"/>
-      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="landuse20160330130100094"/>
-      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="bike_signs20160330130048970"/>
-      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="streams20160330130136671"/>
+      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="elevation_shade20160330155739070_1459774640"/>
+      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="bike_routes20160330130046846_1459774640"/>
+      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="railways20160330130130974_1459774640"/>
+      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="schools20160330130133978_1459774640"/>
+      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="public_wifi20160330130127934_1459774640"/>
+      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="landuse20160330130100094_1459774640"/>
+      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="bike_signs20160330130048970_1459774640"/>
+      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="streams20160330130136671_1459774640"/>
       <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="USER:100008" srcDatumTransform="-1" destDatumTransform="-1" layerid="ortophoto20160330130414665"/>
       <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="prague_120160330143225765"/>
       <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="USER:100008" srcDatumTransform="-1" destDatumTransform="-1" layerid="buildings20160330130413107"/>
       <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="pharmacy20160330130106177"/>
       <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="USER:100008" srcDatumTransform="-1" destDatumTransform="-1" layerid="elevation20160330130413774"/>
-      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="parcels20160330130103258"/>
-      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="air_pollution20160330130033449"/>
-      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="streets20160330130139279"/>
+      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="parcels20160330130103258_1459774640"/>
+      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="air_pollution20160330130033449_1459774640"/>
+      <layer_coordinate_transform destAuthId="EPSG:5514" srcAuthId="EPSG:5514" srcDatumTransform="-1" destDatumTransform="-1" layerid="streets20160330130139279_1459774640"/>
     </layer_coordinate_transform_info>
   </mapcanvas>
   <layer-tree-canvas>
     <custom-order enabled="0">
-      <item>air_pollution20160330130033449</item>
-      <item>basins20160330130042878</item>
-      <item>bike_routes20160330130046846</item>
-      <item>bike_signs20160330130048970</item>
-      <item>boudary_region20160330130051201</item>
-      <item>districts20160330130056066</item>
-      <item>landuse20160330130100094</item>
-      <item>parcels20160330130103258</item>
-      <item>pharmacy20160330130110730</item>
-      <item>prague_120160330130120552</item>
-      <item>public_toilets20160330130124890</item>
-      <item>public_wifi20160330130127934</item>
-      <item>railways20160330130130974</item>
-      <item>schools20160330130133978</item>
-      <item>streams20160330130136671</item>
-      <item>streets20160330130139279</item>
-      <item>universities20160330130141705</item>
-      <item>elevation_shade20160330155739070</item>
-      <item>buildings20160330155804287</item>
-      <item>elevation20160330155810804</item>
-      <item>pop_statistics20160330171330775</item>
+      <item>air_pollution20160330130033449_1459774640</item>
+      <item>basins20160330130042878_1459774640</item>
+      <item>bike_routes20160330130046846_1459774640</item>
+      <item>bike_signs20160330130048970_1459774640</item>
+      <item>boudary_region20160330130051201_1459774640</item>
+      <item>districts20160330130056066_1459774640</item>
+      <item>landuse20160330130100094_1459774640</item>
+      <item>parcels20160330130103258_1459774640</item>
+      <item>pharmacy20160330130110730_1459774640</item>
+      <item>prague_120160330130120552_1459774640</item>
+      <item>public_toilets20160330130124890_1459774640</item>
+      <item>public_wifi20160330130127934_1459774640</item>
+      <item>railways20160330130130974_1459774640</item>
+      <item>schools20160330130133978_1459774640</item>
+      <item>streams20160330130136671_1459774640</item>
+      <item>streets20160330130139279_1459774640</item>
+      <item>universities20160330130141705_1459774640</item>
+      <item>elevation_shade20160330155739070_1459774640</item>
+      <item>buildings20160330155804287_1459774640</item>
+      <item>elevation20160330155810804_1459774640</item>
+      <item>pop_statistics20160330171330775_1459774640</item>
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
     <legendgroup open="true" checked="Qt::PartiallyChecked" name="Prague 1">
       <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Boudary Prague 1" showFeatureCount="0">
         <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="prague_120160330130120552" visible="1"/>
+          <legendlayerfile isInOverview="0" layerid="prague_120160330130120552_1459774640" visible="1"/>
         </filegroup>
       </legendlayer>
       <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Bike signs" showFeatureCount="0">
         <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="bike_signs20160330130048970" visible="1"/>
+          <legendlayerfile isInOverview="0" layerid="bike_signs20160330130048970_1459774640" visible="1"/>
         </filegroup>
       </legendlayer>
       <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Streets" showFeatureCount="0">
         <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="streets20160330130139279" visible="1"/>
+          <legendlayerfile isInOverview="0" layerid="streets20160330130139279_1459774640" visible="1"/>
         </filegroup>
       </legendlayer>
       <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Parcels" showFeatureCount="0">
         <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="parcels20160330130103258" visible="0"/>
+          <legendlayerfile isInOverview="0" layerid="parcels20160330130103258_1459774640" visible="0"/>
         </filegroup>
       </legendlayer>
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Landuse" showFeatureCount="0">
         <filegroup open="false" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="landuse20160330130100094" visible="0"/>
+          <legendlayerfile isInOverview="0" layerid="landuse20160330130100094_1459774640" visible="0"/>
         </filegroup>
       </legendlayer>
     </legendgroup>
@@ -203,66 +203,66 @@
       <legendgroup open="true" checked="Qt::Checked" name="Facilities">
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Public wifi" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="public_wifi20160330130127934" visible="1"/>
+            <legendlayerfile isInOverview="0" layerid="public_wifi20160330130127934_1459774640" visible="1"/>
           </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Public toilets" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="public_toilets20160330130124890" visible="1"/>
+            <legendlayerfile isInOverview="0" layerid="public_toilets20160330130124890_1459774640" visible="1"/>
           </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Schools" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="schools20160330130133978" visible="1"/>
+            <legendlayerfile isInOverview="0" layerid="schools20160330130133978_1459774640" visible="1"/>
           </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Universities" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="universities20160330130141705" visible="1"/>
+            <legendlayerfile isInOverview="0" layerid="universities20160330130141705_1459774640" visible="1"/>
           </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Pharmacy" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="pharmacy20160330130110730" visible="1"/>
+            <legendlayerfile isInOverview="0" layerid="pharmacy20160330130110730_1459774640" visible="1"/>
           </filegroup>
         </legendlayer>
       </legendgroup>
       <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Boudary region" showFeatureCount="0">
         <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="boudary_region20160330130051201" visible="0"/>
+          <legendlayerfile isInOverview="0" layerid="boudary_region20160330130051201_1459774640" visible="0"/>
         </filegroup>
       </legendlayer>
       <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Districts" showFeatureCount="0">
         <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="districts20160330130056066" visible="0"/>
+          <legendlayerfile isInOverview="0" layerid="districts20160330130056066_1459774640" visible="0"/>
         </filegroup>
       </legendlayer>
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Air pollution" showFeatureCount="0">
         <filegroup open="false" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="air_pollution20160330130033449" visible="0"/>
+          <legendlayerfile isInOverview="0" layerid="air_pollution20160330130033449_1459774640" visible="0"/>
         </filegroup>
       </legendlayer>
       <legendgroup open="false" checked="Qt::Unchecked" name="Transport">
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Railways" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="railways20160330130130974" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="railways20160330130130974_1459774640" visible="0"/>
           </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Bike routes" showFeatureCount="0">
           <filegroup open="false" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="bike_routes20160330130046846" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="bike_routes20160330130046846_1459774640" visible="0"/>
           </filegroup>
         </legendlayer>
       </legendgroup>
       <legendgroup open="false" checked="Qt::Unchecked" name="Hydrology">
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Streams" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="streams20160330130136671" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="streams20160330130136671_1459774640" visible="0"/>
           </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Basins" showFeatureCount="0">
           <filegroup open="false" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="basins20160330130042878" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="basins20160330130042878_1459774640" visible="0"/>
           </filegroup>
         </legendlayer>
       </legendgroup>
@@ -270,29 +270,29 @@
     <legendgroup open="true" checked="Qt::PartiallyChecked" name="3D data">
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="Elevation - shade" showFeatureCount="0">
         <filegroup open="false" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="elevation_shade20160330155739070" visible="1"/>
+          <legendlayerfile isInOverview="0" layerid="elevation_shade20160330155739070_1459774640" visible="1"/>
         </filegroup>
       </legendlayer>
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="Elevation" showFeatureCount="0">
         <filegroup open="false" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="elevation20160330155810804" visible="1"/>
+          <legendlayerfile isInOverview="0" layerid="elevation20160330155810804_1459774640" visible="1"/>
         </filegroup>
       </legendlayer>
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="Buildings" showFeatureCount="0">
         <filegroup open="false" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="buildings20160330155804287" visible="0"/>
+          <legendlayerfile isInOverview="0" layerid="buildings20160330155804287_1459774640" visible="0"/>
         </filegroup>
       </legendlayer>
     </legendgroup>
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Population statistics" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="pop_statistics20160330171330775" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="pop_statistics20160330171330775_1459774640" visible="1"/>
       </filegroup>
     </legendlayer>
   </legend>
   <projectlayers>
     <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
-      <id>air_pollution20160330130033449</id>
+      <id>air_pollution20160330130033449_1459774640</id>
       <datasource>dbname='./data/prague.sqlite' table="air_pollution" (geometry) sql=</datasource>
       <shortname>air_pollution</shortname>
       <title></title>
@@ -645,7 +645,7 @@ def my_form_open(dialog, layer, feature):
       </conditionalstyles>
     </maplayer>
     <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
-      <id>basins20160330130042878</id>
+      <id>basins20160330130042878_1459774640</id>
       <datasource>dbname='./data/prague.sqlite' table="basins" (geometry) sql=</datasource>
       <shortname>basins</shortname>
       <title></title>
@@ -2085,7 +2085,7 @@ def my_form_open(dialog, layer, feature):
       </conditionalstyles>
     </maplayer>
     <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Line" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
-      <id>bike_routes20160330130046846</id>
+      <id>bike_routes20160330130046846_1459774640</id>
       <datasource>dbname='./data/prague.sqlite' table="bike_routes" (geometry) sql=</datasource>
       <shortname>bike_routes</shortname>
       <title></title>
@@ -11013,7 +11013,7 @@ def my_form_open(dialog, layer, feature):
       </conditionalstyles>
     </maplayer>
     <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
-      <id>bike_signs20160330130048970</id>
+      <id>bike_signs20160330130048970_1459774640</id>
       <datasource>dbname='./data/prague.sqlite' table="bike_signs" (geometry) sql=</datasource>
       <shortname>bike_signs</shortname>
       <title></title>
@@ -11294,7 +11294,7 @@ def my_form_open(dialog, layer, feature):
       </conditionalstyles>
     </maplayer>
     <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
-      <id>boudary_region20160330130051201</id>
+      <id>boudary_region20160330130051201_1459774640</id>
       <datasource>dbname='./data/prague.sqlite' table="boudary_region" (geometry) sql=</datasource>
       <shortname>boudary_region</shortname>
       <title></title>
@@ -11570,7 +11570,7 @@ def my_form_open(dialog, layer, feature):
       </conditionalstyles>
     </maplayer>
     <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
-      <id>buildings20160330155804287</id>
+      <id>buildings20160330155804287_1459774640</id>
       <datasource>./data/buildings</datasource>
       <shortname>buildings</shortname>
       <title></title>
@@ -11617,7 +11617,7 @@ def my_form_open(dialog, layer, feature):
       <blendMode>0</blendMode>
     </maplayer>
     <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
-      <id>districts20160330130056066</id>
+      <id>districts20160330130056066_1459774640</id>
       <datasource>dbname='./data/prague.sqlite' table="districts" (geometry) sql=</datasource>
       <shortname>districts</shortname>
       <title></title>
@@ -11900,7 +11900,7 @@ def my_form_open(dialog, layer, feature):
       </conditionalstyles>
     </maplayer>
     <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
-      <id>elevation20160330155810804</id>
+      <id>elevation20160330155810804_1459774640</id>
       <datasource>./data/elevation</datasource>
       <shortname>elevation</shortname>
       <title></title>
@@ -12324,7 +12324,7 @@ def my_form_open(dialog, layer, feature):
       <blendMode>0</blendMode>
     </maplayer>
     <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
-      <id>elevation_shade20160330155739070</id>
+      <id>elevation_shade20160330155739070_1459774640</id>
       <datasource>./data/elevation_shade</datasource>
       <shortname>elevation_shade</shortname>
       <title></title>
@@ -12371,7 +12371,7 @@ def my_form_open(dialog, layer, feature):
       <blendMode>0</blendMode>
     </maplayer>
     <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
-      <id>landuse20160330130100094</id>
+      <id>landuse20160330130100094_1459774640</id>
       <datasource>dbname='./data/prague.sqlite' table="landuse" (geometry) sql=</datasource>
       <shortname>landuse</shortname>
       <title></title>
@@ -13808,7 +13808,7 @@ def my_form_open(dialog, layer, feature):
       </conditionalstyles>
     </maplayer>
     <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
-      <id>parcels20160330130103258</id>
+      <id>parcels20160330130103258_1459774640</id>
       <datasource>dbname='./data/prague.sqlite' table="parcels" (geometry) sql=</datasource>
       <shortname>parcels</shortname>
       <title></title>
@@ -14090,7 +14090,7 @@ def my_form_open(dialog, layer, feature):
       </conditionalstyles>
     </maplayer>
     <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
-      <id>pharmacy20160330130110730</id>
+      <id>pharmacy20160330130110730_1459774640</id>
       <datasource>dbname='./data/prague.sqlite' table="pharmacy" (geometry) sql=</datasource>
       <shortname>pharmacy</shortname>
       <title></title>
@@ -14371,7 +14371,7 @@ def my_form_open(dialog, layer, feature):
       </conditionalstyles>
     </maplayer>
     <maplayer minimumScale="0" maximumScale="1e+08" geometry="No geometry" type="vector" hasScaleBasedVisibilityFlag="0">
-      <id>pop_statistics20160330171330775</id>
+      <id>pop_statistics20160330171330775_1459774640</id>
       <datasource>file:./data/pop_statistics.csv?encoding=windows-1250&amp;type=regexp&amp;delimiter=;&amp;geomType=none&amp;subsetIndex=no&amp;watchFile=no</datasource>
       <shortname>pop_statistics</shortname>
       <title></title>
@@ -14436,7 +14436,7 @@ def my_form_open(dialog, layer, feature):
       </conditionalstyles>
     </maplayer>
     <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
-      <id>prague_120160330130120552</id>
+      <id>prague_120160330130120552_1459774640</id>
       <datasource>dbname='./data/prague.sqlite' table="prague_1" (geometry) sql=</datasource>
       <shortname>prague_1</shortname>
       <title></title>
@@ -14721,7 +14721,7 @@ def my_form_open(dialog, layer, feature):
       </conditionalstyles>
     </maplayer>
     <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
-      <id>public_toilets20160330130124890</id>
+      <id>public_toilets20160330130124890_1459774640</id>
       <datasource>dbname='./data/prague.sqlite' table="public_toilets" (geometry) sql=</datasource>
       <shortname>public_toilets</shortname>
       <title></title>
@@ -15014,7 +15014,7 @@ def my_form_open(dialog, layer, feature):
       </conditionalstyles>
     </maplayer>
     <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
-      <id>public_wifi20160330130127934</id>
+      <id>public_wifi20160330130127934_1459774640</id>
       <datasource>dbname='./data/prague.sqlite' table="public_wifi" (geometry) sql=</datasource>
       <shortname>public_wifi</shortname>
       <title></title>
@@ -15295,7 +15295,7 @@ def my_form_open(dialog, layer, feature):
       </conditionalstyles>
     </maplayer>
     <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Line" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
-      <id>railways20160330130130974</id>
+      <id>railways20160330130130974_1459774640</id>
       <datasource>dbname='./data/prague.sqlite' table="railways" (geometry) sql=</datasource>
       <shortname>railways</shortname>
       <title></title>
@@ -15575,7 +15575,7 @@ def my_form_open(dialog, layer, feature):
       </conditionalstyles>
     </maplayer>
     <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
-      <id>schools20160330130133978</id>
+      <id>schools20160330130133978_1459774640</id>
       <datasource>dbname='./data/prague.sqlite' table="schools" (geometry) sql=</datasource>
       <shortname>schools</shortname>
       <title></title>
@@ -15856,7 +15856,7 @@ def my_form_open(dialog, layer, feature):
       </conditionalstyles>
     </maplayer>
     <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Line" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
-      <id>streams20160330130136671</id>
+      <id>streams20160330130136671_1459774640</id>
       <datasource>dbname='./data/prague.sqlite' table="streams" (geometry) sql=</datasource>
       <shortname>streams</shortname>
       <title></title>
@@ -16187,7 +16187,7 @@ def my_form_open(dialog, layer, feature):
       </conditionalstyles>
     </maplayer>
     <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Line" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
-      <id>streets20160330130139279</id>
+      <id>streets20160330130139279_1459774640</id>
       <datasource>dbname='./data/prague.sqlite' table="streets" (geometry) sql=</datasource>
       <shortname>streets</shortname>
       <title></title>
@@ -16469,7 +16469,7 @@ def my_form_open(dialog, layer, feature):
       </conditionalstyles>
     </maplayer>
     <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
-      <id>universities20160330130141705</id>
+      <id>universities20160330130141705_1459774640</id>
       <datasource>dbname='./data/prague.sqlite' table="universities" (geometry) sql=</datasource>
       <shortname>universities</shortname>
       <title></title>
@@ -16768,24 +16768,24 @@ def my_form_open(dialog, layer, feature):
     </Paths>
     <WMSServiceTitle type="QString"></WMSServiceTitle>
     <WFSLayers type="QStringList">
-      <value>air_pollution20160330130033449</value>
-      <value>basins20160330130042878</value>
-      <value>bike_routes20160330130046846</value>
-      <value>bike_signs20160330130048970</value>
-      <value>boudary_region20160330130051201</value>
-      <value>districts20160330130056066</value>
-      <value>landuse20160330130100094</value>
-      <value>parcels20160330130103258</value>
-      <value>pharmacy20160330130110730</value>
-      <value>pop_statistics20160330171330775</value>
-      <value>prague_120160330130120552</value>
-      <value>public_toilets20160330130124890</value>
-      <value>public_wifi20160330130127934</value>
-      <value>railways20160330130130974</value>
-      <value>schools20160330130133978</value>
-      <value>streams20160330130136671</value>
-      <value>streets20160330130139279</value>
-      <value>universities20160330130141705</value>
+      <value>air_pollution20160330130033449_1459774640</value>
+      <value>basins20160330130042878_1459774640</value>
+      <value>bike_routes20160330130046846_1459774640</value>
+      <value>bike_signs20160330130048970_1459774640</value>
+      <value>boudary_region20160330130051201_1459774640</value>
+      <value>districts20160330130056066_1459774640</value>
+      <value>landuse20160330130100094_1459774640</value>
+      <value>parcels20160330130103258_1459774640</value>
+      <value>pharmacy20160330130110730_1459774640</value>
+      <value>pop_statistics20160330171330775_1459774640</value>
+      <value>prague_120160330130120552_1459774640</value>
+      <value>public_toilets20160330130124890_1459774640</value>
+      <value>public_wifi20160330130127934_1459774640</value>
+      <value>railways20160330130130974_1459774640</value>
+      <value>schools20160330130133978_1459774640</value>
+      <value>streams20160330130136671_1459774640</value>
+      <value>streets20160330130139279_1459774640</value>
+      <value>universities20160330130141705_1459774640</value>
     </WFSLayers>
     <WMSContactMail type="QString"></WMSContactMail>
     <PositionPrecision>
@@ -16820,23 +16820,23 @@ def my_form_open(dialog, layer, feature):
     <Digitizing>
       <DefaultSnapToleranceUnit type="int">2</DefaultSnapToleranceUnit>
       <LayerSnappingList type="QStringList">
-        <value>air_pollution20160330130033449</value>
-        <value>basins20160330130042878</value>
-        <value>bike_routes20160330130046846</value>
-        <value>bike_signs20160330130048970</value>
-        <value>boudary_region20160330130051201</value>
-        <value>districts20160330130056066</value>
-        <value>landuse20160330130100094</value>
-        <value>parcels20160330130103258</value>
-        <value>pharmacy20160330130110730</value>
-        <value>prague_120160330130120552</value>
-        <value>public_toilets20160330130124890</value>
-        <value>public_wifi20160330130127934</value>
-        <value>railways20160330130130974</value>
-        <value>schools20160330130133978</value>
-        <value>streams20160330130136671</value>
-        <value>streets20160330130139279</value>
-        <value>universities20160330130141705</value>
+        <value>air_pollution20160330130033449_1459774640</value>
+        <value>basins20160330130042878_1459774640</value>
+        <value>bike_routes20160330130046846_1459774640</value>
+        <value>bike_signs20160330130048970_1459774640</value>
+        <value>boudary_region20160330130051201_1459774640</value>
+        <value>districts20160330130056066_1459774640</value>
+        <value>landuse20160330130100094_1459774640</value>
+        <value>parcels20160330130103258_1459774640</value>
+        <value>pharmacy20160330130110730_1459774640</value>
+        <value>prague_120160330130120552_1459774640</value>
+        <value>public_toilets20160330130124890_1459774640</value>
+        <value>public_wifi20160330130127934_1459774640</value>
+        <value>railways20160330130130974_1459774640</value>
+        <value>schools20160330130133978_1459774640</value>
+        <value>streams20160330130136671_1459774640</value>
+        <value>streets20160330130139279_1459774640</value>
+        <value>universities20160330130141705_1459774640</value>
       </LayerSnappingList>
       <LayerSnappingEnabledList type="QStringList">
         <value>disabled</value>
@@ -16941,10 +16941,10 @@ def my_form_open(dialog, layer, feature):
     </WFSLayersPrecision>
     <Identify>
       <disabledLayers type="QStringList">
-        <value>elevation20160330155810804</value>
-        <value>elevation_shade20160330155739070</value>
-        <value>prague_120160330130120552</value>
-        <value>streams20160330130136671</value>
+        <value>elevation20160330155810804_1459774640</value>
+        <value>elevation_shade20160330155739070_1459774640</value>
+        <value>prague_120160330130120552_1459774640</value>
+        <value>streams20160330130136671_1459774640</value>
       </disabledLayers>
     </Identify>
     <Macros>
@@ -16952,9 +16952,9 @@ def my_form_open(dialog, layer, feature):
     </Macros>
     <WMSAccessConstraints type="QString">None</WMSAccessConstraints>
     <WCSLayers type="QStringList">
-      <value>buildings20160330155804287</value>
-      <value>elevation20160330155810804</value>
-      <value>elevation_shade20160330155739070</value>
+      <value>buildings20160330155804287_1459774640</value>
+      <value>elevation20160330155810804_1459774640</value>
+      <value>elevation_shade20160330155739070_1459774640</value>
     </WCSLayers>
     <Legend>
       <filterByMap type="bool">false</filterByMap>
