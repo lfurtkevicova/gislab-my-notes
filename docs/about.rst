@@ -96,3 +96,39 @@ What is GIS.lab Mobile
 
 .. todo:: |todo.| GIS.lab Mobile
 
+=======================
+How to upgrade GIS.lab?
+=======================
+
+GIS.lab upgrade procedure consists from three steps: 
+
+1. server software upgrade,
+2. client images upgrade, 
+3. GIS.lab system itself upgrade.
+
+Although, it is possible to run each step separately by hand, GIS.lab
+provisioner is designed as idempotent task, which is capable of both,
+GIS.lab installation and also upgrade. This means, that GIS.lab upgrade
+is performed by the same provisioner command as used for GIS.lab
+installation. Using GIS.lab provisioner for upgrade is recommended to
+keep all parts of GIS.lab in consistent state.
+
+GIS.lab source code update (development version)
+
+.. code-block:: sh
+
+   $ git pull
+
+Upgrade with Vagrant
+
+.. code-block:: sh
+
+   $ vagrant provision
+
+Upgrade with Ansible
+
+.. code-block:: sh
+
+   $ ansible-playbook --inventory=gislab-unit.inventory --private-key=<private-SSH-key-file> system/gislab.yml
+
+

@@ -51,6 +51,7 @@ Contents
 
    datasets
    problems
+   communication
    credits
 
 .. note:: |note.| GIS.lab is still in pre-release state
