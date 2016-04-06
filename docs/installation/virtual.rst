@@ -25,19 +25,14 @@ operation is done inside of virtual machine.
    configuration variable, otherwise IP conflicts may occur. See Configuration 
    section for information about changing GIS.lab configuration. 
    
-============
-Requirements
-============
+To run GIS.lab in Virtual mode, there are some hardware and software requirements. 
+Another important point is GIS.lab source code, see :ref:`GIS.lab source code download <GL-clone>`. 
 
---------
-Hardware
---------
+*Hardware*
 
 - 4 GB RAM on host machine
 
---------
-Software
---------
+*Software*
 
 -  host machine running Linux or MAC OSX
 -  Git, see :ref:`Git installation <git-installation>`
@@ -45,15 +40,17 @@ Software
 -  VirtualBox 4.3 or higher, see :ref:`VirtualBox installation <vb-installation>`
 -  Vagrant 1.7 or higher , see :ref:`Vagrant installation <vagrant-installation>`
 
------------
-Source code
------------
+.. tip:: |tip| Check the version of software that are installed by typing
 
-- GIS.lab source code, see :ref:`GIS.lab source code download <GL-clone>` to get it
+   .. code:: sh
 
-====================
+      $ ansible --version
+      $ vboxmanage --version
+      $ vagrant --version
+
+--------------------
 Installation process
-====================
+--------------------
 
 GIS.lab installation takes from 30 minutes to few hours depending on
 your machine performance and Internet connection speed.
@@ -68,27 +65,84 @@ The output should be as follows.
 
 .. code:: sh
 
-   ...
+   Bringing machine 'gislab_vagrant' up with 'virtualbox' provider...
+   ==> gislab_vagrant: Clearing any previously set forwarded ports...
+   ==> gislab_vagrant: Clearing any previously set network interfaces...
+   ==> gislab_vagrant: Available bridged network interfaces:
+   1) eth0
+   2) wlan0
+   ==> gislab_vagrant: When choosing an interface, it is usually the one that is
+   ==> gislab_vagrant: being used to connect to the internet.
+       gislab_vagrant: Which interface should the network bridge to? 
 
-If machine contains multiple network adapters, user will be asked to choose one. 
-corresponding to wired network adapter. In case of ``eth0`` connection, ``2`` 
-should be selected.
+If machine contains multiple network adapters, user is asked to choose one 
+corresponding adapter. For example, in case of ``eth0`` connection, selection 
+``2`` should be choosen. Then the installation goes ahead.
 
-.. rubric:: User accounts
+.. code:: sh
+
+   ==> gislab_vagrant: Preparing network interfaces based on configuration...
+       gislab_vagrant: Adapter 1: nat
+       gislab_vagrant: Adapter 2: bridged
+   ==> gislab_vagrant: Forwarding ports...
+       gislab_vagrant: 22 => 2222 (adapter 1)
+   ==> gislab_vagrant: Running 'pre-boot' VM customizations...
+   ==> gislab_vagrant: Booting VM...
+   ==> gislab_vagrant: Waiting for machine to boot. This may take a few minutes...
+       gislab_vagrant: SSH address: 127.0.0.1:2222
+       gislab_vagrant: SSH username: vagrant
+       gislab_vagrant: SSH auth method: private key
+       gislab_vagrant: Warning: Connection timeout. Retrying...
+   ==> gislab_vagrant: Machine booted and ready!
+   ==> gislab_vagrant: Checking for guest additions in VM...
+       gislab_vagrant: The guest additions on this VM do not match the installed version of
+       gislab_vagrant: VirtualBox! In most cases this is fine, but in rare cases it can
+       gislab_vagrant: prevent things such as shared folders from working properly. If you see
+       gislab_vagrant: shared folder errors, please make sure the guest additions within the
+       gislab_vagrant: virtual machine match the version of VirtualBox you have installed on
+       gislab_vagrant: your host and reload your VM.
+       gislab_vagrant: 
+       gislab_vagrant: Guest Additions Version: 4.1.44
+       gislab_vagrant: VirtualBox Version: 4.3
+   ==> gislab_vagrant: Configuring and enabling network interfaces...
+   ==> gislab_vagrant: Machine already provisioned. Run `vagrant provision` or use the `--provision`
+   ==> gislab_vagrant: flag to force provisioning. Provisioners marked to run always will still run.
+
+-------------
+User accounts
+-------------
 
 By default, GIS.lab installation creates only a superuser account ``gislab``. 
-Let's create ordinary user account. Log in to GIS.lab server and run following 
-command in source code directory.
+Ordinary user account can be created by logging in to GIS.lab server - running Vagrant machine in source code directory.
 
 .. code:: sh
 
    $ vagrant ssh
 
-Then create ``lab1`` user account with password ``lab`` on GIS.lab server.
+For example ``lab1`` user account with password ``lab`` can then be created by 
+using ``gislab-adduser`` command.
 
 .. code:: sh 
 
    $ sudo gislab-adduser -g User -l GIS.lab -m lab1@gis.lab -p lab lab1
+
+With ``gislab-listusers`` list of all GIS.lab users is displayed, see example below.
+
+.. code:: sh
+
+.. code::
+	
+   $ sudo gislab-listusers | grep dn:
+   dn: uid=gislab,ou=People,dc=gis,dc=lab
+   dn: uid=lab1,ou=People,dc=gis,dc=lab
+
+   $ sudo gislab-adduser -g User -l GIS.lab -m furtkevicova@gis.lab -p ludmila furtkevicova
+   
+   $ sudo gislab-listusers | grep dn:
+   dn: uid=gislab,ou=People,dc=gis,dc=lab
+   dn: uid=lab1,ou=People,dc=gis,dc=lab
+   dn: uid=furtkevicova,ou=People,dc=gis,dc=lab
+
 
 ----------------------------
 Installation of requirements
@@ -108,6 +162,16 @@ used to update local package index. Afterwards, Git can be downloaded and instal
 
    $ sudo apt-get update
    $ sudo apt-get install git
+
+.. _GL-clone:
+
+.. rubric:: GIS.lab source code download
+
+Following command will grab GIS.lab source code to user system.
+
+.. code:: sh
+
+   $ git clone https://github.com/gislab-npo/gislab.git
 
 .. _ansible-installation:
 
@@ -157,26 +221,3 @@ and eventually package should be installed. See instructions below.
    .. code:: sh
    
       $ vagrant box add precise-canonical http://cloud-images.ubuntu.com/vagrant/precise/current/precise-server-cloudimg-i386-vagrant-disk1.box
-
-.. _GL-clone:
-
-.. rubric:: GIS.lab source code download
-
-Following command will grab GIS.lab source code to user system.
-
-.. code:: sh
-
-   $ git clone https://github.com/imincik/gis-lab.git
-
-.. tip:: |tip| Lastly, check the version of software that are installed by typing
-
-   .. code:: sh
-
-      # Git
-      $ git --version
-      # Ansible
-      $ ansible --version
-      # VirtualBox
-      $ vboxmanage --version
-      # Vagrant
-      $ vagrant --version
