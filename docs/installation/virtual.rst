@@ -48,9 +48,9 @@ Another important point is GIS.lab source code, see :ref:`GIS.lab source code do
       $ vboxmanage --version
       $ vagrant --version
 
---------------------
-Installation process
---------------------
+------
+Server
+------
 
 GIS.lab installation takes from 30 minutes to few hours depending on
 your machine performance and Internet connection speed.
@@ -108,12 +108,13 @@ corresponding adapter. For example, in case of ``eth0`` connection, selection
    ==> gislab_vagrant: Machine already provisioned. Run `vagrant provision` or use the `--provision`
    ==> gislab_vagrant: flag to force provisioning. Provisioners marked to run always will still run.
 
--------------
+^^^^^^^^^^^^^
 User accounts
--------------
+^^^^^^^^^^^^^
 
 By default, GIS.lab installation creates only a superuser account ``gislab``. 
-Ordinary user account can be created by logging in to GIS.lab server - running Vagrant machine in source code directory.
+Ordinary user account can be created by logging in to GIS.lab server, i.e. 
+running Vagrant machine in source code directory via SSH.
 
 .. code:: sh
 
@@ -143,6 +144,161 @@ With ``gislab-listusers`` list of all GIS.lab users is displayed, see example be
    dn: uid=lab1,ou=People,dc=gis,dc=lab
    dn: uid=furtkevicova,ou=People,dc=gis,dc=lab
 
+------
+Client
+------
+
+Running GIS.lab client in virtual mode is very useful when one wants to
+keep working in his favourite operating system, e.g. Windows 7 OS but also wants 
+to use GIS.lab environment.
+GIS.lab virtual client is running in VirtualBox virtual machine, which
+is capable to run on **Windows**, **Linux** or **Mac OS X** operating systems.
+The process consists of four main steps: 
+
+1. :ref:`Virtual machine creation <vm-creation>`
+2. :ref:`Booting <booting>`
+3. :ref:`Enabling GIS.lab client on GIS.lab server <client-enabling>`
+4. :ref:`Running virtual GIS.lab client <client-running>`
+
+.. _vm-creation:
+
+.. rubric:: Virtual machine creation
+
+.. todo:: |todo| screenshots ...
+
+.. _booting:
+
+.. rubric:: Booting
+
+It is possible to boot using :ref:`PXE <pxe-boot>` or :ref:`HTTP <http-boot>` boot. 
+
+.. _pxe-boot:
+
+^^^^^^^^
+PXE boot
+^^^^^^^^
+
+PXE boot is a default boot mode for GIS.lab clients. It is a simplest
+method to get client up and running, but it may not work if
+multiple DHCP boot servers or GIS.lab servers exists in network.
+
+It is necessary to configure boot order to boot only **from network**, enable IO APIC, 
+configure network adapter in bridged mode, make sure that ``PCnet-FAST III (Am79C973)`` 
+is selected as the adapter type and allow promiscuous mode for all. 
+
+.. todo:: |todo| screenshots ...
+
+.. _http-boot:
+
+^^^^^^^^^
+HTTP boot
+^^^^^^^^^
+
+HTTP boot is an alternative boot method for launching GIS.lab Desktop
+clients, which offers some advanced features and allows to boot if
+multiple DHCP boot servers or GIS.lab servers exists in LAN. HTTP boot is 
+performed by loading 
+system from special GIS.lab bootloader **ISO image file**, which exists 
+in *http-boot/gislab-bootloader.iso*. Here is a
+list of notable advantages of HTTP boot over PXE:
+
+-  it is the only way to boot if multiple DHCP boot servers or GIS.lab
+   servers exists in network
+-  it allows to manually choose target GIS.lab server which is very
+   handy if multiple GIS.lab servers are running in one network
+-  it is easier to boot from HTTP (which is actually done by booting
+   from USB stick) than to setup PXE boot on some new machines
+-  boot process is faster
+-  it allows to use para-virtualized network adapter for Virtual clients
+   (VirtualBox), which is many times faster than network adapter used
+   for PXE
+
+There are two possible choices to choose from: 
+
+A) :ref:`Automatic GIS.lab detection <automatic-detection>`
+B) :ref:`Manual GIS.lab selection <manual-selection>`.
+
+.. _automatic-detection:
+
+.. rubric:: Automatic detection
+
+This mode will run DHCP request to set initial network DNS server
+configuration. It will use the first response from any DHCP server in
+network. Then, it will try to boot from ``http://boot.gis.lab``. It means,
+that if DHCP server response was from GIS.lab server, client machine
+will successfully launch. If that response was from some third-party
+DHCP server running in LAN, it will fail unless DNS server provided by
+that DHCP response will be aware of ``boot.gis.lab``. It also means, that
+if multiple GIS.lab server instances are running in one LAN, it is not
+possible to predict which one will be used.
+
+.. _http-boot-a:
+
+.. figure:: ../img/installation-virtual/http-boot-menu.png
+   :align: center
+   :width: 450
+
+   Automatic detection using HTTP boot.
+
+.. _manual-selection:
+
+.. rubric:: Manual selection
+
+Manual GIS.lab server selection can be used to choose GIS.lab server by
+entering its IP address. It means, that it is not vulnerable from
+third-party DHCP responses and it is possible to choose particular
+GIS.lab server, if multiple ones are running in LAN. GIS.lab server is
+using multiple IP addresses, i.e. IP address from GIS.lab network range
+``GISLAB_NETWORK.5`` or IP address assigned by LAN. Both of them can be
+used for choosing GIS.lab server to boot.
+
+.. _http-boot-m:
+
+.. figure:: ../img/installation-virtual/http-boot-network-selection.png
+   :align: center
+   :width: 450
+
+   Manual network selection using HTTP boot.
+
+Using HTTP boot it is necessary to add virtual *gislab-bootloader.iso* file as 
+virtual CD/DVD, configure boot order to boot only from virtual CD/DVD, enable *IO
+APIC*, configure network adapter in bridged mode, make sure 
+``Paravirtualized Network (virtio-net)`` is selected as the adapter type and allow
+promiscuous mode for all.
+
+.. todo:: |todo| screenshots ...
+
+.. important:: |imp| For next steps assigned ``MAC address`` is needed. 
+   See *Network advanced* tab in VirtualBox environment and make a note of this 
+   address.
+
+.. _client-enabling:
+
+.. rubric:: Enabling GIS.lab client on GIS.lab server
+
+After virtual client is created, log in to GIS.lab server and with 
+``gislab-machines -a`` allow client machine to connect.
+
+.. code:: sh
+
+   $ vagrant ssh
+   $ sudo gislab-machines -a <MAC-address>
+
+.. _client-running:
+
+.. rubric:: Running virtual GIS.lab client
+
+Start *GIS.lab client* virtual machine by pressing *Start* button in
+*VirtualBox Manager*, log in and enjoy. 
+
+.. tip:: |tip| To set custom client display resolution run following command 
+   on host machine.
+   
+   .. code:: sh
+      
+      $ VBoxManage controlvm "GIS.lab client" setvideomodehint <xresolution> <yresolution> 32
+      # example 
+      $ VBoxManage controlvm "GIS.lab client" setvideomodehint 1000 660 32``
 
 ----------------------------
 Installation of requirements
