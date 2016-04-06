@@ -288,8 +288,8 @@ After virtual client is created, log in to GIS.lab server and with
 
 .. rubric:: Running virtual GIS.lab client
 
-Start *GIS.lab client* virtual machine by pressing *Start* button in
-*VirtualBox Manager*, log in and enjoy. 
+Start GIS.lab client virtual machine by pressing ``Start`` button in
+VirtualBox Manager, log in and enjoy. 
 
 .. tip:: |tip| To set custom client display resolution run following command 
    on host machine.
