@@ -11,7 +11,10 @@ Useful terms
    an easy to use configuration management and orchestration tool, it is platform 
    that can combine multi-node software deployment and ad hoc task execution, 
    Ansible’s configuration, deployment, and orchestration language are playbooks
-   expressed in YAML format 
+   expressed in YAML format; Ansible is an automation engine, similar to 
+   `Chef <https://www.chef.io/>`_ or `Puppet <https://puppetlabs.com/>`_, 
+   that can be used to ensure deployment and configuration consistency 
+   across many servers, and keep servers and applications up-to-date
 
 *Bridged networking*
    connects a virtual machine to a network by using the network adapter on the 

@@ -16,6 +16,6 @@ Communication channels
 
   https://hangouts.google.com/call/txgqzo4g2bsoi5ap7744tvc4zaa
 
-- **YouTube Channel**
+- **YouTube**
 
   https://www.youtube.com/channel/UCHXyhq_wrEBnGYTRJovxrCg
