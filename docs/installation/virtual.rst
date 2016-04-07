@@ -133,16 +133,16 @@ With ``gislab-listusers`` list of all GIS.lab users is displayed, see example be
 
 .. code::
 	
-   $ sudo gislab-listusers | grep dn:
-   dn: uid=gislab,ou=People,dc=gis,dc=lab
-   dn: uid=lab1,ou=People,dc=gis,dc=lab
+   $ sudo gislab-listusers | grep uid:
+   uid: uid=gislab
+   uid: uid=lab1
 
    $ sudo gislab-adduser -g User -l GIS.lab -m furtkevicova@gis.lab -p ludmila furtkevicova
    
    $ sudo gislab-listusers | grep dn:
-   dn: uid=gislab,ou=People,dc=gis,dc=lab
-   dn: uid=lab1,ou=People,dc=gis,dc=lab
-   dn: uid=furtkevicova,ou=People,dc=gis,dc=lab
+   uid: uid=gislab
+   uid: uid=lab1
+   uid: uid=furtkevicova
 
 ------
 Client
@@ -186,7 +186,15 @@ It is necessary to configure boot order to boot only **from network**, enable IO
 configure network adapter in bridged mode, make sure that ``PCnet-FAST III (Am79C973)`` 
 is selected as the adapter type and allow promiscuous mode for all. 
 
-.. todo:: |todo| screenshots ...
+.. _pxe-vb-settings:
+
+.. figure:: ../img/installation-virtual/pxe-vb-settings.png
+   :align: center
+   :width: 750
+
+   Settings in VirtalBox using PXE boot.
+
+.. todo:: |todo| new screenshots + instructions
 
 .. _http-boot:
 
@@ -266,10 +274,18 @@ APIC*, configure network adapter in bridged mode, make sure
 ``Paravirtualized Network (virtio-net)`` is selected as the adapter type and allow
 promiscuous mode for all.
 
-.. todo:: |todo| screenshots ...
+.. _http-vb-settings:
+
+.. figure:: ../img/installation-virtual/http-vb-settings.png
+   :align: center
+   :width: 750
+
+   Settings in VirtalBox using HTTP boot.
+
+.. todo:: |todo| new screenshots + instructions
 
 .. important:: |imp| For next steps assigned ``MAC address`` is needed. 
-   See *Network advanced* tab in VirtualBox environment and make a note of this 
+   See *Network* section in VirtualBox environment and make a note of this 
    address.
 
 .. _client-enabling:

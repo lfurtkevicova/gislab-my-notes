@@ -4,6 +4,15 @@
 Useful commands
 ***************
 
+:command:`gislab-adduser`
+   creates GIS.lab user account
+
+:command:`gislab-listusers`
+   lists GIS.lab users
+
+:command:`git config --get remote.origin.url`
+   retrieves the git remote origin URL of the current repo 
+
 :command:`vagrant destroy` 
    stops the running Vagrant machine and destroys all resources that were 
    created during the machine creation process
