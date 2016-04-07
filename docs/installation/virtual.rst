@@ -164,7 +164,8 @@ The process consists of four main steps:
 
 .. rubric:: Virtual machine creation
 
-.. todo:: |todo| screenshots ...
+Machines are created in VirtualBox environment and their creation depends on 
+type of booting, see :num:`#pxe-vb-settings` and :num:`#http-vb-settings`. 
 
 .. _booting:
 
@@ -221,7 +222,69 @@ list of notable advantages of HTTP boot over PXE:
    (VirtualBox), which is many times faster than network adapter used
    for PXE
 
-There are two possible choices to choose from: 
+Using HTTP boot it is necessary to add virtual *gislab-bootloader.iso* file as 
+virtual CD/DVD, configure boot order to boot only from virtual CD/DVD, enable *IO
+APIC*, configure network adapter in bridged mode, make sure 
+``Paravirtualized Network (virtio-net)`` is selected as the adapter type and allow
+promiscuous mode for all.
+
+.. _http-vb-settings:
+
+.. figure:: ../img/installation-virtual/http-vb-settings.png
+   :align: center
+   :width: 750
+
+   Settings in VirtalBox using HTTP boot.
+
+.. todo:: |todo| new screenshots + instructions
+
+.. important:: |imp| For next steps assigned ``MAC address`` is needed. 
+   See *Network* section in VirtualBox environment and make a note of this 
+   address.
+
+.. important:: |imp| Selection of the network adapter on the host system that 
+   traffic to and from which network card will go through should be different 
+   from current internet connection, e.g. in case of ``wlan0``, ``eth0`` should 
+   be set as ``Name`` of ``Bridged Adapter``.
+
+.. _client-enabling:
+
+.. rubric:: Enabling GIS.lab client on GIS.lab server
+
+After virtual client is created, log in to GIS.lab server and with 
+``gislab-machines -a`` allow client machine to connect.
+
+.. code:: sh
+
+   $ vagrant ssh
+   $ sudo gislab-machines -a <MAC-address>
+
+.. _client-running:
+
+.. rubric:: Running virtual GIS.lab client
+
+Start GIS.lab client virtual machine by pressing ``Start`` button in
+VirtualBox Manager, log in and enjoy. In the figures :num:`#client-pxe-logging-in` 
+and :num:`#client-pxe-running` one can see GIS.lab client logging in screen 
+and Desktop of running virtual GIS.lab client using e.g. PXE boot.
+
+.. _client-pxe-logging-in:
+
+.. figure:: ../img/installation-virtual/client-pxe-logging-in.png
+   :align: center
+   :width: 450
+
+   GIS.lab client logging in.
+
+.. _client-pxe-running:
+
+.. figure:: ../img/installation-virtual/client-pxe-running.png
+   :align: center
+   :width: 450
+
+   GIS.lab client running environment.
+
+Using HTTP boot there are two possible choices to choose from: 
 
 A) :ref:`Automatic GIS.lab detection <automatic-detection>`
 B) :ref:`Manual GIS.lab selection <manual-selection>`.
@@ -268,53 +331,27 @@ used for choosing GIS.lab server to boot.
 
    Manual network selection using HTTP boot.
 
-Using HTTP boot it is necessary to add virtual *gislab-bootloader.iso* file as 
-virtual CD/DVD, configure boot order to boot only from virtual CD/DVD, enable *IO
-APIC*, configure network adapter in bridged mode, make sure 
-``Paravirtualized Network (virtio-net)`` is selected as the adapter type and allow
-promiscuous mode for all.
-
-.. _http-vb-settings:
-
-.. figure:: ../img/installation-virtual/http-vb-settings.png
-   :align: center
-   :width: 750
-
-   Settings in VirtalBox using HTTP boot.
-
-.. todo:: |todo| new screenshots + instructions
-
-.. important:: |imp| For next steps assigned ``MAC address`` is needed. 
-   See *Network* section in VirtualBox environment and make a note of this 
-   address.
-
-.. _client-enabling:
-
-.. rubric:: Enabling GIS.lab client on GIS.lab server
-
-After virtual client is created, log in to GIS.lab server and with 
-``gislab-machines -a`` allow client machine to connect.
-
-.. code:: sh
-
-   $ vagrant ssh
-   $ sudo gislab-machines -a <MAC-address>
-
-.. _client-running:
-
-.. rubric:: Running virtual GIS.lab client
-
-Start GIS.lab client virtual machine by pressing ``Start`` button in
-VirtualBox Manager, log in and enjoy. 
+.. note:: |note| IP address can be found out after typing ``ip a | grep eth0``
+   on GIS.lab server, i.e. after ``vagrant ssh``.
 
 .. tip:: |tip| To set custom client display resolution run following command 
    on host machine.
    
    .. code:: sh
       
-      $ VBoxManage controlvm "GIS.lab client" setvideomodehint <xresolution> <yresolution> 32
+      $ VBoxManage controlvm "<GIS.lab client name>" setvideomodehint <xresolution> <yresolution> 32
       # example 
-      $ VBoxManage controlvm "GIS.lab client" setvideomodehint 1000 660 32``
+      $ VBoxManage controlvm "GIS.lab client PXE" setvideomodehint 1000 660 32
+
+.. note:: |note| Getting a list of all running VirtualBox virtual machines by 
+   name and UUID is possible with following command on host machine.
+
+   .. code:: sh
+
+      $ VBoxManage list runningvms
+
+For logging out from GIS.lab server use ``logout`` and then use ``vagrant halt``
+to shut down the running machine Vagrant is managing.
 
 ----------------------------
 Installation of requirements
