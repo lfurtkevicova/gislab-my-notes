@@ -44,3 +44,6 @@ Useful commands
 :command:`vagrant version`
    tells the version of the installed Vagrant as well as the latest version of 
    Vagrant that is currently available
+
+:command:`VBoxManage list runningvms`
+   gets a list of all running VirtualBox virtual machines
