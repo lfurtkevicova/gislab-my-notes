@@ -9,21 +9,24 @@ and VirtualBox. Only **Linux** and **MAC OS X** operating systems are supported.
 Installation process will NOT modify anything on your host machine. Every 
 operation is done inside of virtual machine.
 
-.. attention:: |att| GIS.lab server contains its own DHCP server. DHCP 
-   server is used in almost every local network for automatic network 
-   configuration. By default, access to GIS.lab's DHCP server is restricted only 
-   for GIS.lab client machines (by list of their MAC addresses) and it is 
-   managed by gislab-machines administrator command. It is possible to switch 
-   access policy to unrestricted, but it is required to double check that no DHCP 
-   servers conflict will occur. Otherwise, serious network breakage may be done. 
-   Please, never change policy to unrestricted when connecting to your corporate 
-   LAN!
+GIS.lab server contains its own DHCP server. DHCP server is used in almost every 
+local network for automatic network configuration. By default, access to GIS.lab's 
+DHCP server is restricted only for GIS.lab client machines (by list of their 
+MAC addresses) and it is managed by ``gislab-machines`` administrator command. 
+It is possible to switch access policy to unrestricted, but it is required to 
+double check that no DHCP servers conflict will occur. 
+Otherwise, serious network breakage may be done. 
 
-.. important:: |imp| GIS.lab creates it's own network. By default it is in range 
-   ``192.168.50.0/24``. If this range already exists in LAN where GIS.lab is 
-   going to be deployed, it is required to change it using ``GISLAB_NETWORK`` 
-   configuration variable, otherwise IP conflicts may occur. See Configuration 
-   section for information about changing GIS.lab configuration. 
+.. attention:: |att| Please, never change policy to unrestricted when connecting 
+   to your corporate LAN!
+
+GIS.lab creates it's own network. By default it is in range ``192.168.50.0/24``. 
+If this range already exists in LAN where GIS.lab is going to be deployed, 
+it is required to change it using ``GISLAB_NETWORK`` configuration variable.
+
+.. important:: |imp| Otherwise IP conflicts may occur. 
+
+See Configuration section for information about changing GIS.lab configuration. 
    
 To run GIS.lab in Virtual mode, there are some hardware and software requirements. 
 Another important point is GIS.lab source code, see :ref:`GIS.lab source code download <GL-clone>`. 
@@ -242,10 +245,10 @@ promiscuous mode for all.
    See *Network* section in VirtualBox environment and make a note of this 
    address.
 
-.. important:: |imp| Selection of the network adapter on the host system that 
-   traffic to and from which network card will go through should be different 
-   from current internet connection, e.g. in case of ``wlan0``, ``eth0`` should 
-   be set as ``Name`` of ``Bridged Adapter``.
+Selection of the network adapter on the host system that traffic to and from 
+which network card will go through should be different from current internet 
+connection, e.g. in case of ``wlan0``, ``eth0`` should be set as ``Name`` 
+of ``Bridged Adapter``.
 
 .. _client-enabling:
 
@@ -331,8 +334,8 @@ used for choosing GIS.lab server to boot.
 
    Manual network selection using HTTP boot.
 
-.. note:: |note| IP address can be found out after typing ``ip a | grep eth0``
-   on GIS.lab server, i.e. after ``vagrant ssh``.
+IP address can be found out after typing ``ip a | grep eth0`` on GIS.lab server 
+after ``vagrant ssh``.
 
 .. tip:: |tip| To set custom client display resolution run following command 
    on host machine.
