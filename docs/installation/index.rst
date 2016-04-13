@@ -8,6 +8,7 @@ Installation
    :maxdepth: 2
    :numbered:
 
+   configuration
    physical
    virtual
    

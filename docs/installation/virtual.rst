@@ -24,9 +24,11 @@ GIS.lab creates it's own network. By default it is in range ``192.168.50.0/24``.
 If this range already exists in LAN where GIS.lab is going to be deployed, 
 it is required to change it using ``GISLAB_NETWORK`` configuration variable.
 
-.. important:: |imp| Otherwise IP conflicts may occur. 
+See :ref:`Configuration section <configuration>` for information about changing 
+GIS.lab configuration. 
 
-See Configuration section for information about changing GIS.lab configuration. 
+.. important:: |imp| Without changing network configuration variable IP 
+   conflicts may occur. 
    
 To run GIS.lab in Virtual mode, there are some hardware and software requirements. 
 Another important point is GIS.lab source code, see :ref:`GIS.lab source code download <GL-clone>`. 
@@ -335,7 +337,7 @@ used for choosing GIS.lab server to boot.
    Manual network selection using HTTP boot.
 
 IP address can be found out after typing ``ip a | grep eth0`` on GIS.lab server 
-after ``vagrant ssh``.
+after ``vagrant ssh`` command.
 
 .. tip:: |tip| To set custom client display resolution run following command 
    on host machine.
