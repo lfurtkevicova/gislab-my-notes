@@ -52,6 +52,18 @@ Useful terms
 
    DHCP server [#dhcp]_
 
+*DNS server*
+   *Domain Name Service server* is an IP address of the DNS server and it is what 
+   computer uses to resolve IP addresses to domain names; also it is used to 
+   don’t have to remember IP addresses, e.g. 
+   ``qgis.com`` resolves to ``91.142.249.5`` what is the IP address of the QGIS 
+   website on the Internet and as ``qgis.com`` it is much easier to remember;
+   user will need at least one DNS server address but can enter up to three 
+   addresses in case one server is unavailable; if user does not know it’s DNS 
+   server addresses, Google has DNS servers that anyone in the world can use for 
+   free, the addresses of these servers 
+   are ``Primary 8.8.8.8`` and ``Secondary 8.8.4.4``
+   
 *GIS.lab node*
    GIS.lab client environment which runs on client machine
 
@@ -63,6 +75,10 @@ Useful terms
 
 *Chroot*
 
+*Gateway*
+   it is an IP address of the device that machine looks to for access to the 
+   Internet, usually, it is the router’s IP address
+
 *GUI*
    *Graphical User Interface*
 
@@ -73,11 +89,15 @@ Useful terms
    platform, 64-bit microprocessor
 
 *IP address*
-   *Internet Protocol address*, numerical identifier assigned to each device 
-   participating in a computer network that uses the Internet Protocol for 
+   *Internet Protocol address*, unique numerical identifier assigned to each 
+   device participating in a computer network that uses the Internet Protocol for 
    communication, it is 32-bit numeric address written as four numbers ``0.0.0.0`` 
    separated by periods, each number can be zero to 255, it is assigned as part 
-   of connecting to a network
+   of connecting to a network; 
+   it is used for identifying computer on the network, when 
+   connecting using DHCP, this address will periodically change (hence, the 
+   name “dynamic”), in case of static IP address configuration, address will 
+   never change
 
 *ISO*
    an archive file of an optical disc, image file is a snapshot of the data and 
@@ -93,6 +113,11 @@ Useful terms
    six groups of two hexadecimal digits separated by colons ``0:0:0:0:0:0`` or
    by hyphens ``0-0-0-0-0-0`` or three groups of four hexadecimal digits 
    separated by dots ``0.0.0``
+
+*Network mask*
+   tells computer the size of the network to which it is being connected, it is 
+   formatted the same way as the IP address, but usually looks something 
+   like ``255.255.255.0``
 
 *PXE booting*
    *Preboot Execution Environment* booting, is a method of having an end computer 

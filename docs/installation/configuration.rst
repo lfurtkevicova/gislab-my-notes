@@ -10,7 +10,7 @@ configuration variable ``GISLAB_NETWORK``, if GIS.lab's default network
 range ``192.168.50.0/24`` already exists in LAN to prevent IP conflicts.
 
 Default GIS.lab configuration file named ``all`` exists in ``system/group_vars``,
-see :num:`#configuration-files`).
+see :num:`#configuration-files`.
 When user decides to adjust it, this file should not be modified directly. 
 
 .. rubric:: Virtual mode
