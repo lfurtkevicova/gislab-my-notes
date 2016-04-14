@@ -9,9 +9,9 @@ configuration. However, it is required to change default network
 configuration variable ``GISLAB_NETWORK``, if GIS.lab's default network
 range ``192.168.50.0/24`` already exists in LAN to prevent IP conflicts.
 
-Default GIS.lab configuration file named ``all`` exists in ``system/group_vars``.
-When user decides to adjust it, he/she should not modify this file
-directly. 
+Default GIS.lab configuration file named ``all`` exists in ``system/group_vars``,
+see :num:`#configuration-files`).
+When user decides to adjust it, this file should not be modified directly. 
 
 .. rubric:: Virtual mode
 
@@ -26,6 +26,14 @@ be named according to name of GIS.lab unit. This name is a part
 of Ansible inventory file content, script that Ansible uses
 to determine what to provide. All file names must always match unique 
 host name specified in inventory file.
+
+.. _configuration-files:
+
+.. figure:: ../img/installation/configuration-files.svg
+   :align: center
+   :width: 450
+
+   Directory structure of configuration files.
 
 File ``gislab_vagrant`` will be loaded automatically by Vagrant 
 without need to manually create the Ansible inventory file. Example 

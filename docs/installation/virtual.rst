@@ -194,7 +194,7 @@ is selected as the adapter type and allow promiscuous mode for all.
 
 .. _pxe-vb-settings:
 
-.. figure:: ../img/installation-virtual/pxe-vb-settings.png
+.. figure:: ../img/installation/pxe-vb-settings.png
    :align: center
    :width: 750
 
@@ -235,7 +235,7 @@ promiscuous mode for all.
 
 .. _http-vb-settings:
 
-.. figure:: ../img/installation-virtual/http-vb-settings.png
+.. figure:: ../img/installation/http-vb-settings.png
    :align: center
    :width: 750
 
@@ -275,7 +275,7 @@ and Desktop of running virtual GIS.lab client using e.g. PXE boot.
 
 .. _client-pxe-logging-in:
 
-.. figure:: ../img/installation-virtual/client-pxe-logging-in.png
+.. figure:: ../img/installation/client-pxe-logging-in.png
    :align: center
    :width: 450
 
@@ -283,7 +283,7 @@ and Desktop of running virtual GIS.lab client using e.g. PXE boot.
 
 .. _client-pxe-running:
 
-.. figure:: ../img/installation-virtual/client-pxe-running.png
+.. figure:: ../img/installation/client-pxe-running.png
    :align: center
    :width: 450
 
@@ -310,7 +310,7 @@ possible to predict which one will be used.
 
 .. _http-boot-a:
 
-.. figure:: ../img/installation-virtual/http-boot-menu.png
+.. figure:: ../img/installation/http-boot-menu.png
    :align: center
    :width: 450
 
@@ -330,7 +330,7 @@ used for choosing GIS.lab server to boot.
 
 .. _http-boot-m:
 
-.. figure:: ../img/installation-virtual/http-boot-network-selection.png
+.. figure:: ../img/installation/http-boot-network-selection.png
    :align: center
    :width: 450
 
