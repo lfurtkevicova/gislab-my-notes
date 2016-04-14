@@ -65,14 +65,16 @@ file is shown below.
    
    GISLAB_CLIENT_OWS_WORKER_MIN_MEMORY: 4000
 
-.. note:: Content of Ansible inventory file called ``<name-of-gislab-unit>.inventory`` 
-   would be as follows
+Content of Ansible inventory file called ``<name-of-gislab-unit>.inventory`` 
+would be as follows.
  
-   .. code:: sh
+.. code:: sh
       
-      <name-of-gislab-unit> ansible_ssh_host=<host-url> ansible_ssh_user=<provisioning-user-account-name>
+   <name-of-gislab-unit> ansible_ssh_host=<host-url> ansible_ssh_user=<provisioning-user-account-name>
 
-   Example content of ``gislab-unit-fem.inventory`` Ansible file is shown below.
+.. note:: 
+
+   Example content of ``gislab-unit-fem.inventory`` file is shown below.
 
    .. code:: sh
       
