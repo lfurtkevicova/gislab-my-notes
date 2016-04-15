@@ -81,10 +81,10 @@ are in :num:`#config-virtual`.
 
    file gislab_vagrant 'A'                       file gislab_vagrant 'B'
    -----------------------                       ----------------------- 
-   GISLAB_NETWORK: 192.168.30                    GISLAB_NETWORK: 192.168.30
+   GISLAB_NETWORK: 192.168.50                    GISLAB_NETWORK: 192.168.30
                                  
    GISLAB_CLIENT_KEYBOARDS:                      GISLAB_CLIENT_KEYBOARDS:
-   - layout: it                                  - layout: it
+   - layout: sk                                  - layout: it
      variant: qwerty                               variant: qwerty
 
 .. _config-virtual:
