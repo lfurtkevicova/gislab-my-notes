@@ -70,7 +70,7 @@ Useful terms
    :align: center
    :width: 250
 
-   Domain name server workflow [#dns]_
+   Domain name system workflow [#dns]_
 
 *GIS.lab node*
    GIS.lab client environment which runs on client machine
