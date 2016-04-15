@@ -14,9 +14,9 @@ Useful commands
    retrieves the git remote origin URL of the current repo 
 
 :command:`nslookup`
-   displays information that can be used to diagnose Domain Name System 
-   infrastructure, e.g. domain name or IP address, it is available only if 
-   TCP/IP protocol is installed, Internet name servers are queried interactively
+   displays information that can be used to diagnose DNS infrastructure, e.g. 
+   domain name or IP address, it is available only if 
+   TCP/IP protocol is installed
 
 :command:`ping <hostname-or-ip-address-of-the-target-computer>`
    sends a test packet of data to a designated IP address to test connection 
