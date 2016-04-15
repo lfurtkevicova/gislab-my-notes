@@ -4,6 +4,9 @@
 Configuration
 *************
 
+It is recommended to set at least some basic configuration before
+GIS.lab installation is performed. 
+
 GIS.lab is designed to install and run out-of-box with default
 configuration. However, it is required to change default network
 configuration variable ``GISLAB_NETWORK``, if GIS.lab's default network
@@ -55,18 +58,28 @@ file is shown below.
    GISLAB_CLIENT_ARCHITECTURE: amd64
    GISLAB_CLIENT_LANGUAGES:
     - en
-    - it
     - sk
+    - it
    
    GISLAB_CLIENT_KEYBOARDS:
      - layout: en
+       variant: qwerty
      - layout: sk
+       variant: qwerty
      - layout: it
+       variant: qwerty
    
    GISLAB_CLIENT_OWS_WORKER_MIN_MEMORY: 4000
 
+Fourth number of server's IP address will allways be ``5`` and the first client's 
+IP address will terminate with ``50``. In our case these addresses would look like 
+``192.168.50.5`` and ``192.168.50.50``.
+
+.. note:: This information is useful in Manual GIS.lab server selection  
+          using :ref:`HTTP boot <http-boot>` when server's IP address is required.
+
 Content of Ansible inventory file called ``<name-of-gislab-unit>.inventory`` 
-would be as follows.
+used in physical mode would be as follows.
  
 .. code:: sh
       
@@ -79,3 +92,5 @@ would be as follows.
    .. code:: sh
       
       gislab-unit-fem ansible_ssh_host=10.234.1.44 ansible_ssh_user=ubuntu
+
+.. todo:: |todo| `??? Network configurations ??? <https://github.com/gislab-npo/gislab/wiki/Network-configurations>`_

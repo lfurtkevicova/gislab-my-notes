@@ -13,6 +13,16 @@ Useful commands
 :command:`git config --get remote.origin.url`
    retrieves the git remote origin URL of the current repo 
 
+:command:`nslookup`
+   displays information that can be used to diagnose Domain Name System 
+   infrastructure, e.g. domain name or IP address, it is available only if 
+   TCP/IP protocol is installed, Internet name servers are queried interactively
+
+:command:`ping <hostname-or-ip-address-of-the-target-computer>`
+   sends a test packet of data to a designated IP address to test connection 
+   using the TCP/IP protocol, it finds out whether the peer host/gateway is 
+   reachable
+
 :command:`vagrant destroy` 
    stops the running Vagrant machine and destroys all resources that were 
    created during the machine creation process
