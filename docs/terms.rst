@@ -53,17 +53,25 @@ Useful terms
    DHCP server [#dhcp]_
 
 *DNS server*
-   *Domain Name Service server* is an IP address of the DNS server and it is what 
-   computer uses to resolve IP addresses to domain names; also it is used to 
-   don’t have to remember IP addresses, e.g. 
-   ``qgis.com`` resolves to ``91.142.249.5`` what is the IP address of the QGIS 
-   website on the Internet and as ``qgis.com`` it is much easier to remember;
+   *Domain Name System* is a protocol within the set of standards for 
+   how computers exchange data on the Internet and on many private networks, 
+   known as the TCP/IP protocol suite; its basic job is to turn a user-friendly 
+   domain name like ``qgis.com`` into an IP address like ``91.142.249.5`` 
+   that computers use to identify each other on the network; 
+   also it is used to don’t have to remember IP addresses, domain names are much 
+   easier to remember;
    user will need at least one DNS server address but can enter up to three 
    addresses in case one server is unavailable; if user does not know it’s DNS 
    server addresses, Google has DNS servers that anyone in the world can use for 
-   free, the addresses of these servers 
-   are ``Primary 8.8.8.8`` and ``Secondary 8.8.4.4``
+   free, the addresses of these servers are ``Primary 8.8.8.8`` and 
+   ``Secondary 8.8.4.4``
    
+.. figure:: img/dns.jpg
+   :align: center
+   :width: 250
+
+   Domain name server workflow [#dns]_
+
 *GIS.lab node*
    GIS.lab client environment which runs on client machine
 
@@ -151,17 +159,17 @@ Useful terms
 *Vagrant box*
    the package format for Vagrant environment, it is used to bring up an 
    identical working environment, 
-   
+
+.. rubric:: Source
+
+.. [#bnc] `Configuring Bridged Networking <http://pubs.vmware.com/ws8/wwhelp/wwhimpl/js/html/wwhelp.htm#href=using_ws/GUID-BAFA66C3-81F0-4FCA-84C4-D9F7D258A60A.html#1_14_9_1>`_
+.. [#dhcp] `DHCP server <http://www.tomshardware.co.uk/faq/id-1932036/dhcp-server-assigns-addresses-client-computers.html>`_
+.. [#dns] `How does DNS work? <http://brightmags.com/how-does-dns-work/>`_
+.. [#pxe] `Preboot Execution Environment <https://en.wikipedia.org/wiki/Preboot_Execution_Environment>`_
 
 .. seealso:: |see.| 
    
    * `19 Minutes With Ansible <https://sysadmincasts.com/episodes/43-19-minutes-with-ansible-part-1-4>`_
    * `Booting from the network with PXE <https://www.youtube.com/watch?v=zQ-TQhmjhuc>`_
    * `Vagrant in 5 minutes <https://opensource.com/business/16/1/lightning-talk-quick-introduction-vagrant?sc_cid=701600000011jJaAAI>`_
-   
-
-.. rubric:: Source
-
-.. [#bnc] `Configuring Bridged Networking <http://pubs.vmware.com/ws8/wwhelp/wwhimpl/js/html/wwhelp.htm#href=using_ws/GUID-BAFA66C3-81F0-4FCA-84C4-D9F7D258A60A.html#1_14_9_1>`_
-.. [#dhcp] `DHCP server <http://www.tomshardware.co.uk/faq/id-1932036/dhcp-server-assigns-addresses-client-computers.html>`
-.. [#pxe] `Preboot Execution Environment <https://en.wikipedia.org/wiki/Preboot_Execution_Environment>`_
+   * `How Domain Name Servers Work <http://computer.howstuffworks.com/dns.html>`_
