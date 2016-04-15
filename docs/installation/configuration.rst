@@ -7,8 +7,8 @@ Configuration
 It is recommended to set at least some basic configuration before
 GIS.lab installation is performed. 
 
-GIS.lab is designed to install and run out-of-box with default
-configuration. However, it is required to change default network
+GIS.lab is designed to install and run out of box with default
+configuration. However, it is required to change at least default network
 configuration variable ``GISLAB_NETWORK``, if GIS.lab's default network
 range ``192.168.50.0/24`` already exists in LAN to prevent IP conflicts.
 
@@ -71,9 +71,33 @@ file is shown below.
    
    GISLAB_CLIENT_OWS_WORKER_MIN_MEMORY: 4000
 
-Fourth number of server's IP address will allways be ``5`` and the first client's 
-IP address will terminate with ``50``. In our case these addresses would look like 
-``192.168.50.5`` and ``192.168.50.50``.
+Let's see practical example of configuration with 
+some changes related to GIS.lab network and client keyboards in virtual mode.
+Variables ``GISLAB_NETWORK`` and ``GISLAB_CLIENT_KEYBOARDS`` in ``gislab_vagrant``
+file will be different. Results after the successful installation for both cases 
+are in :num:`#config-virtual`.
+
+.. code:: sh
+
+   file gislab_vagrant 'A'                  file gislab_vagrant 'B'
+   -----------------------                  ----------------------- 
+   GISLAB_NETWORK: 192.168.30               GISLAB_NETWORK: 192.168.30
+                                 
+   GISLAB_CLIENT_KEYBOARDS:                 GISLAB_CLIENT_KEYBOARDS:
+   - layout: it                             - layout: it
+     variant: qwerty                          variant: qwerty
+
+.. _config-virtual:
+
+.. figure:: ../img/installation/config_virtual.png
+   :align: center
+   :width: 750
+
+   Two different results using different Vagrant configuration file.
+
+Fourth number of server's IP address will always be ``5`` and the first client's 
+IP address will always terminate with ``50``. For left case of :num:`#config-virtual` 
+these addresses would look like ``192.168.50.5`` and ``192.168.50.50``.
 
 .. note:: This information is useful in Manual GIS.lab server selection  
           using :ref:`HTTP boot <http-boot>` when server's IP address is required.
