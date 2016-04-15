@@ -79,13 +79,13 @@ are in :num:`#config-virtual`.
 
 .. code:: sh
 
-   file gislab_vagrant 'A'                  file gislab_vagrant 'B'
-   -----------------------                  ----------------------- 
-   GISLAB_NETWORK: 192.168.30               GISLAB_NETWORK: 192.168.30
+   file gislab_vagrant 'A'                       file gislab_vagrant 'B'
+   -----------------------                       ----------------------- 
+   GISLAB_NETWORK: 192.168.30                    GISLAB_NETWORK: 192.168.30
                                  
-   GISLAB_CLIENT_KEYBOARDS:                 GISLAB_CLIENT_KEYBOARDS:
-   - layout: it                             - layout: it
-     variant: qwerty                          variant: qwerty
+   GISLAB_CLIENT_KEYBOARDS:                      GISLAB_CLIENT_KEYBOARDS:
+   - layout: it                                  - layout: it
+     variant: qwerty                               variant: qwerty
 
 .. _config-virtual:
 
