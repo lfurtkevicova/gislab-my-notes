@@ -109,7 +109,8 @@
       <ellipse rx="50" fill="none" ry="20" clip-path="url(#clipPath2)" cx="22.4375" cy="114.75"/>
     </g>
     <g font-size="11px" stroke-linecap="butt" transform="matrix(1,0,0,1,178,-79)" text-rendering="geometricPrecision" font-family="sans-serif" shape-rendering="geometricPrecision" font-weight="bold" stroke-miterlimit="1.45">
-      <text x="-22.054" xml:space="preserve" y="118.5581" clip-path="url(#clipPath2)" stroke="none">GIS.lab Server</text>
+      <text x="-3.5371" xml:space="preserve" y="112.1558" clip-path="url(#clipPath2)" stroke="none"> GIS.lab </text>
+      <text x="2.0059" xml:space="preserve" y="124.9604" clip-path="url(#clipPath2)" stroke="none">Server</text>
     </g>
     <g fill="url(#linearGradient3)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,178,-79)" stroke="url(#linearGradient3)">
       <path d="M44.0312 193.5 L114.0312 193.5 L114.0312 221.5 L34.0312 221.5 L34.0312 203.5 Z" stroke="none" clip-path="url(#clipPath2)"/>
