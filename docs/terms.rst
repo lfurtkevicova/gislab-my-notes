@@ -33,6 +33,11 @@ Useful terms
    an arrangement of functional units, often pertains to the choice of hardware, 
    software, firmware, and documentation, it affects system function and performance
 
+*Containers*
+   can share a single Linux Kernel and, optionally, other binary and library 
+   recources, compared with virtual machines taht require a full operating system 
+   image for each instance
+
 *Customization*
    doing some modification over an existing applications according to requirements 
    of the client
@@ -78,6 +83,11 @@ Useful terms
 *GIS.lab master* 
    GIS.lab server environment which runs as virtualized system on host machine
 
+*hardware virtualization*
+   refers to the creation of a virtual machine that acts like a real computer 
+   with an operating system, softwares executed on these virtual machines
+   are separated from the underlying hardware resources
+
 *Host machine*
    main machine where Vagrant, VirtualBox and GIS.lab package are installed
 
@@ -111,6 +121,11 @@ Useful terms
    an archive file of an optical disc, image file is a snapshot of the data and 
    layout of a CD or DVD, saved in ISO-9660 format, widely used for storing CD 
    content
+
+*LXC*
+   *Linux Container*, a lightweight virtualization technology on operating 
+   system level for running multiple isolated Linux systems, i.e. containers 
+   on a control host using a single Linux kernel
 
 *MAC address*
    *Media Access Control address*, kind of serial number assigned to every 
@@ -159,6 +174,9 @@ Useful terms
 *Vagrant box*
    the package format for Vagrant environment, it is used to bring up an 
    identical working environment, 
+
+
+   
 
 .. rubric:: Source
 

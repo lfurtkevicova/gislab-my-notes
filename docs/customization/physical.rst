@@ -1,4 +1,4 @@
-.. _physical:
+.. _customization-physical:
  
 *************
 Physical Mode
