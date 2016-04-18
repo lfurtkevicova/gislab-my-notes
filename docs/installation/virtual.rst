@@ -1,4 +1,4 @@
-.. _virtual:
+.. _installation-virtual:
  
 ************
 Virtual Mode
@@ -60,7 +60,11 @@ Server
 GIS.lab installation takes from 30 minutes to few hours depending on
 your machine performance and Internet connection speed.
 
-Run following command in source code directory. 
+Run following command in source code directory to power on the Virtual Machine.
+Everey time ``up`` command is used, ``Vagrantfile`` will is used for 
+configuration. If the ``up`` command is run first time, it also run the 
+``vagrant provision`` command internally used to provision, i.e. install and 
+configure software. 
 
 .. code:: sh
 
@@ -120,6 +124,10 @@ User accounts
 By default, GIS.lab installation creates only a superuser account ``gislab``. 
 Ordinary user account can be created by logging in to GIS.lab server, i.e. 
 running Vagrant machine in source code directory via SSH.
+
+Any IP address, username or password are not needed to login via ``SSH``. 
+Just ``vagrant ssh`` command is enough. The only obligation is to be present 
+in the folder where ``Vagrantfile`` is. That file contains all necessary information.
 
 .. code:: sh
 
@@ -356,7 +364,12 @@ after ``vagrant ssh`` command.
       $ VBoxManage list runningvms
 
 For logging out from GIS.lab server use ``logout`` and then use ``vagrant halt``
-to shut down the running machine Vagrant is managing.
+to shut down the running machine Vagrant is managing. It does not remove the 
+Virtual Machine from the hard disk. Machine can be started again by using 
+``vagrant up`` command. 
+
+.. tip:: |tip| Use ``-f`` or ``-force`` flag to forcefully power off the Virtual 
+   Machine. 
 
 ----------------------------
 Installation of requirements

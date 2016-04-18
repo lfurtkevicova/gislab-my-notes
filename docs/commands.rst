@@ -4,6 +4,9 @@
 Useful commands
 ***************
 
+:command:`ansible-playbook --inventory=gislab-unit.inventory --private-key=<private-SSH-key-file> system/test.yml`
+   runs tests with Ansible
+
 :command:`gislab-adduser`
    creates GIS.lab user account
 
@@ -32,11 +35,17 @@ Useful commands
    shuts down the running machine Vagrant is managing
 
 .. _vagrant-provision:
-:command:`vagrant povision` 
+:command:`vagrant provision` 
    runs any configured provisioners that allow user to automatically install 
    software, alter configurations, and more on the machine as part of the 
    :ref:`vagrant up <vagrant-up>` process against the running Vagrant managed 
    machine
+
+:command:`vagrant provision --provision-with test`
+   runs tests with Vagrant
+
+.. important:: |imp.| Variable ``GISLAB_TESTS_ENABLE`` must be set as ``yes`` 
+   in ``system/host_vars/gislab_vagrant`` file.
 
 :command:`vagrant reload` 
    the equivalent of running :ref:`vagrant halt <vagrant-halt>` followed by 

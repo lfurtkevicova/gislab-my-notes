@@ -16,6 +16,10 @@ Default GIS.lab configuration file named ``all`` exists in ``system/group_vars``
 see :num:`#configuration-files`.
 When user decides to adjust it, this file should not be modified directly. 
 
+.. tip:: |tip| Find that file in GIS.lab repository and see its content to 
+   become acquainted with all possibilities of configuration settings. 
+   It is full of commented out information. 
+
 .. rubric:: Virtual mode
 
 For installation in VirtualBox it is recommended to create file
@@ -77,15 +81,19 @@ Variables ``GISLAB_NETWORK`` and ``GISLAB_CLIENT_KEYBOARDS`` in ``gislab_vagrant
 file will be different. Results after the successful installation for both cases 
 are in :num:`#config-virtual`.
 
+.. tip:: |tip| See :ref:`Installation in Virtual Mode <installation-virtual>`
+   section for more details about the steps or just use ``vagrant provision``
+   command which is used to install and configure the machine Vagrant is managing .
+
 .. code:: sh
 
-   file gislab_vagrant 'A'                       file gislab_vagrant 'B'
-   -----------------------                       ----------------------- 
-   GISLAB_NETWORK: 192.168.50                    GISLAB_NETWORK: 192.168.30
+   file gislab_vagrant 'A'                        file gislab_vagrant 'B'
+   -----------------------                        ----------------------- 
+   GISLAB_NETWORK: 192.168.50                     GISLAB_NETWORK: 192.168.30
                                  
-   GISLAB_CLIENT_KEYBOARDS:                      GISLAB_CLIENT_KEYBOARDS:
-   - layout: sk                                  - layout: it
-     variant: qwerty                               variant: qwerty
+   GISLAB_CLIENT_KEYBOARDS:                       GISLAB_CLIENT_KEYBOARDS:
+   - layout: sk                                   - layout: it
+     variant: qwerty                                variant: qwerty
 
 .. _config-virtual:
 
@@ -99,7 +107,7 @@ Fourth number of server's IP address will always be ``5`` and the first client's
 IP address will always terminate with ``50``. For left case of :num:`#config-virtual` 
 these addresses would look like ``192.168.50.5`` and ``192.168.50.50``.
 
-.. note:: This information is useful in Manual GIS.lab server selection  
+.. note:: |note| This information is useful in Manual GIS.lab server selection  
           using :ref:`HTTP boot <http-boot>` when server's IP address is required.
 
 Content of Ansible inventory file called ``<name-of-gislab-unit>.inventory`` 
@@ -109,9 +117,8 @@ used in physical mode would be as follows.
       
    <name-of-gislab-unit> ansible_ssh_host=<host-url> ansible_ssh_user=<provisioning-user-account-name>
 
-.. note:: 
-
-   Example content of ``gislab-unit-fem.inventory`` file is shown below.
+.. note:: |note| Example content of ``gislab-unit-fem.inventory`` file is shown 
+   below.
 
    .. code:: sh
       

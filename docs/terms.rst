@@ -167,9 +167,7 @@ Useful terms
 .. [#dns] `How does DNS work? <http://brightmags.com/how-does-dns-work/>`_
 .. [#pxe] `Preboot Execution Environment <https://en.wikipedia.org/wiki/Preboot_Execution_Environment>`_
 
-.. seealso:: |see.| 
-   
-   * `19 Minutes With Ansible <https://sysadmincasts.com/episodes/43-19-minutes-with-ansible-part-1-4>`_
-   * `Booting from the network with PXE <https://www.youtube.com/watch?v=zQ-TQhmjhuc>`_
-   * `Vagrant in 5 minutes <https://opensource.com/business/16/1/lightning-talk-quick-introduction-vagrant?sc_cid=701600000011jJaAAI>`_
-   * `How Domain Name Servers Work <http://computer.howstuffworks.com/dns.html>`_
+.. seealso:: |see.| `19 Minutes With Ansible <https://sysadmincasts.com/episodes/43-19-minutes-with-ansible-part-1-4>`_, 
+   `Booting from the network with PXE <https://www.youtube.com/watch?v=zQ-TQhmjhuc>`_, 
+   `Vagrant in 5 minutes <https://opensource.com/business/16/1/lightning-talk-quick-introduction-vagrant?sc_cid=701600000011jJaAAI>`_, 
+   `How Domain Name Servers Work <http://computer.howstuffworks.com/dns.html>`_
