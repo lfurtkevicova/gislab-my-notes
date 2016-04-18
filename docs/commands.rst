@@ -10,8 +10,32 @@ Useful commands
 :command:`gislab-adduser`
    creates GIS.lab user account
 
+:command:`gislab-backupall`
+   backups all GIS.lab user accounts
+
+:command:`gislab-backupuser`
+   backups GIS.lab user account
+
+:command:`gislab-client-image`
+   builds GIS.lab client image/upgrades GIS.lab system
+
+:command:`gislab-client-shell`
+   runs command or launches interactive shell in GIS.lab client's chroot
+
+:command:`gislab-deluser`
+   removes GIS.lab user account
+
 :command:`gislab-listusers`
    lists GIS.lab users
+
+:command:`gislab-machines`
+   adds or removes GIS.lab client machine's MAC address
+
+:command:`gislab-password`
+   changes GIS.lab user's password
+
+:command:`gislab-restoreuser`
+   restores GIS.lab user account from backup
 
 :command:`git config --get remote.origin.url`
    retrieves the git remote origin URL of the current repo 
