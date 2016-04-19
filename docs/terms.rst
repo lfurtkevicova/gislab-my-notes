@@ -77,11 +77,18 @@ Useful terms
 
    Domain name system workflow [#dns]_
 
+*Gateway*
+   it is an IP address of the device that machine looks to for access to the 
+   Internet, usually, it is the router’s IP address
+
 *GIS.lab node*
    GIS.lab client environment which runs on client machine
 
 *GIS.lab master* 
    GIS.lab server environment which runs as virtualized system on host machine
+
+*GUI*
+   *Graphical User Interface*
 
 *hardware virtualization*
    refers to the creation of a virtual machine that acts like a real computer 
@@ -92,13 +99,6 @@ Useful terms
    main machine where Vagrant, VirtualBox and GIS.lab package are installed
 
 *Chroot*
-
-*Gateway*
-   it is an IP address of the device that machine looks to for access to the 
-   Internet, usually, it is the router’s IP address
-
-*GUI*
-   *Graphical User Interface*
 
 *I386, x86*
    ordinary platform, 32-bit microprocessor
@@ -120,7 +120,7 @@ Useful terms
 *ISO*
    an archive file of an optical disc, image file is a snapshot of the data and 
    layout of a CD or DVD, saved in ISO-9660 format, widely used for storing CD 
-   content
+   content; it contains raw dumps of a magnetic disk or of an optical disc
 
 *LXC*
    *Linux Container*, a lightweight virtualization technology on operating 

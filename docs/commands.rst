@@ -4,7 +4,7 @@
 Useful commands
 ***************
 
-:command:`ansible-playbook --inventory=gislab-unit.inventory --private-key=<private-SSH-key-file> system/test.yml`
+:command:`ansible-playbook --inventory=<> --private-key=<> <>.yml`
    runs tests with Ansible
 
 :command:`gislab-adduser`
@@ -16,8 +16,12 @@ Useful commands
 :command:`gislab-backupuser`
    backups GIS.lab user account
 
+.. _gislab-client-image:
+
 :command:`gislab-client-image`
    builds GIS.lab client image/upgrades GIS.lab system
+
+.. _gislab-client-shell:
 
 :command:`gislab-client-shell`
    runs command or launches interactive shell in GIS.lab client's chroot
