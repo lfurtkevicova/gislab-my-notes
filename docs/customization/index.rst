@@ -12,7 +12,11 @@ When talking about customization, we should distinguish between
 
 .. _server-customization:
 
-1. GIS.lab Server can be customized by running standard Linux/Ubuntu
+====================
+Server customization
+====================
+
+GIS.lab Server can be customized by running standard Linux/Ubuntu
 commands, but it is recommended to use some isolated environment like
 `LXC <https://linuxcontainers.org/lxc/introduction/>`_ or 
 `Docker <https://www.docker.com/>`_ containers when deploying custom service.
@@ -20,6 +24,10 @@ commands, but it is recommended to use some isolated environment like
 .. seealso:: |see| `Understanding the key differences between LXC and Docker <https://www.flockport.com/lxc-vs-docker/>`_
 
 .. _user-customization:
+
+===========================
+User accounts customization
+===========================
 
 Process of creation and removal of GIS.lab user accounts can be
 customized by special scripts. 
@@ -94,6 +102,10 @@ is shown below.
 
 .. _client-customization:
 
+====================
+Client customization
+====================
+
 .. note:: |note| In the following lines basics of GIS.lab client's customization 
    will be described. GIS.lab client means **GIS.lab Desktop client**. There can 
    also be **GIS.lab Web client**, etc.
@@ -107,9 +119,9 @@ action.
 
 Important file is **image file**. It is a binary file with the ``.img`` filename 
 extension and represents a snapshot of the data and layout of some GIS.lab
-client. More specifically, it is compressed client's chroot. All GIS.lab clients
-boot from some image file. 
-Usually after entering client's ``chroot`` with the first of above mentioned commands, 
+client. More specifically, it is compressed client's ``root``, i.e. ``chroot``. 
+All GIS.lab clients boot from some image file. 
+Usually after entering client's ``root`` with the first of above mentioned commands, 
 the new updated ``image`` is rebuilded by the second of these commands. 
 
 .. important:: |imp| Client's ``chroot`` and resulting ``image`` are always restored 
@@ -119,12 +131,12 @@ the new updated ``image`` is rebuilded by the second of these commands.
 .. note:: |note| This behaviour is planed to be changed in future.
 
 Important note written above is precisely why **backup** should always be used. 
-In general, it is very good idea to backup client's ``chroot`` and also ``image`` 
+In general, it is very good idea to backup ``chroot`` and also ``image`` 
 in case if something will go wrong in process of customization or rollback is
 required. Backup operation can be done by simple backup of them. 
 Approximate total backup size is ``2 GB``.
 
-Backup of client's ``chroot`` directory can be created by following statement
+Backup of client's ``root`` directory can be created by following statement
 using tape archive command.
 Command for client's ``image`` backup is introduced below. 
 
@@ -144,17 +156,17 @@ See also :num:`#backup` for clearer understanding.
 
    Recommended backup of client's files.
 
-.. note:: |note| Backup of clients ``image`` file is not necessary because 
+.. note:: |note| Backup of client's ``image`` file is not necessary because 
    it can always be created by ``gislab-client-image`` command from particular 
    GIS.lab ``chroot``. Why also this backup is useful will be introduced later.
 
 When the recommended backups are created, it is time to start with customization.
-If backup directory contains some backup of client's root and image it is 
+If backup directory contains some backup of client's ``root`` and image it is 
 possible to use them, i.e. :ref:`recover backup <recover-backup>`.
 
 .. _recover-backup:
 
-First of all current client's ``root`` and ``image`` should be removed. Afterwards 
+First, current client's ``root`` and ``image`` should be removed and afterwards, 
 selected backup of them can be recovered.
 
 .. code::
@@ -165,39 +177,8 @@ selected backup of them can be recovered.
    $ sudo tar xjf /mnt/backup/<root>.tar.bz2 -C /
    $ sudo cp -a /mnt/backup/<image>/ /opt/gislab/system/clients/desktop/image
 
-.. rubric:: Example
-
-Let's see example custom installation of **latest GDAL version** from source code.
-
-At first client's chroot should be entered.
-
-.. code:: sh
-
-   $ sudo gislab-client-shell -i
-
-Then compilation and installation of GDAL should be executed.
-
-.. code:: sh
-
-   $ apt-get -y install g++ subversion
-   $ cd /tmp
-   $ svn checkout https://svn.osgeo.org/gdal/trunk/gdal gdal
-   $ cd gdal
-   $ ./configure
-   $ make
-   $ make install
-
-After client's ``root`` is left by ``exit`` command, then ``image`` should 
-be updated by ``sudo gislab-client-image``.
-
-.. important:: |imp| Do not forget to set ``LD_LIBRARY_PATH`` variable on 
-   client before running GDAL commands.
-   
-   .. code:: sh
-
-      $ export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
-      $ /usr/local/bin/ogr2ogr --version
-      GDAL 2.0.0dev, released 2014/04/16
+.. seealso:: |see| See :ref:`practical example <example-gdal>` of custom 
+   installation of latest GDAL version on GIS.lab client from source code.
 
 Relating to mode, we should distinguish between :ref:`Physical <customization-physical>`
 and :ref:`Virtual <customization-virtual>` Mode.

@@ -4,7 +4,11 @@
 GIS.lab in practice
 *******************
 
+Now let's see some practical examples in following sections.
+
 .. toctree::
    :maxdepth: 2
    
-   project
+   practice-desktop
+   practice-web
+   practice-mobile
