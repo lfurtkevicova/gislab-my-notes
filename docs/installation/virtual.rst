@@ -133,6 +133,8 @@ in the folder where ``Vagrantfile`` is. That file contains all necessary informa
 
    $ vagrant ssh
 
+.. _user-creation:
+
 For example ``lab1`` user account with password ``lab`` can then be created by 
 using ``gislab-adduser`` command.
 

@@ -4,6 +4,11 @@
 GIS.lab Desktop
 ***************
 
+It is assumed that GIS.lab server is running either using keyboard, monitor 
+and GIS.lab server username and password, or using ``ssh key``  and 
+``IP address`` together with laptop or computer which ``ssh key`` is 
+registered in ``./ssh/authorized_keys`` file.
+
 .. _example-gdal:
 
 =====================================
@@ -12,13 +17,16 @@ Latest GDAL version on GIS.lab client
 
 Let's see example custom installation of **latest GDAL version** from source code.
 
-At first client's root should be entered.
+At first client's ``root`` and ``image`` backup is recommended. In a next step
+interactive shell in GIS.lab client's ``root`` should be entered.
 
 .. code:: sh
 
+   $ sudo tar cjf /mnt/backup/root-`date -I`.tar.bz2 /opt/gislab/system/clients/desktop/root
+   $ sudo cp -a /opt/gislab/system/clients/desktop/image /mnt/backup/image-`date -I`
    $ sudo gislab-client-shell -i
 
-Then compilation and installation of GDAL should be executed.
+Then compilation and installation of GDAL can be executed.
 
 .. code:: sh
 
@@ -30,8 +38,10 @@ Then compilation and installation of GDAL should be executed.
    $ make
    $ make install
 
-After client's ``root`` is left by ``exit`` command, then ``image`` should 
-be updated by ``sudo gislab-client-image``.
+After ``chroot`` is left by ``exit`` command, then ``image`` should 
+be updated by ``sudo gislab-client-image``. 
+Continue with :ref:`creation <user-creation>` of new user booting with 
+latest GDAL version.
 
 .. important:: |imp| Do not forget to set ``LD_LIBRARY_PATH`` variable on 
    client before running GDAL commands.
@@ -41,6 +51,61 @@ be updated by ``sudo gislab-client-image``.
       $ export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
       $ /usr/local/bin/ogr2ogr --version
       GDAL 2.0.0dev, released 2014/04/16
+
+.. _example-remove-geany:
+
+=======================
+Software uninstallation
+=======================
+
+Example with `Geany <https://www.geany.org/>`_ software is shown below.
+
+.. code:: sh
+
+   # root and image backup
+   $ sudo tar cjf /mnt/backup/root-`date -I`.tar.bz2 /opt/gislab/system/clients/desktop/root
+   $ sudo cp -a /opt/gislab/system/clients/desktop/image /mnt/backup/image-`date -I`
+   # enter interactive schell in chroot
+   $ sudo gislab-client-shell -i
+   
+   # display geany package status details
+   $ dpkg -s geany
+   Status: install ok installed
+   Priority: optional
+   Section: devel
+   Installed-Size: 2422
+   Maintainer: ... ... ...
+   # check geany version
+   $ geany --version
+   geany 0.21 (built on Mar 19 2012 with GTK 2.24.10, GLib 2.31.20)
+   # uninstall geany
+   $ sudo apt-get remove geany
+   # leave chroot
+   $ exit
+
+   # build updated image 
+   $ sudo gislab-client-image
+   # create new user that boots without geany software installed
+   sudo gislab-adduser -g User -l GIS.lab -m x@mail.com -p <psw> <name>
+     
+==================================
+Software installation - Vim editor 
+==================================
+
+See :ref:`software uninstallation <example-remove-geany>` section and in 
+``chroot`` enter following code. 
+
+.. code:: sh
+   
+   $ dpkg -s vim
+   $ sudo apt-get update
+   $ sudo apt-get install vim
+   $ vim test
+   $ Hello VIM!
+   $ :wq
+   $ cat test
+   Hello VIM!
+   $ exit
 
 ===============
 GIS.lab project

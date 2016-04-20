@@ -120,7 +120,7 @@ action.
 Important file is **image file**. It is a binary file with the ``.img`` filename 
 extension and represents a snapshot of the data and layout of some GIS.lab
 client. More specifically, it is compressed client's ``root``, i.e. ``chroot``. 
-All GIS.lab clients boot from some image file. 
+All GIS.lab users boot from some image file. 
 Usually after entering client's ``root`` with the first of above mentioned commands, 
 the new updated ``image`` is rebuilded by the second of these commands. 
 

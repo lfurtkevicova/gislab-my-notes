@@ -107,7 +107,7 @@ Fourth number of server's IP address will always be ``5`` and the first client's
 IP address will always terminate with ``50``. For left case of :num:`#config-virtual` 
 these addresses would look like ``192.168.50.5`` and ``192.168.50.50``.
 
-.. note:: |note| This information is useful in Manual GIS.lab server selection  
+.. note:: |note| This information is useful in manual GIS.lab server selection  
           using :ref:`HTTP boot <http-boot>` when server's IP address is required.
 
 Content of Ansible inventory file called ``<name-of-gislab-unit>.inventory`` 
