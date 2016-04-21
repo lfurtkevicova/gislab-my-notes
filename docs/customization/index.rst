@@ -184,10 +184,10 @@ Violet diagram with blue line color called ``image`` in :num:`#backup`
 containing ``gislab.img`` binary file and ``gislab-desktop.buildstamp`` in 
 ``/opt/gislab/system/clients/desktop`` directory 
 can be directory or symbolic link. By default it is directory.
-It is very handy to have more versions of image 
+
+But it is very smart and handy to have more versions of image 
 and just switching between them by symlink with nickname ``image`` and refer 
-to particular directory
-with ``gislab.img`` and ``gislab-desktop.buildstamp``.
+to particular directory with ``gislab.img`` and ``gislab-desktop.buildstamp``.
 
 For example ``image`` will stay in ``/mnt/backup`` directory after 
 :ref:`backup <backup>` process mentioned above. 
@@ -209,13 +209,20 @@ steps from ``/opt/gislab/system/clients/desktop`` directory should be used.
    # switch to image for advanced course
    # sudo ln -sfn /mnt/backup/root-advanced image
 
-Then continue with creation of new user prepared for andvanced course. See 
+Then continue with creation of new user prepared for advanced course. See 
 principle in :num:`#image-symlink`.
 
 .. _image-symlink:
 
 .. figure:: ../img/customization/image-symlink.svg
    :align: center
-   :width: 450
+   :width: 750
 
    Principle of using symlinks for effective customization.
+
+.. note:: |note| When user booted from some ``image`` which has already been 
+   changed, during logout he is notified that there is new version of system. 
+   Running client is automatically rebooted.
+
+.. todo:: |todo| Táto časť so symbolickými linkami je napísaná veľmi veľmi 
+   neisto, treba to prejsť!
