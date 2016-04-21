@@ -226,3 +226,35 @@ principle in :num:`#image-symlink`.
 
 .. todo:: |todo| Táto časť so symbolickými linkami je napísaná veľmi veľmi 
    neisto, treba to prejsť!
+
+.. tip:: |tip| It is recommended to use Ansible to execute customization 
+   scripts directly from local machine. See :ref:`Executing customization 
+   scripts from Ansible <customization-ansible>` example.
+
+===========
+Boot loader
+===========
+
+To customize GIS.lab Desktop client **boot loader**, create copy of boot loader 
+source file `http-boot/gislab-bootloader.ipxe <http-boot/gislab-bootloader.ipxe>` 
+and modify it as required. For more information about **iPXE** syntax see 
+documentation. Than follow build process below.
+
+Firstly, download iPXE source code.
+
+.. code:: sh
+
+   git clone git://git.ipxe.org/ipxe.git && cd ipxe
+
+Optionally checkout to version used by GIS.lab by typing
+
+.. code:: sh
+
+   git checkout d644ad41f5a17315ab72f6ebeeecf895f7d41679
+
+Finally build customized ISO image ``bin/ipxe.iso``
+
+.. code:: sh
+
+   $ cd src
+   $ make EMBED=CUSTOM-BOOT-LOADER-SOURCE-FILE.ipxe 

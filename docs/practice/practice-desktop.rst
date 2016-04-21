@@ -110,6 +110,100 @@ See :ref:`software uninstallation <example-remove-geany>` section and in
    Hello VIM!
    $ exit
 
+.. _customization-ansible:
+
+============================================
+Executing customization scripts from Ansible
+============================================
+
+Following example will execute the same script first on GIS.lab Server 
+and than in GIS.lab ``chroot``. See Ansible playbook below.
+
+.. code:: sh
+
+   ---
+   
+   # Example GIS.lab customization playbook.
+   
+   - hosts: all
+     sudo: yes
+   
+     vars:
+       SERVER_SCRIPT: gislab-customize.sh
+       CLIENT_SCRIPT: gislab-customize.sh
+       GISLAB_INSTALL_CLIENTS_ROOT: /opt/gislab/system/clients
+   
+     tasks:
+       # Customize GIS.lab Server
+       - name: Run script on server
+         script: "{{ SERVER_SCRIPT }}"
+         tags:
+           - customize-server
+   
+       # Customize GIS.lab Desktop client
+       - name: Copy script to client chroot
+         copy: src={{ CLIENT_SCRIPT }}
+               dest={{ GISLAB_INSTALL_CLIENTS_ROOT }}/desktop/root/tmp/customize.sh
+               owner=root group=root mode=0755
+         tags:
+           - customize-client
+   
+       - name: Run script in client chroot
+         shell: gislab-client-shell /tmp/customize.sh
+         tags:
+           - customize-client
+   
+       - name: Remove script from client chroot
+         file: path={{ GISLAB_INSTALL_CLIENTS_ROOT }}/desktop/root/tmp/customize.sh
+               state=absent
+         tags:
+           - customize-client
+   
+       - name: Rebuild client image
+         shell: gislab-client-image
+         tags:
+           - customize-client
+           - build-cient-image
+   
+   # vim:ft=ansible:
+
+Example customization script would be as follows.
+
+.. code:: sh
+
+   #!/bin/bash
+   # Example GIS.lab customization script.
+   # Author: Ivan Mincik, ivan.mincik@gmail.com
+   
+   
+   # detect if we are running on GIS.lab Server or inside GIS.lab Desktop
+   # Client chroot
+   if [ "$(ls -di /)" == "2 /" ]; then
+       echo "Hello from GIS.lab Server."
+   else
+       echo "Hello from GIS.lab Client chroot."
+   fi
+   
+   
+   # vim: set ts=4 sts=4 sw=4 noet:
+
+And for running Ansible playbook in Vagrant environment see next example.
+
+.. code:: sh
+
+   P   YTHONUNBUFFERED=1 \
+   ANSIBLE_FORCE_COLOR=true \
+   ANSIBLE_HOST_KEY_CHECKING=false \
+   ANSIB   LE_SSH_ARGS='-o UserKnownHostsFile=/dev/null -o ForwardAgent=yes -o ControlMaster=auto -o ControlPersist=60s' \
+   ansible-playbook -v \
+   --private-key=$(pwd)/.vagrant/machines/gislab_vagrant/virtualbox/private_key \
+   --user=vagrant \
+   --connection=ssh \
+   --limit='gislab_vagrant' \
+   --inventory-file=$(pwd)/.vagrant/provisioners/ansible/inventory \
+   --tags customize-server,customize-client,build-cient-image \
+   gislab-customize.yml 
+
 ===============
 GIS.lab project
 ===============
