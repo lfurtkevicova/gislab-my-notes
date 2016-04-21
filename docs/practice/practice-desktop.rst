@@ -8,6 +8,8 @@ It is assumed that GIS.lab server is running either using keyboard, monitor
 and GIS.lab server username and password, or using ``ssh key``  and 
 ``IP address`` together with laptop or computer which ``ssh key`` is 
 registered in ``./ssh/authorized_keys`` file.
+In virtual mode GIS.lab server is running after ``vagrant ssh`` command, see 
+:ref:`login to GIS.lab <login-vagrant>` via ``SSH`` section.
 
 .. _example-gdal:
 
@@ -101,6 +103,7 @@ See :ref:`software uninstallation <example-remove-geany>` section and in
    $ sudo apt-get update
    $ sudo apt-get install vim
    $ vim test
+   $ a
    $ Hello VIM!
    $ :wq
    $ cat test

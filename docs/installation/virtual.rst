@@ -125,6 +125,8 @@ By default, GIS.lab installation creates only a superuser account ``gislab``.
 Ordinary user account can be created by logging in to GIS.lab server, i.e. 
 running Vagrant machine in source code directory via SSH.
 
+.. _vagrant-login:
+
 Any IP address, username or password are not needed to login via ``SSH``. 
 Just ``vagrant ssh`` command is enough. The only obligation is to be present 
 in the folder where ``Vagrantfile`` is. That file contains all necessary information.

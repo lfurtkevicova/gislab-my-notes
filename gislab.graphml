@@ -225,7 +225,7 @@
     <node id="n13">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
-          <y:Geometry height="28.0" width="65.05854018912532" x="-113.60842424493306" y="407.38728623923674"/>
+          <y:Geometry height="28.0" width="65.05854018912532" x="-110.07986065155245" y="407.38728623923674"/>
           <y:Fill color="#E8EEF7" color2="#FFFF99" transparent="false"/>
           <y:BorderStyle color="#99CCFF" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="11" fontStyle="italic" hasBackgroundColor="false" hasLineColor="false" height="16.8046875" modelName="custom" textColor="#000000" visible="true" width="60.79931640625" x="2.129611891437662" y="5.59765625">gislab.img<y:LabelModel>
@@ -241,7 +241,7 @@
     <node id="n14">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
-          <y:Geometry height="28.0" width="65.05854018912532" x="56.269612168313614" y="406.3125"/>
+          <y:Geometry height="28.0" width="65.05854018912532" x="61.6951566193853" y="406.3125"/>
           <y:Fill color="#E8EEF7" color2="#FFFF99" transparent="false"/>
           <y:BorderStyle color="#99CCFF" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="11" fontStyle="italic" hasBackgroundColor="false" hasLineColor="false" height="16.8046875" modelName="custom" textColor="#000000" visible="true" width="60.79931640625" x="2.129611891437662" y="5.59765625">gislab.img<y:LabelModel>
@@ -273,7 +273,7 @@
     <node id="n16">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
-          <y:Geometry height="28.0" width="80.0" x="144.4037242316785" y="406.3125"/>
+          <y:Geometry height="28.0" width="80.0" x="140.09301644351453" y="406.3125"/>
           <y:Fill color="#E8EEF7" color2="#FFFF99" transparent="false"/>
           <y:BorderStyle color="#99CCFF" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="11" fontStyle="italic" hasBackgroundColor="false" hasLineColor="false" height="16.8046875" modelName="custom" textColor="#000000" visible="true" width="74.52783203125" x="2.736083984375" y="5.59765625">*.buildstamp<y:LabelModel>

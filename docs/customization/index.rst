@@ -117,7 +117,7 @@ scripts :ref:`gislab-client-shell <gislab-client-shell>`
 and :ref:`gislab-client-image <gislab-client-image>` are used to perform this 
 action. 
 
-Important file is **image file**. It is a binary file with the ``.img`` filename 
+Fundamental file is **image file**. It is a binary file with the ``.img`` filename 
 extension and represents a snapshot of the data and layout of some GIS.lab
 client. More specifically, it is compressed client's ``root``, i.e. ``chroot``. 
 All GIS.lab users boot from some image file. 
@@ -180,11 +180,42 @@ selected backup of them can be recovered.
 .. seealso:: |see| See :ref:`practical example <example-gdal>` of custom 
    installation of latest GDAL version on GIS.lab client from source code.
 
-Relating to mode, we should distinguish between :ref:`Physical <customization-physical>`
-and :ref:`Virtual <customization-virtual>` Mode.
+Violet diagram with blue line color called ``image`` in :num:`#backup` 
+containing ``gislab.img`` binary file and ``gislab-desktop.buildstamp`` in 
+``/opt/gislab/system/clients/desktop`` directory 
+can be directory or symbolic link. By default it is directory.
+It is very handy to have more versions of image 
+and just switching between them by symlink with nickname ``image`` and refer 
+to particular directory
+with ``gislab.img`` and ``gislab-desktop.buildstamp``.
 
-.. toctree::
-   :maxdepth: 2
+For example ``image`` will stay in ``/mnt/backup`` directory after 
+:ref:`backup <backup>` process mentioned above. 
+Let's say there are two different images for two different courses - beginner
+and advanced . They cause different customization of users. 
 
-   physical
-   virtual
+When one wants to select desired image, following
+steps from ``/opt/gislab/system/clients/desktop`` directory should be used.
+
+.. code::
+
+   # get list of all saved versions of image
+   $ (cd /mnt/backup/; ls -la)
+   root-advanced
+   root-beginner
+   root-advanced.tar.bz2
+   root-beginner.tar.bz2
+   ...
+   # switch to image for advanced course
+   # sudo ln -sfn /mnt/backup/root-advanced image
+
+Then continue with creation of new user prepared for andvanced course. See 
+principle in :num:`#image-symlink`.
+
+.. _image-symlink:
+
+.. figure:: ../img/customization/image-symlink.svg
+   :align: center
+   :width: 450
+
+   Principle of using symlinks for effective customization.
