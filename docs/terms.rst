@@ -95,6 +95,26 @@ Useful terms
 *GIS.lab master* 
    GIS.lab server environment which runs as virtualized system on host machine
 
+*Git*
+   is a distributed version control system often used to work on some code 
+   together, it allows groups of people to work on the same files at the same 
+   time to develop various software; it runs command line on local machine and allows to 
+   keep track of files and modifications to those files in something called 
+   `repository`; every developer can work independently and then merge changes 
+   together while everything is recorded by Git 
+
+*GitHub*
+   is a web side that allows to upload Git repositories online; unlike Git, 
+   GitHub provides graphical interface for private repositories and free accounts
+   usually used to host open-source projects.
+
+*GDAL/OGR*
+   *Geospatial Data Abstraction Library* provides access to geospatial data, 
+   it is a cross platform C++ translator used for reading, writing and 
+   transforming raster (GDAL) and vector (OGR) data to the calling application 
+   for all supported formats; a variety of useful command line utilities for data 
+   translation and processing are used
+
 *GUI*
    *Graphical User Interface*
 
@@ -131,6 +151,11 @@ Useful terms
    an archive file of an optical disc, image file is a snapshot of the data and 
    layout of a CD or DVD, saved in ISO-9660 format, widely used for storing CD 
    content; it contains raw dumps of a magnetic disk or of an optical disc
+
+*LDAP*
+   *Lightweight Directory Access Protocol* is an open protocol that email 
+   and other programs use to look up information from a server, allows to 
+   access information directories and obtain these information
 
 *LXC*
    *Linux Container*, a lightweight virtualization technology on operating 

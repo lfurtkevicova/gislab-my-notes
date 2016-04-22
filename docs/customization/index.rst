@@ -189,6 +189,8 @@ But it is very smart and handy to have more versions of image
 and just switching between them by symlink with nickname ``image`` and refer 
 to particular directory with ``gislab.img`` and ``gislab-desktop.buildstamp``.
 
+.. note:: File ``gislab.img`` is compressed client's ``root`` directory. 
+
 For example ``image`` will stay in ``/mnt/backup`` directory after 
 :ref:`backup <backup>` process mentioned above. 
 Let's say there are two different images for two different courses - beginner
