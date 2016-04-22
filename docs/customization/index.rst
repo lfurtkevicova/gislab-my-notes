@@ -119,19 +119,19 @@ action.
 
 Fundamental file is **image file**. It is a binary file with the ``.img`` filename 
 extension and represents a snapshot of the data and layout of some GIS.lab
-client. More specifically, it is compressed client's ``root``, i.e. ``chroot``. 
+client. More specifically, it is compressed client's ``root``. 
 All GIS.lab users boot from some image file. 
 Usually after entering client's ``root`` with the first of above mentioned commands, 
 the new updated ``image`` is rebuilded by the second of these commands. 
 
-.. important:: |imp| Client's ``chroot`` and resulting ``image`` are always restored 
+.. important:: |imp| Client's ``root`` and resulting ``image`` are always restored 
    to original state after every GIS.lab upgrade, so customization must be
    applied again.
 
 .. note:: |note| This behaviour is planed to be changed in future.
 
 Important note written above is precisely why **backup** should always be used. 
-In general, it is very good idea to backup ``chroot`` and also ``image`` 
+In general, it is very good idea to backup client's ``root`` and also ``image`` 
 in case if something will go wrong in process of customization or rollback is
 required. Backup operation can be done by simple backup of them. 
 Approximate total backup size is ``2 GB``.
@@ -158,7 +158,7 @@ See also :num:`#backup` for clearer understanding.
 
 .. note:: |note| Backup of client's ``image`` file is not necessary because 
    it can always be created by ``gislab-client-image`` command from particular 
-   GIS.lab ``chroot``. Why also this backup is useful will be introduced later.
+   GIS.lab client's ``root``. Why also this backup is useful will be introduced later.
 
 When the recommended backups are created, it is time to start with customization.
 If backup directory contains some backup of client's ``root`` and image it is 

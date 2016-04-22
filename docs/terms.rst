@@ -29,6 +29,14 @@ Useful terms
 *Client machine*
    machine which runs GIS.lab client system launched from GIS.lab server
 
+*Client's root*
+   concrete directory on GIS.lab server in which GIS.lab client is installed 
+   with a special tool named `debootstrap`; it has almost the same filesystem
+   hierarchy as a standard xubuntu desktop installation with GIS.lab integration
+   changes (and this is what one can see in running GIS.lab client; from this 
+   directory is then created GIS.lab client image which is mounted over network 
+   as a `client's root partition` during boot process
+
 *Configuration*
    an arrangement of functional units, often pertains to the choice of hardware, 
    software, firmware, and documentation, it affects system function and performance
@@ -99,6 +107,8 @@ Useful terms
    main machine where Vagrant, VirtualBox and GIS.lab package are installed
 
 *Chroot*
+   is a tool which enables installation in client environment, installation 
+   to client's ``root`` is done within ``chroot`` operation
 
 *I386, x86*
    ordinary platform, 32-bit microprocessor
