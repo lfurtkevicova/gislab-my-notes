@@ -40,25 +40,27 @@ Then compilation and installation of GDAL can be executed.
    $ make
    $ make install
 
-After ``chroot`` is left by ``exit`` command, then ``image`` should 
+After client's ``root`` is left by ``exit`` command, then ``image`` should 
 be updated by ``sudo gislab-client-image``. 
 Continue with :ref:`creation <user-creation>` of new user booting with 
 latest GDAL version.
 
-.. important:: |imp| Do not forget to set ``LD_LIBRARY_PATH`` variable on 
-   client before running GDAL commands.
+.. important:: |imp| Do not forget to set ``LD_LIBRARY_PATH`` variable and 
+   configure dynamic linker run-time bindings on client before running GDAL 
+   commands.
    
    .. code:: sh
 
       $ export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+      $ sudo ldconfig
       $ /usr/local/bin/ogr2ogr --version
       GDAL 2.0.0dev, released 2014/04/16
 
 .. _example-remove-geany:
 
-=======================
-Software uninstallation
-=======================
+===============================
+Software uninstallation - Geany
+===============================
 
 Example with `Geany <https://www.geany.org/>`_ software is shown below.
 
@@ -67,7 +69,7 @@ Example with `Geany <https://www.geany.org/>`_ software is shown below.
    # root and image backup
    $ sudo tar cjf /mnt/backup/root-`date -I`.tar.bz2 /opt/gislab/system/clients/desktop/root
    $ sudo cp -a /opt/gislab/system/clients/desktop/image /mnt/backup/image-`date -I`
-   # enter interactive schell in chroot
+   # enter interactive schell in client's root
    $ sudo gislab-client-shell -i
    
    # display geany package status details
@@ -82,7 +84,7 @@ Example with `Geany <https://www.geany.org/>`_ software is shown below.
    geany 0.21 (built on Mar 19 2012 with GTK 2.24.10, GLib 2.31.20)
    # uninstall geany
    $ sudo apt-get remove geany
-   # leave chroot
+   # leave client's root
    $ exit
 
    # build updated image 
@@ -95,7 +97,7 @@ Software installation - Vim editor
 ==================================
 
 See :ref:`software uninstallation <example-remove-geany>` section and in 
-``chroot`` enter following code. 
+client's root enter following code. 
 
 .. code:: sh
    
@@ -116,8 +118,10 @@ See :ref:`software uninstallation <example-remove-geany>` section and in
 Executing customization scripts from Ansible
 ============================================
 
+.. todo:: |todo| prejsť!
+
 Following example will execute the same script first on GIS.lab Server 
-and than in GIS.lab ``chroot``. See Ansible playbook below.
+and than in GIS.lab client's ``root``. See Ansible playbook below.
 
 .. code:: sh
 
@@ -141,19 +145,19 @@ and than in GIS.lab ``chroot``. See Ansible playbook below.
            - customize-server
    
        # Customize GIS.lab Desktop client
-       - name: Copy script to client chroot
+       - name: Copy script to client's root
          copy: src={{ CLIENT_SCRIPT }}
                dest={{ GISLAB_INSTALL_CLIENTS_ROOT }}/desktop/root/tmp/customize.sh
                owner=root group=root mode=0755
          tags:
            - customize-client
    
-       - name: Run script in client chroot
+       - name: Run script in client's root
          shell: gislab-client-shell /tmp/customize.sh
          tags:
            - customize-client
    
-       - name: Remove script from client chroot
+       - name: Remove script from client's root
          file: path={{ GISLAB_INSTALL_CLIENTS_ROOT }}/desktop/root/tmp/customize.sh
                state=absent
          tags:
@@ -177,11 +181,11 @@ Example customization script would be as follows.
    
    
    # detect if we are running on GIS.lab Server or inside GIS.lab Desktop
-   # Client chroot
+   # Client root
    if [ "$(ls -di /)" == "2 /" ]; then
        echo "Hello from GIS.lab Server."
    else
-       echo "Hello from GIS.lab Client chroot."
+       echo "Hello from GIS.lab Client's root."
    fi
    
    
@@ -191,10 +195,10 @@ And for running Ansible playbook in Vagrant environment see next example.
 
 .. code:: sh
 
-   P   YTHONUNBUFFERED=1 \
+   PYTHONUNBUFFERED=1 \
    ANSIBLE_FORCE_COLOR=true \
    ANSIBLE_HOST_KEY_CHECKING=false \
-   ANSIB   LE_SSH_ARGS='-o UserKnownHostsFile=/dev/null -o ForwardAgent=yes -o ControlMaster=auto -o ControlPersist=60s' \
+   ANSIBLE_SSH_ARGS='-o UserKnownHostsFile=/dev/null -o ForwardAgent=yes -o ControlMaster=auto -o ControlPersist=60s' \
    ansible-playbook -v \
    --private-key=$(pwd)/.vagrant/machines/gislab_vagrant/virtualbox/private_key \
    --user=vagrant \
