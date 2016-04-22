@@ -209,4 +209,6 @@ Footnotes
 
 .. [#name] Some footnote.
 
+.. seealso:: |see.| `Coding conventions <https://github.com/gislab-npo/gislab/wiki/Coding-Guidelines>`_.
+
 

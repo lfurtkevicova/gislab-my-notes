@@ -166,7 +166,7 @@ possible to use them, i.e. :ref:`recover backup <recover-backup>`.
 
 .. _recover-backup:
 
-First, current client's ``root`` and ``image`` should be removed and afterwards, 
+First, current client's ``root`` and ``image`` should be **removed** and afterwards, 
 selected backup of them can be recovered.
 
 .. code::
@@ -210,10 +210,13 @@ steps from ``/opt/gislab/system/clients/desktop`` directory should be used.
    root-advanced.tar.bz2
    root-beginner.tar.bz2
    ...
+   # remove current image and root
+   $ sudo rm -r image
+   $ sudo rm -r root
    # switch to image for advanced course
-   # sudo ln -sfn /mnt/backup/root-advanced image
+   $ sudo ln -s /mnt/backup/root-advanced image
    # extract corresponding root from backup
-   # sudo tar xjf /mnt/backup/root-advanced.tar.bz2 -C /
+   $ sudo tar xjf /mnt/backup/root-advanced.tar.bz2 -C /
 
 Then continue with creation of new user prepared for advanced course. See 
 principle in :num:`#image-symlink`.
@@ -228,11 +231,10 @@ principle in :num:`#image-symlink`.
 
 .. note:: |note| When user booted from some ``image`` which has already been 
    changed, during logout he is notified that there is new version of system
-   with ``A new version of a system is available .... 
+   with ``A new version of a system is available, rebooting in 10s.``
    Running client is automatically rebooted.
 
-.. todo:: |todo| Táto časť so symbolickými linkami je napísaná veľmi veľmi 
-   neisto, treba to prejsť!
+.. todo:: |todo| prejsť!
 
 .. tip:: |tip| It is recommended to use Ansible to execute customization 
    scripts directly from local machine. See :ref:`Executing customization 
