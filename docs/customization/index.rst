@@ -236,11 +236,11 @@ principle in :num:`#image-symlink`.
 
 .. todo:: |todo| prejsť!
 
-.. tip:: |tip| It is recommended to use Ansible to execute customization 
-   scripts directly from local machine. See :ref:`Executing customization 
-   scripts from Ansible <customization-ansible>` example.
+It is recommended to use Ansible to execute customization scripts directly 
+from local machine. See :ref:`Executing customization scripts from 
+Ansible <customization-ansible>` example.
 
-Ansible uses ``*.yml`` files to perform customization.
+Ansible uses ``*.yml`` format to perform customization.
 
 ===========
 Boot loader

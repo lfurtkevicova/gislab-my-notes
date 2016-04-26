@@ -4,6 +4,10 @@
 Configuration
 *************
 
+=========================
+Virtual and Physical mode
+=========================
+
 It is recommended to set at least some basic configuration before
 GIS.lab installation is performed. 
 
@@ -20,13 +24,9 @@ When user decides to adjust it, this file should not be modified directly.
    become acquainted with all possibilities of configuration settings. 
    It is full of commented out information. 
 
-.. rubric:: Virtual mode
-
 For installation in VirtualBox it is recommended to create file
 named ``gislab_vagrant`` in ``system/host_vars`` directory for host specific 
 GIS.lab configuration and put various changes there. 
-
-.. rubric:: Physical mode
 
 When Physical mode is used, file in ``system/group_vars`` should
 be named according to name of GIS.lab unit. This name is a part 
@@ -123,5 +123,42 @@ used in physical mode would be as follows.
    .. code:: sh
       
       gislab-unit-fem ansible_ssh_host=10.234.1.44 ansible_ssh_user=ubuntu
+
+==================
+Apt Cacher service
+==================
+
+Vagrant file for Apt Cacher service:
+
+.. code:: sh
+
+   # -*- mode: ruby -*-
+   # vi: set ft=ruby :
+
+   GISLAB_NETWORK="192.168.50"
+
+   VAGRANTFILE_API_VERSION = "2"
+   Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+     config.vm.box = "precise-canonical"
+
+     config.vm.provider "virtualbox" do |v|
+       v.customize ["modifyvm", :id, "--memory", "512"]
+       v.customize ["modifyvm", :id, "--nictype1", "virtio"]
+       v.customize ["modifyvm", :id, "--nictype2", "virtio"]
+
+       config.vm.network "forwarded_port", guest: 3142, host: 3142, auto_correct: true
+     end
+
+     config.vm.hostname = "apt-cacher"
+     config.vm.provision "shell", inline: "apt-get install apt-cacher-ng"
+     config.vm.network "public_network", ip: "%s.%s" % [GISLAB_NETWORK, "6"]
+   end
+
+Run Apt Cacher server by typing ``vagrant up`` and add following line to 
+GIS.lab configuration file:
+
+.. code:: sh
+
+   GISLAB_APT_HTTP_PROXY: http://192.168.50.6:3142
 
 .. todo:: |todo| `??? Network configurations ??? <https://github.com/gislab-npo/gislab/wiki/Network-configurations>`_

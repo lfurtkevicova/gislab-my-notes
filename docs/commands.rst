@@ -27,13 +27,13 @@ Useful commands
    runs command or launches interactive shell in GIS.lab client's chroot
 
 :command:`gislab-cluster event <event>`
-   sends a custom event through the serf cluster
+   sends a custom event through the Serf cluster
 
 :command:`gislab-cluster event shutdown`
    should shutdown all members of cluster
 
 :command:`gislab-cluster leave`
-   gracefully leaves the serf cluster and shuts down 
+   gracefully leaves the Serf cluster and shuts down 
 
 :command:`gislab-cluster members`
    lists the members of a serve cluster
