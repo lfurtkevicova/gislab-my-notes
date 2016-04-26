@@ -152,6 +152,10 @@ Useful terms
    layout of a CD or DVD, saved in ISO-9660 format, widely used for storing CD 
    content; it contains raw dumps of a magnetic disk or of an optical disc
 
+*LAN*
+   *Local Area Network* is a computer network interconnecting computers 
+   within a limited area, e.g. school or office building
+
 *LDAP*
    *Lightweight Directory Access Protocol* is an open protocol that email 
    and other programs use to look up information from a server, allows to 
@@ -216,6 +220,8 @@ and notify the rest of the cluster
    the package format for Vagrant environment, it is used to bring up an 
    identical working environment, 
 
+*vendor*
+   supplier, a part of the supply chain
 
    
 
