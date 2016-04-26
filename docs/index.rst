@@ -44,11 +44,11 @@ Contents
    practice/index
    gislab-web/index
    gislab-mobile/index
-   wiki/index*
 
 .. toctree::
    :maxdepth: 1
 
+   workshop
    datasets
    problems
    communication

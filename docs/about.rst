@@ -33,6 +33,41 @@ with power and Internet outages. It is also ideal system for education or just
 for `Open Source <https://en.wikipedia.org/wiki/Open-source_software>`_ 
 technologies popularization.
 
+================
+Fundamental aims
+================
+
+One of the main objectives is rapid deployment of complete **geospatial solution** 
+for collaborative data capturing, processing, analysis and publication on web
+with fully **automatic provisioning** and **out-of-box working deployment** 
+using GIS.lab Unit.
+
+It is self containing system with very quick results. It is possible to get web
+application from plain hardware in a few minutes.
+
+GIS.lab brings high added values by integration of precisely chosen **set of 
+geospatial FOSS**, i.e. one best tool for one thing to one system with 
+consistent behaviour, many collaboration tools, user and software support.
+
+Full client computer performance utilisation represents opposite to thin client.
+
+Rather than a traditional desktop, GIS.lab provides thinking about client 
+environment more as about some kind of specialized client interface 
+providing tools from desktop world. 
+
+It allows computer resources sharing, same deployment in LAN and cloud, 
+mobile clients and web administration similar to router or NAS (plans).
+
+================
+How it is done ?
+================
+
+Automatic provisioning is enabled by **Ansible**, virtual machine deployment by 
+**Vagrant** and VirtualBox. Client boot service is **LTSP Fat client** or 
+own solution. It uses OWS services load balancing, QGIS Desktop and Server as 
+GIS.lab Desktop including own GIS.lab Web app, GRASS as processing backend 
+under QGIS Processing plugin and WPS, own GIS software packaging, etc.
+
 ==========================
 What are the key benefits?
 ==========================
@@ -95,6 +130,15 @@ What is GIS.lab Mobile
 ======================
 
 .. todo:: |todo.| GIS.lab Mobile
+
+============================
+Is it similar to OSGeo Live? 
+============================
+
+GIS.lab is automatic deployment of GIS infrastructure, more or less opposite to 
+OSGeo Live.
+
+.. todo:: |todo.| Most significant differences ...
 
 =======================
 How to upgrade GIS.lab?

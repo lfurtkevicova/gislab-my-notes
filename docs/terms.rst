@@ -223,8 +223,6 @@ and notify the rest of the cluster
 *vendor*
    supplier, a part of the supply chain
 
-   
-
 .. rubric:: Source
 
 .. [#bnc] `Configuring Bridged Networking <http://pubs.vmware.com/ws8/wwhelp/wwhimpl/js/html/wwhelp.htm#href=using_ws/GUID-BAFA66C3-81F0-4FCA-84C4-D9F7D258A60A.html#1_14_9_1>`_
