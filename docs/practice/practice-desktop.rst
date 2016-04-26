@@ -359,147 +359,51 @@ created in desktop to web environment.
 Following steps will create simplest possible GIS project and will
 publish it on web.
 
-Log in
-------
+1. Log in to GIS.lab session 
 
--  log in to GIS.lab session using 'lab1' user credentials
+Use login and password for user account that has been 
+:ref:`created <user-creation>` by ``sudo gislab-adduser`` command from GIS.lab
+server. 
 
-.. figure:: images/quick-start/gis-project/client-login.png
-   :alt: client-login
+2. Prepare data
 
-   client-login
-Data preparation
-----------------
+Create working directory called ``my-first-project`` in ``~/Projects`` directory.
+Copy example SpatiaLite database file 
+``~/Repository/gislab-project/prague/prague.sqlite`` to 
+``~/Projects/my-first-project`` directory.
 
--  create working directory called *my-first-project* in *~/Projects*
-   directory
--  copy example SpatiaLite database file
-   *~/Repository/gislab-project/natural-earth/natural-earth.sqlite* to
-   *~/Projects/my-first-project* directory
+3. Create project
 
-.. figure:: images/quick-start/gis-project/first-project-copy-data.png
-   :alt: first-project-copy-data
+Launch **GIS.lab Desktop** as ``GIS.lab > GIS.lab Desktop`` (QGIS) and add 
+SpatiaLite database file as ``Layer > Add SpatiaLite layer > New``. 
+Coose the database in ``Projects`` directory and connect to database by 
+pressing ``Connect`` button.
 
-   first-project-copy-data
-Project creation
-----------------
+Load some layer by mouse selection and press ``Add`` button. Set project 
+title in ``Project > Project Properties > Project title``, save the project 
+as ``~/Projects/my-first-project/my-first-project.qgs`` with ``Project > Save``
+option. Now first GIS project is ready.
 
--  launch *GIS.lab Desktop* (*GIS.lab > GIS.lab Desktop* applications
-   menu). New project will be automatically created
+4. Publish project on Web
 
-.. figure:: images/quick-start/gis-project/gislab-desktop-applications-menu.png
-   :alt: gislab-desktop-applications-menu
+Install **GIS.lab Web plugin** in ``Plugins > Manage and Install Plugins`` 
+section and launch it. 
 
-   gislab-desktop-applications-menu
+.. note:: |note| It is safe to ignore on-the-fly transformation warning.
 
--  add SpatiaLite database file to *GIS.lab Desktop* project (*Layer >
-   Add SpatiaLite layer > New*)
--  connect to database by pressing *Connect* button
+Publish project by pressing ``Next``, ``Publish`` and ``Finish`` buttons 
+in plugin's wizards presented in dialogs. In next step copy whole directory 
+``~/Projects/my-first-project`` to ``~/Publish/lab1`` directory.
 
-.. figure:: images/quick-start/gis-project/first-project-connect-data.png
-   :alt: first-project-connect-data
+Launch **GIS.lab Web** as ``GIS.lab > GIS.lab Web`` applications menu from main
+GIS.lab panel. Ignore security warnings produced by self-signed certificate, 
+i.e. *I Understand the Risks > Add Exception > Confirm Security Exception*
+and log in with user's credentials. Then inspect published project which 
+should be listed as second, right below 
+default ``Empty`` project. Click on project's link in URL column to launch
+project in web environment.
 
-   first-project-connect-data
-
--  load *counties* layer by mouse selection and pressing *Add* button
-
-.. figure:: images/quick-start/gis-project/first-project-countries-layer.png
-   :alt: first-project-countries-layer
-
-   first-project-countries-layer
-
--  set project title to *Countries of Central Europe* (*Project >
-   Project Properties > Project title*)
-
-.. figure:: images/quick-start/gis-project/first-project-title.png
-   :alt: first-project-title
-
-   first-project-title
-
--  save project as *~/Projects/my-first-project/europe.qgs* (*Project >
-   Save*). Our first GIS project is ready
-
-.. figure:: images/quick-start/gis-project/first-project-save-europe.png
-   :alt: first-project-save-europe
-
-   first-project-save-europe
-Project publishing
-------------------
-
--  install *GIS.lab Web* plugin (*Plugins > Manage and Install Plugins*)
-
-.. figure:: images/quick-start/gis-project/gislab-web-plugin.png
-   :alt: gislab-web-plugin
-
-   gislab-web-plugin
-
--  launch *GIS.lab Web* plugin (*Web > GIS.lab Web > Publish in GIS.lab
-   Web*). It is safe to ignore on-the-fly transformation warning
-
-.. figure:: images/quick-start/gis-project/first-project-plugin-publish1.png
-   :alt: first-project-plugin-publish1
-
-   first-project-plugin-publish1
-
--  publish project by pressing *Next* button in wizard. Press *Publish*
-   and *Finish* buttons on the last two pages
-
-|first-project-plugin-publish2| |first-project-plugin-publish3|
-
--  copy whole directory *~/Projects/my-first-project* to
-   *~/Publish/lab1* directory to finish project publishing
-
-.. figure:: images/quick-start/gis-project/first-project-copy-to-publish.png
-   :alt: first-project-copy-to-publish
-
-   first-project-copy-to-publish
-Using project on web
---------------------
-
--  launch *GIS.lab Web* User page (*GIS.lab > GIS.lab Web* applications
-   menu)
-
-.. figure:: images/quick-start/gis-project/gislab-web-applications-menu.png
-   :alt: gislab-web-applications-menu
-
-   gislab-web-applications-menu
-
--  ignore security warnings produced by self-signed certificate (*I
-   Understand the Risks > Add Exception > Confirm Security Exception*)
-
-.. figure:: images/quick-start/gis-project/gislab-web-user-page-warnings.png
-   :alt: gislab-web-user-page-warnings
-
-   gislab-web-user-page-warnings
-
--  log in to GIS.lab Web User page using 'lab1' user credentials
-
-.. figure:: images/quick-start/gis-project/gislab-web-user-page-login.png
-   :alt: gislab-web-user-page-login
-
-   gislab-web-user-page-login
-
--  inspect published project. Our project should be listed as second,
-   right below default *Empty* project
-
-.. figure:: images/quick-start/gis-project/gislab-web-user-page-projects.png
-   :alt: gislab-web-user-page-projects
-
-   gislab-web-user-page-projects
-
--  click on project's link in *URL* column to launch it
-
-.. figure:: images/quick-start/gis-project/gislab-web-first-project.png
-   :alt: gislab-web-first-project
-
-   gislab-web-first-project
-What's next
------------
-
-To get more familiar with possible project configurations, copy whole
-GIS.lab example project directory
-*~/Repository/gislab-project/natural-earth* to *~/Projects* directory
-and start exploring.
-
-.. |first-project-plugin-publish2| image:: images/quick-start/gis-project/first-project-plugin-publish2.png
-.. |first-project-plugin-publish3| image:: images/quick-start/gis-project/first-project-plugin-publish3.png
+.. tip:: |tip| To get more familiar with possible project configurations, 
+   copy some of whole GIS.lab example projects directories located in 
+   ``~/Repository/gislab-project`` to ``~/Projects`` directory and start 
+   exploring.
