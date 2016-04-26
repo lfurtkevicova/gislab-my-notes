@@ -29,6 +29,12 @@ Useful commands
 :command:`gislab-cluster event <event>`
    sends a custom event through the Serf cluster
 
+:command:`gislab-cluster event reboot`
+   should reboot all members of cluster
+
+:command:`gislab-cluster event reboot "<hostname>,<hostname>,..."`
+   should reboot particular client machines
+
 :command:`gislab-cluster event shutdown`
    should shutdown all members of cluster
 
@@ -37,6 +43,9 @@ Useful commands
 
 :command:`gislab-cluster members`
    lists the members of a serve cluster
+
+:command:`gislab-cluster members -tag sesion-active=*`
+   lists client machines which are currently running user session
 
 :command:`gislab-deluser`
    removes GIS.lab user account

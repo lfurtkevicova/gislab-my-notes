@@ -131,4 +131,118 @@ Upgrade with Ansible
 
    $ ansible-playbook --inventory=gislab-unit.inventory --private-key=<private-SSH-key-file> system/gislab.yml
 
+===============
+GIS.lab cluster
+===============
+
+GIS.lab cluster is managed by decentralized cluster management tool
+called `Serf <https://www.serfdom.io/intro/>`_ based on
+gossip protocol. Serf is responsible for automatic joining and removing
+machines to and from GIS.lab cluster and OWS load balancer management.
+It is also used as interface for running cluster **events** and **queries**.
+
+-------------------------
+Roles, events and queries
+-------------------------
+
+Machines belonging to GIS.lab cluster are divided into two roles
+
+1. **server**, i.e. GIS.lab server 
+2. **client**, i.e. GIS.lab clients
+
+All machines are capable of running different set of `cluster 
+events <https://www.serfdom.io/docs/commands/event.html>`_ and
+`queries <https://www.serfdom.io/docs/commands/query.html>`_ depending
+on their role membership. Events and queries can be send from any
+machine which is a member of GIS.lab cluster using **gislab-cluster client** 
+which is currently just symlink to serf binary or
+programmatically using `RPC mechanism <https://www.serfdom.io/docs/agent/rpc.html>`_. 
+All machines in cluster will receive all events and queries and will decide to
+respond or not depending on existence of
+`handler <https://www.serfdom.io/docs/agent/event-handlers.html>`_
+responsible for particular event or query.
+
+The main difference between **event** and **query** is that while query is
+designed to send some query and receive response, the purpose of event
+is just to announce that something has happend or should happen without
+receiving any response. Response from query can be returned in two
+formats, ``text`` or ``JSON``.
+
+-------------------------
+Public events and queries
+-------------------------
+
+Here is a list of publicly available events and queries designed for
+ordinary usage. This list does not contain system events and queries
+which are used for internal GIS.lab cluster management.
+
+Get a list of cluster members of a Serf cluster by typing 
+``gislab-cluster members``. 
+
+.. code:: sh
+
+   server.gis.lab  192.168.50.5:7946   alive  role=server
+   c51             192.168.50.51:7946  alive  role=client
+
+Or get this list in JSON format with ``gislab-cluster members -format json``
+command.
+
+.. code:: json
+
+   {
+     "members": [
+       {
+         "name": "server.gis.lab",
+         "addr": "192.168.50.5:7946",
+         "port": 7946,
+         "tags": {
+           "role": "server"
+         },
+         "status": "alive",
+         "protocol": {
+           "max": 4,
+           "min": 2,
+           "version": 4
+         }
+       },
+       {
+         "name": "c51",
+         "addr": "192.168.50.51:7946",
+         "port": 7946,
+         "tags": {
+           "role": "client"
+         },
+         "status": "alive",
+         "protocol": {
+           "max": 4,
+           "min": 2,
+           "version": 4
+         }
+       }
+     ]
+   }
+
+
+For more commands see :ref:`Useful commands <commands>` section with ``<cluster>``
+key word. For example command 
+``gislab-cluster members -tag sesion-active=*`` lists 
+client machines which are currently running user session. After GIS.lab user's 
+login there will be list as follows.
+
+.. code:: sh
+
+   server.gis.lab  192.168.50.5:7946   alive  role=server
+   c51             192.168.50.51:7946  alive  role=client,session-active=ludka
+
+.. seealso:: |see.| :ref:`Running commands on whole cluster with parallel-ssh <cluster-parallel-ssh>`
+
+-------------------------
+Remote desktop management
+-------------------------
+
+Connect to running remote desktop session using following command.
+
+.. code:: sh
+
+   HOST=<REMOTE-HOST-NAME> ssh gislab@$HOST "x11vnc -bg -safer -once -nopw -scale 0.9x0.9 -display :0 -allow $(hostname -f)" && vncviewer $HOST
 

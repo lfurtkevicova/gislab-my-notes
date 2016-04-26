@@ -208,6 +208,142 @@ And for running Ansible playbook in Vagrant environment see next example.
    --tags customize-server,customize-client,build-cient-image \
    gislab-customize.yml 
 
+.. _cluster-parallel-ssh:
+
+===================================================
+Running commands on whole cluster with parallel-ssh
+===================================================
+
+Deploy public ``ssh`` key to GIS.lab user to allow passwordless login.
+
+.. code:: sh
+
+   $ ssh-copy-id -i ~/.ssh/id_rsa.pub  gislab@<GIS.lab server IP>
+
+Get list of currently running client machines
+
+.. code:: sh
+
+   $ MACHINES="$(gislab-cluster members -tag role=client -status=alive | awk -F " " '{printf "%s ", $1}')"
+
+Install gedit on all client machines
+
+.. code:: sh
+
+   $ parallel-ssh -O StrictHostKeyChecking=no -i -H "$MACHINES" sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends gedit
+
+   [1] 23:02:57 [SUCCESS] c51
+   Reading package lists...
+   Building dependency tree...
+   Reading state information...
+   The following NEW packages will be installed:
+     gedit
+   0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+   Need to get 0 B/827 kB of archives.
+   After this operation, 2,781 kB of additional disk space will be used.
+   Selecting previously unselected package gedit.
+   (Reading database ... 134642 files and directories currently installed.)
+   Unpacking gedit (from .../gedit_3.4.1-0ubuntu1_amd64.deb) ...
+   Processing triggers for desktop-file-utils ...
+   Setting up gedit (3.4.1-0ubuntu1) ...
+   update-alternatives: using /usr/bin/gedit to provide /usr/bin/gnome-text-editor (gnome-text-editor) in auto mode.
+   Processing triggers for libc-bin ...
+   ldconfig deferred processing now taking place
+   [2] 23:02:57 [SUCCESS] c50
+   Reading package lists...
+   Building dependency tree...
+   Reading state information...
+   The following NEW packages will be installed:
+     gedit
+   0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+   Need to get 0 B/827 kB of archives.
+   After this operation, 2,781 kB of additional disk space will be used.
+   Selecting previously unselected package gedit.
+   (Reading database ... 134642 files and directories currently installed.)
+   Unpacking gedit (from .../gedit_3.4.1-0ubuntu1_amd64.deb) ...
+   Processing triggers for desktop-file-utils ...
+   Setting up gedit (3.4.1-0ubuntu1) ...
+   update-alternatives: using /usr/bin/gedit to provide /usr/bin/gnome-text-editor (gnome-text-editor) in auto mode.
+   Processing triggers for libc-bin ...
+   ldconfig deferred processing now taking place
+
+Perform performance test of parallel write to network share
+
+.. code:: sh
+
+   $ parallel-ssh -O StrictHostKeyChecking=no -i -H "$MACHINES" 'dd if=/dev/zero of=/mnt/barrel/file-$(hostname).io bs=1M count=1024'
+
+   [1] 09:42:11 [SUCCESS] c54
+   Stderr: 1024+0 records in
+   1024+0 records out
+   1073741824 bytes (1.1 GB) copied, 37.7824 s, 28.4 MB/s
+   [2] 09:42:11 [SUCCESS] c52
+   Stderr: 1024+0 records in
+   1024+0 records out
+   1073741824 bytes (1.1 GB) copied, 38.1136 s, 28.2 MB/s
+   [3] 09:42:11 [SUCCESS] c51
+   Stderr: 1024+0 records in
+   1024+0 records out
+   1073741824 bytes (1.1 GB) copied, 38.4403 s, 27.9 MB/s
+   [4] 09:42:12 [SUCCESS] c53
+   Stderr: 1024+0 records in
+   1024+0 records out
+   1073741824 bytes (1.1 GB) copied, 38.6802 s, 27.8 MB/s
+
+Perform performance test of parallel read from network share
+
+.. code:: sh
+
+   $ parallel-ssh -O StrictHostKeyChecking=no -i -H "$MACHINES" 'dd if=/mnt/barrel/file-$(hostname).io of=/dev/zero bs=1M'
+
+   [1] 09:42:45 [SUCCESS] c51
+   Stderr: 1024+0 records in
+   1024+0 records out
+   1073741824 bytes (1.1 GB) copied, 0.207453 s, 5.2 GB/s
+   [2] 09:42:45 [SUCCESS] c53
+   Stderr: 1024+0 records in
+   1024+0 records out
+   1073741824 bytes (1.1 GB) copied, 0.210259 s, 5.1 GB/s
+   [3] 09:42:45 [SUCCESS] c52
+   Stderr: 1024+0 records in
+   1024+0 records out
+   1073741824 bytes (1.1 GB) copied, 0.227793 s, 4.7 GB/s
+   [4] 09:42:45 [SUCCESS] c54
+   Stderr: 1024+0 records in
+   1024+0 records out
+   1073741824 bytes (1.1 GB) copied, 0.207774 s, 5.2 GB/s
+
+Perform CPU performance test
+
+.. code:: sh
+
+   $ parallel-ssh -O StrictHostKeyChecking=no -i -H "$MACHINES" 'dd if=/dev/zero bs=1M count=1024 | md5sum'
+
+   [1] 09:39:05 [SUCCESS] c52
+   cd573cfaace07e7949bc0c46028904ff  -
+   Stderr: Warning: Permanently added 'c52,192.168.19.52' (ECDSA) to the list of known hosts.
+   1024+0 records in
+   1024+0 records out
+   1073741824 bytes (1.1 GB) copied, 2.51008 s, 428 MB/s
+   [2] 09:39:05 [SUCCESS] c53
+   cd573cfaace07e7949bc0c46028904ff  -
+   Stderr: Warning: Permanently added 'c53,192.168.19.53' (ECDSA) to the list of known hosts.
+   1024+0 records in
+   1024+0 records out
+   1073741824 bytes (1.1 GB) copied, 2.50255 s, 429 MB/s
+   [3] 09:39:06 [SUCCESS] c54
+   cd573cfaace07e7949bc0c46028904ff  -
+   Stderr: Warning: Permanently added 'c54,192.168.19.54' (ECDSA) to the list of known hosts.
+   1024+0 records in
+   1024+0 records out
+   1073741824 bytes (1.1 GB) copied, 2.52551 s, 425 MB/s
+   [4] 09:39:06 [SUCCESS] c51
+   cd573cfaace07e7949bc0c46028904ff  -
+   Stderr: Warning: Permanently added 'c51,192.168.19.51' (ECDSA) to the list of known hosts.
+   1024+0 records in
+   1024+0 records out
+   1073741824 bytes (1.1 GB) copied, 2.56706 s, 418 MB/s
+
 ===============
 GIS.lab project
 ===============

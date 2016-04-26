@@ -192,6 +192,12 @@ Useful terms
 
    PXE overview [#pxe]_
 
+*Serf*
+   *Service orchestration and management tool* is a decentralized solution for 
+service discovery and orchestration; it uses an efficient and lightweight 
+gossip protocol to communicate with other nodes, it can detect node failures 
+and notify the rest of the cluster
+
 *Travis CI*
    a FOSS, hosted, distributed continuous integration service used to build 
    and test software projects hosted at GitHub, it is configured by adding a 
