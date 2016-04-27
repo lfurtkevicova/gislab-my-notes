@@ -17,7 +17,7 @@ figuration, see :num:`#requirements-physical`.
   - 16 GB RAM: KINGSTON KVR16S11/8 8GB 2Rx8 1G x 64-Bit PC3-12800 CL11 204-Pin SODIMM DDR3
   -  mSata SSD 525 Series, 60GB
 
-- 4 GB RAM on host machine, Intel NUC (optional)
+- 8 GB RAM on host machine, Intel NUC (optional)
 - keyboard
 - mouse
 - LCD display
