@@ -138,6 +138,8 @@ Useful terms
 *IA64*
    platform, 64-bit microprocessor
 
+.. _ip-address:
+
 *IP address*
    *Internet Protocol address*, unique numerical identifier assigned to each 
    device participating in a computer network that uses the Internet Protocol for 

@@ -161,8 +161,6 @@ GIS.lab configuration file:
 
    GISLAB_APT_HTTP_PROXY: http://192.168.50.6:3142
 
-.. todo:: |todo| `??? Network configurations ??? <https://github.com/gislab-npo/gislab/wiki/Network-configurations>`_
-
 =====================
 Network configuration
 =====================

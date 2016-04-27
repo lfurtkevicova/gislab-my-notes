@@ -55,17 +55,19 @@ figuration, see :num:`#requirements-physical`.
 Server
 ======
 
-The process of installation consists of three main steps:
+The process of installation consists of five main steps:
 
-1. :ref:`Basic operating system installation <basic-os>`
-2. :ref:`GIS.lab Unit initialization <initialization>`
-3. :ref:`GIS.lab Unit installation <unit-installation>`
+1. :ref:`Preparation of bootable USB stick <usb-preparation>`
+2. :ref:`Adjusted operating system installation <basic-os>`
+3. :ref:`GIS.lab unit initialization <initialization>`
+4. :ref:`Configuration <configuration>`
+5. :ref:`GIS.lab unit installation <unit-installation>`
 
-.. _basic-os:
+.. _usb-preparation:
 
-Actual GIS.lab version runs on top of **Ubuntu 12.04 Precise**. 
+Actual GIS.lab version runs on top of **Ubuntu 12.04 Precise** release. 
 GIS.lab developers are currently working on upgrade to new Ubuntu version 
-**Ubuntu 16.04 Xenial**. Meanwhile, these material are dedicated to old 
+**Ubuntu 16.04 Xenial**. Meanwhile, these materials are dedicated to old 
 Ubuntu version. 
 
 Following steps will guide user to install basic Ubuntu operating system with
@@ -73,16 +75,18 @@ default ``ubuntu`` super user account and password ``ubuntu``. Network is
 configured to automatically obtain :ref:`IP address <ip-address>` from 
 :ref:`DHCP server <dhcp-server>`.
 
-In the first step download latest `64-bit PC (AMD64) server install 
-CD <<http://releases.ubuntu.com/precise>>`_ type of **image**.
+In the first step download latest 
+`64-bit PC (AMD64) server install CD <http://releases.ubuntu.com/precise>`_ 
+type of **image**.
 
 Then use script ``providers/gislab-unit/gislab-unit-iso.sh`` to create 
 custom **GIS.lab unit** installation **ISO image file** from original Ubuntu 
 server ISO image file downloaded in above step. 
 This command has some parametres `-s`, ``-t``, ``-k``, ``-w`` and ``-i``. 
 
-.. tip:: |tip| From cloned `gislab` directory (see :ref:`GIS.lab source code <GL-clone>` 
-   run `sudo ./providers/gislab-unit/gislab-unit-iso.sh -h` command to see 
+.. tip:: |tip| From cloned ``gislab`` directory included in 
+   :ref:`GIS.lab source code <GL-clone>` 
+   run ``sudo ./providers/gislab-unit/gislab-unit-iso.sh -h`` command to see 
    details of required options. 
 
 Options are written below. Adjusted image will be used for automatic 
@@ -106,7 +110,8 @@ For example, assuming that downloaded original Ubuntu server installation
 ``ISO image`` is located in ``Downloads`` directory, user wants to use 
 ``Italian`` official archive mirror, ``Rome`` timezone, ``SSH public key`` 
 file particularly created for GIS.lab installation or update is located in 
-``.ssh`` directory, then the script can be run as follows.
+``.ssh`` directory and new adjusted image should be saved in ``tmp`` directory, 
+then the script can be run as follows.
 
 .. code:: sh
 
@@ -114,27 +119,65 @@ file particularly created for GIS.lab installation or update is located in
 
 Continue with preparation of bootable installation USB stick from custom 
 GIS.lab Unit ISO image file created in previous step. On Ubuntu 
-`Startup Disk Creator <>`_ or `UNetbootin <>`_ application can be used and 
-they exists also for other Linux distributions. Recommended option is usage
-of ``dd`` command. See example bellow.
+`Startup Disk Creator <https://en.wikipedia.org/wiki/Startup_Disk_Creator>`_ 
+or `UNetbootin <https://en.wikipedia.org/wiki/UNetbootin>`_ application can 
+be used and they exists also for other Linux distributions. 
+Probably the most recommended option is usage of ``dd`` command. 
+See example bellow.
 
 .. code:: sh
 
    # Format USB flash disk 
-   # In our example we assume that USB flash disk is connected as /dev/sdf
+   # In is assumed that USB flash disk is connected as /dev/sdf
    # Please check 'dmesg' for your configuration
    sudo mkdosfs -n 'GIS.lab Base System' -I /dev/sdf -F 32
    isohybrid /path/to/your/gislab.iso
    sudo dd if=/path/to/your/gislab.iso of=/dev/sdf bs=4k
    sudo eject /dev/sdf
 
-When above process is done, together with ready USB stick attach into GIS.lab 
-unit machine also power supply, HDMI display, keyboard and Ethernet cable. 
-Power it on, press F10 key to run boot manager and select ``boot from USB`` 
-option. Then, fully automatic installation should start. When finished, 
+.. _basic-os:
+
+When above process is done, together with ready USB stick attach also power 
+supply, HDMI display, keyboard and Ethernet cable into GIS.lab unit machine,
+see :num:`#installation-unit`. 
+Power it on, press ``F10`` key to run boot manager and select ``boot from USB`` 
+option. Then fully automatic installation should start. When finished, 
 machine will be turned of. USB stick should then be removed. 
+
+.. _installation-unit:
+
+.. figure:: ../img/installation/installation-unit.svg
+   :align: center
+   :width: 450
+
+   Necessary hardware components in adjusted operating system installation 
+   process.
+
+.. note:: |note| After booting there is only one notification related to 
+   **cash packages** that allows to choose them in case they are existing.
+   Otherwise just ``Continue`` option should be selected.
 
 .. _initialization:
 
+.. _configuration:
+
+It is recommended to set at least some basic configuration before
+GIS.lab installation is performed. See 
+:ref:`Configuration section <configuration>` of this documentation for
+detailed instructions.
+
 .. _unit-installation: 
 
+Once GIS.lab is configured, installation can be performed. Run following 
+command to execute **Ansible playbook**.
+
+.. code:: sh
+
+   $ ansible-playbook --inventory=gislab-unit.inventory --private-key=
+system/gislab.yml 
+
+Now, GIS.lab unit machine is installed with GIS.lab system. Do not forget 
+to :ref:`create user accounts <user-creation>` by ``gislab-adduser`` command 
+and :ref:`allow their client machines <client-enabling>` to connect by running 
+``gislab-machines`` 
+command.
