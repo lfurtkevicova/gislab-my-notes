@@ -53,6 +53,8 @@ Useful terms
 *Dev*
    development tools, software developer or device in PC
 
+.. _dhcp-server:
+
 *DHCP server*
     *Dynamic Host Configuration Protocol*, way how to set host's IP address to 
     automatically assign an IP address to any host on the network upon the request
@@ -124,7 +126,7 @@ Useful terms
    are separated from the underlying hardware resources
 
 *Host machine*
-   main machine where Vagrant, VirtualBox and GIS.lab package are installed
+   main machine where required softwares and GIS.lab package are installed
 
 *Chroot*
    is a tool which enables installation in client environment, installation 
