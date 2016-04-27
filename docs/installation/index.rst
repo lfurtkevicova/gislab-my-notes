@@ -9,7 +9,7 @@ Installation
    :numbered:
 
    configuration
-   physical
    virtual
+   physical
    
    

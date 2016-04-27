@@ -41,9 +41,9 @@ Contents
 
    installation/index
    customization/index
-   practice/index
    gislab-web/index
    gislab-mobile/index
+   practice/index
 
 .. toctree::
    :maxdepth: 1
