@@ -31,7 +31,8 @@ GIS.lab configuration.
    conflicts may occur. 
    
 To run GIS.lab in Virtual mode, there are some hardware and software requirements. 
-Another important point is GIS.lab source code, see :ref:`GIS.lab source code download <GL-clone>`. 
+Another important point is GIS.lab source code, see :ref:`GIS.lab source code download <GL-clone>`. See information below with graphical representation in 
+:num:`#requirements-virtual`. 
 
 *Hardware*
 
@@ -44,6 +45,14 @@ Another important point is GIS.lab source code, see :ref:`GIS.lab source code do
 -  Ansible 2.0 or higher, see :ref:`Ansible installation <ansible-installation>`
 -  VirtualBox 4.3 or higher, see :ref:`VirtualBox installation <vb-installation>`
 -  Vagrant 1.7 or higher , see :ref:`Vagrant installation <vagrant-installation>`
+
+.. _requirements-virtual:
+
+.. figure:: ../img/installation/requirements-virtual.svg
+   :align: center
+   :width: 450
+
+   Requirements for installation in virtual mode.
 
 .. tip:: |tip| Check the version of software that are installed by typing
 
