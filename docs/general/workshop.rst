@@ -4,7 +4,7 @@
 GIS.lab workshop
 ****************
 
-.. todo:: |todo.| This is elementary draft!
+.. todo:: |todo| This is elementary draft!
 
 =================
 Goals of workshop

@@ -7,10 +7,12 @@ Physical Mode
 In this section, attention shall be given to installation of GIS.lab using 
 physical mode.
 
+.. _requirements-physical:
+
 To run GIS.lab in physical mode, there are some hardware and software requirements. 
 As well as using virtual mode, :ref:`GIS.lab source code <GL-clone>` is needed. 
 Information about requirements can be found below together with graphical 
-figuration, see :num:`#requirements-physical`. 
+figuration, see :num:`#requirementsphysical`. 
 
 *Hardware*
 
@@ -37,7 +39,7 @@ figuration, see :num:`#requirements-physical`.
 -  Git, see :ref:`Git installation <git-installation>`
 -  Ansible 2.0 or higher, see :ref:`Ansible installation <ansible-installation>`
 
-.. _requirements-physical:
+.. _requirementsphysical:
 
 .. figure:: ../img/installation/requirements-physical.svg
    :align: center

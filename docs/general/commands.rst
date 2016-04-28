@@ -93,7 +93,7 @@ Useful commands
 :command:`vagrant provision --provision-with test`
    runs tests with Vagrant
 
-.. important:: |imp.| Variable ``GISLAB_TESTS_ENABLE`` must be set as ``yes`` 
+.. important:: |imp| Variable ``GISLAB_TESTS_ENABLE`` must be set as ``yes`` 
    in ``system/host_vars/gislab_vagrant`` file.
 
 :command:`vagrant reload` 

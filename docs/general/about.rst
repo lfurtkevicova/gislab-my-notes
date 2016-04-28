@@ -58,9 +58,9 @@ providing tools from desktop world.
 It allows computer resources sharing, same deployment in LAN and cloud, 
 mobile clients and web administration similar to router or NAS (plans).
 
-================
-How it is done ?
-================
+===============
+How it is done?
+===============
 
 Automatic provisioning is enabled by **Ansible**, virtual machine deployment by 
 **Vagrant** and VirtualBox. Client boot service is **LTSP Fat client** or 
@@ -86,9 +86,11 @@ What about software requirements?
 =================================
 
 At a minimum, your PC needs some necessaries. For this kind of facts,
-see `Software requirements <https://github.com/gislab-npo/gislab/wiki/Quick-Start#software-requirements>`_.
+see hardware and software requirements for 
+:ref:`virtual <requirements-virtual>` or :ref:`physical <requirements-physical>` 
+mode.
 
-.. seealso:: |see.| More information related to introduction 
+.. seealso:: |see| More information related to introduction 
    and basic information are available :ref:`here <quick-start>`.
 
 ==========================
@@ -113,7 +115,7 @@ What is GIS.lab Unit?
 GIS.lab system which is ready for immediate plug-and-play deployment and 
 user friendly management using web administration interface.
 
-.. seealso:: |see.| `Technical specification <http://web.gislab.io/pages/gislab-unit>`_
+.. seealso:: |see| `Technical specification <http://web.gislab.io/pages/gislab-unit>`_
 
 .. _gislab-web:
 
@@ -121,7 +123,7 @@ user friendly management using web administration interface.
 What is GIS.lab Web
 ===================
 
-.. todo:: |todo.| GIS.lab Web
+.. todo:: |todo| GIS.lab Web
 
 .. _gislab-mobile:
 
@@ -129,7 +131,7 @@ What is GIS.lab Web
 What is GIS.lab Mobile
 ======================
 
-.. todo:: |todo.| GIS.lab Mobile
+.. todo:: |todo| GIS.lab Mobile
 
 ============================
 Is it similar to OSGeo Live? 
@@ -138,7 +140,7 @@ Is it similar to OSGeo Live?
 GIS.lab is automatic deployment of GIS infrastructure, more or less opposite to 
 OSGeo Live.
 
-.. todo:: |todo.| Most significant differences ...
+.. todo:: |todo| Most significant differences ...
 
 =======================
 How to upgrade GIS.lab?
@@ -278,7 +280,7 @@ login there will be list as follows.
    server.gis.lab  192.168.50.5:7946   alive  role=server
    c51             192.168.50.51:7946  alive  role=client,session-active=ludka
 
-.. seealso:: |see.| :ref:`Running commands on whole cluster with parallel-ssh <cluster-parallel-ssh>`
+.. seealso:: |see| :ref:`Running commands on whole cluster with parallel-ssh <cluster-parallel-ssh>`
 
 -------------------------
 Remote desktop management

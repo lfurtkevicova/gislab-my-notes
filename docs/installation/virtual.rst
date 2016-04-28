@@ -29,10 +29,12 @@ GIS.lab configuration.
 
 .. important:: |imp| Without changing network configuration variable IP 
    conflicts may occur. 
+
+.. _requirements-virtual:
    
 To run GIS.lab in Virtual mode, there are some hardware and software requirements. 
 Another important point is GIS.lab source code, see :ref:`GIS.lab source code download <GL-clone>`. See information below with graphical representation in 
-:num:`#requirements-virtual`. 
+:num:`#requirementsvirtual`. 
 
 *Hardware*
 
@@ -46,7 +48,7 @@ Another important point is GIS.lab source code, see :ref:`GIS.lab source code do
 -  VirtualBox 4.3 or higher, see :ref:`VirtualBox installation <vb-installation>`
 -  Vagrant 1.7 or higher , see :ref:`Vagrant installation <vagrant-installation>`
 
-.. _requirements-virtual:
+.. _requirementsvirtual:
 
 .. figure:: ../img/installation/requirements-virtual.svg
    :align: center

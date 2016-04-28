@@ -20,7 +20,7 @@ Useful terms
    connects a virtual machine to a network by using the network adapter on the 
    host system, the virtual machine is a full participant in the network
 
-.. figure:: img/bridged_networking.png
+.. figure:: ../img/bridged_networking.png
    :align: center
    :width: 250
 
@@ -61,7 +61,7 @@ Useful terms
     (in order for two hosts communicate on the same network using TCP/IP model, 
     both hosts need to have an unique IP address); GIS.lab has own DHCP server
 
-.. figure:: img/dhcp.gif
+.. figure:: ../img/dhcp.gif
    :align: center
    :width: 250
 
@@ -81,7 +81,7 @@ Useful terms
    free, the addresses of these servers are ``Primary 8.8.8.8`` and 
    ``Secondary 8.8.4.4``
    
-.. figure:: img/dns.jpg
+.. figure:: ../img/dns.jpg
    :align: center
    :width: 250
 
@@ -194,7 +194,7 @@ Useful terms
    PXE provides e.g. DHCP, application program interfaces that are 
    used by the client's Basic Input/Output Operating System (BIOS), etc. 
 
-.. figure:: img/pxe.png
+.. figure:: ../img/pxe.png
    :align: center
    :width: 250
 
