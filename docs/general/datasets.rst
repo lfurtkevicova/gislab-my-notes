@@ -455,68 +455,68 @@ Thematic layers
 Issues (draft)
 ==============
 
-.. figure:: ../img/data_elevation.png
+.. figure:: ../img/practice/data_elevation.png
    :align: center
    :width: 450
 
    Elevation map in combination with shaded relief.
 
-.. figure:: ../img/data_toilets.png
+.. figure:: ../img/practice/data_toilets.png
    :align: center
    :width: 450
    
    Public toilets with information about opening hours.
 
-.. figure:: ../img/data_landuse_LRO.png
+.. figure:: ../img/practice/data_landuse_LRO.png
    :align: center
    :width: 450
 
    Selection of forests in landuse layer.
    
 
-.. figure:: ../img/data_ortophoto.png
+.. figure:: ../img/practice/data_ortophoto.png
    :align: center
    :width: 450
 
    Ortophoto of Prague in GRASS GIS environment.
 
-.. figure:: ../img/data_air_pollution.png
+.. figure:: ../img/practice/data_air_pollution.png
    :align: center
    :width: 450
 
    Bonita of climate in terms of air pollution.
 
-.. figure:: ../img/data_bike_wc.png
+.. figure:: ../img/practice/data_bike_wc.png
    :align: center
    :width: 450
 
    Bike signs and public toilets overlapping Bing Road map.
 
-.. figure:: ../img/data_zip_streets_wc.png
+.. figure:: ../img/practice/data_zip_streets_wc.png
    :align: center
    :width: 450
 
    Zipcodes, streets and public toilets.
 
-.. figure:: ../img/data_basins.png
+.. figure:: ../img/practice/data_basins.png
    :align: center
    :width: 450
 
    Basins of IV. code in Prague.
 
-.. figure:: ../img/data_points.png
+.. figure:: ../img/practice/data_points.png
    :align: center
    :width: 450
 
    Some OSM point data in Prague.
 
-.. figure:: ../img/data_wifi.png
+.. figure:: ../img/practice/data_wifi.png
    :align: center
    :width: 250
 
    Public wifi.
 
-.. figure:: ../img/data_districts.png
+.. figure:: ../img/practice/data_districts.png
    :align: center
    :width: 450
 

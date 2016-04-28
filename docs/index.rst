@@ -1,4 +1,4 @@
-.. |note.| image:: img/note.png
+.. |imp.| image:: img/paragraphs/important.png
    :width: 1.5em
 
 .. _gislab-main:
@@ -54,4 +54,4 @@ Contents
    general/communication
    general/credits
 
-.. note:: |note.| GIS.lab is still in pre-release state
+.. important:: |imp.| GIS.lab is still in pre-release state
