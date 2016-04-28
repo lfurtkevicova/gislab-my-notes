@@ -255,7 +255,7 @@ command ``gislab.intra.ismaa.it`` and user ``ubuntu`` is
 
 In the next phase ``ansible-playbook`` should be run. For more detailed 
 information about playbooks, see 
-:ref:`http://docs.ansible.com/ansible/playbooks.html`_ manual page. 
+`playbooks <http://docs.ansible.com/ansible/playbooks.html>`_ manual page. 
 Example with above mentioned names and files is below. The execution will 
 copy public part of SSH key to unit and from now, access will be possible only 
 using SSH. 
@@ -263,6 +263,8 @@ using SSH.
 .. code:: sh
 
    ansible-playbook --inventory=gislab-unit-fem.inventory --private-key=~/.ssh/id_rsa_gislab_unit providers/gislab-unit/gislab-unit.yml
+
+GIS.lab Unit will reboot when finished.
 
 .. important:: |imp| Correct paths to established invetory file, newly created 
    public part of competent SSH keypair and `gislab-unit.yml` from GIS.lab 
@@ -273,12 +275,13 @@ using SSH.
 
 .. note:: |note| In ``providers`` directory one can find also scripts dependent
    on platform. THis is because initialization files can be different for units
-   and different for AWS (Amazon Web Cloud). 
+   and different for `AWS <https://aws.amazon.com/>`_. 
 
 .. _unit-installation: 
 
 Once GIS.lab is configured, installation can be performed. Run following 
-command to execute **Ansible playbook**.
+command to execute another ``ansible-playbook``. In this step all the work is 
+made by ``gislab.yml`` file located in ``system`` directory.
 
 .. code:: sh
 
