@@ -90,9 +90,6 @@ see hardware and software requirements for
 :ref:`virtual <requirements-virtual>` or :ref:`physical <requirements-physical>` 
 mode.
 
-.. seealso:: |see| More information related to introduction 
-   and basic information are available :ref:`here <quick-start>`.
-
 ==========================
 What are the key features?
 ==========================
@@ -114,8 +111,6 @@ What is GIS.lab Unit?
 *GIS.lab Unit* appliance is a hardware solution containing installation of 
 GIS.lab system which is ready for immediate plug-and-play deployment and 
 user friendly management using web administration interface.
-
-.. seealso:: |see| `Technical specification <http://web.gislab.io/pages/gislab-unit>`_
 
 .. _gislab-web:
 
