@@ -57,15 +57,13 @@ figuration, see :num:`#requirementsphysical`.
 Server
 ======
 
-The process of installation consists of five main steps:
+The process of installation consists of three main steps:
 
-1. :ref:`Preparation of bootable USB stick <usb-preparation>`
-2. :ref:`Adjusted operating system installation <basic-os>`
-3. :ref:`GIS.lab unit initialization <initialization>`
-4. :ref:`Configuration <configuration>`
-5. :ref:`GIS.lab unit installation <unit-installation>`
+1. :ref:`Adjusted operating system installation <basic-os>`
+2. :ref:`GIS.lab unit initialization <initialization>`
+3. :ref:`GIS.lab unit installation <unit-installation>`
 
-.. _usb-preparation:
+.. _basic-os:
 
 Actual GIS.lab version runs on top of **Ubuntu 12.04 Precise** release. 
 GIS.lab developers are currently working on upgrade to new Ubuntu version 
@@ -153,8 +151,6 @@ See example bellow.
    sudo dd if=/path/to/your/gislab.iso of=/dev/sdf bs=4k
    sudo eject /dev/sdf
 
-.. _basic-os:
-
 When above process is done, together with ready USB stick attach also power 
 supply, HDMI display, keyboard and Ethernet cable into GIS.lab unit machine,
 see :num:`#installation-unit`. 
@@ -216,18 +212,68 @@ access to unit.
    unit should work, for example ``gislab.intra.ismaa.it``. This name can be 
    found in output of ``nslookup <ip address>`` command.
 
+.. code:: sh
+
+   ludka@lenovo:~$ ssh gislab@server.intra.ismaa.it.
+   
+      _____ _____  _____  _       _ 
+     / ____|_   _|/ ____|| |     | | 
+    | |  __  | | | (___  | | __ _| |__
+    | | |_ | | |  \___ \ | |/ _` | '_ \ 
+    | |__| |_| |_ ____) || | (_| | |_) |
+     \_____|_____|_____(_)_|\__,_|_.__/   VERSION: init-1950-g1ce4a79, ID: gislab-unit-fem
+   
+   
+   
+   10 packages can be updated.
+   9 updates are security updates.
+   
+   
+   Your Hardware Enablement Stack (HWE) is supported until April 2017.
+   
+   Last login: Thu Apr 28 14:24:02 2016 from lenovo.intra.ismaa.it
+   gislab@server.GIS.lab(gislab-unit-fem):~$ 
+
 .. _initialization:
 
-With regards to the initialization, it is recommended step.
+With regards to the recommended initialization, there are two 
+important Ansible files, ``*.inventory`` file and file in ``host_vars`` 
+directory which has already been stated in 
+:ref:`configuration section <configuration-section>` of this documentation. 
 
-There are two important files.  
+Let's create Ansible inventory file. The name depends on unit's name which is 
+the same as customization file in ``host_vars`` directory. For example 
+``gislab-unit-italy.inventory`` will have following content:
 
-.. _configuration:
+* name of GIS.lab unit
+* Ansible SSH host with IP address or name of unit
+* the name of user able to log in to GIS.lab unit
 
-It is recommended to set at least some basic configuration before
-GIS.lab installation is performed. See 
-:ref:`configuration section <configuration-section>` of this documentation for
-detailed instructions.
+Example for GIS.lab unit called ``gislab-unit-fem``, name get from ``nslookup``
+command ``gislab.intra.ismaa.it`` and user ``ubuntu`` is 
+``gislab-unit-fem ansible_ssh_host=gislab.intra.ismaa.it ansible_ssh_user=ubuntu``.
+
+In the next phase ``ansible-playbook`` should be run. For more detailed 
+information about playbooks, see 
+:ref:`http://docs.ansible.com/ansible/playbooks.html`_ manual page. 
+Example with above mentioned names and files is below. The execution will 
+copy public part of SSH key to unit and from now, access will be possible only 
+using SSH. 
+
+.. code:: sh
+
+   ansible-playbook --inventory=gislab-unit-fem.inventory --private-key=~/.ssh/id_rsa_gislab_unit providers/gislab-unit/gislab-unit.yml
+
+.. important:: |imp| Correct paths to established invetory file, newly created 
+   public part of competent SSH keypair and `gislab-unit.yml` from GIS.lab 
+   repository are very important. 
+
+.. tip:: |tip| See ``gislab-unit.yml`` contect to be well aware of what this 
+   script is exactly performing.
+
+.. note:: |note| In ``providers`` directory one can find also scripts dependent
+   on platform. THis is because initialization files can be different for units
+   and different for AWS (Amazon Web Cloud). 
 
 .. _unit-installation: 
 
