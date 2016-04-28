@@ -203,14 +203,9 @@ If one wants to know if unit is already in network, ``ifconfog`` command
 should be used to see ``inet addr`` and then ``ssh ubuntu@<inet addr>`` 
 should be run to connect to unit from another computer.
 
-
-
-
-
-
-
-
-
+.. note:: |note| Instead of ``IP address`` also assigned ``name`` of registered 
+   unit should work, for example ``gislab.intra.ismaa.it``. This name can be 
+   found in output of ``nslookup <ip address>`` command.
 
 
 
