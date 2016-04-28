@@ -91,7 +91,7 @@ for example ``id_rsa_gislab_unit``.
 
 Then use script ``providers/gislab-unit/gislab-unit-iso.sh`` to create 
 custom **GIS.lab unit** installation **ISO image file** from original Ubuntu 
-server ISO image file downloaded in above step. 
+server ISO image file downloaded in above step (:num:`#installation-iso`). 
 This command has some parametres `-s`, ``-t``, ``-k``, ``-w`` and ``-i``. 
 
 .. tip:: |tip| From cloned ``gislab`` directory included in 
@@ -126,6 +126,14 @@ then the script can be run as follows.
 .. code:: sh
 
    sudo ./providers/gislab-unit/gislab-unit-iso.sh -s IT -t Europe/Rome -k ~/.ssh/id_rsa_gislab_unit.pub -w /tmp/ -i ~/Downloads/ubuntu-12.04.5-server-amd64.iso
+
+.. _installation-iso:
+
+.. figure:: ../img/installation/installation-cd.svg
+   :align: center
+   :width: 450
+
+   Creation if custom GIS.lab unit installation ISO image.
 
 Continue with preparation of bootable installation USB stick from custom 
 GIS.lab Unit ISO image file created in previous step. On Ubuntu 
@@ -199,25 +207,26 @@ e.g. with ``ping`` command.
 .. tip:: |tip| To restart network use ``sudo /etc/init.d/networking restart``
    command.
 
-If one wants to know if unit is already in network, ``ifconfog`` command 
-should be used to see ``inet addr`` and then ``ssh ubuntu@<inet addr>`` 
-should be run to connect to unit from another computer.
+If one wants to know from his computer if unit is already in network, 
+``ifconfog`` command should be run from server to see ``inet addr``. Then 
+from user's computer ``ssh ubuntu@<inet addr>`` should be used to enable full 
+access to unit.
 
 .. note:: |note| Instead of ``IP address`` also assigned ``name`` of registered 
    unit should work, for example ``gislab.intra.ismaa.it``. This name can be 
    found in output of ``nslookup <ip address>`` command.
 
-
-
-
-
 .. _initialization:
+
+With regards to the initialization, it is recommended step.
+
+There are two important files.  
 
 .. _configuration:
 
 It is recommended to set at least some basic configuration before
 GIS.lab installation is performed. See 
-:ref:`Configuration section <configuration-section>` of this documentation for
+:ref:`configuration section <configuration-section>` of this documentation for
 detailed instructions.
 
 .. _unit-installation: 
