@@ -81,6 +81,14 @@ In the first step download latest
 `64-bit PC (AMD64) server install CD <http://releases.ubuntu.com/precise>`_ 
 type of **image**.
 
+.. _generate-ssh:
+
+Furthermore, it is important to create **private key**. Generated public part 
+of **keypair** will be used as a way to identify trusted computers 
+without involving passwords. It can be generated with ``ssh-keygen`` command
+from ``home/.ssh`` directory. It is recommended to rename new key suitably, 
+for example ``id_rsa_gislab_unit``.
+
 Then use script ``providers/gislab-unit/gislab-unit-iso.sh`` to create 
 custom **GIS.lab unit** installation **ISO image file** from original Ubuntu 
 server ISO image file downloaded in above step. 
@@ -159,13 +167,62 @@ machine will be turned of. USB stick should then be removed.
    **cash packages** that allows to choose them in case they are existing.
    Otherwise just ``Continue`` option should be selected.
 
+As a next step, power on GIS.lab unit and log in to machine using already 
+noted username ``ubuntu`` and password ``ubuntu``. 
+
+This is one of the ways how to log in to unit and it is possible only with 
+LCD monitor and keyboard connected to unit. Another way means using SSH
+key and log in to unit from another computer or laptop. That is why SSH
+key :ref:`was generated <generate-ssh>`.
+
+.. important:: |imp| GIS.lab unit has to be registered in the network. In other
+   words ``IP address`` has to be assigned to unit. IP address can be assigned
+   only to machine which ``MAC address`` is registered. Run ``ip a`` command to 
+   detect this address. 
+
+After registration run command again and detect ``IP address`` assigned by 
+DHCP server.
+
+.. code:: sh 
+
+   ip a | grep eth0
+
+In case unit is not registered automatically, run DHCP client that apply for
+``IP address``. Then verify working internet connection, 
+e.g. with ``ping`` command. 
+
+.. code:: sh
+
+   sudo dhclient eth0 -v
+   ping www.google.com
+
+.. tip:: |tip| To restart network use ``sudo /etc/init.d/networking restart``
+   command.
+
+If one wants to know if unit is already in network, ``ifconfog`` command 
+should be used to see ``inet addr`` and then ``ssh ubuntu@<inet addr>`` 
+should be run to connect to unit from another computer.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .. _initialization:
 
 .. _configuration:
 
 It is recommended to set at least some basic configuration before
 GIS.lab installation is performed. See 
-:ref:`Configuration section <configuration>` of this documentation for
+:ref:`Configuration section <configuration-section>` of this documentation for
 detailed instructions.
 
 .. _unit-installation: 
@@ -175,8 +232,7 @@ command to execute **Ansible playbook**.
 
 .. code:: sh
 
-   $ ansible-playbook --inventory=gislab-unit.inventory --private-key=
-system/gislab.yml 
+   $ ansible-playbook --inventory=gislab-unit.inventory --private-key= system/gislab.yml 
 
 Now, GIS.lab unit machine is installed with GIS.lab system. Do not forget 
 to :ref:`create user accounts <user-creation>` by ``gislab-adduser`` command 
