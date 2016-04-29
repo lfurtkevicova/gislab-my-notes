@@ -304,8 +304,8 @@ any) on hard drive. Original operating system and local data will stay
 untouched and will be ready to run again after GIS.lab client is shut down.
 
 To run physical client, it is required to connect machine running
-GIS.lab server and client machines via **Gigabit switch and cables** (CAT 5e
-or higher).
+GIS.lab server and client machines via **Gigabit switch and cables**, CAT 5e
+or higher.
 
 There is no reason to be afraid of loosing domestic operating system. 
 GIS.lab client is capable to run even if you have **Windows**, **Linux** 
@@ -323,13 +323,53 @@ unit consists of three main steps.
 .. rubric:: Booting
 
 As well as in :ref:`virtual mode <booting-virtual>` it is possible to boot 
-using using :ref:`PXE <pxe-boot>` or :ref:`HTTP <http-boot>` boot.
+using using :ref:`PXE <pxe-boot-physical>` or :ref:`HTTP <http-boot-physical>` 
+boot.
 
+.. _pxe-boot-physical:
 
+^^^^^^^^
+PXE boot
+^^^^^^^^
 
+PXE is a method of having a client boot using only its network card. 
+Using this method of booting it is possible to circumvent the normal boot 
+procedure, what means booting from CD/DVD/CD-RW Drive to **Network Interface 
+Card**, usually known as **NIC**.
 
+PXE boot is a default boot mode for GIS.lab clients. Booting from PXE
+requires to instruct client machine to boot from other device as it is
+usually doing so. On newer computers it is also required to 
+disable **Secure** boot and/or enable **Legacy** mode.
 
- 
+.. important:: |imp| It is necessary to enabling NIC in Bios. 
+
+The way how to enabling NIC is going into Bios and look for it.
+It depends on machine. Look for *Preiferal devices*, *System Configuration*,
+*Integrated Devices* or something similar and find **NIC** card there. 
+When you find it, select **enabled** and then back out, save and reboot.
+
+In general, there are multiple possibilities how to instruct client machine to 
+boot from PXE. See potential instructions below.
+
+A. Depending on vendor press some ``F`` at machine start which will 
+   temporary instruct machine to boot from PXE. 
+
+B. Depending on vendor press some ``F`` key at machine start to launch boot 
+   manager, choose ``PXE`` or ``PCI LAN`` in boot menu to boot from PXE. 
+
+C. Set ``PXE`` or ``LAN`` as first boot device in BIOS configuration, save 
+   and restart machine to boot from PXE.
+
+.. seealso:: |see| See procedure of enabling PXE boot for 
+   :ref:`Lenovo <pxe-boot-lenovo>` or :ref:`Dell <pxe-boot-dell>` machine in 
+   :ref:`GIS.lab in practice <practice>` section.
+
+.. _pxe-boot-physical:
+
+^^^^^^^^^
+HTTP boot
+^^^^^^^^^
 
 .. _client-enabling-physical:
 

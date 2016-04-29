@@ -199,9 +199,10 @@ type of booting, see :num:`#pxe-vb-settings` and :num:`#http-vb-settings`.
 
 .. rubric:: Booting
 
-It is possible to boot using :ref:`PXE <pxe-boot>` or :ref:`HTTP <http-boot>` boot. 
+It is possible to boot using :ref:`PXE <pxe-boot-virtual>` or 
+:ref:`HTTP <http-boot-virtual>` boot. 
 
-.. _pxe-boot:
+.. _pxe-boot-virtual:
 
 ^^^^^^^^
 PXE boot
@@ -225,7 +226,7 @@ is selected as the adapter type and allow promiscuous mode for all.
 
 .. todo:: |todo| new screenshots + instructions
 
-.. _http-boot:
+.. _http-boot-virtual:
 
 ^^^^^^^^^
 HTTP boot

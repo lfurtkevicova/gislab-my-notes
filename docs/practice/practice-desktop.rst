@@ -344,6 +344,35 @@ Perform CPU performance test
    1024+0 records out
    1073741824 bytes (1.1 GB) copied, 2.56706 s, 418 MB/s
 
+.. _pxe-boot-lenovo:
+
+=================================================
+Procedure of enabling PXE boot for Lenovo machine
+=================================================
+
+Here is an example procedure of enabling PXE boot for Lenovo ThinkPad. 
+
+Firstly, boot up computer. Press ``F2``, then press ``Enter`` and ``F1`` key. 
+This should take you to the BIOS screen. Select ``Security``, ``Secure Boot``, 
+set to ``Disable``, select ``Start Up``, ``UEFI/Legacy Boot``, set to
+``Legacy Only`` and press ``F10``. Once you press ``F10``, reboot and then 
+press ``F12``. You should now be at the boot menu. Select ``PCI LAN`` and 
+press ``Enter``.
+
+.. _pxe-boot-dell:
+
+===============================================
+Procedure of enabling PXE boot for Dell machine
+===============================================
+
+Following examples shows enabling PXE boot for Dell Precision M4400 Mobile 
+Workstation.
+
+Start with machine booting. Press ``F12``, go to ``BIOS Setup``, find
+``Settings``, ``System configuration``, ``Integrated NIC`` and set 
+``Enabled w/PXE``. Then press ``Exit`` button, reboot and boot from 
+**Onboard NIC**.
+
 ===============
 GIS.lab project
 ===============

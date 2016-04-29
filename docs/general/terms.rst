@@ -185,6 +185,11 @@ Useful terms
    formatted the same way as the IP address, but usually looks something 
    like ``255.255.255.0``
 
+*NIC*
+   *Network Interface Card* is a computer hardware component that enable 
+   connecting computer to a computer network physically. It is a circuit 
+   board or card that is installed in a computer. 
+
 *PXE booting*
    *Preboot Execution Environment* booting, is a method of having an end computer 
    (client) boot using only its network card, 
