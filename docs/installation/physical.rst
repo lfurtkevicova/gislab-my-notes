@@ -428,8 +428,26 @@ client machine, there are similar steps to steps described for
 
 .. rubric:: Running physical GIS.lab client
 
-After successful booting, there will be welcome screen with login dialog.
-Creation of user accounts and running GIS.lab clients are the same as in 
-virtual mode. Find more details in :ref:`User accounts <user-creation>` and 
+After successful booting, there will be welcome screen with login dialog, see 
+:num:`#login-unit`. Creation of user accounts and running GIS.lab clients are 
+the same as in virtual mode. Find more details in 
+:ref:`User accounts <user-creation>` and 
 :ref:`Running virtual GIS.lab client <client-running-virtual>` sections. 
+
+.. _login-unit:
+
+.. figure:: ../img/installation/login-unit.png
+   :align: center
+   :width: 450
+
+   GIS.lab client logging in.
+
 Enjoy!
+
+.. _running-client-unit:
+
+.. figure:: ../img/installation/running-client-unit.png
+   :align: center
+   :width: 450
+
+   GIS.lab client running environment.
