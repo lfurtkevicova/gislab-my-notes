@@ -184,9 +184,9 @@ is capable to run on **Windows**, **Linux** or **Mac OS X** operating systems.
 The process consists of four main steps: 
 
 1. :ref:`Virtual machine creation <vm-creation>`
-2. :ref:`Booting <booting>`
-3. :ref:`Enabling GIS.lab client on GIS.lab server <client-enabling>`
-4. :ref:`Running virtual GIS.lab client <client-running>`
+2. :ref:`Booting <booting-virtual>`
+3. :ref:`Enabling GIS.lab client on GIS.lab server <client-enabling-virtual>`
+4. :ref:`Running virtual GIS.lab client <client-running-virtual>`
 
 .. _vm-creation:
 
@@ -195,7 +195,7 @@ The process consists of four main steps:
 Machines are created in VirtualBox environment and their creation depends on 
 type of booting, see :num:`#pxe-vb-settings` and :num:`#http-vb-settings`. 
 
-.. _booting:
+.. _booting-virtual:
 
 .. rubric:: Booting
 
@@ -275,7 +275,7 @@ which network card will go through should be different from current internet
 connection, e.g. in case of ``wlan0``, ``eth0`` should be set as ``Name`` 
 of ``Bridged Adapter``.
 
-.. _client-enabling:
+.. _client-enabling-virtual:
 
 .. rubric:: Enabling GIS.lab client on GIS.lab server
 
@@ -287,7 +287,7 @@ After virtual client is created, log in to GIS.lab server and with
    $ vagrant ssh
    $ sudo gislab-machines -a <MAC-address>
 
-.. _client-running:
+.. _client-running-virtual:
 
 .. rubric:: Running virtual GIS.lab client
 
