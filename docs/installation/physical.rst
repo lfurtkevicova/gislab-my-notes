@@ -292,3 +292,52 @@ to :ref:`create user accounts <user-creation>` by ``gislab-adduser`` command
 and :ref:`allow their client machines <client-enabling>` to connect by running 
 ``gislab-machines`` 
 command.
+
+======
+Client
+======
+
+Physical client mode is preferred way of launching GIS.lab client,
+because it provides best performance. It will run GIS.lab client session
+on client machine instead of original operating system installed (if
+any) on hard drive. Original operating system and local data will stay
+untouched and will be ready to run again after GIS.lab client is shut down.
+
+To run physical client, it is required to connect machine running
+GIS.lab server and client machines via **Gigabit switch and cables** (CAT 5e
+or higher).
+
+There is no reason to be afraid of loosing domestic operating system. 
+GIS.lab client is capable to run even if you have **Windows**, **Linux** 
+or **MAC OC X**. The spell is concealed in a type of machine booting.
+
+Complete process of running GIS.lab client using physical mode, i.e. GIS.lab
+unit consists of three main steps.
+
+1. :ref:`Booting <booting-physical>`
+2. :ref:`Enabling GIS.lab client on GIS.lab server <client-enabling-physical>`
+3. :ref:`Running physical GIS.lab client <client-running-physical>`
+
+.. _booting-physical:
+
+.. rubric:: Booting
+
+As well as in :ref:`virtual mode <booting-virtual>` it is possible to boot 
+using using :ref:`PXE <pxe-boot>` or :ref:`HTTP <http-boot>` boot.
+
+
+
+
+
+ 
+
+.. _client-enabling-physical:
+
+.. rubric:: Enabling GIS.lab client on GIS.lab server
+
+.. _client-running-physical:
+
+.. rubric:: Running physical GIS.lab client
+
+ 
+
