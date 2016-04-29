@@ -334,8 +334,8 @@ PXE boot
 
 PXE is a method of having a client boot using only its network card. 
 Using this method of booting it is possible to circumvent the normal boot 
-procedure, what means booting from CD/DVD/CD-RW Drive to **Network Interface 
-Card**, usually known as **NIC**.
+procedure, what means booting from CD/DVD/CD-RW Drive to 
+**Network Interface Card**, usually known as **NIC**.
 
 PXE boot is a default boot mode for GIS.lab clients. Booting from PXE
 requires to instruct client machine to boot from other device as it is
@@ -344,26 +344,35 @@ disable **Secure** boot and/or enable **Legacy** mode.
 
 .. important:: |imp| It is necessary to enabling NIC in Bios. 
 
-The way how to enabling NIC is going into Bios and look for it.
-It depends on machine. Look for *Preiferal devices*, *System Configuration*,
+The way how to enabling NIC is going into BIOS and look for it.
+It depends on machine. BIOS boot order can be changed for one time using 
+``F9`` or ``F12`` key, for permanent setup from BIOS configuration using 
+``DEL``,``F2`` or ``F12``, but it can differ from one to another machine brand.
+
+It is recommended to look for *Preiferal devices*, *System Configuration*,
 *Integrated Devices* or something similar and find **NIC** card there. 
-When you find it, select **enabled** and then back out, save and reboot.
+When it is found, **enabled** and then back out, save and reboot should be 
+selected.
 
 In general, there are multiple possibilities how to instruct client machine to 
 boot from PXE. See potential instructions below.
 
-A. Depending on vendor press some ``F`` at machine start which will 
+A. Depending on vendor, pressing some ``F`` at machine start will 
    temporary instruct machine to boot from PXE. 
 
-B. Depending on vendor press some ``F`` key at machine start to launch boot 
-   manager, choose ``PXE`` or ``PCI LAN`` in boot menu to boot from PXE. 
+B. Depending on vendor, pressing some ``F`` key at machine starts to launch boot 
+   manager and enables to choose ``PXE`` or ``PCI LAN`` in boot menu to 
+   boot from PXE. 
 
-C. Set ``PXE`` or ``LAN`` as first boot device in BIOS configuration, save 
-   and restart machine to boot from PXE.
+C. ``PXE`` or ``LAN`` option set as first boot device in BIOS configuration 
+   enable to boot from PXE after machine restart.
 
 .. seealso:: |see| See procedure of enabling PXE boot for 
    :ref:`Lenovo <pxe-boot-lenovo>` or :ref:`Dell <pxe-boot-dell>` machine in 
    :ref:`GIS.lab in practice <practice>` section.
+
+   For more information about how it works see for example
+   `PXE Boot Server Installation Steps in Ubuntu Server VM <http://askubuntu.com/questions/412574/pxe-boot-server-installation-steps-in-ubuntu-server-vm/414813>`.
 
 .. _pxe-boot-physical:
 
@@ -371,13 +380,56 @@ C. Set ``PXE`` or ``LAN`` as first boot device in BIOS configuration, save
 HTTP boot
 ^^^^^^^^^
 
+In addition to default PXE boot method, GIS.lab clients can boot over
+HTTP, which can provide some advantages. 
+
+To enable HTTP boot, it is needed to create **bootable USB stick** from
+special **ISO image** which exists in **http-boot** directory.
+Recipe is as follows.
+
+Insert free USB stick into Linux workstation machine. If it is
+automatically mounted, unmount it. Run ``dmesg`` command to detect
+device assigned to USB stick by operating system. 
+
+.. note:: |note| It should be something like ``/dev/sd[x]``.
+
+Burn GIS.lab Desktop bootloader into USB stick with command below. Be careful 
+to choose correct output device without a partition number.
+
+.. code:: sh
+
+   $ sudo dd if=http-boot/gislab-bootloader.iso of=/dev/sd[x]
+
+Insert prepared USB stick into client machine and instruct it to boot
+from it.
+
 .. _client-enabling-physical:
 
 .. rubric:: Enabling GIS.lab client on GIS.lab server
+
+By default, no client machines are allowed to boot from server. To allow
+client machine, there are similar steps to steps described for 
+:ref:`virtual <client-enabling-virtual>` mode. Simply run 
+``gislab-machines -a`` command on **GIS.lab server** and enable the client.
+
+.. code:: sh
+
+   sudo gislab-machines -a <MAC-address>
+
+.. tip:: Good way to collect ``MAC addresses`` of client machines is to plainly 
+   let them try to boot and than run following command to get list of denied
+   MAC addresses on server.
+
+   .. code:: sh
+
+      $ sudo grep -e 'DHCPDISCOVER.*no free leases' /var/log/syslog 
 
 .. _client-running-physical:
 
 .. rubric:: Running physical GIS.lab client
 
- 
-
+After successful booting, there will be welcome screen with login dialog.
+Creation of user accounts and running GIS.lab clients are the same as in 
+virtual mode. Find more details in :ref:`User accounts <user-creation>` and 
+:ref:`Running virtual GIS.lab client <client-running-virtual>` sections. 
+Enjoy!
