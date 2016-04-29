@@ -47,7 +47,7 @@ contains following directories with customization scripts.
 
 .. _customization-files:
 
-.. figure:: ../img/customization/customization-files.svg
+.. figure:: ../img/installation/customization-files.svg
    :align: center
    :width: 450
 
@@ -150,7 +150,7 @@ See also :num:`#backup` for clearer understanding.
 
 .. _backup:
 
-.. figure:: ../img/customization/backup.svg
+.. figure:: ../img/installation/backup.svg
    :align: center
    :width: 450
 
@@ -223,7 +223,7 @@ principle in :num:`#image-symlink`.
 
 .. _image-symlink:
 
-.. figure:: ../img/customization/image-symlink.svg
+.. figure:: ../img/installation/image-symlink.svg
    :align: center
    :width: 750
 

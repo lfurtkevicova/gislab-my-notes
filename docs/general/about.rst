@@ -11,11 +11,19 @@ What is GIS.lab?
 ================
 
 *GIS.lab* is capable to deploy a complete, centrally managed 
-and horizontally scalable GIS infrastructure in local area network (LAN), 
+and horizontally scalable GIS infrastructure in local area network, 
 data center or cloud in a few moments. 
 It provides comprehensive set of free geospatial software 
 seamlessly integrated in to one, easy-to-use system with desktop, web and mobile 
 client interfaces.
+
+.. _gislab-schema:
+
+.. figure:: ../img/general/gislab-schema.png
+   :align: center
+   :width: 450
+
+   Schema representing what GIS.lab is all about.
 
 GIS.lab lowers deployment and ownership cost of complex geospatial solution 
 to absolute minimum, while still keeping whole technology in house and under 

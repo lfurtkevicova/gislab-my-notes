@@ -4,10 +4,6 @@
 Configuration
 *************
 
-=========================
-Virtual and Physical mode
-=========================
-
 It is recommended to set at least some basic configuration before
 GIS.lab installation is performed. 
 

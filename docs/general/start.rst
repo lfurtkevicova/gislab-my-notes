@@ -6,16 +6,24 @@ Let's get started
 
 You may be coming to :ref:`GIS.lab <about>` from various operating system, 
 but we expect that you are probably 
-familiar with browsing the Web, writing documents, sending email and doing other 
+familiar with browsing the web, writing documents, sending emails and doing other 
 jobrelated tasks with your computer. Whether you’re somewhat experienced or 
 completely new to computers, this documentation should be very useful for you.
-Of course the more experience you have, the more quickly you’ll learn.  
+Of course the more experience you have, the more quickly you will learn. 
 
 In general, this documentation does not assume any computer experience on your 
-part. We try to explain in detail what :ref:`GIS.lab <gislab>`, 
+part. We try to explain in detail what :ref:`GIS.lab Desktop<gislab>`, 
 :ref:`GIS.lab Web <gislab-web>` and :ref:`GIS.lab Mobile <gislab-mobile>` 
 are, and we even tell you how to install 
 and how to use every of these pieces in the most efficient way. 
+
+.. _desktop-web-mobile:
+
+.. figure:: ../img/general/desktop-web-mobile.png
+   :align: center
+   :width: 450
+
+   GIS.lab Desktop, GIS.lab Web and GIS.lab Mobile form.
 
 Firstly, there are sections related to introduction like 
 :ref:`Learning about the pieces <about>`, :ref:`Useful terms <terms>` 

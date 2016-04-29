@@ -4,9 +4,6 @@
 Useful commands
 ***************
 
-:command:`ansible-playbook --inventory=<> --private-key=<> <>.yml`
-   runs tests with Ansible
-
 :command:`gislab-adduser`
    creates GIS.lab user account
 
