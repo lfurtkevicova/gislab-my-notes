@@ -72,6 +72,10 @@ Useful commands
    using the TCP/IP protocol, it finds out whether the peer host/gateway is 
    reachable
 
+:command:`shutdown -h now`
+   brings the system down; instructs the hardware to stop all CPU functions
+   immediately 
+
 :command:`vagrant destroy` 
    stops the running Vagrant machine and destroys all resources that were 
    created during the machine creation process

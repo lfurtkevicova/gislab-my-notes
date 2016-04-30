@@ -65,6 +65,8 @@ The process of installation consists of three main steps:
 
 .. _basic-os:
 
+.. rubric:: Adjusted operating system installation
+
 Actual GIS.lab version runs on top of **Ubuntu 12.04 Precise** release. 
 GIS.lab developers are currently working on upgrade to new Ubuntu version 
 **Ubuntu 16.04 Xenial**. Meanwhile, these materials are dedicated to old 
@@ -236,6 +238,8 @@ access to unit.
 
 .. _initialization:
 
+.. rubric:: GIS.lab unit initialization
+
 With regards to the recommended initialization, there are two 
 important Ansible files, ``*.inventory`` file and file in ``host_vars`` 
 directory which has already been stated in 
@@ -260,11 +264,19 @@ Example with above mentioned names and files is below. The execution will
 copy public part of SSH key to unit and from now, access will be possible only 
 using SSH. 
 
+.. _gislab-unit-yml:
+
+.. figure:: ../img/installation/gislab-unit-yml.svg
+   :align: center
+   :width: 450
+
+   Placement of important file for initialization in GIS.lab directory structure.
+
 .. code:: sh
 
    ansible-playbook --inventory=gislab-unit-fem.inventory --private-key=~/.ssh/id_rsa_gislab_unit providers/gislab-unit/gislab-unit.yml
 
-GIS.lab Unit will reboot when finished.
+GIS.lab unit will reboot when finished.
 
 .. important:: |imp| Correct paths to established invetory file, newly created 
    public part of competent SSH keypair and `gislab-unit.yml` from GIS.lab 
@@ -279,9 +291,19 @@ GIS.lab Unit will reboot when finished.
 
 .. _unit-installation: 
 
+.. rubric:: GIS.lab unit installation
+
 Once GIS.lab is configured, installation can be performed. Run following 
 command to execute another ``ansible-playbook``. In this step all the work is 
 made by ``gislab.yml`` file located in ``system`` directory.
+
+.. _gislab-yml:
+
+.. figure:: ../img/installation/gislab-yml.svg
+   :align: center
+   :width: 450
+
+   Placement of important file for installation in GIS.lab directory structure.
 
 .. code:: sh
 
