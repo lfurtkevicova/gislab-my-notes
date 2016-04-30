@@ -27,19 +27,27 @@ Contents
 ========
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    general/start
    general/about
    general/terms
    general/commands
    general/conventions
+
+.. toctree::
+   :maxdepth: 2
+
    installation/index
    gislab-web/index
    gislab-mobile/index*
    practice/index
    general/workshop
    general/datasets
+
+.. toctree::
+   :maxdepth: 1
+
    general/problems
    general/communication
    general/credits
