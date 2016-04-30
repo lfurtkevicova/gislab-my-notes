@@ -318,6 +318,14 @@ unit consists of three main steps.
 2. :ref:`Enabling GIS.lab client on GIS.lab server <client-enabling-physical>`
 3. :ref:`Running physical GIS.lab client <client-running-physical>`
 
+.. _schema-physical-client:
+
+.. figure:: ../img/installation/schema-physical-client.png
+   :align: center
+   :width: 450
+
+   Schema of physical client.
+
 .. _booting-physical:
 
 .. rubric:: Booting
@@ -416,6 +424,14 @@ client machine, there are similar steps to steps described for
 
    sudo gislab-machines -a <MAC-address>
 
+.. _gislab-machines:
+
+.. figure:: ../img/installation/gislab-machines-launch.png
+   :align: center
+   :width: 450
+
+   GIS.lab machines launching.
+
 .. tip:: Good way to collect ``MAC addresses`` of client machines is to plainly 
    let them try to boot and than run following command to get list of denied
    MAC addresses on server.
@@ -451,3 +467,13 @@ Enjoy!
    :width: 450
 
    GIS.lab client running environment.
+
+.. todo:: |todo| Dokončiť!
+
+.. _gislab-qgis:
+
+.. figure:: ../img/installation/gislab-qgis.png
+   :align: center
+   :width: 450
+
+   QGIS GIS.lab edition.

@@ -23,7 +23,7 @@ and how to use every of these pieces in the most efficient way.
    :align: center
    :width: 450
 
-   GIS.lab Desktop, GIS.lab Web and GIS.lab Mobile form.
+   GIS.lab Desktop, GIS.lab Web and GIS.lab Mobile interface.
 
 Firstly, there are sections related to introduction like 
 :ref:`Learning about the pieces <about>`, :ref:`Useful terms <terms>` 
@@ -32,7 +32,16 @@ To distinguish between different kinds of information we use some typographical
 and stylistic features, see chapter
 :ref:`Conventions used in this documentation <conventions>`. 
 In case you feel sufficiently familiar with all the introductory parts just skip 
-them and go straight away to :ref:`GIS.lab Installation <gislab-installation>`.
+them and go straight away to :ref:`GIS.lab Installation <gislab-installation>`
+of GIS.lab Desktop form.
+
+.. _gislab-desktop-start:
+
+.. figure:: ../img/general/gislab-desktop-start.png
+   :align: center
+   :width: 450
+
+   GIS.lab Desktop screen.
 
 Moreover, when you meet some trouble or difficulty, you can find solutions to 
 simple and difficult problems in :ref:`Problem solving <problems>` part.

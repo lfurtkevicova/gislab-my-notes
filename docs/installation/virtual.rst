@@ -188,6 +188,14 @@ The process consists of four main steps:
 3. :ref:`Enabling GIS.lab client on GIS.lab server <client-enabling-virtual>`
 4. :ref:`Running virtual GIS.lab client <client-running-virtual>`
 
+.. _schema-virtual-client:
+
+.. figure:: ../img/installation/schema-virtual-client.png
+   :align: center
+   :width: 450
+
+   Schema of virtual client.
+
 .. _vm-creation:
 
 .. rubric:: Virtual machine creation

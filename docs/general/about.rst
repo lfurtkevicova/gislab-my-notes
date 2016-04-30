@@ -10,7 +10,9 @@ Learning about the pieces
 What is GIS.lab?
 ================
 
-*GIS.lab* is capable to deploy a complete, centrally managed 
+*GIS.lab* is **free technology** which can instantly turn any computer
+network in to the fully equipped geospatial cluster. 
+It is capable to deploy a complete, centrally managed 
 and horizontally scalable GIS infrastructure in local area network, 
 data center or cloud in a few moments. 
 It provides comprehensive set of free geospatial software 
@@ -34,10 +36,12 @@ What can be GIS.lab ideal for?
 ==============================
 
 GIS.lab can be used in places and conditions where deployment of any other 
-technology wouldn't be affordable or technically possible. GIS.lab is capable 
+technology would not be affordable or technically possible. GIS.lab is capable 
 to turn bunch of heterogeneous or broken computers in to crisis management 
 command center, flawlessly working in very hard conditions of natural disaster 
-with power and Internet outages. It is also ideal system for education or just 
+with power and internet outages. 
+
+It is also ideal system for education or just 
 for `Open Source <https://en.wikipedia.org/wiki/Open-source_software>`_ 
 technologies popularization.
 
@@ -47,22 +51,23 @@ Fundamental aims
 
 One of the main objectives is rapid deployment of complete **geospatial solution** 
 for collaborative data capturing, processing, analysis and publication on web
-with fully **automatic provisioning** and **out-of-box working deployment** 
-using GIS.lab Unit.
+with fully **automatic provisioning** and **out of box working deployment** 
+using GIS.lab unit.
 
-It is self containing system with very quick results. It is possible to get web
+.. figure:: ../img/general/gislab-guys.svg
+   :align: center
+   :width: 250
+
+It is self containing system with very quick results, possible to get web
 application from plain hardware in a few minutes.
-
-GIS.lab brings high added values by integration of precisely chosen **set of 
-geospatial FOSS**, i.e. one best tool for one thing to one system with 
+GIS.lab brings high added values by integration of precisely chosen set of 
+geospatial **FOSS**, i.e. one best tool for one thing to one system with 
 consistent behaviour, many collaboration tools, user and software support.
 
 Full client computer performance utilisation represents opposite to thin client.
-
 Rather than a traditional desktop, GIS.lab provides thinking about client 
 environment more as about some kind of specialized client interface 
 providing tools from desktop world. 
-
 It allows computer resources sharing, same deployment in LAN and cloud, 
 mobile clients and web administration similar to router or NAS (plans).
 
@@ -70,19 +75,50 @@ mobile clients and web administration similar to router or NAS (plans).
 How it is done?
 ===============
 
-Automatic provisioning is enabled by **Ansible**, virtual machine deployment by 
-**Vagrant** and VirtualBox. Client boot service is **LTSP Fat client** or 
+Automatic provisioning is enabled by **Ansible** characterised by human-readable 
+IT automation language, self-documenting syntax, agent-less execution, 
+idempotent modules, templates, support for cloud providers AWS, GCE, Digital 
+Ocean, Azure, and the like.
+
+Simple **YAML** configuration and automatic installation are outlined below.
+
+.. code:: sh
+
+   # CONFIGURATION
+   # First three octets of private IP range 192.168.0.0 - 192.168.255.255, 
+     which will define network number used for GIS.lab network
+   # Example: 192.168.1
+   # Change requires GIS.lab re-installation
+   GISLAB_NETWORK: 192.168.50
+   ... 
+
+   # INSTALLATION
+   $ ansible - playbook
+   -- inventory = gislab . inventory
+   -- private - key =~/. ssh / id_rsa
+   system / gislab . yml
+
+Virtual machine deployment is enabled by 
+**Vagrant** and **VirtualBox**. Client boot service is **LTSP Fat client** or 
 own solution. It uses OWS services load balancing, QGIS Desktop and Server as 
 GIS.lab Desktop including own GIS.lab Web app, GRASS as processing backend 
-under QGIS Processing plugin and WPS, own GIS software packaging, etc.
+under QGIS Processing plugin and WPS, own GIS software packaging.
+
+.. _key-sw:
+
+.. figure:: ../img/general/key-sw.svg
+   :align: center
+   :width: 750
+
+   Key softwares for GIS.lab provisioning.
 
 ==========================
 What are the key benefits?
 ==========================
 
-The main advantages are fully automatic installation or immediate deployment 
-with GIS.lab Unit appliance, central management of all machines, user accounts 
-and backups high performance, maintenance-free desktop interfaces. 
+The main advantages are **fully automatic installation** or immediate deployment 
+with GIS.lab unit appliance, central management of all machines, user accounts 
+and backups high performance, maintenance free desktop interfaces. 
 Web and mobile client interfaces, web administration interface computing 
 resources sharing across all machines, 
 well known free software with high added value of seamless integration 
@@ -113,10 +149,10 @@ The most important are:
 .. _gislab-unit:
 
 =====================
-What is GIS.lab Unit?
+What is GIS.lab unit?
 =====================
 
-*GIS.lab Unit* appliance is a hardware solution containing installation of 
+*GIS.lab unit* appliance is a hardware solution containing installation of 
 GIS.lab system which is ready for immediate plug-and-play deployment and 
 user friendly management using web administration interface.
 
@@ -129,21 +165,6 @@ What is GIS.lab Web
 .. todo:: |todo| GIS.lab Web
 
 .. _gislab-mobile:
-
-======================
-What is GIS.lab Mobile
-======================
-
-.. todo:: |todo| GIS.lab Mobile
-
-============================
-Is it similar to OSGeo Live? 
-============================
-
-GIS.lab is automatic deployment of GIS infrastructure, more or less opposite to 
-OSGeo Live.
-
-.. todo:: |todo| Most significant differences ...
 
 =======================
 How to upgrade GIS.lab?
@@ -189,6 +210,15 @@ called `Serf <https://www.serfdom.io/intro/>`_ based on
 gossip protocol. Serf is responsible for automatic joining and removing
 machines to and from GIS.lab cluster and OWS load balancer management.
 It is also used as interface for running cluster **events** and **queries**.
+
+.. _gislab-cluster:
+
+.. figure:: ../img/general/gislab-cluster-architecture.png
+   :align: center
+   :width: 450
+
+   GIS.lab cluster architecture.
+
 
 -------------------------
 Roles, events and queries
@@ -294,4 +324,19 @@ Connect to running remote desktop session using following command.
 .. code:: sh
 
    HOST=<REMOTE-HOST-NAME> ssh gislab@$HOST "x11vnc -bg -safer -once -nopw -scale 0.9x0.9 -display :0 -allow $(hostname -f)" && vncviewer $HOST
+
+======================
+What is GIS.lab Mobile
+======================
+
+.. todo:: |todo| GIS.lab Mobile
+
+============================
+Is it similar to OSGeo Live? 
+============================
+
+GIS.lab is automatic deployment of GIS infrastructure, more or less opposite to 
+OSGeo Live.
+
+.. todo:: |todo| Most significant differences ...
 

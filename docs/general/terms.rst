@@ -100,7 +100,8 @@ Useful terms
 *Git*
    is a distributed version control system often used to work on some code 
    together, it allows groups of people to work on the same files at the same 
-   time to develop various software; it runs command line on local machine and allows to 
+   time to develop various software; it runs command line on local machine and 
+   allows to 
    keep track of files and modifications to those files in something called 
    `repository`; every developer can work independently and then merge changes 
    together while everything is recorded by Git 
@@ -120,7 +121,7 @@ Useful terms
 *GUI*
    *Graphical User Interface*
 
-*hardware virtualization*
+*Hardware virtualization*
    refers to the creation of a virtual machine that acts like a real computer 
    with an operating system, softwares executed on these virtual machines
    are separated from the underlying hardware resources
@@ -207,9 +208,15 @@ Useful terms
 
 *Serf*
    *Service orchestration and management tool* is a decentralized solution for 
-service discovery and orchestration; it uses an efficient and lightweight 
-gossip protocol to communicate with other nodes, it can detect node failures 
-and notify the rest of the cluster
+   service discovery and orchestration; it uses an efficient and lightweight 
+   gossip protocol to communicate with other nodes, it can detect node failures 
+   and notify the rest of the cluster
+
+.. figure:: ../img/terms/serf.png
+   :align: center
+   :width: 250
+
+   Serf as a decentralized solution for service discovery and orchestration.
 
 *Travis CI*
    a FOSS, hosted, distributed continuous integration service used to build 
