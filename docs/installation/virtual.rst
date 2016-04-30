@@ -64,9 +64,11 @@ Another important point is GIS.lab source code, see :ref:`GIS.lab source code do
       $ vboxmanage --version
       $ vagrant --version
 
-------
-Server
-------
+======
+Master
+======
+
+Master means GIS.lab Server.
 
 GIS.lab installation takes from 30 minutes to few hours depending on
 your machine performance and Internet connection speed.
@@ -128,9 +130,9 @@ corresponding adapter. For example, in case of ``eth0`` connection, selection
    ==> gislab_vagrant: Machine already provisioned. Run `vagrant provision` or use the `--provision`
    ==> gislab_vagrant: flag to force provisioning. Provisioners marked to run always will still run.
 
-^^^^^^^^^^^^^
+-------------
 User accounts
-^^^^^^^^^^^^^
+-------------
 
 By default, GIS.lab installation creates only a superuser account ``gislab``. 
 Ordinary user account can be created by logging in to GIS.lab server, i.e. 
@@ -172,9 +174,9 @@ With ``gislab-listusers`` list of all GIS.lab users is displayed, see example be
    uid: uid=lab1
    uid: uid=furtkevicova
 
-------
+======
 Client
-------
+======
 
 Running GIS.lab client in virtual mode is very useful when one wants to
 keep working in his favourite operating system, e.g. Windows 7 OS but also wants 
@@ -212,9 +214,9 @@ It is possible to boot using :ref:`PXE <pxe-boot-virtual>` or
 
 .. _pxe-boot-virtual:
 
-^^^^^^^^
+--------
 PXE boot
-^^^^^^^^
+--------
 
 PXE boot is a default boot mode for GIS.lab clients. It is a simplest
 method to get client up and running, but it may not work if
@@ -236,9 +238,9 @@ is selected as the adapter type and allow promiscuous mode for all.
 
 .. _http-boot-virtual:
 
-^^^^^^^^^
+---------
 HTTP boot
-^^^^^^^^^
+---------
 
 HTTP boot is an alternative boot method for launching GIS.lab Desktop
 clients, which offers some advanced features and allows to boot if
@@ -395,9 +397,9 @@ Virtual Machine from the hard disk. Machine can be started again by using
 .. tip:: |tip| Use ``-f`` or ``-force`` flag to forcefully power off the Virtual 
    Machine. 
 
-----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Installation of requirements
-----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. _git-installation:
 

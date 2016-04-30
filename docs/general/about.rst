@@ -31,18 +31,30 @@ GIS.lab lowers deployment and ownership cost of complex geospatial solution
 to absolute minimum, while still keeping whole technology in house and under 
 full control.
 
+GIS.lab Desktop is traditional, customized, low resources environment with
+office and geospatial software. This technology promotes combination of desktop 
+performance with web accessibility.
+
 ==============================
 What can be GIS.lab ideal for?
 ==============================
 
 GIS.lab can be used in places and conditions where deployment of any other 
 technology would not be affordable or technically possible. GIS.lab is capable 
-to turn bunch of heterogeneous or broken computers in to crisis management 
+to turn bunch of heterogeneous or broken computers in to **crisis management** 
 command center, flawlessly working in very hard conditions of natural disaster 
-with power and internet outages. 
+with power, internet outages and no dependencies. 
 
-It is also ideal system for education or just 
-for `Open Source <https://en.wikipedia.org/wiki/Open-source_software>`_ 
+It can be used at **schools** as central management with maintenance-free 
+clients, in **science institutions** which can effectively use horizontally 
+scalable computing power, advanced tools and extensibility. 
+
+Next, **small projects** or **poor countries** 
+can appreciate affordable, complete solution, low system requirements and 
+already mentioned maintenance-free clients. 
+
+Or it can serve as ideal system just for 
+`Open Source <https://en.wikipedia.org/wiki/Open-source_software>`_ 
 technologies popularization.
 
 ================
@@ -117,13 +129,17 @@ What are the key benefits?
 ==========================
 
 The main advantages are **fully automatic installation** or immediate deployment 
-with GIS.lab unit appliance, central management of all machines, user accounts 
-and backups high performance, maintenance free desktop interfaces. 
-Web and mobile client interfaces, web administration interface computing 
+with GIS.lab unit appliance, **central management** of all machines, user accounts 
+and backups high performance, maintenance free **desktop** interfaces. 
+
+**Web** and **mobile** client interfaces, web administration interface computing 
 resources sharing across all machines, 
 well known free software with high added value of seamless integration 
-and bug fixes are some of other main qualities. Useful benefits are also
-central software distribution and easy customization.
+and bug fixes are some of other main qualities. 
+
+Useful benefits are also
+central software distribution, easy customization, automatic clustering and 
+computing power sharing, no dependencies, etc.
 
 =================================
 What about software requirements?
@@ -134,27 +150,28 @@ see hardware and software requirements for
 :ref:`virtual <requirements-virtual>` or :ref:`physical <requirements-physical>` 
 mode.
 
-==========================
-What are the key features?
-==========================
-
-The most important are:
-
-* spatial and non-spatial data storage and sharing
-* vector, raster and tabular data creation, processing and analysis
-* rapid cartographic outputs creation
-* simple maps publishing using Web and Mobile client interfaces
-* collaboration tools
-
 .. _gislab-unit:
 
 =====================
 What is GIS.lab unit?
 =====================
 
-*GIS.lab unit* appliance is a hardware solution containing installation of 
+GIS.lab unit appliance is a hardware solution containing installation of 
 GIS.lab system which is ready for immediate plug-and-play deployment and 
 user friendly management using web administration interface.
+
+With a view to further specifying the hardware, GIS.lab unit can be presented as 
+**Intel Haswell**, **16 GB RAM**, **SSD**, tested with **20 clients**, 
+portable, pocket size (11 x 11 x 4 cm) device with automatic host network 
+adaptation. 
+
+.. _gislab-unit-png:
+
+.. figure:: ../img/general/gislab-unit.png
+   :align: center
+   :width: 250
+
+   GIS.lab unit.
 
 .. _gislab-web:
 
@@ -207,9 +224,11 @@ GIS.lab cluster
 
 GIS.lab cluster is managed by decentralized cluster management tool
 called `Serf <https://www.serfdom.io/intro/>`_ based on
-gossip protocol. Serf is responsible for automatic joining and removing
-machines to and from GIS.lab cluster and OWS load balancer management.
-It is also used as interface for running cluster **events** and **queries**.
+**GOSSIP** protocol. Serf is responsible for automatic joining and removing
+machines to and from GIS.lab cluster and OWS load balancer management
+and can serve as failure detection system.
+This automatic cluster orchestration system is also used as interface for 
+running cluster **events** and **queries**.
 
 .. _gislab-cluster:
 
@@ -226,8 +245,16 @@ Roles, events and queries
 
 Machines belonging to GIS.lab cluster are divided into two roles
 
-1. **server**, i.e. GIS.lab server 
-2. **client**, i.e. GIS.lab clients
+1. **server** 
+2. **client**
+
+.. _gislab-architecture:
+
+.. figure:: ../img/general/gislab-architecture.png
+   :align: center
+   :width: 250
+
+   GIS.lab server and GIS.lab clients.
 
 All machines are capable of running different set of `cluster 
 events <https://www.serfdom.io/docs/commands/event.html>`_ and

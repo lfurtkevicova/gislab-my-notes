@@ -49,18 +49,18 @@ figuration, see :num:`#requirementsphysical`.
 
 .. seealso:: |see| `Intel documentation <http://www.intel.com/support/motherboards/desktop/sb/CS-034249.htm>`_ and `Intel documentation for NUC hardware <http://www.intel.com/support/motherboards/desktop/sb/CS-034031.htm>`_.
 
-.. important:: |imp| In following procedure it is assumed that GIS.lab Unit 
+.. important:: |imp| In following procedure it is assumed that GIS.lab unit 
    machine is going to be installed in network with automatic IP address 
    assigning from :ref:`DHCP server <dhcp-server>`.
 
 ======
-Server
+Master
 ======
 
 The process of installation consists of three main steps:
 
 1. :ref:`Adjusted operating system installation <basic-os>`
-2. :ref:`GIS.lab unit initialization <initialization>`
+2. :ref:`GIS.lab initialization <initialization>`
 3. :ref:`GIS.lab unit installation <unit-installation>`
 
 .. _basic-os:
@@ -238,7 +238,19 @@ access to unit.
 
 .. _initialization:
 
-.. rubric:: GIS.lab unit initialization
+.. rubric:: GIS.lab initialization
+
+GIS.lab machines are initialized from GIS.lab network using PXE or HTTP. 
+This means always clean system, maintenance free with no HDD required 
+using full hardware potential what make it opposite to thin client.
+
+.. _gislab-machines:
+
+.. figure:: ../img/installation/gislab-machines-launch.png
+   :align: center
+   :width: 450
+
+   GIS.lab machines launching.
 
 With regards to the recommended initialization, there are two 
 important Ansible files, ``*.inventory`` file and file in ``host_vars`` 
@@ -445,14 +457,6 @@ client machine, there are similar steps to steps described for
 .. code:: sh
 
    sudo gislab-machines -a <MAC-address>
-
-.. _gislab-machines:
-
-.. figure:: ../img/installation/gislab-machines-launch.png
-   :align: center
-   :width: 450
-
-   GIS.lab machines launching.
 
 .. tip:: Good way to collect ``MAC addresses`` of client machines is to plainly 
    let them try to boot and than run following command to get list of denied
