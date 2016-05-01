@@ -68,8 +68,6 @@ Another important point is GIS.lab source code, see :ref:`GIS.lab source code do
 Master
 ======
 
-Master means GIS.lab Server.
-
 GIS.lab installation takes from 30 minutes to few hours depending on
 your machine performance and Internet connection speed.
 
@@ -133,6 +131,10 @@ corresponding adapter. For example, in case of ``eth0`` connection, selection
 -------------
 User accounts
 -------------
+
+GIS.lab user accounts are created by GIS.lab administrator on demand. 
+The same login credentials are valid for logging in to GIS.lab client session 
+and to all GIS.lab services as well.
 
 By default, GIS.lab installation creates only a superuser account ``gislab``. 
 Ordinary user account can be created by logging in to GIS.lab server, i.e. 
@@ -234,8 +236,6 @@ is selected as the adapter type and allow promiscuous mode for all.
 
    Settings in VirtalBox using PXE boot.
 
-.. todo:: |todo| new screenshots + instructions
-
 .. _http-boot-virtual:
 
 ---------
@@ -275,8 +275,6 @@ promiscuous mode for all.
 
    Settings in VirtalBox using HTTP boot.
 
-.. todo:: |todo| new screenshots + instructions
-
 .. important:: |imp| For next steps assigned ``MAC address`` is needed. 
    See *Network* section in VirtualBox environment and make a note of this 
    address.
@@ -303,7 +301,29 @@ After virtual client is created, log in to GIS.lab server and with
 .. rubric:: Running virtual GIS.lab client
 
 Start GIS.lab client virtual machine by pressing ``Start`` button in
-VirtualBox Manager, log in and enjoy. In the figures :num:`#client-pxe-logging-in` 
+VirtualBox Manager, log in and enjoy. 
+
+.. figure:: ../img/installation/client-vb-launching.png
+   :align: center
+   :width: 450
+
+   GIS.lab virtual client launching.
+
+.. note:: |note| Make sure that GIS.lab Master is running.
+
+   .. code:: sh
+
+      $ vagrant status
+      Current machine states:
+      
+      gislab_vagrant            running (virtualbox)
+      
+      The VM is running. To stop this VM, you can run `vagrant halt` to
+      shut it down forcefully, or you can run `vagrant suspend` to simply
+      suspend the virtual machine. In either case, to restart it again,
+      simply run `vagrant up`.
+
+In the figures :num:`#client-pxe-logging-in` 
 and :num:`#client-pxe-running` one can see GIS.lab client logging in screen 
 and Desktop of running virtual GIS.lab client using e.g. PXE boot.
 
