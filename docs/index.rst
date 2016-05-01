@@ -42,7 +42,7 @@ Contents
    :maxdepth: 2
 
    installation/index
-   environment/index
+   client-layout/index
    gislab-web/index
    gislab-mobile/index*
    practice/index

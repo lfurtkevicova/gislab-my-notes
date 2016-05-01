@@ -1,8 +1,8 @@
-.. _environment:
+.. _layout:
  
-***************************
-GIS.lab Desktop environment
-***************************
+*********************
+Client Desktop layout
+*********************
 
 .. todo:: |todo| Dokončiť, opýtať sa!
 
