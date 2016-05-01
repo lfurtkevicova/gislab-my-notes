@@ -209,16 +209,6 @@ adaptation.
 
    GIS.lab unit.
 
-.. _gislab-web:
-
-===================
-What is GIS.lab Web
-===================
-
-.. todo:: |todo| GIS.lab Web
-
-.. _gislab-mobile:
-
 =======================
 How to upgrade GIS.lab?
 =======================
@@ -288,7 +278,7 @@ Machines belonging to GIS.lab cluster are divided into two roles
 
 .. figure:: ../img/general/gislab-architecture.png
    :align: center
-   :width: 250
+   :width: 450
 
    GIS.lab server and GIS.lab clients.
 
@@ -388,12 +378,6 @@ Connect to running remote desktop session using following command.
 
    HOST=<REMOTE-HOST-NAME> ssh gislab@$HOST "x11vnc -bg -safer -once -nopw -scale 0.9x0.9 -display :0 -allow $(hostname -f)" && vncviewer $HOST
 
-======================
-What is GIS.lab Mobile
-======================
-
-.. todo:: |todo| GIS.lab Mobile
-
 ============================
 Is it similar to OSGeo Live? 
 ============================
@@ -403,3 +387,20 @@ OSGeo Live.
 
 .. todo:: |todo| Most significant differences ...
 
+.. _gislab-web:
+
+====================
+What is GIS.lab web?
+====================
+
+GIS.lab web is a **web application** built on top of modern technologies with 
+very modern user interface, optimized also for mobile devices. It stands on the 
+shoulders of `QGIS <http://qgis.org/en/site/>`_ desktop and server software.
+
+.. _gislab-web-ui:
+
+.. figure:: ../img/general/gislab-web-ui.png
+   :align: center
+   :width: 450
+
+   GIS.lab web interface.

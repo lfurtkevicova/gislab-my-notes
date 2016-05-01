@@ -4,12 +4,8 @@
 GIS.lab Web
 ***********
 
-GIS.lab Web is a **web application** built on top of modern technologies with 
-very modern user interface, optimized also for mobile devices. It stands on the 
-shoulders of `QGIS <http://qgis.org/en/site/>`_ desktop and server software.
-
-It is separated project from the core GIS.lab system with aim to produce 
-generally usable QGIS web interface, usable with or without GIS.lab 
+GIS.lab Web is separated project from the core GIS.lab system with aim 
+to produce generally usable QGIS web interface, usable with or without GIS.lab 
 infrastructure.
 
 .. raw:: html
