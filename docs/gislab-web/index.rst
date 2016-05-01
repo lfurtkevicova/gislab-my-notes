@@ -6,41 +6,35 @@ GIS.lab Web
 
 GIS.lab Web is separated project from the core GIS.lab system with aim 
 to produce generally usable QGIS web interface, usable with or without GIS.lab 
-infrastructure.
+infrastructure. In other words, it is infrastructure for publishing QGIS 
+projects in Web. 
+
+To get the better idea what GIS.lab Web is, see video below.
+Following subsections describe all closely related information.
+
 
 .. raw:: html
 
    <center><iframe width="560" height="315" src="https://www.youtube.com/embed/7vBM1X5QuqE" frameborder="0" allowfullscreen></iframe></center>
    <p>
 
-.. important:: |imp| No GIS.lab is needed!
-
-It is possible to install environment in virtual machine using Vagrant.
+An integral part of whole mechanism is **GIS.lab QGIS plugin**. On the ground 
+that GIS.lab Web is currently still in process of development, there are no 
+released packages yet. However, installation is possible. 
+Above environment can be installed in virtual machine using **Vagrant**.
 Vagrant will automatically install whole development environment and build 
 GIS.lab Web from source code.﻿
 
-=====================
-Software requirements
-=====================
+.. important:: |imp| No GIS.lab is needed! Only **Linux** and **Mac OS X** 
+   host systems are required. 
 
-Only **Linux** and **Mac OS X** host systems are supported. 
-   
-============
-Installation
-============   
+.. toctree::
+   :maxdepth: 2
+   :numbered:
 
+   installation-web
+   project-publishing
+   environment-web
+ 
+ 
 
-==========
-Print tool
-==========
-
-The main idea is, that once print is activated in GIS.lab Web, it will 
-download raw print output from QGIS Server using GetPrint request and will 
-allow interactive visualization of map content directly in this template. 
-One can zoom, pan and rotate map and see exactly how the result will look like. 
-To get the better idea, see video below.
-
-.. raw:: html
-
-   <center><iframe width="560" height="315" src="https://www.youtube.com/embed/1g0YduhPwpk" frameborder="0" allowfullscreen></iframe></center>
-   <p>

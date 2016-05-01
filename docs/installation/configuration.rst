@@ -120,6 +120,8 @@ used in physical mode would be as follows.
       
       gislab-unit-fem ansible_ssh_host=10.234.1.44 ansible_ssh_user=ubuntu
 
+.. _apt-cacher-service:
+
 ==================
 Apt Cacher service
 ==================
