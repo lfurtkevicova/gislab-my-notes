@@ -10,14 +10,19 @@ Learning about the pieces
 What is GIS.lab?
 ================
 
-*GIS.lab* is **free technology** which can instantly turn any computer
-network in to the fully equipped geospatial cluster. 
-It is capable to deploy a complete, centrally managed 
-and horizontally scalable GIS infrastructure in local area network, 
+*GIS.lab* is a tool for simple, unbreakable, always ready and clean deployment 
+of multiple machines running software mainly for Geographic 
+Information Systems, but also for office. 
+
+It is **free technology** which can instantly turn any computer
+network into fully equipped geospatial cluster. It is capable to deploy 
+a complete, centrally managed 
+and horizontally scalable geospatial infrastructure in local area network, 
 data center or cloud in a few moments. 
-It provides comprehensive set of free geospatial software 
-seamlessly integrated in to one, easy-to-use system with desktop, web and mobile 
-client interfaces.
+It is provided as comprehensive set of free geospatial software 
+seamlessly integrated into one, easy-to-use system with out-of-box running 
+services capable to run with minimal maintenance requirements for desktop, web 
+and mobile client interfaces.
 
 .. _gislab-schema:
 
@@ -35,9 +40,27 @@ GIS.lab Desktop is traditional, customized, low resources environment with
 office and geospatial software. This technology promotes combination of desktop 
 performance with web accessibility.
 
+There are two different ways of launching GIS.lab Desktop. Depending on future 
+usage, hardware and software possibilities and other similar factors, GIS.lab 
+Desktop can be implemented using **virtal** or **physical** mode.
+
+Virtual mode can be used for any operating system. Original operating system 
+and GIS.lab will be **available**. On the other hand, physical mode 
+represents best performance, but original operating system is **temporary lost**.
+
+.. _physical-or-virtual-mode:
+
+.. figure:: ../img/installation/physical-or-virtual-mode.png
+   :align: center
+   :width: 450
+
+   GIS.lab Desktop launched in virtual or physical mode.
+
 ==============================
 What can be GIS.lab ideal for?
 ==============================
+
+This solution offers very large number of possible deployment scenarios.
 
 GIS.lab can be used in places and conditions where deployment of any other 
 technology would not be affordable or technically possible. GIS.lab is capable 
@@ -46,12 +69,15 @@ command center, flawlessly working in very hard conditions of natural disaster
 with power, internet outages and no dependencies. 
 
 It can be used at **schools** as central management with maintenance-free 
-clients, in **science institutions** which can effectively use horizontally 
-scalable computing power, advanced tools and extensibility. 
+clients. Students can gain various knowledge from Linux systems principles 
+to GIS development.
 
+Or it can be useful for **science institutions** which can effectively use 
+horizontally scalable computing power, advanced tools and extensibility. 
 Next, **small projects** or **poor countries** 
 can appreciate affordable, complete solution, low system requirements and 
-already mentioned maintenance-free clients. 
+already mentioned maintenance-free clients. GIS.lab can save huge amount of 
+obtaining and maintenance costs.
 
 Or it can serve as ideal system just for 
 `Open Source <https://en.wikipedia.org/wiki/Open-source_software>`_ 
@@ -77,6 +103,7 @@ geospatial **FOSS**, i.e. one best tool for one thing to one system with
 consistent behaviour, many collaboration tools, user and software support.
 
 Full client computer performance utilisation represents opposite to thin client.
+It provides real desktop experience without any thin-client glitches.
 Rather than a traditional desktop, GIS.lab provides thinking about client 
 environment more as about some kind of specialized client interface 
 providing tools from desktop world. 
@@ -86,6 +113,12 @@ mobile clients and web administration similar to router or NAS (plans).
 ===============
 How it is done?
 ===============
+
+GIS.lab consists from one host machine running **Linux**, **Windows** or **Mac** 
+operating system and any number of client computers with nearly no 
+requirements - no operating system, even no hard disk is required 
+(but no problem if they exists). 
+All these computers must be connected with gigabit cables and switch. 
 
 Automatic provisioning is enabled by **Ansible** characterised by human-readable 
 IT automation language, self-documenting syntax, agent-less execution, 
@@ -111,10 +144,13 @@ Simple **YAML** configuration and automatic installation are outlined below.
    system / gislab . yml
 
 Virtual machine deployment is enabled by 
-**Vagrant** and **VirtualBox**. Client boot service is **LTSP Fat client** or 
-own solution. It uses OWS services load balancing, QGIS Desktop and Server as 
+**Vagrant** and **VirtualBox**. Client boot service is Linux Terminal Server
+fat client or own solution. It uses OWS services load balancing, QGIS Desktop 
+and Server as 
 GIS.lab Desktop including own GIS.lab Web app, GRASS as processing backend 
-under QGIS Processing plugin and WPS, own GIS software packaging.
+under QGIS Processing plugin and WPS, own GIS software packaging. 
+Magic command is called ``vagrant up`` and orders to automatically 
+provision GIS.lab server inside of virtual machine on the host computer. 
 
 .. _key-sw:
 
@@ -167,9 +203,9 @@ adaptation.
 
 .. _gislab-unit-png:
 
-.. figure:: ../img/general/gislab-unit.png
+.. figure:: ../img/general/gislab-unit.svg
    :align: center
-   :width: 250
+   :width: 450
 
    GIS.lab unit.
 

@@ -181,6 +181,10 @@ Useful terms
    by hyphens ``0-0-0-0-0-0`` or three groups of four hexadecimal digits 
    separated by dots ``0.0.0``
 
+*Master*
+   is GIS.lab server which acts as conventional server. It provides boot 
+   service, file, geo-database or chat server.
+
 *Network mask*
    tells computer the size of the network to which it is being connected, it is 
    formatted the same way as the IP address, but usually looks something 

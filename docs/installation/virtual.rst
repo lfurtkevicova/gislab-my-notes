@@ -196,7 +196,7 @@ The process consists of four main steps:
    :align: center
    :width: 450
 
-   Schema of virtual client.
+   Computer with various operating system can be GIS.lab client.
 
 .. _vm-creation:
 

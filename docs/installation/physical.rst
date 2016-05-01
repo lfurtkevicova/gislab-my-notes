@@ -358,7 +358,7 @@ unit consists of three main steps.
    :align: center
    :width: 450
 
-   Schema of physical client.
+   Any computer can be GIS.lab client.
 
 .. _booting-physical:
 
@@ -493,13 +493,3 @@ Enjoy!
    :width: 450
 
    GIS.lab client running environment.
-
-.. todo:: |todo| Dokončiť!
-
-.. _gislab-qgis:
-
-.. figure:: ../img/installation/gislab-qgis.png
-   :align: center
-   :width: 450
-
-   QGIS GIS.lab edition.
