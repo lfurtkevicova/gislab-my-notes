@@ -140,8 +140,8 @@ existing one.
 
    Some QGIS project.
 
-Go to :menuselection:`Plugins > Manage and install plugins` and 
-in ``Installed`` tab of that dialog window find **GIS.lab plugin**.
+Go to :menuselection:`Plugins --> Manage and install plugins` and 
+in ``Installed`` tab of dialog window find **GIS.lab plugin**.
 Activate this plugin by checking the toggle beside it, see 
 :num:`#install-gislab-plugin`.
 
@@ -178,8 +178,7 @@ and fill in required fields and settings.
 
 .. _gislab-qgis-plugin-publish:
 
-Workflow is nearly finished with ``Publish`` button. Unique project file name 
-with timestamp together with it's metafile are created.
+Workflow is nearly finished with ``Publish`` button. 
 
 .. figure:: ../img/gislab-web/gislab-plugin-publish.png
    :align: center

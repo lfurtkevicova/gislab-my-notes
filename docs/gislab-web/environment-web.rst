@@ -1,8 +1,8 @@
 .. _environment-web:
  
-=======================
-GIS.lab Web environment
-=======================
+===========
+Environment
+===========
 
 ----------
 Print tool
