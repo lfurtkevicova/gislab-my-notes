@@ -6,6 +6,10 @@ GIS.lab Desktop environment
 
 .. todo:: |todo| Dokončiť, opýtať sa!
 
+.. figure:: ../img/installation/running-client-unit.png
+   :align: center
+   :width: 450
+
 * IRC server
 
   To allow effective communication between all GIS.lab users without a need 
