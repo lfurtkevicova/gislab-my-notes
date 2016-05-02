@@ -4,44 +4,79 @@
 GIS.lab workshop
 ****************
 
-.. todo:: |todo| This is elementary draft!
-
-=================
-Goals of workshop
-=================
-
--  to provide technical knowledge required to build GIS.lab from source
-   code and start using and hacking
--  get serious feedback to know what to change and improve
--  discuss GRASS 7 integration
--  discuss improvements needed for using GIS.lab in education
--  propose future development
--  get new contributors
-
 ======
-Topics
+Issues
 ======
 
--  introduction to GIS.lab
--  introduction to Vagrant and Vagrant commands (status, up, destroy,
-   provision, ssh)
--  GIS.lab installation in VirtualBox using Vagrant provisioner,
-   configuration, update
--  introduction to GIS.lab management commands (adduser, deluser,
-   password, machine)
--  extensibility with plugins and Docker containers
--  creation of GIS.lab network from scratch
--  booting physical client
--  booting virtual clients (HTTP boot, file sharing with host machine)
--  introduction to GIS.lab client environment (shared folders, Projects,
-   Publish, Booster, software, services, PostgreSQL schemas, chat)
--  introduction to GIS.lab OWS services load balancing
--  creation of GIS projects in GIS.lab, publishing in GIS.lab Web
--  testing GRASS in GIS.lab
+-----------------------
+Introduction to GIS.lab
+-----------------------
 
--  introduction to Ansible
--  introduction to GIS.lab source code
+* `GIS.lab NPO on GitHub <https://github.com/gislab-npo>`_
+* :ref:`Manual page of GIS.lab documentation <gislab-main>`
+* :ref:`Let's get started <start>`
 
--  discussion about integration of education support tools
--  discussion about integration of GRASS 7
--  general discussion
+  * general information
+  * required computer experience and skills
+  * GIS.lab interfaces
+
+---------------------------
+Getting technical knowledge
+--------------------------- 
+  
+* :ref:`Learning about pieces <about>`
+
+  * most useful questions and answers
+
+* :ref:`Useful terms <terms>`
+
+  * introduction to Ansible
+  * general definitions and concepts
+
+* :ref:`Useful commands <commands>`
+  
+  * GIS.lab management commands
+  * Vagrant commands 
+
+--------------------
+GIS.lab installation
+--------------------
+
+* :ref:`GIS.lab installation <gislab-installation>`
+
+   * configuration for virtual and physical mode
+   * server, user accounts and client customization 
+   * hardware and software requirements
+   * installation in virtual mode, running GIS.lab virtual client
+   * installation in physical mode, running GIS.lab physical client
+
+---------------------
+Client Desktop layout
+---------------------
+
+* :ref:`Client Desktop layout <layout>`
+
+  * introduction to GIS.lab client environment - shared folders, projects, 
+    publish, booster, software, services, PostgreSQL schemas, chat, etc.
+
+---------------------------
+Introduction to GIS.lab Web
+---------------------------
+
+* :ref:`GIS.lab Web <gislab-web>`
+
+  * creating development environment
+  * GIS.lab Web plugin introduction
+  * project publishing and GIS.lab Web layout 
+
+----------------
+Practical issues
+----------------
+
+* :ref:`GIS.lab in practice <practice>`
+ 
+  * customization examples, cluster management, example of machine booting
+  * creation of GIS projects in GIS.lab, publishing in GIS.lab Web,
+    available data sets for GIS.lab workshop
+
+.. important:: |imp| This is elementary draft!

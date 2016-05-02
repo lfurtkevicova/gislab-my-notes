@@ -111,7 +111,7 @@ Client customization
    also be **GIS.lab Web client**, etc.
 
 GIS.lab client can be customized by running standard Linux/Ubuntu commands as
-well as :ref:`GIS.lab server <sever-customization>`. Difference is that they 
+well as :ref:`GIS.lab server <server-customization>`. Difference is that they 
 must be executed in isolated environment called **chroot**. Administrator 
 scripts :ref:`gislab-client-shell <gislab-client-shell>` 
 and :ref:`gislab-client-image <gislab-client-image>` are used to perform this 

@@ -13,8 +13,8 @@ Of course the more experience you have, the more quickly you will learn.
 
 In general, this documentation does not assume any computer experience on your 
 part. We try to explain in detail what :ref:`GIS.lab Desktop<gislab>`, 
-:ref:`GIS.lab Web <gislab-web>` and :ref:`GIS.lab Mobile <gislab-mobile>` 
-are. We even tell you how to install 
+:ref:`GIS.lab Web <gislab-web>` and GIS.lab Mobile are. 
+We even tell you how to install 
 and how to use every of these pieces in the most efficient way. 
 
 .. _desktop-web-mobile:
@@ -34,7 +34,7 @@ and stylistic features, see chapter
 In case you feel sufficiently familiar with all the introductory parts just skip 
 them and go straight away to :ref:`GIS.lab Installation <gislab-installation>`
 of GIS.lab Desktop form. Section 
-:ref:`Client Desktop layout <client-desktop-layout>` relates to GIS.lab client
+:ref:`Client Desktop layout <layout>` relates to GIS.lab client
 environment with GIS and no GIS applications.
 To get to know about QGIS projects publishing on web, see 
 :ref:`GIS.lab Web <gislab-web>` part.

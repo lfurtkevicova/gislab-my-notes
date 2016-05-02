@@ -104,7 +104,7 @@ IP address will always terminate with ``50``. For left case of :num:`#config-vir
 these addresses would look like ``192.168.50.5`` and ``192.168.50.50``.
 
 .. note:: |note| This information is useful in manual GIS.lab server selection  
-          using :ref:`HTTP boot <http-boot>` when server's IP address is required.
+          using :ref:`HTTP boot <http-boot-virtual>` when server's IP address is required.
 
 Content of Ansible inventory file called ``<name-of-gislab-unit>.inventory`` 
 used in physical mode would be as follows.

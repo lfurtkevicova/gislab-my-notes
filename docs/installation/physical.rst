@@ -323,9 +323,8 @@ made by ``gislab.yml`` file located in ``system`` directory.
 
 Now, GIS.lab unit machine is installed with GIS.lab system. Do not forget 
 to :ref:`create user accounts <user-creation>` by ``gislab-adduser`` command 
-and :ref:`allow their client machines <client-enabling>` to connect by running 
-``gislab-machines`` 
-command.
+and :ref:`allow their client machines <client-enabling-physical>` to connect 
+by running ``gislab-machines`` command.
 
 ======
 Client
@@ -416,7 +415,7 @@ C. ``PXE`` or ``LAN`` option set as first boot device in BIOS configuration
    For more information about how it works see for example
    `PXE Boot Server Installation Steps in Ubuntu Server VM <http://askubuntu.com/questions/412574/pxe-boot-server-installation-steps-in-ubuntu-server-vm/414813>`.
 
-.. _pxe-boot-physical:
+.. _http-boot-physical:
 
 ^^^^^^^^^
 HTTP boot
