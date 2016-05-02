@@ -79,7 +79,7 @@ can appreciate affordable, complete solution, low system requirements and
 already mentioned maintenance-free clients. GIS.lab can save huge amount of 
 obtaining and maintenance costs.
 
-Or it can serve as ideal system just for 
+In any case, it can serve as ideal system just for 
 `Open Source <https://en.wikipedia.org/wiki/Open-source_software>`_ 
 technologies popularization.
 
@@ -396,6 +396,8 @@ What is GIS.lab web?
 GIS.lab web is a **web application** built on top of modern technologies with 
 very modern user interface, optimized also for mobile devices. It stands on the 
 shoulders of `QGIS <http://qgis.org/en/site/>`_ desktop and server software.
+
+The main purpose is QGIS projects publishing on web. 
 
 .. _gislab-web-ui:
 

@@ -233,8 +233,9 @@ Useful terms
    line utility for managing the lifecycle of virtual machines,
    to describe the type of machine required for a project, and how to configure 
    and provision these machines *Vagrantfile* with Ruby syntax is used,
-   process means **set up** (downloading and installing Vagrant), **configure** 
-   (creating a single file with description) and **work** (running ``vagrant up``)
+   process means **set up** - downloading and installing Vagrant, 
+   **configure** - creating a single file with description and 
+   **work** - running ``vagrant up``
 
 *Vagrant box*
    the package format for Vagrant environment, it is used to bring up an 

@@ -1,15 +1,21 @@
-.. _practice-desktop:
+.. _practice:
  
-***************
-GIS.lab Desktop
-***************
+*******************
+GIS.lab in practice
+*******************
+
+Now let's see some practical examples.
+
+.. _practice-desktop:
+
+.. rubric:: GIS.lab Desktop
 
 It is assumed that GIS.lab server is running either using keyboard, monitor 
 and GIS.lab server username and password, or using ``ssh key``  and 
 ``IP address`` together with laptop or computer which ``ssh key`` is 
 registered in ``./ssh/authorized_keys`` file.
 In virtual mode GIS.lab server is running after ``vagrant ssh`` command, see 
-:ref:`login to GIS.lab <login-vagrant>` via ``SSH`` section.
+:ref:`login to GIS.lab <vagrant-login>` via ``SSH`` section.
 
 .. _example-gdal:
 
@@ -403,30 +409,35 @@ Copy example SpatiaLite database file
 
 3. Create project
 
-Launch **GIS.lab Desktop** as ``GIS.lab > GIS.lab Desktop`` (QGIS) and add 
-SpatiaLite database file as ``Layer > Add SpatiaLite layer > New``. 
+Launch **GIS.lab Desktop** as :menuselection:`GIS.lab --> GIS.lab Desktop` 
+(QGIS) and add SpatiaLite database file as 
+:menuselection:`Layer --> Add SpatiaLite layer --> New`. 
 Coose the database in ``Projects`` directory and connect to database by 
 pressing ``Connect`` button.
 
 Load some layer by mouse selection and press ``Add`` button. Set project 
-title in ``Project > Project Properties > Project title``, save the project 
-as ``~/Projects/my-first-project/my-first-project.qgs`` with ``Project > Save``
-option. Now first GIS project is ready.
+title in :menuselection:`Project --> Project Properties --> Project title`, 
+save the project 
+as ``~/Projects/my-first-project/my-first-project.qgs`` with 
+:menuselection:`Project > Save` option. Now first GIS project is ready.
+
+.. _practice-gislab-web-publishing:
 
 4. Publish project on Web
 
-Install **GIS.lab Web plugin** in ``Plugins > Manage and Install Plugins`` 
-section and launch it. 
+Install **GIS.lab Web plugin** in 
+:menuselection:`Plugins --> Manage and Install Plugins` section and launch it. 
 
 .. note:: |note| It is safe to ignore on-the-fly transformation warning.
 
-Publish project by pressing ``Next``, ``Publish`` and ``Finish`` buttons 
-in plugin's wizards presented in dialogs. In next step copy whole directory 
-``~/Projects/my-first-project`` to ``~/Publish/lab1`` directory.
+Publish project by pressing ``Publish`` button in plugin's wizard. 
+In next step copy whole directory 
+``~/Projects/my-first-project`` to ``~/Publish/<name-of-user>`` directory.
 
-Launch **GIS.lab Web** as ``GIS.lab > GIS.lab Web`` applications menu from main
+Launch **GIS.lab Web** as :menuselection:`GIS.lab --> GIS.lab Web` applications 
+menu from main
 GIS.lab panel. Ignore security warnings produced by self-signed certificate, 
-i.e. *I Understand the Risks > Add Exception > Confirm Security Exception*
+i.e. :menuselection:`I Understand the Risks --> Add Exception --> Confirm Security Exception`
 and log in with user's credentials. Then inspect published project which 
 should be listed as second, right below 
 default ``Empty`` project. Click on project's link in URL column to launch

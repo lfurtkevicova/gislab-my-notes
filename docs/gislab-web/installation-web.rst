@@ -119,6 +119,9 @@ after command below.
 GIS.lab QGIS plugin
 -------------------
 
+GIS.lab QGIS plugin builds GIS.lab web bundle from any QGIS desktop project.
+
+
 All installed QGIS plugins are usually located in ``.qgis/python/plugins`` 
 directory.
 If ``gislab-web`` repository is correctly cloned, for GIS.lab QGIS plugin

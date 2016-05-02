@@ -24,9 +24,7 @@ released packages yet. However, installation is possible.
 Above environment can be installed in virtual machine using **Vagrant**.
 Vagrant will automatically install whole development environment and build 
 GIS.lab Web from source code.﻿
-
-.. important:: |imp| No GIS.lab is needed! Only **Linux** and **Mac OS X** 
-   host systems are required. 
+Following subsections give a detailed insight into whole mechanism.
 
 .. toctree::
    :maxdepth: 2
@@ -36,5 +34,5 @@ GIS.lab Web from source code.﻿
    project-publishing
    environment-web
  
- 
-
+.. important:: |imp| No GIS.lab is needed! Only **Linux** and **Mac OS X** 
+   host systems are required. 

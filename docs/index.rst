@@ -45,7 +45,7 @@ Contents
    client-layout/index
    gislab-web/index
    gislab-mobile/index*
-   practice/index
+   practice/practice
    general/workshop
    general/datasets
 

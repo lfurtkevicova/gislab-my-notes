@@ -50,3 +50,6 @@ And now there are no obstacles to enjoy your published project.
 
    QGIS project published with GIS.lab Web.
 
+.. seealso:: |see| :ref:`Publish project on Web <practice-gislab-web-publishing>`
+   section with publishing QGIS projects from GIS.lab desktop environment.
+
