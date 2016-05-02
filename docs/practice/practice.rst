@@ -423,7 +423,7 @@ as ``~/Projects/my-first-project/my-first-project.qgs`` with
 
 .. _practice-gislab-web-publishing:
 
-4. Publish project on Web
+4. Publish project on web
 
 Install **GIS.lab Web plugin** in 
 :menuselection:`Plugins --> Manage and Install Plugins` section and launch it. 

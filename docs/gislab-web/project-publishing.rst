@@ -8,12 +8,6 @@ When ``Publish`` button is successfully pressed in GIS.lab QGIS plugin
 :ref:`dialog <gislab-qgis-plugin-publish>`, 
 unique project file name with timestamp together with it's metafile are created.
 
-.. figure:: ../img/gislab-web/gislab-plugin-publish.png
-   :align: center
-   :width: 450
-
-   Part of GIS.lab project publishing process.
-
 Then it is necessary to **copy** published QGIS project with all associated data 
 to ``vagrant`` directory that is located in ``gislab-web`` source code.
 
@@ -22,6 +16,8 @@ to ``vagrant`` directory that is located in ``gislab-web`` source code.
    :width: 450
 
    Directory for QGIS projects going to be published.
+
+.. seealso:: |see| :ref:`Source code layout <source-code-layout>`
 
 As the final step, open web browser and launch published project in GIS.lab Web 
 interface by entering URL below.
@@ -50,6 +46,20 @@ And now there are no obstacles to enjoy your published project.
 
    QGIS project published with GIS.lab Web.
 
-.. seealso:: |see| :ref:`Publish project on Web <practice-gislab-web-publishing>`
-   section with publishing QGIS projects from GIS.lab desktop environment.
+.. seealso:: |see| See :ref:`Publish project on web <practice-gislab-web-publishing>`
+   section with publishing QGIS projects from GIS.lab Desktop environment.
+
+To quite type ``tmux kill-session``, then ``logout`` to log out from virtual 
+machine and ``vagrant halt`` to shut down the running machine Vagrant 
+is managing.
+
+.. tip:: |tip| Use following command to run server tests from 
+   ``/vagrant/dev/django`` directory.
+
+   .. code:: sh
+
+      $ python ./manage.py test webgis.viewer.tests
+
+.. note:: |note| QGIS Mapserver is also forwarded to host machine on port ``8090``.
+   Its logs can be found in ``/var/log/lighttpd`` directory.
 

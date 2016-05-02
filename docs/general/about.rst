@@ -390,10 +390,10 @@ OSGeo Live.
 .. _gislab-web:
 
 ====================
-What is GIS.lab web?
+What is GIS.lab Web?
 ====================
 
-GIS.lab web is a **web application** built on top of modern technologies with 
+GIS.lab Web is a **web application** built on top of modern technologies with 
 very modern user interface, optimized also for mobile devices. It stands on the 
 shoulders of `QGIS <http://qgis.org/en/site/>`_ desktop and server software.
 

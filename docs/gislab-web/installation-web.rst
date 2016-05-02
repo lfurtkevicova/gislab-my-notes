@@ -5,7 +5,7 @@ Installation
 ============  
 
 As it was noticed in previous subsection, very important part is represented
-by **GIS.lab QGIS plugin**.
+by :ref:`GIS.lab Web QGIS plugin <gislab-qgis-plugin>`.
 
 This plugin is part of ``gislab-web`` source code, so all necessary files
 are downloaded with cloning process. But let us stick to this order of 
@@ -115,11 +115,21 @@ after command below.
 
 .. _gislab-qgis-plugin:
 
--------------------
-GIS.lab QGIS plugin
--------------------
+------------------
+GIS.lab Web plugin
+------------------
 
-GIS.lab QGIS plugin builds GIS.lab web bundle from any QGIS desktop project.
+GIS.lab Web plugin builds GIS.lab web bundle from any QGIS desktop project.
+It allows adding base layers, creating topics from layers list, 
+setting access constraints or project expiration.
+
+.. _gislab-qgis-plugin-logo:
+
+.. figure:: ../img/gislab-web/gislab-qgis-plugin-logo.svg
+   :align: center
+   :width: 150
+
+   GIS.lab Web QGIS plugin icon.
 
 
 All installed QGIS plugins are usually located in ``.qgis/python/plugins`` 
@@ -144,7 +154,7 @@ existing one.
    Some QGIS project.
 
 Go to :menuselection:`Plugins --> Manage and install plugins` and 
-in ``Installed`` tab of dialog window find **GIS.lab plugin**.
+in ``Installed`` tab of dialog window find **GIS.lab Web plugin**.
 Activate this plugin by checking the toggle beside it, see 
 :num:`#install-gislab-plugin`.
 
@@ -154,7 +164,7 @@ Activate this plugin by checking the toggle beside it, see
    :align: center
    :width: 750
 
-   GIS.lab QGIS plugin activation.
+   GIS.lab Web QGIS plugin activation.
 
 Assuming that QGIS project is saved, run GIS.lab plugin wizard as 
 :menuselection:`Web --> GIS.lab Web` or just click on plugin's icon in menu bar.
