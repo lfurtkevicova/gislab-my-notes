@@ -49,7 +49,9 @@ And now there are no obstacles to enjoy your published project.
 .. seealso:: |see| See :ref:`Publish project on web <practice-gislab-web-publishing>`
    section with publishing QGIS projects from GIS.lab Desktop environment.
 
-To quite type ``tmux kill-session``, then ``logout`` to log out from virtual 
+Type ``tmux kill-session`` to destroy the given session, closing any windows 
+linked to it and no other sessions, and detaching all clients attached to it.
+Then use ``logout`` to log out from virtual 
 machine and ``vagrant halt`` to shut down the running machine Vagrant 
 is managing.
 

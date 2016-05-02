@@ -76,6 +76,12 @@ Useful commands
    brings the system down; instructs the hardware to stop all CPU functions
    immediately 
 
+:command:`tmux kill-session`
+   destroyes the given session, closing any windows linked to it and no other 
+   sessions, and detaching all clients attached to it; if ``-a`` is given, 
+   all sessions but the specified one is killed
+
+
 :command:`vagrant destroy` 
    stops the running Vagrant machine and destroys all resources that were 
    created during the machine creation process

@@ -222,6 +222,12 @@ Useful terms
 
    Serf as a decentralized solution for service discovery and orchestration.
 
+*Tmux*
+   *Terminal multiplexer* is a software application usually used to multiplex 
+   several virtual consoles, enabling a number of terminals to be created, 
+   accessed, and controlled from a single screen; it may be detached from 
+   a screen and continue running in the background, then later reattached
+
 *Travis CI*
    a FOSS, hosted, distributed continuous integration service used to build 
    and test software projects hosted at GitHub, it is configured by adding a 
