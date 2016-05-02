@@ -10,9 +10,9 @@ Learning about the pieces
 What is GIS.lab?
 ================
 
-*GIS.lab* is a tool for simple, unbreakable, always ready and clean deployment 
+GIS.lab is a tool for simple, unbreakable, always ready and clean deployment 
 of multiple machines running software mainly for Geographic 
-Information Systems, but also for office. 
+Information Systems (GIS) as well as for office. 
 
 It is **free technology** which can instantly turn any computer
 network into fully equipped geospatial cluster. It is capable to deploy 
@@ -209,41 +209,6 @@ adaptation.
 
    GIS.lab unit.
 
-=======================
-How to upgrade GIS.lab?
-=======================
-
-GIS.lab upgrade procedure consists from three steps: 
-
-1. server software upgrade,
-2. client images upgrade, 
-3. GIS.lab system itself upgrade.
-
-Although, it is possible to run each step separately by hand, GIS.lab
-provisioner is designed as idempotent task, which is capable of both,
-GIS.lab installation and also upgrade. This means, that GIS.lab upgrade
-is performed by the same provisioner command as used for GIS.lab
-installation. Using GIS.lab provisioner for upgrade is recommended to
-keep all parts of GIS.lab in consistent state.
-
-GIS.lab source code update (development version)
-
-.. code-block:: sh
-
-   $ git pull
-
-Upgrade with Vagrant
-
-.. code-block:: sh
-
-   $ vagrant provision
-
-Upgrade with Ansible
-
-.. code-block:: sh
-
-   $ ansible-playbook --inventory=gislab-unit.inventory --private-key=<private-SSH-key-file> system/gislab.yml
-
 ===============
 GIS.lab cluster
 ===============
@@ -378,16 +343,44 @@ Connect to running remote desktop session using following command.
 
    HOST=<REMOTE-HOST-NAME> ssh gislab@$HOST "x11vnc -bg -safer -once -nopw -scale 0.9x0.9 -display :0 -allow $(hostname -f)" && vncviewer $HOST
 
-============================
-Is it similar to OSGeo Live? 
-============================
+.. _gislab-upgrade:
 
-GIS.lab is automatic deployment of GIS infrastructure, more or less opposite to 
-OSGeo Live.
+===============================
+How to upgrade GIS.lab Desktop?
+===============================
 
-.. todo:: |todo| Most significant differences ...
+GIS.lab upgrade procedure consists from three steps: 
 
-.. _gislab-web:
+1. server software upgrade,
+2. client images upgrade, 
+3. GIS.lab system itself upgrade.
+
+Although, it is possible to run each step separately by hand, GIS.lab
+provisioner is designed as idempotent task, which is capable of both,
+GIS.lab installation and also upgrade. This means, that GIS.lab upgrade
+is performed by the same provisioner command as used for GIS.lab
+installation. Using GIS.lab provisioner for upgrade is recommended to
+keep all parts of GIS.lab in consistent state.
+
+GIS.lab source code update (development version)
+
+.. code-block:: sh
+
+   $ git pull
+
+Upgrade with Vagrant
+
+.. code-block:: sh
+
+   $ vagrant provision
+
+Upgrade with Ansible
+
+.. code-block:: sh
+
+   $ ansible-playbook --inventory=gislab-unit.inventory --private-key=<private-SSH-key-file> system/gislab.yml
+
+.. _gislab-web-about:
 
 ====================
 What is GIS.lab Web?
@@ -406,3 +399,50 @@ The main purpose is QGIS projects publishing on web.
    :width: 450
 
    GIS.lab web interface.
+
+.. _gislab-web-upgrade:
+
+===========================
+How to upgrade GIS.lab Web?
+===========================
+
+GIS.lab Web source code update is done with ``pull`` command.
+
+.. code:: sh
+
+   $ git pull
+
+Upgrade with Vagrant as follows.
+
+.. code:: sh
+
+   $ vagrant up
+   $ vagrant provision
+
+When there are fundamental changes, it is better to run also ``vagrant destroy``
+command.
+
+.. code:: sh
+
+   $ vagrant destroy -f 
+   $ git pull
+   $ vagrant up
+
+.. tip:: |tip| Quick update can be done with ``git pull`` command followed by
+   running ``$ gulp build-web`` on server.
+
+   .. code:: sh
+
+      $ git pull && vagrant up && vagrant ssh
+      $ /vagrant/utils/tmux-dev.sh
+      $ cd /vagrant/clients
+      $ gulp build-web
+
+=================================
+Is GIS.lab similar to OSGeo Live? 
+=================================
+
+GIS.lab is automatic deployment of GIS infrastructure, more or less opposite to 
+OSGeo Live.
+
+.. todo:: |todo| Most significant differences ...
