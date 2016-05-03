@@ -32,24 +32,24 @@ Useful terms
 
 *Client's root*
    concrete directory on GIS.lab server in which GIS.lab client is installed 
-   with a special tool named `debootstrap`; it has almost the same filesystem
+   with a special tool named ``debootstrap``; it has almost the same filesystem
    hierarchy as a standard xubuntu desktop installation with GIS.lab integration
-   changes (and this is what one can see in running GIS.lab client; from this 
+   changes - and this is what one can see in running GIS.lab client; from this 
    directory is then created GIS.lab client image which is mounted over network 
    as a `client's root partition` during boot process
 
 *Configuration*
    an arrangement of functional units, often pertains to the choice of hardware, 
-   software, firmware, and documentation, it affects system function and performance
+   software, firmware, and documentation; it affects system function and performance
 
 *Containers*
-   can share a single Linux Kernel and, optionally, other binary and library 
-   recources, compared with virtual machines taht require a full operating system 
+   can share a single Linux Kernel and optionally other binary and library 
+   recources, compared with virtual machines that require a full operating system 
    image for each instance
 
 *Customization*
-   doing some modification over an existing applications according to requirements 
-   of the client
+   means doing some modification over an existing applications according to 
+   requirements of the client
 
 *Dev*
    development tools, software developer or device in PC
@@ -57,7 +57,7 @@ Useful terms
 .. _dhcp-server:
 
 *DHCP server*
-    *Dynamic Host Configuration Protocol*, way how to set host's IP address to 
+    *Dynamic Host Configuration Protocol* is way how to set host's IP address to 
     automatically assign an IP address to any host on the network upon the request
     (in order for two hosts communicate on the same network using TCP/IP model, 
     both hosts need to have an unique IP address); GIS.lab has own DHCP server
@@ -70,7 +70,7 @@ Useful terms
 
 *DNS server*
    *Domain Name System* is a protocol within the set of standards for 
-   how computers exchange data on the Internet and on many private networks, 
+   how computers exchange data on the internet and on many private networks, 
    known as the TCP/IP protocol suite; its basic job is to turn a user-friendly 
    domain name like ``qgis.com`` into an IP address like ``91.142.249.5`` 
    that computers use to identify each other on the network; 
@@ -89,14 +89,16 @@ Useful terms
    Domain name system workflow [#dns]_
 
 *Gateway*
-   it is an IP address of the device that machine looks to for access to the 
-   Internet, usually, it is the router’s IP address
+   is an IP address of the device that machine looks to for access to the 
+   internet; usually, it is the router’s IP address
 
 *GIS.lab node*
    GIS.lab client environment which runs on client machine
 
 *GIS.lab master* 
-   GIS.lab server environment which runs as virtualized system on host machine
+   GIS.lab server environment which runs on host machine; 
+   it acts as conventional server providing boot service, file, geo-database 
+   or chat server
 
 *Git*
    is a distributed version control system often used to work on some code 
@@ -110,11 +112,11 @@ Useful terms
 *GitHub*
    is a web side that allows to upload Git repositories online; unlike Git, 
    GitHub provides graphical interface for private repositories and free accounts
-   usually used to host open-source projects.
+   usually used to host open-source projects
 
 *GDAL/OGR*
    *Geospatial Data Abstraction Library* provides access to geospatial data, 
-   it is a cross platform C++ translator used for reading, writing and 
+   it is a cross platform **C++** translator used for reading, writing and 
    transforming raster (GDAL) and vector (OGR) data to the calling application 
    for all supported formats; a variety of useful command line utilities for data 
    translation and processing are used
@@ -124,14 +126,14 @@ Useful terms
 
 *Hardware virtualization*
    refers to the creation of a virtual machine that acts like a real computer 
-   with an operating system, softwares executed on these virtual machines
+   with an operating system; softwares executed on these virtual machines
    are separated from the underlying hardware resources
 
 *Host machine*
-   main machine where required softwares and GIS.lab package are installed
+   is main machine where required softwares and GIS.lab package are installed
 
 *Chroot*
-   is a tool which enables installation in client environment, installation 
+   is a tool which enables installation in client environment; installation 
    to client's ``root`` is done within ``chroot`` operation
 
 *I386, x86*
@@ -143,19 +145,19 @@ Useful terms
 .. _ip-address:
 
 *IP address*
-   *Internet Protocol address*, unique numerical identifier assigned to each 
+   *Internet Protocol address* is unique numerical identifier assigned to each 
    device participating in a computer network that uses the Internet Protocol for 
-   communication, it is 32-bit numeric address written as four numbers ``0.0.0.0`` 
-   separated by periods, each number can be zero to 255, it is assigned as part 
+   communication; it is 32-bit numeric address written as four numbers ``0.0.0.0`` 
+   separated by periods, each number can be zero to ``255``; it is assigned as part 
    of connecting to a network; 
-   it is used for identifying computer on the network, when 
+   it is used for identifying computer on the network; when 
    connecting using DHCP, this address will periodically change (hence, the 
-   name “dynamic”), in case of static IP address configuration, address will 
+   name ``dynamic``), in case of static IP address configuration, address will 
    never change
 
 *ISO*
-   an archive file of an optical disc, image file is a snapshot of the data and 
-   layout of a CD or DVD, saved in ISO-9660 format, widely used for storing CD 
+   an archive file of an optical disc; image file is a snapshot of the data and 
+   layout of a CD or DVD, saved in ``ISO-9660`` format widely used for storing CD 
    content; it contains raw dumps of a magnetic disk or of an optical disc
 
 *LAN*
@@ -168,23 +170,19 @@ Useful terms
    access information directories and obtain these information
 
 *LXC*
-   *Linux Container*, a lightweight virtualization technology on operating 
+   *Linux Container* is a lightweight virtualization technology on operating 
    system level for running multiple isolated Linux systems, i.e. containers 
    on a control host using a single Linux kernel
 
 *MAC address*
-   *Media Access Control address*, kind of serial number assigned to every 
-   network adapter, no two anywhere 
-   should have the same MAC address, it is assigned at the time hardware is 
+   *Media Access Control address* is kind of serial number assigned to every 
+   network adapter; no two anywhere 
+   should have the same MAC address; it is assigned at the time hardware is 
    manufactured, the computer needs to have its MAC address registered in 
    the DNS/DHCP so that it'll be recognized and get the right IP address,
    six groups of two hexadecimal digits separated by colons ``0:0:0:0:0:0`` or
    by hyphens ``0-0-0-0-0-0`` or three groups of four hexadecimal digits 
    separated by dots ``0.0.0``
-
-*Master*
-   is GIS.lab server which acts as conventional server. It provides boot 
-   service, file, geo-database or chat server.
 
 *Network mask*
    tells computer the size of the network to which it is being connected, it is 
@@ -194,7 +192,7 @@ Useful terms
 *NIC*
    *Network Interface Card* is a computer hardware component that enable 
    connecting computer to a computer network physically. It is a circuit 
-   board or card that is installed in a computer. 
+   board or card that is installed in a computer
 
 *PXE booting*
    *Preboot Execution Environment* booting, is a method of having an end computer 
