@@ -162,7 +162,7 @@ Thematic layers
 * *Storage type:* SQLite database
 * *Last update:* 01.01.2008
 * *Geometry type of the features in layer* : Polygon
-* `Source <http://www.geoportalpraha.cz/cs/opendata/5BB4E2C5-9D4B-4B2B-BF0A-E0B98EE6013A>`_
+* `Source <http://www.geoportalpraha.cz/cs/opendata/5BB4E2C5-9D4B-4B2B-BF0A-E0B98EE6013A>`__
 * *Attributes* :
 
 .. csv-table:: Attributes of air pollution layer.
@@ -177,7 +177,7 @@ Thematic layers
 * *Storage type:* SQLite database
 * *Last update:* 06.04.2006
 * *Geometry type of the features in layer* : Polygon
-* `Source <http://www.dibavod.cz/download.php?id_souboru=1418&PHPSESSID=vcbxqccbl>`_
+* `Source <http://www.dibavod.cz/download.php?id_souboru=1418&PHPSESSID=vcbxqccbl>`__
 * *Attributes* :
 
 .. csv-table:: Attributes of basins layer.
@@ -194,8 +194,8 @@ Thematic layers
 * *Last update:* 14.03.2016
 * *Geometry type of the features in layer* : Polyline
 * *Spatial resolution:* `1:10000`
-* `Source <http://www.geoportalpraha.cz/en/opendata/0AF6DE97-68B3-4CD6-AE5D-76ACEEE50636>`_,
-  `metadata <http://www.geoportalpraha.cz/cs/fulltext_geoportal?id=0AF6DE97-68B3-4CD6-AE5D-76ACEEE50636>`_
+* `Source <http://www.geoportalpraha.cz/en/opendata/0AF6DE97-68B3-4CD6-AE5D-76ACEEE50636>`__,
+  `metadata <http://www.geoportalpraha.cz/cs/fulltext_geoportal?id=0AF6DE97-68B3-4CD6-AE5D-76ACEEE50636>`__
 * *Attributes* :
 
 .. csv-table:: Attributes of bike routes layer.
@@ -213,8 +213,8 @@ Thematic layers
 * *Last update:* 14.03.2016
 * *Geometry type of the features in layer* : Point
 * *Spatial resolution:* `1:10000`
-* `Source <http://www.geoportalpraha.cz/cs/opendata/7ED6D2D8-A68C-44F1-8EC3-0F75A5AEF781>`_,
-  `metadata <http://www.geoportalpraha.cz/cs/fulltext_geoportal?id=7ED6D2D8-A68C-44F1-8EC3-0F75A5AEF781>`_
+* `Source <http://www.geoportalpraha.cz/cs/opendata/7ED6D2D8-A68C-44F1-8EC3-0F75A5AEF781>`__,
+  `metadata <http://www.geoportalpraha.cz/cs/fulltext_geoportal?id=7ED6D2D8-A68C-44F1-8EC3-0F75A5AEF781>`__
 * *Attributes* :
 
 .. csv-table:: Attributes of bike signs layer.
@@ -229,7 +229,7 @@ Thematic layers
 * *Storage type:* SQLite database
 * *Last update:* 04.05.2014
 * *Geometry type of the features in layer* : Polygon
-* `Source <http://www.geoportalpraha.cz/cs/opendata/669607B8-EA0A-44FB-8771-C509C2384E59>`_
+* `Source <http://www.geoportalpraha.cz/cs/opendata/669607B8-EA0A-44FB-8771-C509C2384E59>`__
 * *Attributes* :
 
 .. csv-table:: Attributes of boundary region.
@@ -243,7 +243,7 @@ Thematic layers
 * *Layer name:* ``buildings``
 * *Storage type:* SQLite database
 * *Spatial representation:* 3D grid 
-* `Source <http://www.geoportalpraha.cz/en/opendata/DDBD51D9-CDF6-4288-8FAB-F049BB5ADFD9>`_
+* `Source <http://www.geoportalpraha.cz/en/opendata/DDBD51D9-CDF6-4288-8FAB-F049BB5ADFD9>`__
 
 **elevation** - digital terrain model (DTM) within the meaning of the bare surface
 
@@ -252,7 +252,7 @@ Thematic layers
 * *Last update:* 10.04.2015
 * *Spatial representation:* 3D grid
 * *Spatial resolution:* 1:5000
-* `Source <http://www.geoportalpraha.cz/en/opendata/6E9A6D83-5F66-4B06-ABB5-CE8E773A811C>`_
+* `Source <http://www.geoportalpraha.cz/en/opendata/6E9A6D83-5F66-4B06-ABB5-CE8E773A811C>`__
 
 **landuse** - landuse in 2016
 
@@ -261,7 +261,7 @@ Thematic layers
 * *Last update:* 24.02.2016
 * *Spatial resolution:* 1:5000
 * *Geometry type of the features in layer* : Polygon
-* `Source <http://www.geoportalpraha.cz/en/opendata/A0198E36-FCAD-42E7-BE4A-3B7755A48DAC>`_
+* `Source <http://www.geoportalpraha.cz/en/opendata/A0198E36-FCAD-42E7-BE4A-3B7755A48DAC>`__
 * *Attributes* :
 
 .. csv-table:: Attributes of landuse layer.
@@ -277,8 +277,8 @@ Thematic layers
 * *Storage type:* SQLite database
 * *Last update:* 10.12.2015
 * *Spatial representation:* grid
-* `Source <http://www.geoportalpraha.cz/cs/opendata/A0198E36-FCAD-42E7-BE4A-3B7755A48DAC>`_,
-  `metadata <http://www.geoportalpraha.cz/en/fulltext_geoportal?id=A0198E36-FCAD-42E7-BE4A-3B7755A48DAC>`_
+* `Source <http://www.geoportalpraha.cz/cs/opendata/A0198E36-FCAD-42E7-BE4A-3B7755A48DAC>`__,
+  `metadata <http://www.geoportalpraha.cz/en/fulltext_geoportal?id=A0198E36-FCAD-42E7-BE4A-3B7755A48DAC>`__
 
 **parcels** - polygons of the parcels for Prague 1 district
 
@@ -287,7 +287,7 @@ Thematic layers
 * *Last update:* 01.03.2016
 * *Geometry type of the features in layer* : Polygon
 * *Spatial resolution:* `1:500`
-* `Source <http://www.geoportalpraha.cz/en/opendata/31363CF6-2A9F-41D1-B000-23587084BC7A>`_
+* `Source <http://www.geoportalpraha.cz/en/opendata/31363CF6-2A9F-41D1-B000-23587084BC7A>`__
 * *Attributes* :
 
 .. csv-table:: Attributes of parcels layer.
@@ -315,7 +315,7 @@ Thematic layers
 * *Layer name:* ``pop_statistics``
 * *Data representation:* comma separated values file
 * *Last update*: 31.12.2014
-* `Source <https://www.czso.cz/documents/10180/26823476/3301231505.xlsx/1e37f0cd-ef06-4872-b108-31778585b635?version=1.0>`_
+* `Source <https://www.czso.cz/documents/10180/26823476/3301231505.xlsx/1e37f0cd-ef06-4872-b108-31778585b635?version=1.0>`__
 * *Attributes* :
 
 .. csv-table:: Some population statistics.
@@ -348,7 +348,7 @@ Thematic layers
 * *Storage type:* SQLite database
 * *Last update:* 20.07.2015
 * *Geometry type of the features in layer* : Point
-* `Source <http://www.geoportalpraha.cz/en/opendata/27028B3A-9442-44BC-9EA2-4DF8A2DF9940>`_
+* `Source <http://www.geoportalpraha.cz/en/opendata/27028B3A-9442-44BC-9EA2-4DF8A2DF9940>`__
 * *Attributes* :
 
 .. csv-table:: Attributes of public toilets layer.
@@ -403,7 +403,7 @@ Thematic layers
 * *Storage type:* SQLite database
 * *Last update:* 06.04.2006
 * *Geometry type of the features in layer* : Polyline
-* `Source <http://www.dibavod.cz/download.php?id_souboru=1412&PHPSESSID=vcbxqccbl>`_
+* `Source <http://www.dibavod.cz/download.php?id_souboru=1412&PHPSESSID=vcbxqccbl>`__
 * *Attributes* :
 
 .. csv-table:: Attributes of streams layer.

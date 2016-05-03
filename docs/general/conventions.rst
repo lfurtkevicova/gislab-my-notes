@@ -67,7 +67,7 @@ represented as `GIS.lab web page <http://web.gislab.io/>`_, for reference to
 some picture, see :num:`#some-figure-t`, 
 :num:`#some-figure-s`, :num:`#some-figure-m` and :num:`#some-figure-l`, 
 for reference to some part of page, 
-see :ref:`Conventions <conventions>`, to include files as part of the build process e.g. :download:`GIS.lab logo <https://github.com/gislab-npo/gislab-web/blob/master/clients/src/web/styles/map/image_logo.svg>` is used.
+see :ref:`Conventions <conventions>`.
 
 ================
 Short paragraphs
@@ -175,6 +175,7 @@ Sidebars, lists and quote-like blocks
    :code:`vagrant up`
 
 #. numbered list 
+
   #. nested numbered list
 
 * bulleted list 
