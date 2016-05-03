@@ -21,7 +21,7 @@ Useful commands
 .. _gislab-client-shell:
 
 :command:`gislab-client-shell`
-   runs command or launches interactive shell in GIS.lab client's chroot
+   runs command or launches interactive shell in GIS.lab client's root
 
 :command:`gislab-cluster event <event>`
    sends a custom event through the Serf cluster

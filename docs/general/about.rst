@@ -46,7 +46,7 @@ Desktop can be implemented using **virtal** or **physical** mode.
 
 Virtual mode can be used for any operating system. Original operating system 
 and GIS.lab will be **available**. On the other hand, physical mode 
-represents best performance, but original operating system is **temporary lost**.
+represents best performance but original operating system is **temporary lost**.
 
 .. _physical-or-virtual-mode:
 
@@ -72,14 +72,15 @@ It can be used at **schools** as central management with maintenance-free
 clients. Students can gain various knowledge from Linux systems principles 
 to GIS development.
 
-Or it can be useful for **science institutions** which can effectively use 
+GIS.lab can be useful for **science institutions** which can effectively use 
 horizontally scalable computing power, advanced tools and extensibility. 
+
 Next, **small projects** or **poor countries** 
 can appreciate affordable, complete solution, low system requirements and 
 already mentioned maintenance-free clients. GIS.lab can save huge amount of 
 obtaining and maintenance costs.
 
-In any case, it can serve as ideal system just for 
+Or in any case, it can serve as ideal system just for 
 `Open Source <https://en.wikipedia.org/wiki/Open-source_software>`_ 
 technologies popularization.
 
@@ -97,7 +98,7 @@ using GIS.lab unit.
    :width: 250
 
 It is self containing system with very quick results, possible to get web
-application from plain hardware in a few minutes.
+application from plain hardware.
 GIS.lab brings high added values by integration of precisely chosen set of 
 geospatial **FOSS**, i.e. one best tool for one thing to one system with 
 consistent behaviour, many collaboration tools, user and software support.
@@ -116,12 +117,12 @@ How it is done?
 
 GIS.lab consists from one host machine running **Linux**, **Windows** or **Mac** 
 operating system and any number of client computers with nearly no 
-requirements - no operating system, even no hard disk is required 
-(but no problem if they exists). 
+requirements. No operating system, even no hard disk is required 
+but no problem if they exist. 
 All these computers must be connected with gigabit cables and switch. 
 
 Automatic provisioning is enabled by **Ansible** characterised by human-readable 
-IT automation language, self-documenting syntax, agent-less execution, 
+automation language, self-documenting syntax, agent-less execution, 
 idempotent modules, templates, support for cloud providers AWS, GCE, Digital 
 Ocean, Azure, and the like.
 
@@ -144,11 +145,13 @@ Simple **YAML** configuration and automatic installation are outlined below.
    system / gislab . yml
 
 Virtual machine deployment is enabled by 
-**Vagrant** and **VirtualBox**. Client boot service is Linux Terminal Server
-fat client or own solution. It uses OWS services load balancing, QGIS Desktop 
-and Server as 
-GIS.lab Desktop including own GIS.lab Web app, GRASS as processing backend 
-under QGIS Processing plugin and WPS, own GIS software packaging. 
+**Vagrant** and **VirtualBox**. Client boot service is 
+`Linux Terminal Server <http://www.ltsp.org/>`_
+fat client or own solution. It uses OGC Web Service Common (OWS) services 
+load balancing, QGIS Desktop and Server as 
+GIS.lab Desktop including own GIS.lab Web app, own GIS software packaging and 
+GRASS as processing backend under QGIS Processing plugin and WPS. 
+
 Magic command is called ``vagrant up`` and orders to automatically 
 provision GIS.lab server inside of virtual machine on the host computer. 
 
@@ -234,7 +237,7 @@ running cluster **events** and **queries**.
 Roles, events and queries
 -------------------------
 
-Machines belonging to GIS.lab cluster are divided into two roles
+Machines belonging to GIS.lab cluster are divided into two roles:
 
 1. **server** 
 2. **client**
@@ -351,30 +354,30 @@ How to upgrade GIS.lab Desktop?
 
 GIS.lab upgrade procedure consists from three steps: 
 
-1. server software upgrade,
-2. client images upgrade, 
-3. GIS.lab system itself upgrade.
+1. server software upgrade
+2. client images upgrade
+3. GIS.lab system itself upgrade
 
 Although, it is possible to run each step separately by hand, GIS.lab
-provisioner is designed as idempotent task, which is capable of both,
+provisioner is designed as idempotent task which is capable of both,
 GIS.lab installation and also upgrade. This means, that GIS.lab upgrade
 is performed by the same provisioner command as used for GIS.lab
 installation. Using GIS.lab provisioner for upgrade is recommended to
 keep all parts of GIS.lab in consistent state.
 
-GIS.lab source code update (development version)
+GIS.lab source code update: 
 
 .. code-block:: sh
 
    $ git pull
 
-Upgrade with Vagrant
+Upgrade with Vagrant:
 
 .. code-block:: sh
 
    $ vagrant provision
 
-Upgrade with Ansible
+Upgrade with Ansible:
 
 .. code-block:: sh
 
@@ -387,7 +390,7 @@ What is GIS.lab Web?
 ====================
 
 GIS.lab Web is a **web application** built on top of modern technologies with 
-very modern user interface, optimized also for mobile devices. It stands on the 
+very modern user interface optimized also for mobile devices. It stands on the 
 shoulders of `QGIS <http://qgis.org/en/site/>`_ desktop and server software.
 
 The main purpose is QGIS projects publishing on web. 
@@ -412,15 +415,15 @@ GIS.lab Web source code update is done with ``pull`` command.
 
    $ git pull
 
-Upgrade with Vagrant as follows.
+Upgrade with Vagrant:
 
 .. code:: sh
 
    $ vagrant up
    $ vagrant provision
 
-When there are fundamental changes, it is better to run also ``vagrant destroy``
-command.
+When there are fundamental changes, it is better to run ``vagrant destroy``
+command before ``git pull``.
 
 .. code:: sh
 
@@ -442,7 +445,7 @@ command.
 Is GIS.lab similar to OSGeo Live? 
 =================================
 
-GIS.lab is automatic deployment of GIS infrastructure, more or less opposite to 
+GIS.lab is automatic deployment of GIS infrastructure - more or less opposite to 
 OSGeo Live.
 
 .. todo:: |todo| Most significant differences ...

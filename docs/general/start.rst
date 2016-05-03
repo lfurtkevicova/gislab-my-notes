@@ -4,12 +4,12 @@
 Let's get started
 *****************
 
-You may be coming to :ref:`GIS.lab <about>` from various operating system, 
+You may be coming to :ref:`GIS.lab <about>` from various operating systems, 
 but we expect that you are probably 
 familiar with browsing the web, writing documents, sending emails and doing other 
 jobrelated tasks with your computer. Whether you are somewhat experienced or 
 completely new to computers, this documentation should be very useful for you.
-Of course the more experience you have, the more quickly you will learn. 
+Of course, the more experience you have, the more quickly you will learn. 
 
 In general, this documentation does not assume any computer experience on your 
 part. We try to explain in detail what :ref:`GIS.lab Desktop<gislab>`, 
@@ -31,15 +31,14 @@ or :ref:`Useful commands <commands>`.
 To distinguish between different kinds of information we use some typographical
 and stylistic features, see chapter
 :ref:`Conventions used in this documentation <conventions>`. 
-In case you feel sufficiently familiar with all the introductory parts just skip 
-them and go straight away to :ref:`GIS.lab Installation <gislab-installation>`
-of GIS.lab Desktop form. Section 
-:ref:`Client Desktop layout <layout>` relates to GIS.lab client
+In case you feel sufficiently familiar with all the introductory parts, just skip 
+them and go straight away to :ref:`GIS.lab Installation <gislab-installation>`. 
+Section :ref:`Client Desktop layout <layout>` relates to GIS.lab client
 environment with GIS and no GIS applications.
 To get to know about QGIS projects publishing on web, see 
 :ref:`GIS.lab Web <gislab-web>` part.
-Chapters dedicated to providing practical skills with GIS.lab technology
-are :ref:`GIS.lab un practice <practice>` and :ref:`GIS.lab workshop <workshop>`.
+Chapters dedicated to provide practical skills with GIS.lab technology
+are :ref:`GIS.lab in practice <practice>` and :ref:`GIS.lab workshop <workshop>`.
 
 .. _gislab-desktop-start:
 
@@ -49,5 +48,5 @@ are :ref:`GIS.lab un practice <practice>` and :ref:`GIS.lab workshop <workshop>`
 
    GIS.lab Desktop screen.
 
-Moreover, when you meet some trouble or difficulty, you can find solutions to 
+Moreover, when you meet some troubles or difficulties, you can find solutions to 
 simple and difficult problems in :ref:`Problem solving <problems>` part.

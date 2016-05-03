@@ -64,6 +64,10 @@ Another important point is GIS.lab source code, see :ref:`GIS.lab source code do
       $ vboxmanage --version
       $ vagrant --version
 
+.. note:: |note| Git is not necessary but it is recommended. One can get 
+   GIS.lab source code also by downloading latest GIS.lab package from
+   `https://github.com/gislab-npo/gislab.git <https://github.com/gislab-npo/gislab.git>`_ and unpacking it in working directory.
+
 ======
 Master
 ======

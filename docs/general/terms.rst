@@ -8,10 +8,11 @@ Useful terms
    platform, the 64-bit version of the x86 instruction set, x86 means 32-bit OS
 
 *Ansible*
-   an easy to use configuration management and orchestration tool, it is platform 
-   that can combine multi-node software deployment and ad hoc task execution, 
-   Ansible’s configuration, deployment, and orchestration language are playbooks
-   expressed in YAML format; Ansible is an automation engine, similar to 
+   an easy to use configuration management and orchestration tool; it is platform 
+   that can combine multi-node software deployment and ad hoc task execution; 
+   it’s configuration, deployment, and orchestration language are playbooks
+   expressed in **YAML** format; `Ansible <http://docs.ansible.com/ansible/index.html>`_ 
+   is an automation engine similar to 
    `Chef <https://www.chef.io/>`_ or `Puppet <https://puppetlabs.com/>`_, 
    that can be used to ensure deployment and configuration consistency 
    across many servers, and keep servers and applications up-to-date
@@ -22,7 +23,7 @@ Useful terms
 
 .. figure:: ../img/terms/bridged_networking.png
    :align: center
-   :width: 250
+   :width: 450
 
    Bridged Networking Configuration [#bnc]_
 
@@ -63,7 +64,7 @@ Useful terms
 
 .. figure:: ../img/terms/dhcp.gif
    :align: center
-   :width: 250
+   :width: 450
 
    DHCP server [#dhcp]_
 
@@ -83,7 +84,7 @@ Useful terms
    
 .. figure:: ../img/terms/dns.jpg
    :align: center
-   :width: 250
+   :width: 450
 
    Domain name system workflow [#dns]_
 
