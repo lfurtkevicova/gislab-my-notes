@@ -64,7 +64,7 @@ Useful terms
 
 .. figure:: ../img/terms/dhcp.gif
    :align: center
-   :width: 450
+   :width: 250
 
    DHCP server [#dhcp]_
 
