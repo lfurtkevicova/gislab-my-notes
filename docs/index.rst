@@ -3,11 +3,6 @@
 
 .. _gislab-main:
 
-.. GIS.lab documentation master file, created by
-   sphinx-quickstart on Fri Mar 11 12:08:21 2016.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 .. raw:: html
 
    <h1><center>Welcome to GIS.lab documentation!</center></h1>
@@ -55,4 +50,4 @@ Contents
    general/communication
    general/credits
 
-.. important:: |imp.| GIS.lab is still in pre-release state
+.. important:: |imp.| GIS.lab is still in Pre-Release state.
