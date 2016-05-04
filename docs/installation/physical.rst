@@ -207,7 +207,7 @@ e.g. with ``ping`` command.
    command.
 
 If one wants to know from his computer if unit is already in network, 
-``ifconfog`` command should be run from server to see ``inet addr``. Then 
+``ifconfig`` command should be run from server to see ``inet addr``. Then 
 from user's computer ``ssh ubuntu@<inet addr>`` should be used to enable full 
 access to unit.
 
