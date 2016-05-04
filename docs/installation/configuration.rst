@@ -13,7 +13,7 @@ configuration variable ``GISLAB_NETWORK``, if GIS.lab's default network
 range ``192.168.50.0/24`` already exists in LAN to prevent IP conflicts.
 
 Default GIS.lab configuration file named ``all`` exists in ``system/group_vars``,
-see :num:`#configuration-files`.
+see figure :num:`#configuration-files`.
 When user decides to adjust it, this file should not be modified directly. 
 
 .. tip:: |tip| Find that file in GIS.lab repository and see its content to 
@@ -76,7 +76,7 @@ Let's see practical example of configuration with
 some changes related to GIS.lab network and client keyboards in virtual mode.
 Variables ``GISLAB_NETWORK`` and ``GISLAB_CLIENT_KEYBOARDS`` in ``gislab_vagrant``
 file will be different. Results after the successful installation for both cases 
-are in :num:`#config-virtual`.
+are in figure :num:`#config-virtual`.
 
 .. tip:: |tip| See :ref:`Installation in Virtual Mode <installation-virtual>`
    section for more details about the steps or just use ``vagrant provision``
@@ -101,7 +101,7 @@ are in :num:`#config-virtual`.
    Two different results using different Vagrant configuration file.
 
 Fourth number of server's IP address will always be ``5`` and the first client's 
-IP address will always terminate with ``50``. For left case of :num:`#config-virtual` 
+IP address will always terminate with ``50``. For left case of figure :num:`#config-virtual` 
 these addresses would look like ``192.168.50.5`` and ``192.168.50.50``.
 
 .. note:: |note| This information is useful in manual GIS.lab server selection  

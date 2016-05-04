@@ -158,7 +158,7 @@ existing one.
 
 Go to :menuselection:`Plugins --> Manage and install plugins` and 
 in ``Installed`` tab of dialog window find **GIS.lab Web plugin**.
-Activate this plugin by checking the toggle beside it, see 
+Activate this plugin by checking the toggle beside it, see figure
 :num:`#install-gislab-plugin`.
 
 .. _install-gislab-plugin:

@@ -33,7 +33,8 @@ about changing GIS.lab configuration.
 .. _requirements-virtual:
    
 To run GIS.lab in Virtual mode, there are some hardware and software requirements. 
-Another important point is GIS.lab source code, see :ref:`GIS.lab source code download <GL-clone>`. See information below with graphical representation in 
+Another important point is GIS.lab source code, see :ref:`GIS.lab source code download <GL-clone>`. 
+See information below with graphical representation in figure
 :num:`#requirementsvirtual`. 
 
 *Hardware*
@@ -209,7 +210,7 @@ The process consists of four main steps:
 .. rubric:: Virtual machine creation
 
 Machines are created in VirtualBox environment and their creation depends on 
-type of booting, see :num:`#pxe-vb-settings` and :num:`#http-vb-settings`. 
+type of booting, see figures :num:`#pxe-vb-settings` and :num:`#http-vb-settings`. 
 
 .. _booting-virtual:
 

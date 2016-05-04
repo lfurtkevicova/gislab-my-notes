@@ -12,7 +12,7 @@ physical mode.
 To run GIS.lab in physical mode, there are some hardware and software requirements. 
 As well as using virtual mode, :ref:`GIS.lab source code <GL-clone>` is needed. 
 Information about requirements can be found below together with graphical 
-figuration, see :num:`#requirementsphysical`. 
+figuration, see figure :num:`#requirementsphysical`. 
 
 *Hardware*
 
@@ -91,7 +91,7 @@ for example ``id_rsa_gislab_unit``.
 
 Then use script ``providers/gislab-unit/gislab-unit-iso.sh`` to create 
 custom **GIS.lab unit** installation **ISO image file** from original Ubuntu 
-server ISO image file downloaded in above step (:num:`#installation-iso`). 
+server ISO image file downloaded in above step. 
 This command has some parametres `-s`, ``-t``, ``-k``, ``-w`` and ``-i``. 
 
 .. tip:: |tip| From cloned ``gislab`` directory included in 
@@ -156,7 +156,7 @@ See example bellow.
 
 When above process is done, together with ready USB stick attach also power 
 supply, HDMI display, keyboard and Ethernet cable into GIS.lab unit machine,
-see :num:`#installation-unit`. 
+see figure :num:`#installation-unit`. 
 Power it on, press ``F10`` key to run boot manager and select ``boot from USB`` 
 option. Then fully automatic installation should start. When finished, 
 machine will be turned of. USB stick should then be removed. 
@@ -473,7 +473,7 @@ client machine, there are similar steps to steps described for
 .. rubric:: Running physical GIS.lab client
 
 After successful booting, there will be welcome screen with login dialog, see 
-:num:`#login-unit`. Creation of user accounts and running GIS.lab clients are 
+figure :num:`#login-unit`. Creation of user accounts and running GIS.lab clients are 
 the same as in virtual mode. Find more details in 
 :ref:`User accounts <user-creation>` and 
 :ref:`Running virtual GIS.lab client <client-running-virtual>` sections. 

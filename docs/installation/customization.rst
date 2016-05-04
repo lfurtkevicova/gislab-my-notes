@@ -35,7 +35,7 @@ customized by special scripts.
 .. important:: |imp| Scripts must have executable permissions assigned and 
    can't contain file extension, see ``man run-parts``. 
 
-Directory ``/opt/gislab/custom/accounts`` in :num:`#customization-files` 
+Directory ``/opt/gislab/custom/accounts`` in figure :num:`#customization-files` 
 contains following directories with customization scripts.
 
 * ``before add`` - executed before account is created
@@ -145,7 +145,7 @@ Command for client's ``image`` backup is introduced below.
    $ sudo tar cjf /mnt/backup/<root>.tar.bz2 /opt/gislab/system/clients/desktop/root
    $ sudo cp -a /opt/gislab/system/clients/desktop/image /mnt/backup/<image>
 
-See also :num:`#backup` for clearer understanding.
+See also figure :num:`#backup` for clearer understanding.
 
 .. _backup:
 
@@ -181,7 +181,7 @@ selected backup of them can be recovered.
 
 .. rubric:: Using symbolic links
 
-Violet diagram with blue line color called ``image`` in :num:`#backup` 
+Violet diagram with blue line color called ``image`` in figure :num:`#backup` 
 containing ``gislab.img`` binary file and ``gislab-desktop.buildstamp`` in 
 ``/opt/gislab/system/clients/desktop`` directory 
 can be directory or symbolic link. By default it is directory.
@@ -218,7 +218,7 @@ steps from ``/opt/gislab/system/clients/desktop`` directory should be used.
    $ sudo tar xjf /mnt/backup/root-advanced.tar.bz2 -C /
 
 Then continue with creation of new user prepared for advanced course. See 
-principle in :num:`#image-symlink`.
+principle in figure :num:`#image-symlink`.
 
 .. _image-symlink:
 
