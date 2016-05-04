@@ -36,14 +36,15 @@ host name specified in inventory file.
    :align: center
    :width: 450
 
-   Directory structure of configuration files.
+   File layout related to configuration.
 
 File ``gislab_vagrant`` will be loaded automatically by Vagrant 
-without need to manually create the Ansible inventory file. Example 
-configuration in ``gislab_vagrant`` or ``<name-of-gislab-unit>``
+without need to manually :ref:`create the Ansible inventory file <create-ansible-inventory-file>`. 
+Example configuration in ``gislab_vagrant`` or ``<name-of-gislab-unit>``
 file is shown below.
 
-.. code:: sh
+.. code-block:: sh
+   :emphasize-lines: 5
 
    GISLAB_ADMIN_FIRST_NAME: Ludmila
    GISLAB_ADMIN_SURNAME: Furtkevicova
@@ -106,19 +107,21 @@ these addresses would look like ``192.168.50.5`` and ``192.168.50.50``.
 .. note:: |note| This information is useful in manual GIS.lab server selection  
           using :ref:`HTTP boot <http-boot-virtual>` when server's IP address is required.
 
+.. _create-ansible-inventory-file:
+
 Content of Ansible inventory file called ``<name-of-gislab-unit>.inventory`` 
-used in physical mode would be as follows.
+used in physical mode would be as follows. 
  
-.. code:: sh
+.. code-block:: sh
+   :emphasize-lines: 1
       
    <name-of-gislab-unit> ansible_ssh_host=<host-url> ansible_ssh_user=<provisioning-user-account-name>
 
-.. note:: |note| Example content of ``gislab-unit-fem.inventory`` file is shown 
-   below.
+   # Example for <gislab-unit-fem.inventory> 
+   gislab-unit-fem ansible_ssh_host=10.234.1.44 ansible_ssh_user=ubuntu
 
-   .. code:: sh
-      
-      gislab-unit-fem ansible_ssh_host=10.234.1.44 ansible_ssh_user=ubuntu
+.. seealso:: |see| `Creation of Ansible inventory file <ansible-inventory-file>`
+   in installation process.
 
 .. _apt-cacher-service:
 

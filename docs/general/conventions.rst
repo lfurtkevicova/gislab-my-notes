@@ -8,7 +8,7 @@ There are many different organizational and typographical features throughout
 this documentation designed to help you get the most out of the material.
 You will find number of styles of text that distinguish 
 between different kinds of information. Here are some types of headings, 
-examples of typographical conventions, styles, and an explanation of their 
+examples of typographical conventions, styles and an explanation of their 
 meaning.
 
 .. _styles-text:
@@ -17,26 +17,29 @@ meaning.
 Styles of text
 ==============
 
-*Italic* indicates new terms, URLs, email addresses, filenames, file extensions, 
-pathnames, directories, and Unix utilities.
+.. sidebar:: Example
 
-**Bold** shows commands or other text indicates that we wish to draw your 
-attention to a particular part of a code block, the relevant lines or items.
+   .. code:: 
+   
+      *Italic*
+      **Bold**
+      :superscript:`superscript`
+      :subscript:`subscript`
+      ``Code text``
 
-`Plain text` indicates menu titles, menu options, menu buttons, and keyboard 
-accelerators.
+*Italic* indicates mainly important or key terms, URLs or email addresses.
+
+**Bold** shows new terms and other text indicating that we wish to draw your attention.
 
 Other roles like :superscript:`superscript` and :subscript:`subscript` text are 
 displayed in this way.
 
-*Example of useful term*
-   description ... 
-
 ``Code text`` represents code, commands, options, switches, variables, 
 attributes, keys, functions, types, classes, namespaces, methods, modules, 
-properties, parameters, values, objects, events, event handlers, tags, macros, 
-the contents of files, or the output from commands. More comprehensive
-parts are written in blocks as follows: 
+properties, parameters, values, directories, objects, events, 
+event handlers, tags, macros, the contents of files, or the output from commands. 
+
+More comprehensive parts are written in blocks as follows: 
 
 .. code-block:: python
    :emphasize-lines: 3
@@ -59,15 +62,32 @@ Shell commands beginning with :command:`$` (dollar) should be run in command win
 
 	<various code block>
 
-General commands are written as :command:`Some command`, guilabel as 
+.. sidebar:: Example
+
+   .. code:: 
+
+      :command:`some command` 
+      :guilabel:`Guilabel`
+      :menuselection:`First step --> Second step`
+      :file:`file.svg`
+      `GIS.lab web page <http://web.gislab.io/>`_
+      :num:`#some-figure-t`
+      :ref:`Conventions <conventions>`
+
+General commands are written as :command:`some command`, guilabel as 
 :guilabel:`Guilabel`, direction through a menu is displayed as 
 :menuselection:`First step --> Second step`, name of file is represented by 
 :file:`file.svg`. For usage of footnotes, see [#name]_, external hyperlinks are 
 represented as `GIS.lab web page <http://web.gislab.io/>`_, for reference to 
 some picture, see :num:`#some-figure-t`, 
 :num:`#some-figure-s`, :num:`#some-figure-m` and :num:`#some-figure-l`, 
-for reference to some part of page, 
-see :ref:`Conventions <conventions>`.
+for reference to some part of page, see :ref:`Conventions <conventions>`.
+
+*Example of useful term*
+   description ... 
+
+``Example of useful command``
+   description ...
 
 ================
 Short paragraphs
@@ -117,9 +137,21 @@ Part
    
 etc.
 
+.. sidebar:: Example
+
+   .. code:: 
+
+     .. _some-figure-t:
+     
+     .. figure:: ../img/login_text_logo.svg
+        :align: center
+        :width: 150
+     
+        GIS.lab unit tiny.     
+
 =======
 Figures
-=======
+======= 
 
 .. _some-figure-t:
 
@@ -172,7 +204,25 @@ Sidebars, lists and quote-like blocks
 
 .. sidebar:: Some Sidebar 
 
-   :code:`vagrant up`
+   ``vagrant up``
+
+   .. code:: 
+
+      .. sidebar:: Some Sidebar
+
+         ``vagrant up``
+
+   Example of lists:
+
+   .. code:: 
+
+      #. numbered list 
+
+        #. nested numbered list
+
+      * bulleted list 
+
+        * nested bulleted list
 
 #. numbered list 
 

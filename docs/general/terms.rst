@@ -246,17 +246,17 @@ Useful terms
    the package format for Vagrant environment, it is used to bring up an 
    identical working environment, 
 
-*vendor*
+*Vendor*
    supplier, a part of the supply chain
-
-.. rubric:: Source
-
-.. [#bnc] `Configuring Bridged Networking <http://pubs.vmware.com/ws8/wwhelp/wwhimpl/js/html/wwhelp.htm#href=using_ws/GUID-BAFA66C3-81F0-4FCA-84C4-D9F7D258A60A.html#1_14_9_1>`_
-.. [#dhcp] `DHCP server <http://www.tomshardware.co.uk/faq/id-1932036/dhcp-server-assigns-addresses-client-computers.html>`_
-.. [#dns] `How does DNS work? <http://brightmags.com/how-does-dns-work/>`_
-.. [#pxe] `Preboot Execution Environment <https://en.wikipedia.org/wiki/Preboot_Execution_Environment>`_
 
 .. seealso:: |see| `19 Minutes With Ansible <https://sysadmincasts.com/episodes/43-19-minutes-with-ansible-part-1-4>`_, 
    `Booting from the network with PXE <https://www.youtube.com/watch?v=zQ-TQhmjhuc>`_, 
    `Vagrant in 5 minutes <https://opensource.com/business/16/1/lightning-talk-quick-introduction-vagrant?sc_cid=701600000011jJaAAI>`_, 
    `How Domain Name Servers Work <http://computer.howstuffworks.com/dns.html>`_
+
+.. rubric:: Sources
+
+.. [#bnc] `Configuring Bridged Networking <http://pubs.vmware.com/ws8/wwhelp/wwhimpl/js/html/wwhelp.htm#href=using_ws/GUID-BAFA66C3-81F0-4FCA-84C4-D9F7D258A60A.html#1_14_9_1>`_
+.. [#dhcp] `DHCP server <http://www.tomshardware.co.uk/faq/id-1932036/dhcp-server-assigns-addresses-client-computers.html>`_
+.. [#dns] `How does DNS work? <http://brightmags.com/how-does-dns-work/>`_
+.. [#pxe] `Preboot Execution Environment <https://en.wikipedia.org/wiki/Preboot_Execution_Environment>`_

@@ -27,7 +27,8 @@ to ``provision/host_vars/gislab-web`` file as ``GISLAB_CLIENT_MOBILE: yes``.
 Development environment is started after running following, well known 
 command from source code root directory.
 
-.. code:: sh
+.. code-block:: sh
+   :emphasize-lines: 1
 
    $ vagrant up
 
@@ -69,7 +70,8 @@ because software packages will have not to be downloaded again.
 
 After, one can log in to virtual machine - still from source code root directory.
 
-.. code:: sh
+.. code-block:: sh
+   :emphasize-lines: 1
    
    $ vagrant ssh
 
@@ -88,7 +90,8 @@ After, one can log in to virtual machine - still from source code root directory
 At this moment virtual machine is launched. Development services are started
 after command below.
 
-.. code:: sh
+.. code-block:: sh
+   :emphasize-lines: 1
 
    $ /vagrant/utils/tmux-dev.sh 
    
@@ -175,13 +178,9 @@ and fill in required fields and settings.
    :align: center
    :width: 450
 
-   GIS.lab project publishing.
-
 .. figure:: ../img/gislab-web/gislab-plugin-layers.png
    :align: center
    :width: 450
-
-   GIS.lab project publishing.
 
 .. figure:: ../img/gislab-web/gislab-plugin-project.png
    :align: center
@@ -197,4 +196,4 @@ Workflow is nearly finished with ``Publish`` button.
    :align: center
    :width: 450
 
-   Part of GIS.lab project publishing process.
+   Important step in GIS.lab project publishing process.

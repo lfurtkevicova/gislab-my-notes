@@ -4,7 +4,7 @@
 Customization
 *************
 
-When talking about customization, we should distinguish between
+When talking about customization, we should distinguish between:
 
 1. :ref:`Server customization <server-customization>`
 2. :ref:`User accounts customization <user-customization>`
@@ -51,7 +51,7 @@ contains following directories with customization scripts.
    :align: center
    :width: 450
 
-   Example of directory structure of customization files.
+   File layout related to customization.
 
 In above customization scripts it is possible to use various variables. 
 When creating or deleting GIS.lab user account using ``gislab-adduser`` and 
@@ -124,13 +124,13 @@ All GIS.lab users boot from some image file.
 Usually after entering client's ``root`` with the first of above mentioned commands, 
 the new updated ``image`` is rebuilded by the second of these commands. 
 
-.. important:: |imp| Client's ``root`` and resulting ``image`` are always restored 
+.. danger:: |danger| Client's ``root`` and resulting ``image`` are always restored 
    to original state after every GIS.lab upgrade, so customization must be
    applied again.
 
 .. note:: |note| This behaviour is planed to be changed in future.
 
-Important note written above is precisely why **backup** should always be used. 
+Important danger note written above is precisely why **backup** should always be used. 
 In general, it is very good idea to backup client's ``root`` and also ``image`` 
 in case if something will go wrong in process of customization or rollback is
 required. Backup operation can be done by simple backup of them. 
@@ -143,7 +143,6 @@ Command for client's ``image`` backup is introduced below.
 .. code:: sh
 
    $ sudo tar cjf /mnt/backup/<root>.tar.bz2 /opt/gislab/system/clients/desktop/root
-
    $ sudo cp -a /opt/gislab/system/clients/desktop/image /mnt/backup/<image>
 
 See also :num:`#backup` for clearer understanding.
@@ -242,12 +241,14 @@ Ansible <customization-ansible>` example.
 
 Ansible uses ``*.yml`` format to perform customization.
 
+.. important:: |imp| GIS.lab master has to run during customization.
+
 ===========
 Boot loader
 ===========
 
 To customize GIS.lab Desktop client **boot loader**, create copy of boot loader 
-source file `http-boot/gislab-bootloader.ipxe <http-boot/gislab-bootloader.ipxe>` 
+source file ``http-boot/gislab-bootloader.ipxe`` 
 and modify it as required. For more information about **iPXE** syntax see 
 documentation. Than follow build process below.
 

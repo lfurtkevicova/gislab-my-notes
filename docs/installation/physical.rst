@@ -133,7 +133,7 @@ then the script can be run as follows.
    :align: center
    :width: 450
 
-   Creation if custom GIS.lab unit installation ISO image.
+   Creation of custom GIS.lab unit installation ISO image.
 
 Continue with preparation of bootable installation USB stick from custom 
 GIS.lab Unit ISO image file created in previous step. On Ubuntu 
@@ -143,7 +143,8 @@ be used and they exists also for other Linux distributions.
 Probably the most recommended option is usage of ``dd`` command. 
 See example bellow.
 
-.. code:: sh
+.. code-block:: sh
+   :emphasize-lines: 4,5,6,7
 
    # Format USB flash disk 
    # In is assumed that USB flash disk is connected as /dev/sdf
@@ -257,6 +258,8 @@ important Ansible files, ``*.inventory`` file and file in ``host_vars``
 directory which has already been stated in 
 :ref:`configuration section <configuration-section>` of this documentation. 
 
+.. _ansible-inventory-file:
+
 Let's create Ansible inventory file. The name depends on unit's name which is 
 the same as customization file in ``host_vars`` directory. For example 
 ``gislab-unit-italy.inventory`` will have following content:
@@ -282,7 +285,7 @@ using SSH.
    :align: center
    :width: 450
 
-   Placement of important file for initialization in GIS.lab directory structure.
+   Placement of important file for initialization in GIS.lab file layout.
 
 .. code:: sh
 
@@ -315,11 +318,11 @@ made by ``gislab.yml`` file located in ``system`` directory.
    :align: center
    :width: 450
 
-   Placement of important file for installation in GIS.lab directory structure.
+   Placement of important file for installation in GIS.lab file layout.
 
 .. code:: sh
 
-   $ ansible-playbook --inventory=gislab-unit.inventory --private-key= system/gislab.yml 
+   $ ansible-playbook --inventory=gislab-unit-fem.inventory --private-key=~/.ssh/id_rsa_gislab_unit system/gislab.yml 
 
 Now, GIS.lab unit machine is installed with GIS.lab system. Do not forget 
 to :ref:`create user accounts <user-creation>` by ``gislab-adduser`` command 

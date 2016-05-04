@@ -126,24 +126,6 @@ automation language, self-documenting syntax, agent-less execution,
 idempotent modules, templates, support for cloud providers AWS, GCE, Digital 
 Ocean, Azure, and the like.
 
-Simple **YAML** configuration and automatic installation are outlined below.
-
-.. code:: sh
-
-   # CONFIGURATION
-   # First three octets of private IP range 192.168.0.0 - 192.168.255.255, 
-     which will define network number used for GIS.lab network
-   # Example: 192.168.1
-   # Change requires GIS.lab re-installation
-   GISLAB_NETWORK: 192.168.50
-   ... 
-
-   # INSTALLATION
-   $ ansible - playbook
-   -- inventory = gislab . inventory
-   -- private - key =~/. ssh / id_rsa
-   system / gislab . yml
-
 Virtual machine deployment is enabled by 
 **Vagrant** and **VirtualBox**. Client boot service is 
 `Linux Terminal Server <http://www.ltsp.org/>`_
@@ -401,7 +383,7 @@ The main purpose is QGIS projects publishing on web.
    :align: center
    :width: 450
 
-   GIS.lab web interface.
+   GIS.lab Web interface.
 
 .. _gislab-web-upgrade:
 

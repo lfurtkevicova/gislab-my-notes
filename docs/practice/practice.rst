@@ -70,7 +70,8 @@ Software uninstallation - Geany
 
 Example with `Geany <https://www.geany.org/>`_ software is shown below.
 
-.. code:: sh
+.. code-block:: sh
+   :emphasize-lines: 2,3,5,18,23,25
 
    # root and image backup
    $ sudo tar cjf /mnt/backup/root-`date -I`.tar.bz2 /opt/gislab/system/clients/desktop/root
@@ -96,8 +97,12 @@ Example with `Geany <https://www.geany.org/>`_ software is shown below.
    # build updated image 
    $ sudo gislab-client-image
    # create new user that boots without geany software installed
-   sudo gislab-adduser -g User -l GIS.lab -m x@mail.com -p <psw> <name>
+   $ sudo gislab-adduser -g User -l GIS.lab -m x@mail.com -p <psw> <name>
      
+.. note:: |note| Main panel in client Desktop layout is generated with user
+   creation proscess, so changes related to panel are displayed only for new 
+   user.
+
 ==================================
 Software installation - Vim editor 
 ==================================
@@ -105,7 +110,8 @@ Software installation - Vim editor
 See :ref:`software uninstallation <example-remove-geany>` section and in 
 client's root enter following code. 
 
-.. code:: sh
+.. code-block:: sh
+   :emphasize-lines: 2,3
    
    $ dpkg -s vim
    $ sudo apt-get update
