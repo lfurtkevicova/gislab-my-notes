@@ -50,6 +50,14 @@ GIS.lab installation
    * installation in virtual mode, running GIS.lab virtual client
    * installation in physical mode, running GIS.lab physical client
 
+.. _installation-workflow:
+
+.. figure:: ../img/general/installation-workflow.svg
+   :align: center
+   :width: 750
+
+   Installation workflow.
+
 ---------------------
 Client Desktop layout
 ---------------------
