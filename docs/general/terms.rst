@@ -68,6 +68,12 @@ Useful terms
 
    DHCP server [#dhcp]_
 
+*Django*
+   is a free and open-source web framework, written in Python, which follows 
+   the model–view–controller architectural pattern with primary goal to ease 
+   the creation of complex, database-driven websites, reuse various components 
+   emphasizing principle of don't repeat yourself
+
 *DNS server*
    *Domain Name System* is a protocol within the set of standards for 
    how computers exchange data on the internet and on many private networks, 
@@ -220,6 +226,11 @@ Useful terms
    :width: 250
 
    Serf as a decentralized solution for service discovery and orchestration.
+
+*Software framework*
+   is an abstraction in which software providing generic functionality can be 
+   selectively changed by additional user-written code, thus providing 
+   application-specific software
 
 *Tmux*
    *Terminal multiplexer* is a software application usually used to multiplex 
