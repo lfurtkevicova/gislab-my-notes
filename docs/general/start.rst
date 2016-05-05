@@ -25,12 +25,8 @@ and how to use every of these pieces in the most efficient way.
 
    GIS.lab Desktop, GIS.lab Web and GIS.lab Mobile interface.
 
-Firstly, there are sections related to introduction like 
-:ref:`Learning about the pieces <about>`, :ref:`Useful terms <terms>` 
-or :ref:`Useful commands <commands>`.
-To distinguish between different kinds of information we use some typographical
-and stylistic features, see chapter
-:ref:`Conventions used in this documentation <conventions>`. 
+Firstly, there is a section related to introduction called 
+:ref:`Learning about the pieces <about>`. 
 In case you feel sufficiently familiar with all the introductory parts, just skip 
 them and go straight away to :ref:`GIS.lab Installation <gislab-installation>`. 
 Section :ref:`Client Desktop layout <layout>` relates to GIS.lab client
@@ -39,6 +35,11 @@ To get to know about QGIS projects publishing on web, see
 :ref:`GIS.lab Web <gislab-web>` part.
 Chapters dedicated to provide practical skills with GIS.lab technology
 are :ref:`GIS.lab in practice <practice>` and :ref:`GIS.lab workshop <workshop>`.
+Another useful parts can be :ref:`Useful terms <terms>` 
+or :ref:`Useful commands <commands>`.
+To distinguish between different kinds of information we use some typographical
+and stylistic features, see chapter
+:ref:`Conventions used in this documentation <conventions>`. 
 
 .. _gislab-desktop-start:
 
@@ -49,4 +50,4 @@ are :ref:`GIS.lab in practice <practice>` and :ref:`GIS.lab workshop <workshop>`
    GIS.lab Desktop screen.
 
 Moreover, when you meet some troubles or difficulties, you can find solutions to 
-simple and difficult problems in :ref:`Problem solving <problems>` part.
+simple and difficult problems in :ref:`Tips and tricks <tips>` part.

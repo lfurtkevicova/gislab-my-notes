@@ -90,6 +90,40 @@ License
 
 GNU General Public License version 2 or later.
 
+.. _gislab-web-upgrade:
 
+===========================
+How to upgrade GIS.lab Web?
+===========================
 
+GIS.lab Web source code update is done with ``pull`` command.
 
+.. code:: sh
+
+   $ git pull
+
+Upgrade with Vagrant:
+
+.. code:: sh
+
+   $ vagrant up
+   $ vagrant provision
+
+When there are fundamental changes, it is better to run ``vagrant destroy``
+command before ``git pull``.
+
+.. code:: sh
+
+   $ vagrant destroy -f 
+   $ git pull
+   $ vagrant up
+
+.. tip:: |tip| Quick update can be done with ``git pull`` command followed by
+   running ``$ gulp build-web`` on server.
+
+   .. code:: sh
+
+      $ git pull && vagrant up && vagrant ssh
+      $ /vagrant/utils/tmux-dev.sh
+      $ cd /vagrant/clients
+      $ gulp build-web

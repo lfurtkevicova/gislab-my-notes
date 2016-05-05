@@ -86,7 +86,7 @@ type of **image**.
 Furthermore, it is important to create **private key**. Generated public part 
 of **keypair** will be used as a way to identify trusted computers 
 without involving passwords. It can be generated with ``ssh-keygen`` command
-from ``home/.ssh`` directory. It is recommended to rename new key suitably, 
+from ``$HOME/.ssh`` directory. It is recommended to rename new key suitably, 
 for example ``id_rsa_gislab_unit``.
 
 Then use script ``providers/gislab-unit/gislab-unit-iso.sh`` to create 
@@ -149,7 +149,10 @@ See example bellow.
    # Format USB flash disk 
    # In is assumed that USB flash disk is connected as /dev/sdf
    # Please check 'dmesg' for your configuration
+   
+   # It is possible to use also gparted
    sudo mkdosfs -n 'GIS.lab Base System' -I /dev/sdf -F 32
+   # isohybrid is included in syslinux
    isohybrid /path/to/your/gislab.iso
    sudo dd if=/path/to/your/gislab.iso of=/dev/sdf bs=4k
    sudo eject /dev/sdf
@@ -267,6 +270,17 @@ the same as customization file in ``host_vars`` directory. For example
 * name of GIS.lab unit
 * Ansible SSH host with IP address or name of unit
 * the name of user able to log in to GIS.lab unit
+
+Content of Ansible inventory file called ``<name-of-gislab-unit>.inventory`` 
+used in physical mode would be as follows. 
+ 
+.. code-block:: sh
+   :emphasize-lines: 1
+      
+   <name-of-gislab-unit> ansible_ssh_host=<host-url> ansible_ssh_user=<provisioning-user-account-name>
+
+   # Example for <gislab-unit-fem.inventory> 
+   gislab-unit-fem ansible_ssh_host=10.234.1.44 ansible_ssh_user=ubuntu
 
 Example for GIS.lab unit called ``gislab-unit-fem``, name get from ``nslookup``
 command ``gislab.intra.ismaa.it`` and user ``ubuntu`` is 
@@ -495,3 +509,34 @@ Enjoy!
    :width: 450
 
    GIS.lab client running environment.
+
+.. _gislab-upgrade:
+
+===============================
+How to upgrade GIS.lab Desktop?
+===============================
+
+GIS.lab upgrade procedure consists from three steps: 
+
+1. server software upgrade
+2. client images upgrade
+3. GIS.lab system itself upgrade
+
+Although, it is possible to run each step separately by hand, GIS.lab
+provisioner is designed as idempotent task which is capable of both,
+GIS.lab installation and also upgrade. This means, that GIS.lab upgrade
+is performed by the same provisioner command as used for GIS.lab
+installation. Using GIS.lab provisioner for upgrade is recommended to
+keep all parts of GIS.lab in consistent state.
+
+GIS.lab source code update: 
+
+.. code-block:: sh
+
+   $ git pull
+
+Upgrade with Ansible:
+
+.. code-block:: sh
+
+   $ ansible-playbook --inventory=gislab-unit.inventory --private-key=<private-SSH-key-file> system/gislab.yml

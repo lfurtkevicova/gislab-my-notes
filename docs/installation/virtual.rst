@@ -422,80 +422,31 @@ Virtual Machine from the hard disk. Machine can be started again by using
 .. tip:: |tip| Use ``-f`` or ``-force`` flag to forcefully power off the Virtual 
    Machine. 
 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Installation of requirements
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+===============================
+How to upgrade GIS.lab Desktop?
+===============================
 
-.. _git-installation:
+GIS.lab upgrade procedure consists from three steps: 
 
-.. rubric:: Git installation
+1. server software upgrade
+2. client images upgrade
+3. GIS.lab system itself upgrade
 
-By far the easiest way of getting Git installed and ready to use is by using 
-default repositories. This is the fastest method, but the version may 
-be older than the newest version. For GIS.lab version from official repositories 
-should be normally sufficient. At firt, ``apt`` package management tools can be 
-used to update local package index. Afterwards, Git can be downloaded and installed.
+Although, it is possible to run each step separately by hand, GIS.lab
+provisioner is designed as idempotent task which is capable of both,
+GIS.lab installation and also upgrade. This means, that GIS.lab upgrade
+is performed by the same provisioner command as used for GIS.lab
+installation. Using GIS.lab provisioner for upgrade is recommended to
+keep all parts of GIS.lab in consistent state.
 
-.. code:: sh
-
-   $ sudo apt-get update
-   $ sudo apt-get install git
-
-.. _GL-clone:
-
-.. rubric:: GIS.lab source code download
-
-Following command will grab GIS.lab source code to user system.
-
-.. code:: sh
-
-   $ git clone https://github.com/gislab-npo/gislab.git
-
-.. _ansible-installation:
-
-.. rubric:: Ansible installation
-
-Ansible is an automation engine and its installation includes adding Ansible 
-repository and installing it by typing ordinary commands.
+GIS.lab source code update: 
 
 .. code-block:: sh
 
-   $ sudo apt-get install software-properties-common
-   $ sudo apt-add-repository ppa:ansible/ansible
-   $ sudo apt-get update
-   $ sudo apt-get install ansible
+   $ git pull
 
-.. _vb-installation:
-
-.. rubric::  VirtualBox installation
-
-Firstly, add VirtualBox repository signing key, then add repository to system, 
-install Dynamic Kernel Module Support Framework and finally install VirtualBox.
-
-.. code-block:: sh
-   
-   $ wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
-   $ sudo sh -c 'echo "deb http://download.virtualbox.org/virtualbox/debian trusty contrib" > /etc/apt/sources.list.d/virtualbox.list'
-   $ sudo apt-get update && sudo apt-get install dkms
-   $ sudo apt-get install virtualbox-4.3
-
-.. _vagrant-installation:
-
-.. rubric:: Vagrant installation
-
-It should be first removed previously downloaded Vagrant packages, then 
-downloaded from `www.vagrantup.com <http://www.vagrantup.com/downloads.html>`_ 
-and eventually package should be installed. See instructions below.
+Upgrade with Vagrant:
 
 .. code-block:: sh
 
-   $ rm -vf ~/Downloads/vagrant_*.deb
-   $ sudo dpkg -i ~/Downloads/vagrant_*.deb
-   $ sudo apt-get -f install
-
-.. attention:: |att| If running 32-bit host operating system, run following command 
-   to download 32-bit Vagrant box from whatever directory.
-   
-   .. code:: sh
-   
-      $ vagrant box add precise-canonical http://cloud-images.ubuntu.com/vagrant/precise/current/precise-server-cloudimg-i386-vagrant-disk1.box
+   $ vagrant provision

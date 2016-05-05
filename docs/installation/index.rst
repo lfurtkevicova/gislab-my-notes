@@ -21,8 +21,6 @@ it means **GIS.lab Desktop** form of GIS.lab.
    :numbered:
 
    configuration
-   customization
    virtual
    physical
-   
-   
+   customization

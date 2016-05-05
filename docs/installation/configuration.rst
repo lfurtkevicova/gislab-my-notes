@@ -1,8 +1,98 @@
 .. _configuration-section:
  
 *************
-Configuration
+How to start
 *************
+
+=============================
+Installation of requirements
+=============================
+
+.. _git-installation:
+
+.. rubric:: Git installation
+
+By far the easiest way of getting Git installed and ready to use is by using 
+default repositories. This is the fastest method, but the version may 
+be older than the newest version. For GIS.lab version from official repositories 
+should be normally sufficient. At firt, ``apt`` package management tools can be 
+used to update local package index. Afterwards, Git can be downloaded and installed.
+
+.. code:: sh
+
+   $ sudo apt-get update
+   $ sudo apt-get install git
+
+.. _GL-clone:
+
+.. rubric:: GIS.lab source code download
+
+Following command will grab GIS.lab source code to user system.
+
+.. code:: sh
+
+   $ git clone https://github.com/gislab-npo/gislab.git
+
+.. _ansible-installation:
+
+.. rubric:: Ansible installation
+
+Ansible is an automation engine and its installation includes adding Ansible 
+repository and installing it by typing ordinary commands.
+
+.. code-block:: sh
+
+   $ sudo apt-get install software-properties-common
+   $ sudo apt-add-repository ppa:ansible/ansible
+   $ sudo apt-get update
+   $ sudo apt-get install ansible
+
+.. tip:: |tip| Run following code to get **Ansible 1.9.3**
+
+   .. code:: sh
+
+      $ sudo apt-get install python-pip python-dev
+      $ sudo pip install ansible==1.9.3
+
+.. _vb-installation:
+
+.. rubric::  VirtualBox installation
+
+Firstly, add VirtualBox repository signing key, then add repository to system, 
+install Dynamic Kernel Module Support Framework and finally install VirtualBox.
+
+.. code-block:: sh
+   
+   $ wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
+   $ sudo sh -c 'echo "deb http://download.virtualbox.org/virtualbox/debian trusty contrib" > /etc/apt/sources.list.d/virtualbox.list'
+   $ sudo apt-get update && sudo apt-get install dkms
+   $ sudo apt-get install virtualbox-4.3
+
+.. _vagrant-installation:
+
+.. rubric:: Vagrant installation
+
+It should be first removed previously downloaded Vagrant packages, then 
+downloaded from `www.vagrantup.com <http://www.vagrantup.com/downloads.html>`_ 
+and eventually package should be installed. See instructions below.
+
+.. code-block:: sh
+
+   $ rm -vf ~/Downloads/vagrant_*.deb
+   $ sudo dpkg -i ~/Downloads/vagrant_*.deb
+   $ sudo apt-get -f install
+
+.. attention:: |att| If running 32-bit host operating system, run following command 
+   to download 32-bit Vagrant box from whatever directory.
+   
+   .. code:: sh
+   
+      $ vagrant box add precise-canonical http://cloud-images.ubuntu.com/vagrant/precise/current/precise-server-cloudimg-i386-vagrant-disk1.box
+
+===============
+Configuration
+===============
+
 
 It is recommended to set at least some basic configuration before
 GIS.lab installation is performed. 
@@ -106,61 +196,6 @@ these addresses would look like ``192.168.50.5`` and ``192.168.50.50``.
 
 .. note:: |note| This information is useful in manual GIS.lab server selection  
           using :ref:`HTTP boot <http-boot-virtual>` when server's IP address is required.
-
-.. _create-ansible-inventory-file:
-
-Content of Ansible inventory file called ``<name-of-gislab-unit>.inventory`` 
-used in physical mode would be as follows. 
- 
-.. code-block:: sh
-   :emphasize-lines: 1
-      
-   <name-of-gislab-unit> ansible_ssh_host=<host-url> ansible_ssh_user=<provisioning-user-account-name>
-
-   # Example for <gislab-unit-fem.inventory> 
-   gislab-unit-fem ansible_ssh_host=10.234.1.44 ansible_ssh_user=ubuntu
-
-.. seealso:: |see| `Creation of Ansible inventory file <ansible-inventory-file>`
-   in installation process.
-
-.. _apt-cacher-service:
-
-==================
-Apt Cacher service
-==================
-
-Vagrant file for Apt Cacher service:
-
-.. code:: sh
-
-   # -*- mode: ruby -*-
-   # vi: set ft=ruby :
-
-   GISLAB_NETWORK="192.168.50"
-
-   VAGRANTFILE_API_VERSION = "2"
-   Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-     config.vm.box = "precise-canonical"
-
-     config.vm.provider "virtualbox" do |v|
-       v.customize ["modifyvm", :id, "--memory", "512"]
-       v.customize ["modifyvm", :id, "--nictype1", "virtio"]
-       v.customize ["modifyvm", :id, "--nictype2", "virtio"]
-
-       config.vm.network "forwarded_port", guest: 3142, host: 3142, auto_correct: true
-     end
-
-     config.vm.hostname = "apt-cacher"
-     config.vm.provision "shell", inline: "apt-get install apt-cacher-ng"
-     config.vm.network "public_network", ip: "%s.%s" % [GISLAB_NETWORK, "6"]
-   end
-
-Run Apt Cacher server by typing ``vagrant up`` and add following line to 
-GIS.lab configuration file:
-
-.. code:: sh
-
-   GISLAB_APT_HTTP_PROXY: http://192.168.50.6:3142
 
 =====================
 Network configuration

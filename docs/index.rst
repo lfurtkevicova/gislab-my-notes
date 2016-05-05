@@ -29,9 +29,6 @@ Contents
 
    general/start
    general/about
-   general/terms
-   general/commands
-   general/conventions
 
 .. toctree::
    :maxdepth: 2
@@ -46,7 +43,10 @@ Contents
 .. toctree::
    :maxdepth: 1
 
-   general/problems
+   general/terms
+   general/commands
+   general/conventions
+   general/tips
    general/communication
    general/credits
 
