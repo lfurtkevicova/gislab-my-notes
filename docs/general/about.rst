@@ -279,4 +279,12 @@ Is GIS.lab similar to OSGeo Live?
 GIS.lab is automatic deployment of GIS infrastructure - more or less opposite to 
 OSGeo Live.
 
-.. todo:: |todo| Most significant differences ...
+OSGeo-Live is a self-contained bootable DVD, USB thumb drive or
+Virtual Machine based on Lubuntu that allows user to try a wide
+variety of free and open source geospatial software without installing
+anything, it is like a Linux distribution.
+
+GIS.lab is a operative system that uses a server where it is installed
+and server clients can attach to it using a LAN. It is easily
+configurable and it contains by default some of the most used free and
+open source geospatial software.
